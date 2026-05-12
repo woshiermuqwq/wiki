@@ -1,4 +1,4 @@
-## 粒子：小型阵风发射器
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/GUST_EMITTER_SMALL.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=gust_emitter_small}
 ```
+
+
+
+

@@ -1,4 +1,4 @@
-## 粒子：幽匿充能爆裂
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SCULK_CHARGE_POP.gif)
 
 
@@ -14,3 +14,7 @@
   Skills:
   - particle{p=sculk_charge_pop;rotation=0}
 ```
+
+
+
+

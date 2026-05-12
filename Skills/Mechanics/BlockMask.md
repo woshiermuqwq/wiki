@@ -1,5 +1,5 @@
 ## 描述 
-Creates a mask of blocks around the specified 目标. The blocks created or changed by this effect 将消失 or rather reset to their former state after the specified duration expired. Resetting the blocks at an earlier point in time can be achieved by using the blockunmask-effect (see example below).
+Creates a mask of blocks around the specified 目标. The blocks created or changed by this effect will disappear or rather reset to their former state after the 指定的duration expired. Resetting the blocks at an earlier point in time can be achieved by using the blockunmask-effect (see example below).
 
 Note that the blockmask effect will never actually change any blocks in the world and thus will never grief the environment in any way. The changes made this effect are purely cosmetic, no actual blocks are changed and everything will always return to its original state.
 
@@ -30,7 +30,7 @@ there are 20 ticks in 1 second, and setting duration to 0 will have an infinite 
 
 
 ## 示例
-Creates a netherrack environment around the casting 生物. Leaving the duration on 0 ticks 将导致 the blocks to stay in their new fake form until manual block updates are provided or players relog into the game.
+Creates a netherrack environment around the casting 生物. Leaving the duration on 0 ticks will cause the blocks to stay in their new fake form until manual block updates are provided or players relog into the game.
 
 ```yaml
 - effect:blockmask{m=netherrack;r=5} @self ~onTimer:1200

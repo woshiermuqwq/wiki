@@ -1,4 +1,4 @@
-## 粒子：火焰
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FLAME.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=flame}
 ```
+
+
+
+

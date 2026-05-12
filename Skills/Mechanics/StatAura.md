@@ -1,5 +1,5 @@
 ## 描述
-Applies an [光环] to the 目标 that 施加 a specific [stat] to them.  
+Applies an [光环] to the 目标 that applies a specific [stat] to them.  
 The buff received is multiplied by the amount of stacks the 光环 has
 
 
@@ -10,7 +10,7 @@ The buff received is multiplied by the amount of stacks the 光环 has
 | type      | t, modifier, mod, m | The [stat modifier] to use         | ADDITIVE<!--type:StatModifier-->|
 | value     | val, v    | The value to use for the stat                                        | 0.0     |
 
-> 此技能继承[光环] 技能
+> This 技能 继承 [光环] 技能
 
 
 ## 示例

@@ -1,4 +1,4 @@
-## 粒子：灵魂
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SOUL.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=soul}
 ```
+
+
+
+

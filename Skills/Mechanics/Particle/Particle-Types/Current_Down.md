@@ -1,4 +1,4 @@
-## 粒子：下降水流
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/CURRENT_DOWN.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] currentdown
+
+

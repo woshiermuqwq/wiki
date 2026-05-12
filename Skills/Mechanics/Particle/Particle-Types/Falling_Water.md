@@ -1,4 +1,4 @@
-## 粒子：掉落水
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FALLING_WATER.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] fallingwater
+
+

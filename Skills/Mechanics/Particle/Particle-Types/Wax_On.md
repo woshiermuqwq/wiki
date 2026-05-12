@@ -1,4 +1,4 @@
-## 粒子：上蜡
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/WAX_ON.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=wax_on}
 ```
+
+
+
+

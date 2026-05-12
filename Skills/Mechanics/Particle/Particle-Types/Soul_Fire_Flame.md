@@ -1,4 +1,4 @@
-## 粒子：灵魂火火焰
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SOUL_FIRE_FLAME.gif)
 
 
@@ -18,3 +18,5 @@
 - [x] soulfireflame
 - [x] soulfire
 - [x] soulflame
+
+

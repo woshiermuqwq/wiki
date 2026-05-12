@@ -1,4 +1,4 @@
-## 粒子：发光鱿鱼墨
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/GLOW_SQUID_INK.gif)
 
 
@@ -18,3 +18,5 @@
 - [x] glowingink
 - [x] glowink
 - [x] glowsquid
+
+

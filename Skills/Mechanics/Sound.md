@@ -1,13 +1,13 @@
 ## 描述
-Plays a sound from either the vanilla game or a resource pack at the targeted entity or location. An extensive list of sounds can be found [here](https://misode.github.io/sounds/). Using multiple sounds stacked together can give the impression of an entirely new sound.
+Plays a sound from either the vanilla game or a resource pack at 目标实体 or location. An extensive list of sounds can be found [here](https://misode.github.io/sounds/). Using multiple sounds stacked together can give the impression of an entirely new sound.
 
 
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| sound     | s         | 要播放的音效                             | entity.zombie.attack_iron_door<!--type:Sound-->|
-| 俯仰角(pitch)     | p         | 音效的音高. Can be between 0.01 and 2.0                  | 1.0     |
-| volume    | v         | 音效的音量.                                             | 1.0     |
+| sound     | s         | The sound to play                             | entity.zombie.attack_iron_door<!--type:Sound-->|
+| 俯仰角(pitch)     | p         | The 俯仰角(pitch) of the sound. Can be between 0.01 and 2.0                  | 1.0     |
+| volume    | v         | The volume of the sound.                                             | 1.0     |
 | 半径    | r         | The 半径 in which the sound will be heard                      | `volume`*16 |
 | soundcategory | category, sc | The category at which the sound is played, useful for resourcepacks | MASTER<!--type:SoundCategory-->|
 | audience  |           | The [audience] of the effect                                         | world<!--type:Audience--> |
@@ -30,7 +30,7 @@ EndermanAttack:
   - sound{s=entity.enderman.scream} @self
 ```
 ##
-The below example 播放 a sound from your resource pack. A good guide on adding custom sounds can be found [here](https://mcmodels.net/guides/4-sounds).
+The below example plays a sound from your resource pack. A good guide on adding custom sounds can be found [here](https://mcmodels.net/guides/4-sounds).
 ```yaml
 BossSoundEffect:
   Skills:

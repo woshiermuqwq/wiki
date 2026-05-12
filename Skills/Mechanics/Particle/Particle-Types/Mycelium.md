@@ -1,4 +1,4 @@
-## 粒子：菌丝
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/MYCELIUM.gif)
 
 
@@ -19,5 +19,7 @@
 - [x] townaura
 
 
-> 此粒子在 1.20.5 之前的版本中有不同的名称  
+> 此粒子在 1.20.5 之前的版本中具有不同的名称  
 > - [x] town_aura
+
+

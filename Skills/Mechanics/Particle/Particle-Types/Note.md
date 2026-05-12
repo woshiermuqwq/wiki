@@ -1,4 +1,4 @@
-## 粒子：音符
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/NOTE.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=note}
 ```
+
+
+
+

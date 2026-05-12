@@ -1,4 +1,4 @@
-## 粒子：悬浮深度
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SUSPENDED_DEPTH.gif)
 
 
@@ -17,3 +17,5 @@
 ## Aliases
 - [x] underwater
 - [x] depthsuspend
+
+

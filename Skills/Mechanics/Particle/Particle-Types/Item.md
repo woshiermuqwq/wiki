@@ -1,12 +1,12 @@
-## 粒子：物品
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/ITEM.gif)
 
 
 ## Attributes
 | Attribute | Aliases   | Description                                                          | Default |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| material | m | The material the itemstack particle will be based on | STONE |
-> This particle has a [Itemstack](/Skills/Mechanics/Particle/Particle-Types#itemstack) Datatype, 并继承其所有属性
+| material | m | 物品堆粒子所基于的材料 | STONE |
+> 此粒子具有 [Itemstack](/Skills/Mechanics/Particle/Particle-Types#itemstack) 数据类型，并继承其所有属性
 
 
 
@@ -23,5 +23,7 @@
 - [x] itemcrack
 
 
-> 此粒子在 1.20.5 之前的版本中有不同的名称  
+> 此粒子在 1.20.5 之前的版本中具有不同的名称  
 > - [x] item_crack
+
+

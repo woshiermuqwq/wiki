@@ -1,4 +1,4 @@
-## 粒子：方块粉尘
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/BLOCK_DUST.gif)
 
 
@@ -17,3 +17,5 @@
 ## Aliases
 - [x] dust
 - [x] blockdust
+
+

@@ -1,4 +1,4 @@
-## 粒子：飞溅
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SPLASH.gif)
 
 
@@ -18,5 +18,7 @@
 - [x] water_splash
 
 
-> 此粒子在 1.20.5 之前的版本中有不同的名称  
+> 此粒子在 1.20.5 之前的版本中具有不同的名称  
 > - [x] water_splash
+
+

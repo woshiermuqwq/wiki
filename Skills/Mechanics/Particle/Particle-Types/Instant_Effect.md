@@ -1,4 +1,4 @@
-## 粒子：即时效果
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/INSTANT_EFFECT.gif)
 
 
@@ -19,5 +19,7 @@
 - [x] instant_spell
 
 
-> 此粒子在 1.20.5 之前的版本中有不同的名称  
+> 此粒子在 1.20.5 之前的版本中具有不同的名称  
 > - [x] spell_instant
+
+

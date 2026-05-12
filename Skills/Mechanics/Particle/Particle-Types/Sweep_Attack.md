@@ -1,4 +1,4 @@
-## 粒子：横扫攻击
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SWEEP_ATTACK.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] sweepattack
+
+

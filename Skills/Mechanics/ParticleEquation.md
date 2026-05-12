@@ -13,7 +13,7 @@ Generates a 粒子 effect based on an equation.
 | precision |           | The distance between individual 粒子                            | 1       |
 | tolerance |           | Tolerance for floating points errors                                 | 0.1     |
 | variables |           | A map of variables for the equation expression, like x/y/z are, separated by `;`<br>for example, `variables="h=1;t=2"` |  |
-> 此技能继承[粒子](/skills/技能/粒子) 技能
+> This 技能 继承 [粒子](/skills/技能/粒子) 技能
 
 
 ## 别名

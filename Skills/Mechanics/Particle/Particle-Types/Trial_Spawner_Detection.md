@@ -1,4 +1,4 @@
-## 粒子：试炼刷怪笼检测
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/TRIAL_SPAWNER_DETECTION.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=trial_spawner_detection}
 ```
+
+
+
+

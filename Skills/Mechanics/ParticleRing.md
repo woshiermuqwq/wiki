@@ -1,5 +1,5 @@
 ## 描述
-Creates a ring of 粒子 around the targeted entity or location.
+Creates a ring of 粒子 around 目标实体 or location.
 
 
 ## 属性
@@ -7,7 +7,7 @@ Creates a ring of 粒子 around the targeted entity or location.
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | points    | pts       | The number of points to draw representing the ring                   | 8       |
 | 半径    | r         | The 半径 of the ring around the 目标                             | 10      |
-> 此技能继承[粒子](/skills/技能/粒子) 技能
+> This 技能 继承 [粒子](/skills/技能/粒子) 技能
 >> The 粒子 are generated “per point” in this 技能, so keeping `amount` low is recommended.
 
 

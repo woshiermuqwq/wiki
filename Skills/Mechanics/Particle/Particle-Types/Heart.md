@@ -1,4 +1,4 @@
-## 粒子：爱心
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/HEART.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=heart}
 ```
+
+
+
+

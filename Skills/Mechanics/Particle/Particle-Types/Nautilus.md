@@ -1,4 +1,4 @@
-## 粒子：鹦鹉螺
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/NAUTILUS.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=nautilus}
 ```
+
+
+
+

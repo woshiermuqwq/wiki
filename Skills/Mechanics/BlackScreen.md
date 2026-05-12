@@ -3,7 +3,7 @@ Causes 玩家的 screen to black out.
 
 
 ## 属性
-> 此技能继承[光环](/Skills/技能/光环) 技能
+> This 技能 继承 [光环](/Skills/技能/光环) 技能
 >> - The `auraname` attribute is **set** at `#blackScreen`
 >> - The `maxStacks` attribute is **set** at `1`  
 >> - The `refreshDuration` attribute is **set** at `true`  
@@ -11,7 +11,7 @@ Causes 玩家的 screen to black out.
 
 
 ## 示例
-Blinds players when the 生物 传送
+Blinds players when the 生物 teleports
 ```yaml
 BlackScreen:
   Skills:

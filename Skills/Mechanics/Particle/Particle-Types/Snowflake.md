@@ -1,4 +1,4 @@
-## 粒子：雪花
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SNOWFLAKE.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=snowflake}
 ```
+
+
+
+

@@ -1,4 +1,4 @@
-## 粒子：虫蚀
+## Particle
 ![img](https://placehold.co/150x150?text=Missing+Image)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=infested}
 ```
+
+
+
+

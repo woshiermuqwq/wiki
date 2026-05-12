@@ -1,19 +1,19 @@
 ## 描述
-Crates an [光环] that 使 the holding 生物 to follow a path.  
+Crates an [光环] that causes the holding 生物 to follow a path.  
 This 技能 is also an [光环].
 
 
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| path      | p         | A list of either coordinates in the format `(x,y,z)` or [targeters]  |         |
-| onGoalSkill| onGoal, og, then | The [metaskill] to execute when the last point is reached    |<!--type:Metaskill-->|
+| path      | p         | A list of either coordinates 格式为 `(x,y,z)` or [targeters]  |         |
+| onGoalSkill| onGoal, og, then | The [metaskill] to 执行 when the last point is reached    |<!--type:Metaskill-->|
 | tolerance |           | The minimum distance the 生物 must be from each point in order to having "reached" it                                                                                   | 2       |
 | speed     | s         | The speed multiplier of the movement                                 | 1       |
-| duration  | ticks, t, d, time, t | The maximum duration of the 技能的所有属性。 Unless set, it's the maximum possible value for an integer  |         |
+| duration  | ticks, t, d, time, t | The maximum duration of the 技能 Unless set, it's the maximum possible value for an integer  |         |
 | timeoutdistance | td, maxdistance, md | If set, if the distance between the 生物 and the next point is greater than this value, it will be immediately teleported to the next point                   |         |
 | timeouttime | tt      | If set, if the 生物 has not reached the next point in less than this allotted time, it will be teleported to the next point                                                  |         |
-> 此技能继承[光环] 技能  
+> This 技能 继承 [光环] 技能  
 >> - The `auraname` attribute is **set** at `#pathing`
 >> - The `duration` attribute is **defaulted** at `2147483647`
 >> - The `charges` attribute is **set** at `1`  

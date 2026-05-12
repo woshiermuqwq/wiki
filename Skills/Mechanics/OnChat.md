@@ -8,12 +8,12 @@ Applies an [光环] on the 目标 player that 触发 a [metaskill] when they typ
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| onChatSkill | onchat, oc, then  | The [metaskill] to execute when the player chats           |<!--type:Metaskill-->|
+| onChatSkill | onchat, oc, then  | The [metaskill] to 执行 when the player chats           |<!--type:Metaskill-->|
 
-> 此技能继承[光环] 技能
+> This 技能 继承 [光环] 技能
 
 ## onChatSkill Attribute
-When the metaskill is execute, a new [skill-scoped variable] containing what has been said in chat is set, called `input`.  
+When the metaskill is 执行, a new [skill-scoped variable] containing what has been said in chat is set, called `input`.  
 Its value can then be fetched via the `<skill.var.input>` placeholder.
 
 

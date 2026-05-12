@@ -1,4 +1,4 @@
-## 粒子：鱿鱼墨
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SQUID_INK.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] squidink
+
+

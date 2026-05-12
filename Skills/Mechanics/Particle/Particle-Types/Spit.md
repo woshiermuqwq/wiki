@@ -1,4 +1,4 @@
-## 粒子：吐沫
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SPIT.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=spit}
 ```
+
+
+
+

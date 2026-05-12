@@ -1,4 +1,4 @@
-## 粒子：闪光
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FLASH.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=flash}
 ```
+
+
+
+

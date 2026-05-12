@@ -14,13 +14,13 @@ Note that the blockwave effect will never actually change any blocks in the worl
 | shape     | s         | The shape of the effect (Sphere/Cube)                                | sphere<!--type:Shape-->|
 | 速度  | v         | The speed of the effect                                              | 0.2     |
 | horizontalvelocity | velocityh, vh | The speed of the effect in the horizontal direction     | 0       |
-| specificvelocities | sv | Whether to make use of the `vx`, `vy` and `vz` attributes          | false   |
+| specificvelocities | sv | 是否 to make use of the `vx`, `vy` and `vz` attributes          | false   |
 | velocityx | vx        | The speed of the effect on the x axis                                | 0       |
 | velocityy | vy        | The speed of the effect on the y axis                                | 0       |
 | velocityz | vz        | The speed of the effect on the z axis                                | 0       |
 | noise     | n         | The noise of the effect                                              | 0       |
-| hidesourceblock | hidesource, hsb, hs  | Whether to hide the source block                    | true    |  
-| ignoreair | ia        | Whether air blocks should be ignored                                 | true    |
+| hidesourceblock | hidesource, hsb, hs  | 是否 to hide the source block                    | true    |  
+| ignoreair | ia        | 是否 air blocks should be ignored                                 | true    |
 
 ### Material Attribute
 If material is left blank, it will use whatever material type it is used on. 

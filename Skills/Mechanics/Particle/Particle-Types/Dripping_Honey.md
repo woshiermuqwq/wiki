@@ -1,4 +1,4 @@
-## 粒子：滴落蜂蜜
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/DRIPPING_HONEY.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] drippinghoney
+
+

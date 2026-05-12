@@ -1,4 +1,4 @@
-## 粒子：滴水石锥滴落水
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/DRIPPING_DRIPSTONE_WATER.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] dropping_dripstone_water
+
+

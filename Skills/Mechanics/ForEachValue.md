@@ -1,5 +1,5 @@
 ## 描述
-Executes the specified metaskill *once and separately* for each value of the specified list/map formatted value. Each metaskill that will be called will have special skill parameters set depending on the iterated value:
+执行 the specified metaskill *once and separately* for each value of the specified list/map formatted value. Each metaskill that will be called will have special skill parameters set depending on the iterated value:
 - For list-formatted inputs
   - `<skill.value>` for the iterated value
   - `<skill.index>` for the index of the value
@@ -14,7 +14,7 @@ Executes the specified metaskill *once and separately* for each value of the spe
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | values    | val, v    | The list or map formatted string to iterate on                       |         |
 
-> 此技能继承[Skill](/skills/技能/skill) 技能
+> This 技能 继承 [Skill](/skills/技能/skill) 技能
 
 
 ## 示例

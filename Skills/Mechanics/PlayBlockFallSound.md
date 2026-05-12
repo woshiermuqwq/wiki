@@ -7,8 +7,8 @@ Plays the 目标 block's falling sound.
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 俯仰角(pitch)     | p         | 音效的音高. Can be between 0.01 and 2.0                  | 1.0     |
-| volume    | v         | 音效的音量.                                             | 1.0     |
+| 俯仰角(pitch)     | p         | The 俯仰角(pitch) of the sound. Can be between 0.01 and 2.0                  | 1.0     |
+| volume    | v         | The volume of the sound.                                             | 1.0     |
 
 ### Volume Attribute
 The “volume” attribute doesn't define the percentage of the loudness of the sound, but rather determines how far (measured in blocks) the sound can be heard at maximum volume.  

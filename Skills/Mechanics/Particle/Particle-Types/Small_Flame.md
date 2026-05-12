@@ -1,4 +1,4 @@
-## 粒子：小型火焰
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SMALL_FLAME.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=small_flame}
 ```
+
+
+
+

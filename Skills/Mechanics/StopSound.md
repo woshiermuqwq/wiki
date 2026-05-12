@@ -1,5 +1,5 @@
 ## 描述
-Stops a sound from playing from either the vanilla game or a resource pack for the targeted entity. A good list of sounds can be found [here](https://minecraft.wiki/w/Sounds.json#sound_events). Use the “sound event” column.
+Stops a sound from playing from either the vanilla game or a resource pack for 目标实体. A good list of sounds can be found [here](https://minecraft.wiki/w/Sounds.json#sound_events). Use the “sound event” column.
 
 
 ## 属性

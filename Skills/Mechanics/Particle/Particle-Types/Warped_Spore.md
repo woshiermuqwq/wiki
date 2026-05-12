@@ -1,4 +1,4 @@
-## 粒子：诡异孢子
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/WARPED_SPORE.gif)
 
 
@@ -18,3 +18,5 @@
 - [x] warped_spores
 - [x] warpedspore
 - [x] warpedspores
+
+

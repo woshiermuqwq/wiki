@@ -1,15 +1,15 @@
 ## 描述
-Sets 世界的 time. Depending on the attributes used, the change in time can be absolute or relative to the 目标 player.
+Sets the world's time. Depending on the attributes used, the change in time can be absolute or relative to the 目标 player.
 
-Time 技能s must be synced to function. "sync=true;"
+Time 技能 must be synced to function. "sync=true;"
 
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| mode      | m         | The mode used in the time 技能的所有属性。 Can be ADD/SET/RESET             | ADD<!--type:Time_Mode-->|
+| mode      | m         | The mode used in the time 技能 Can be ADD/SET/RESET             | ADD<!--type:Time_Mode-->|
 | amount    | ticks, t, amt | The amount of ticks by which the time will be changed            | 20      |
-| personal  |           | Sets whether to change the global time or 玩家的 client time   | false   |
-| relative  |           | Sets whether to keep 玩家的 time synchronized to its world time with an offset                                                                                         | true    |
+| personal  |           | Sets 是否 to change the global time or 玩家的 client time   | false   |
+| relative  |           | Sets 是否 to keep 玩家的 time synchronized to its world time with an offset                                                                                         | true    |
 
 #### Mode Attribute
 The different values the mode attribute can be all have different effects

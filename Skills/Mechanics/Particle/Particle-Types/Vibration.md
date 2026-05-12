@@ -1,4 +1,4 @@
-## 粒子：振动
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/VIBRATION.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=vibration}
 ```
+
+
+
+

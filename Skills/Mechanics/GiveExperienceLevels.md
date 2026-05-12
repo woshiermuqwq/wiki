@@ -1,11 +1,11 @@
 ## 描述
-Gives experience levels to the targeted players
+Gives experience levels to 目标玩家
 
 
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| amount    | a         | 要给予的等级数                                         | 0       |
+| amount    | a         | The amount of levels to give                                         | 0       |
 
 
 ## 示例

@@ -1,4 +1,4 @@
-## 粒子：滴落黑曜石泪
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/DRIPPING_OBSIDIAN_TEAR.gif)
 
 
@@ -17,3 +17,5 @@
 ## Aliases
 - [x] dropping_obsidian_tear
 - [x] drippingobsidiantear
+
+

@@ -1,4 +1,4 @@
-## 粒子：鸡蛋破裂
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/EGG_CRACK.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=egg_crack}
 ```
+
+
+
+

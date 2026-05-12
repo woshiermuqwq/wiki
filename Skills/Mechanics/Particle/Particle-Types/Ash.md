@@ -1,4 +1,4 @@
-## 粒子：灰烬
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/ASH.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=ash}
 ```
+
+
+
+

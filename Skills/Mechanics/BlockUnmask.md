@@ -1,5 +1,5 @@
 ## 描述
-The blockunmask effect 用于 revert blockchanges made by the blockmask effect. For instance, this effect 可用于 a high 半径 after a 生物 has died in order to “clean up” the fake block updates sent. However this is not necessary, because the fake block changes created by the blockmask effect will be reverted if a chunk is reloaded for a player (but will only revert for that player).
+The blockunmask effect is used to revert blockchanges made by the blockmask effect. For instance, this effect 可用于 a high 半径 after a 生物 has died in order to “clean up” the fake block updates sent. However this is not necessary, because the fake block changes created by the blockmask effect will be reverted if a chunk is reloaded for a player (but will only revert for that player).
 
 
 ## 属性

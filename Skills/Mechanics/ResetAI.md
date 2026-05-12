@@ -1,5 +1,5 @@
 ## 描述
-Attempts to resets the AI of a casting 生物 to the base type's default.
+Attempts to resets the AI of a casting 生物 to the base type's 默认值：.
 
 
 ## 属性

@@ -1,4 +1,4 @@
-## 粒子：光
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/LIGHT.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=light}
 ```
+
+
+
+

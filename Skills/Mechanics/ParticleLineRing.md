@@ -8,11 +8,11 @@ Creates a particleline ring.
 | distanceBetween | db  | The distance between each point                                      | 1       |
 | startYOffset    | syo, ystartoffset, ys| Offset Y location of the starting point             | 0       |
 | targetYOffset   | tyo, ytargetoffset, yt | Offset Y location of the 目标 point             | 0       |
-| fromOrigin      | fo  | Whether to draw the line from the [@原点] instead                  | false   |
+| fromOrigin      | fo  | 是否 to draw the line from the [@原点] instead                  | false   |
 | ringpoints | rp       | The number of points in the line ring                                | 16      |
 | ringradius | rr       | The 半径 of the line ring                                          | 0.5     |
 | maxdistance     | md  | The maximum distance the line can reach                              | 256     |
-> 此技能继承[粒子](/skills/技能/粒子) 技能
+> This 技能 继承 [粒子](/skills/技能/粒子) 技能
 
 
 ## 示例

@@ -16,7 +16,7 @@ Creates an orbiting Atom effect at the location.
 | ticks     | t         | The amount of ticks during which the atom will persist               | 1       |
 | interval  | in        | The interval of the updates of the atom                              | 10      |
 | 速度  | v         | The 速度 of the atom                                             | 80      |
-> 此技能继承[粒子](/skills/技能/粒子) 技能
+> This 技能 继承 [粒子](/skills/技能/粒子) 技能
 
 
 ## 示例

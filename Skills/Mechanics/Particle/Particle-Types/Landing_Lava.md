@@ -1,4 +1,4 @@
-## 粒子：熔岩着陆
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/LANDING_LAVA.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] landinglava
+
+

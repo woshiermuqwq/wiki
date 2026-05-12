@@ -1,4 +1,4 @@
-## 粒子：暴击
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/CRIT.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=crit}
 ```
+
+
+
+

@@ -1,6 +1,6 @@
 ## 描述
 Plays the effect of a totem resurrecting a player with options to specify CustomModelData to use from resource packs.  
-> You can't disable the sound that 播放
+> You can't disable the sound that plays
 
 
 ## 属性

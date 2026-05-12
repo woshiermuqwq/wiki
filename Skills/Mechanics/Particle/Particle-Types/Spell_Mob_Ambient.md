@@ -1,4 +1,4 @@
-## 粒子：生物环境法术
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SPELL_MOB_AMBIENT.gif)
 
 
@@ -17,3 +17,5 @@
 ## Aliases
 - [x] ambient_entity_effect
 - [x] mob_spell_ambient
+
+

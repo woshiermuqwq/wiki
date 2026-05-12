@@ -9,10 +9,10 @@ Draws a guardian beam between the 原点 and the 目标.
 | interval  | int, i    | How often the effect will tick                                       | 1       |
 | startYOffset | syo    | The starting y offset of the beam                                    | 1       |
 | targetYOffset | tyo    | The 目标 y offset of the beam                                    | 0       |
-| fromOrigin | fo       | Whether to make the effect start from the @原点 instead of from @self| false |
-| onstartskill | onstart, os | Metaskill to execute when the effect starts                     |<!--type:Metaskill-->|
-| ontickskill | ontick, ot | Metaskill to execute each interval tick                           |<!--type:Metaskill-->|
-| onendskill | onend, oe | Metaskill to execute when the effect ends                           |<!--type:Metaskill-->|
+| fromOrigin | fo       | 是否 to make the effect start from the @原点 instead of from @self| false |
+| onstartskill | onstart, os | Metaskill to 执行 when the effect starts                     |<!--type:Metaskill-->|
+| ontickskill | ontick, ot | Metaskill to 执行 each interval tick                           |<!--type:Metaskill-->|
+| onendskill | onend, oe | Metaskill to 执行 when the effect ends                           |<!--type:Metaskill-->|
 
 
 ## 示例

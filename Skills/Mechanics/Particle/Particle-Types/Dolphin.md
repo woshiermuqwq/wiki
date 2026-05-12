@@ -1,4 +1,4 @@
-## 粒子：海豚
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/DOLPHIN.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=dolphin}
 ```
+
+
+
+

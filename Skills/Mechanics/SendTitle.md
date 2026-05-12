@@ -1,6 +1,6 @@
 ## 描述
 Displays a "title" and/or "subtitle" message to all targeted players.
-如果目标不是玩家则无效。
+Does nothing if the 目标 is not a player.
 
 
 ## 属性

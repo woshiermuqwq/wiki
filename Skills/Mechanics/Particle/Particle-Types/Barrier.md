@@ -1,4 +1,4 @@
-## 粒子：屏障
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/BARRIER.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=barrier}
 ```
+
+
+
+

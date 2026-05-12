@@ -1,4 +1,4 @@
-## 粒子：试炼预兆
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/TRIAL_OMEN.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=trial_omen}
 ```
+
+
+
+

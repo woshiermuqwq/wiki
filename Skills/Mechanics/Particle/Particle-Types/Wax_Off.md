@@ -1,4 +1,4 @@
-## 粒子：除蜡
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/WAX_OFF.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=wax_off}
 ```
+
+
+
+

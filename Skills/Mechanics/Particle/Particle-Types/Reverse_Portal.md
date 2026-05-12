@@ -1,4 +1,4 @@
-## 粒子：反向传送门
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/REVERSE_PORTAL.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=reverse_portal}
 ```
+
+
+
+

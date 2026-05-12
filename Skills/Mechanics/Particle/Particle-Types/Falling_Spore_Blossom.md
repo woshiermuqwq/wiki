@@ -1,4 +1,4 @@
-## 粒子：掉落孢子花
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FALLING_SPORE_BLOSSOM.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=falling_spore_blossom}
 ```
+
+
+
+

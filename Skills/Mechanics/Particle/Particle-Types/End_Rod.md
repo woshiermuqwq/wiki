@@ -1,4 +1,4 @@
-## 粒子：末地烛
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/END_ROD.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] endrod
+
+

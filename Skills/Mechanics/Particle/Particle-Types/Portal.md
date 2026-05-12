@@ -1,4 +1,4 @@
-## 粒子：传送门
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/PORTAL.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=portal}
 ```
+
+
+
+

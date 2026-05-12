@@ -1,4 +1,4 @@
-## 粒子：尖啸
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SHRIEK.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=shriek}
 ```
+
+
+
+

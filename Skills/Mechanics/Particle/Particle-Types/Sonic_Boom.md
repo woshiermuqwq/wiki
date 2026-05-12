@@ -1,4 +1,4 @@
-## 粒子：音爆
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SONIC_BOOM.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=sonic_boom}
 ```
+
+
+
+

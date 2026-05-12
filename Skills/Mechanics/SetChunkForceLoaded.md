@@ -5,7 +5,7 @@ Sets the force-loaded status of a location's chunk
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| loaded    | l         | Whether the chunk should be force loaded                             | true    |
+| loaded    | l         | 是否 the chunk should be force loaded                             | true    |
 
 
 ## 示例

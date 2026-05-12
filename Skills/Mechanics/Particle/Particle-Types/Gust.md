@@ -1,4 +1,4 @@
-## 粒子：阵风
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/GUST.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=gust}
 ```
+
+
+
+

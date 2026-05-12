@@ -1,4 +1,4 @@
-## 粒子：掉落黑曜石泪
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FALLING_OBSIDIAN_TEAR.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] fallingobsidiantear
+
+

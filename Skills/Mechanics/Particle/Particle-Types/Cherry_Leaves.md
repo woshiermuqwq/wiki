@@ -1,4 +1,4 @@
-## 粒子：樱花树叶
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/CHERRY_LEAVES.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=cherry_leaves}
 ```
+
+
+
+

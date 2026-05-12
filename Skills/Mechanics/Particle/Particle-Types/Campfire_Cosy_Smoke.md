@@ -1,4 +1,4 @@
-## 粒子：营火舒适烟
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/CAMPFIRE_COSY_SMOKE.gif)
 
 
@@ -19,3 +19,5 @@
 - [x] campfire_cozy_smoke
 - [x] campfire_cozy
 - [x] campfire
+
+

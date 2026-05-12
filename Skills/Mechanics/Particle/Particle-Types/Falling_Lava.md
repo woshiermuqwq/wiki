@@ -1,4 +1,4 @@
-## 粒子：掉落熔岩
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FALLING_LAVA.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] fallinglava
+
+

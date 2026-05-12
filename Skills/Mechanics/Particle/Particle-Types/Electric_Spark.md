@@ -1,4 +1,4 @@
-## 粒子：电火花
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/ELECTRIC_SPARK.gif)
 
 
@@ -17,3 +17,5 @@
 ## Aliases
 - [x] electricspark
 - [x] spark
+
+

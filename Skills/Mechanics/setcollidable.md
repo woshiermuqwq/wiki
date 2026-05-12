@@ -1,0 +1,33 @@
+## 描述
+Sets if the 目标 of the 技能 should have a collidable hitbox or not.
+<br>The result is equivalent to the [Collidable](/生物/Options#collidable) Option.
+
+
+## 属性
+| 属性 | 缩写   | 描述                                                          | 默认值 |
+|-----------|-----------|----------------------------------------------------------------------|---------|
+| collidable | state, value, c | Sets if the 生物 is collidable or not                          | false   |
+
+
+## 示例
+In this example, the 生物 will permanently become not collidable once it receives a source of damage.
+```yaml
+ExampleMob:
+  Type: ZOMBIE
+  Skills:
+  - setcollidable{c=false} @self ~onDamaged
+```
+##
+In this example, the 生物 will apply an 光环 to itself. For the duration of the 光环, the 生物 will be non collidable.
+```yaml
+ExampleMob:
+  Type: ZOMBIE
+  Skills:
+  - aura{d=100;rd=true;ms=1;
+    onStart=[
+    - setcollidable{c=false} @self
+    ];
+    onEnd=[
+    - setcollidable{c=true} @self
+    ]} @self ~onDamaged
+```

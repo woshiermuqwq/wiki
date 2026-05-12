@@ -1,4 +1,4 @@
-## 粒子：刮擦
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SCRAPE.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=scrape}
 ```
+
+
+
+

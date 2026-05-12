@@ -1,4 +1,4 @@
-## 粒子：气泡柱上升
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/BUBBLE_COLUMN_UP.gif)
 
 
@@ -17,3 +17,5 @@
 ## Aliases
 - [x] bubblecolumn
 - [x] bubble_column
+
+

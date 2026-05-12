@@ -1,4 +1,4 @@
-## 粒子：粉尘羽
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/DUST_PLUME.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=dust_plume}
 ```
+
+
+
+

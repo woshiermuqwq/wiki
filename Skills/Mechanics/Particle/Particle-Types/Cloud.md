@@ -1,4 +1,4 @@
-## 粒子：云
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/CLOUD.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=cloud}
 ```
+
+
+
+

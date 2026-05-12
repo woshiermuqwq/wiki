@@ -1,4 +1,4 @@
-## 粒子：烟花
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FIREWORK.gif)
 
 
@@ -20,5 +20,7 @@
 - [x] fireworksspark
 
 
-> 此粒子在 1.20.5 之前的版本中有不同的名称  
+> 此粒子在 1.20.5 之前的版本中具有不同的名称  
 > - [x] fireworks_spark
+
+

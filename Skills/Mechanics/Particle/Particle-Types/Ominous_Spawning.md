@@ -1,4 +1,4 @@
-## 粒子：不祥生成
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/OMINOUS_SPAWNING.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=ominous_spawning}
 ```
+
+
+
+

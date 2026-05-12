@@ -1,4 +1,4 @@
-## 粒子：营火信号烟
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/CAMPFIRE_SIGNAL_SMOKE.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] campfire_signal
+
+

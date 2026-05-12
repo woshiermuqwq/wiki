@@ -1,4 +1,4 @@
-## 粒子：蜂蜜着陆
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/LANDING_HONEY.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] landinghoney
+
+

@@ -1,4 +1,4 @@
-## 粒子：掉落花蜜
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FALLING_NECTAR.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] fallingnectar
+
+

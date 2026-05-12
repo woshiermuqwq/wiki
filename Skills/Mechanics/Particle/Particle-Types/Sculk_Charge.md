@@ -1,4 +1,4 @@
-## 粒子：幽匿充能
+## Particle
 ![img](https://placehold.co/150x150?text=Missing+Image)
 
 
@@ -14,3 +14,7 @@
   Skills:
   - particle{p=sculk_charge;rotation=0}
 ```
+
+
+
+

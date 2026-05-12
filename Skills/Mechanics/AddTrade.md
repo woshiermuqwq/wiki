@@ -1,19 +1,19 @@
 ## 描述
 Changes the trades of a villager.  
-The villager 将变为 a nitwit if it doesn't have any profession assigned when using this 技能的所有属性。
+The villager will become a nitwit if it doesn't have any profession assigned when using this 技能
 
 
 ## 属性
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | action    | mode, m   | The action to perform. Can be `ADD`, `REMOVE`,`REPLACE`              | ADD<!--type:AddTrade_Action--> |
-| slot      | s , index | The slot to be selected for the action. Slot starts at 0, so if a villager has 3 trades, the middle trade would be slot 1                                                       | 0       |
+| 栏位      | s , index | The 栏位 to be selected for the action. 栏位 starts at 0, so if a villager has 3 trades, the middle trade would be 栏位 1                                                       | 0       |
 | ingredient| item, ingredient1, item1, i, i1 | The first ingredient                           | STONE<!--type:Item-->|
 |ingredient2| item2, i2 | The second ingredient                                                |         |
 | result    | r         | The result item of the trade                                         | STONE<!--type:Item-->|
 | maxUses   | uses, u   | The uses of the trade                                                |<Max Int>|
-| experienceReward | expReward, exp, dropExp | If the trade should drop experience             | false   |
-| villagerExp | villExp, vexp | 要给予的经验量 to the villager upon successful trade            | 0   |
+| experienceReward | expReward, exp, dropExp | If the trade should 掉落 experience             | false   |
+| villagerExp | villExp, vexp | The amount of experience to give to the villager upon successful trade            | 0   |
 | priceMultiplier|multiplier|The multiplier for the price when the player has made the villager angry |0 |
 | demand    | d         | The demand of the trade                                              | 1       |
 | specialPrice | special| The special price for when the villager is friendly to the player (player reputation or hero of the village effect)                                                      | 1       |

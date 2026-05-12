@@ -7,7 +7,7 @@ Modifies the 仇恨 level that the 施法者 holds with the 目标 entities
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | mode      | m         | How the 仇恨 should be assigned                                    | taunt<!--type:ThreatMode-->|
 
-> 此技能继承[仇恨](/skills/技能/仇恨) 技能
+> This 技能 继承 [仇恨](/skills/技能/仇恨) 技能
 
 
 ## 示例

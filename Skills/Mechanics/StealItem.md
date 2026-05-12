@@ -7,10 +7,10 @@ Steals an item from the 目标 and puts it in 生物的 hand
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | amount    | a         | The amount to steal                                                  | 1       |
 | dropchance | dc | Sets the chance for the stolen item to be dropped upon death               | 0.0     |
-| strict    | exact, e  | Whether the matcher should more strictly match the 目标 item       | false   |
+| strict    | exact, e  | 是否 the matcher should more strictly match the 目标 item       | false   |
 | types     | type, t, material, mat, m, item, i | The items to match. Can be a list           | DIRT    |
-| vanillaonly | vanilla | Whether the matched item can only be a vanilla one                   | false   |
-| onStealSkill | onsteal, then | The Metaskill to execute once an item is successfully stolen  |<!--type:Metaskill-->|
+| vanillaonly | vanilla | 是否 the matched item can only be a vanilla one                   | false   |
+| onStealSkill | onsteal, then | The Metaskill to 执行 once an item is successfully stolen  |<!--type:Metaskill-->|
 
 ## 示例
 ```yaml

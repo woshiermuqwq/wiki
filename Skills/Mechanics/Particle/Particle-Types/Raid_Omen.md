@@ -1,4 +1,4 @@
-## 粒子：袭击预兆
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/RAID_OMEN.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=raid_omen}
 ```
+
+
+
+

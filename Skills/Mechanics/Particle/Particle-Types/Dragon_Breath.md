@@ -1,4 +1,4 @@
-## 粒子：龙息
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/DRAGON_BREATH.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] dragonbreath
+
+

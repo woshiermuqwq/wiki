@@ -1,5 +1,5 @@
 ## 描述
-Activates a MythicMobs [spawner](Spawners), causing it to spawn 生物. Will not
+Activates a Mythic生物 [spawner](Spawners), causing it to spawn 生物. Will not
 override any 条件 or options set on the spawner.
 
 >Best used in conjunction with setting the `useTimer` attribute on
@@ -19,14 +19,14 @@ This would activate the spawner named "BossAdd"
     - activatespawner{spawner=BossAdd}
 ```
 ##
-此示例将activate all spawners in the group "Castle"
+此示例将 activate all spawners in the group "Castle"
 ```yaml
     Skills:
     - activatespawner{spawner=g:Castle}
 ```
 ##
-此示例将activate all spawners starting with
-"DungeonBoss1Spawner" (i.e. DungeonBoss1Spawner1, DungeonBoss1Spawner2,
+此示例将 activate all spawners starting with
+"DungeonBoss1Spawner" (即 DungeonBoss1Spawner1, DungeonBoss1Spawner2,
 etc)
 ```yaml
     Skills:

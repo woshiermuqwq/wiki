@@ -1,4 +1,4 @@
-## 粒子：绯红孢子
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/CRIMSON_SPORE.gif)
 
 
@@ -18,3 +18,5 @@
 - [x] crimson_spores
 - [x] crimsonspore
 - [x] crimsonspores
+
+

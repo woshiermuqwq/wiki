@@ -1,13 +1,13 @@
-## 粒子：粉尘
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/DUST.gif)
 
 
 ## Attributes
 | Attribute | Aliases   | Description                                                          | Default |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| color | c | The color of the particle | #FF0000 |
-| size |  | The size of the particle | 1 |
-> This particle has a [Dustoptions](/Skills/Mechanics/Particle/Particle-Types#dustoptions) Datatype, 并继承其所有属性
+| color | c | 粒子的颜色 | #FF0000 |
+| size |  | 粒子的大小 | 1 |
+> 此粒子具有 [Dustoptions](/Skills/Mechanics/Particle/Particle-Types#dustoptions) 数据类型，并继承其所有属性
 
 
 
@@ -24,5 +24,7 @@
 - [x] redstone
 
 
-> 此粒子在 1.20.5 之前的版本中有不同的名称  
+> 此粒子在 1.20.5 之前的版本中具有不同的名称  
 > - [x] redstone
+
+

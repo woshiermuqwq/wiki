@@ -1,5 +1,5 @@
 ## 描述
-Sets the base value of the targeted entity's [attribute][]
+Sets the base value of 目标实体's [attribute][]
 
 
 ## 属性

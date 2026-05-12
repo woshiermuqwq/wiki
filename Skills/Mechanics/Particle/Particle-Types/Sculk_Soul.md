@@ -1,4 +1,4 @@
-## 粒子：幽匿灵魂
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SCULK_SOUL.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=sculk_soul}
 ```
+
+
+
+

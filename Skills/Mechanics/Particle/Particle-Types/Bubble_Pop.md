@@ -1,4 +1,4 @@
-## 粒子：气泡破裂
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/BUBBLE_POP.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] bubblepop
+
+

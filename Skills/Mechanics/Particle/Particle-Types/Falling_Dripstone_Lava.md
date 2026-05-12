@@ -1,4 +1,4 @@
-## 粒子：滴水石锥掉落熔岩
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/FALLING_DRIPSTONE_LAVA.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=falling_dripstone_lava}
 ```
+
+
+
+

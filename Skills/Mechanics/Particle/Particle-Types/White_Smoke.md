@@ -1,4 +1,4 @@
-## 粒子：白色烟
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/WHITE_SMOKE.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=white_smoke}
 ```
+
+
+
+

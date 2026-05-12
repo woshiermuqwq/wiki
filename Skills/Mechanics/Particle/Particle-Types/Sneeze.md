@@ -1,4 +1,4 @@
-## 粒子：喷嚏
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SNEEZE.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=sneeze}
 ```
+
+
+
+

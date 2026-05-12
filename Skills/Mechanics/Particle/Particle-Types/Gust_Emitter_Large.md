@@ -1,4 +1,4 @@
-## 粒子：大型阵风发射器
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/GUST_EMITTER_LARGE.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] large_gust
+
+

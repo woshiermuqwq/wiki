@@ -1,4 +1,4 @@
-## 粒子：小型阵风
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/SMALL_GUST.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] gust_small
+
+

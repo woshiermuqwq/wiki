@@ -1,0 +1,39 @@
+## 描述
+Modifies the 计分板-objective value of a fake player name.  
+Can also be used to modify a specific players score.
+
+A list of possible operations for the action-syntax:
+
+-   `SET`
+-   `ADD`
+-   `SUBTRACT`
+-   `MULTIPLY`
+-   `DIVIDE`
+-   `MOD` [^mod]
+
+
+## 属性
+| 属性 | 缩写   | 描述                                                          | 默认值 |
+|-----------|-----------|----------------------------------------------------------------------|---------|
+| objective   | obj, o  | Specifies the 计分板 objective to be changed. If the objective doesn't exist it will automatically be created by the 技能                                               |         |
+| action      | a       | The operation to perform                                             | SET<!--type:ScoreAction-->|
+| value       | v       | The value to perform the operation with                              | 0       |
+| name, entry | n, e    | The name of the player/fake player                                   | dummy   |
+
+
+## 示例
+此示例将 add one to the score of a player
+named "Bob" for the objective "TestScore", even if that player doesn't
+exist on the server.  
+It will create the objective if it does not currently exist.
+```yaml
+  Skills:
+  - modifyscore{o=TestScore;e=Bob;a=add;v=1} ~onInteract 
+```
+![](https://i.imgur.com/0HKvAUM.png)
+
+[^mod]: shorthand for "Modular Division"
+
+
+<!--TAGS-->
+<!--tag:Scoreboard-->

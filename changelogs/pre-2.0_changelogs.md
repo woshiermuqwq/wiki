@@ -67,9 +67,9 @@ ARMOR\_STAND options:
 #### Bug Fixes/Other
 
 -   Particle effects can now be seen from much further away on 1.8
--   Fixed some errors with AI on certain Bukkit versions
--   Fixed a bunch of assorted NPE errors
--   Fixed various other minor bugs
+-   修复了 some 错误s with AI on certain Bukkit versions
+-   修复了 a bunch of assorted NPE 错误s
+-   修复了 various other minor 漏洞s
 
 ### v1.1.4
 
@@ -101,9 +101,9 @@ will still work.**
 
 #### Bug Fixes/Other
 
--   Fixed a bunch of assorted NPE errors
--   Fixed ThreatTable error when target goes to a different world
--   Fixed various other minor bugs
+-   修复了 a bunch of assorted NPE 错误s
+-   修复了 ThreatTable 错误 when target goes to a different world
+-   修复了 various other minor 漏洞s
 
 ### v1.1.2
 
@@ -116,12 +116,12 @@ such as BABY\_ZOMBIE will still work.&lt;&lt;/color&gt;&gt;**
 
 #### Bug Fixes/Other
 
--   Fixed a critical bug where mob timer abilities would sometimes
+-   修复了 a critical 漏洞 where mob timer abilities would sometimes
     continue firing after death or despawning
--   Fixed a console error involving mobs that did not have equipment
--   Fixed a console bug thrown by mobs without certain options defined
--   Fixed an NPE error on mob spawn for mobs without Skills
--   Fixed an NPE error on mob damage for mobs without DamageModifiers
+-   修复了 a console 错误 involving mobs that did not have equipment
+-   修复了 a console 漏洞 thrown by mobs without certain options defined
+-   修复了 an NPE 错误 on mob spawn for mobs without Skills
+-   修复了 an NPE 错误 on mob damage for mobs without DamageModifiers
 
 ### v1.1.1
 
@@ -142,11 +142,11 @@ such as BABY\_ZOMBIE will still work.&lt;&lt;/color&gt;&gt;**
     startup errors.
 -   Fixed Creeper-specific options not being applied.
 -   Fixed effects targeting spawners to target the center of blocks
--   Fixed a bug with preventSuicide creeper option not working in most
+-   修复了 a bug with preventSuicide creeper option 不生效的问题 in most
     cases
--   Fixed an alias for MagmaCube not working properly
--   Fixed a bug preventing Slime and MagmaCube options from applying
--   Fixed a bug preventing options that apply to after-death events from
+-   修复了 an alias for MagmaCube 不生效的问题 properly
+-   修复了 a 漏洞 preventing Slime and MagmaCube options from applying
+-   修复了 a 漏洞 preventing options that apply to after-death events from
     functioning
 -   Fixed (hopefully) mob custom AI not persisting through chunk reloads
 
@@ -310,14 +310,14 @@ Added lots of new options...
 
 #### Bug Fixes/Other
 
--   Fixed a bug where MythicMobs would not always activate skills when
+-   修复了 a 漏洞 where MythicMobs would not always activate skills when
     attacking other MythicMobs.
 -   Fixed bug with \~onAttack skills causing recursion when using
     damage-causing abilities
--   Fixed a bug that caused the onExplode trigger to not always work
--   Fixed some bugs with the preventSuicide option not retaining mob
+-   修复了 a 漏洞 that caused the onExplode trigger to not always work
+-   修复了 some 漏洞s with the preventSuicide option not retaining mob
     data after preventing a the mob's death
--   Fixed a bug with projectile skill causing projectiles to not always
+-   修复了 a 漏洞 with projectile skill causing projectiles to not always
     do the configured damage
 -   Fixed a couple NullPointerExceptions
 
@@ -340,9 +340,9 @@ Added lots of new options...
 
 -   ShootPotion now uses ticks instead of seconds, in order to be more
     consistent with other similar skills
--   Fixed a bug with the ActivateSpawner skill not working with spawner
+-   修复了 a bug with the ActivateSpawner skill 不生效的问题 with spawner
     groups
--   Fixed a bug with the new SafeSpawnLocation algorithm
+-   修复了 a 漏洞 with the new SafeSpawnLocation algorithm
 
 ### v1.0.0-RC3
 
@@ -369,25 +369,25 @@ Most spawner commands can now accept wildcards in the spawner name:
 -   Added error checking for a couple systems
 -   Better compatibility with various Forge modpacks and modded Bukkit
     servers
--   Fixed a bug with timer skills occasionally throwing a
+-   修复了 a 漏洞 with timer skills occasionally throwing a
     ConcurrentModificationException in the console
--   Fixed a bug with RandomSpawns rarely throwing a NullPointerException
+-   修复了 a 漏洞 with RandomSpawns rarely throwing a NullPointerException
     in the console
 -   Fixed RemoveMobs skill to unregister mobs from plugin before
     removing them
--   Fixed a rare bug with the MovementSpeed mob option
+-   修复了 a rare 漏洞 with the MovementSpeed mob option
 -   Fixed spawners to spawn mobs in the center of the target block
 -   Fixed spawners so that they will measure a mob's height and choose
     an appropriate spawn location rather than spawning mobs in areas too
     short for them to survive
--   Fixed a bug where negative Damage Modifiers were not healing the mob
+-   修复了 a 漏洞 where negative Damage Modifiers were not healing the mob
     as intended
 -   Fixed Damage ability to correctly register from the using mob
--   Fixed health ranges in skills not working when smaller health amount
+-   修复了 health ranges in skills 不生效的问题 when smaller health amount
     is put first
 -   Fixed spawners spawning mobs underground in some scenarios
 -   Fixed player disguises to allow color codes in the names
--   Fixed a bug where damage skills that ignore armor could "multi-kill"
+-   修复了 a 漏洞 where damage skills that ignore armor could "multi-kill"
     players that had already just died, causing them to drop their items
     when a plugin such as DeathControl should have prevented it.
 
@@ -442,21 +442,21 @@ This can also target spawner groups using the format
 
 #### Bug Fixes/Other
 
--   Fixed a crippling bug with spawners that had a radius of 0.
--   Fixed a bug with spawn radius logic.
+-   修复了 a crippling 漏洞 with spawners that had a radius of 0.
+-   修复了 a 漏洞 with spawn radius logic.
 -   Fixed the following spawner commands to be usable from the console
     or command blocks: activate, info, and set.
--   Fixed a bug where mobs were throwing the death event and granting
+-   修复了 a 漏洞 where mobs were throwing the death event and granting
     players XP after being removed by the **/mm m kill** and **/mm m
     killall** commands
--   Fixed a bug where mobs were still registered as active for a short
+-   修复了 a 漏洞 where mobs were still registered as active for a short
     time after dying
--   Fixed a bug where passive mobs were not being unregistered from
+-   修复了 a 漏洞 where passive mobs were not being unregistered from
     spawners when removed by commands
 -   Fixed dropped\_item disguise, usage i.e. Disguise: item:diamond
--   Fixed several bugs preventing mobs from sometimes not despawning
+-   修复了 several 漏洞s preventing mobs from sometimes not despawning
     after a server restart when Despawn was set to true
--   Fixed a bug with compatibility mode causing multiple mounts to spawn
+-   修复了 a 漏洞 with compatibility mode causing multiple mounts to spawn
 
 ### v1.0.0-RC1
 
@@ -479,9 +479,9 @@ This can also target spawner groups using the format
     mobs losing their disguises
 -   Updated CachedMobs file to save mob's level for better consistency
     between server restarts when using mob levels
--   Fixed an error caused by having question marks in mob names
+-   修复了 an 错误 caused by having question marks in mob names
 -   Fixed the Wither Skeleton disguise
--   Fixed spawn radius not being set correctly and throwing errors upon
+-   修复了 spawn radius not being set correctly and throwing 错误s upon
     new spawner creation
 
 ### Beta Release v0.12.0
@@ -615,30 +615,30 @@ particle\_name:square\_radius:horizontalspread:verticalspread:count:&lt;speed&gt
     spawners
 -   Rewrote a large part of the item and drop-table systems for better
     performance and to add new features
--   Added support for splitting Heroes XP based on Heroes' party system
+-   添加了对以下内容的支持： splitting Heroes XP based on Heroes' party system
 -   Fixed variables not being processed in $mobname inside of message
     skills
 -   Fixed mob tracker to correctly track mobs with their level in their
     display name after a server restart.
 -   Fixed moblevel attribute not saving on spawners
--   Fixed a ConcurrentModificationException error being thrown by
+-   修复了 a ConcurrentModificationException 错误 being thrown by
     certain Timer skills
 -   Fixed errors with the Rally skill when the mob didn't have a proper
     target
--   Fixed a bug with null lore in certain items
--   Fixed a recursion bug involving mounts and compatibility mode
+-   修复了 a 漏洞 with null lore in certain items
+-   修复了 a recursion 漏洞 involving mounts and compatibility mode
     spawning multiple mounts
--   Fixed a bug in the Summon skill's positioning logic
--   Fixed a bug with Mythic Spawners where the Warmup timer did not
+-   修复了 a 漏洞 in the Summon skill's positioning logic
+-   修复了 a 漏洞 with Mythic Spawners where the Warmup timer did not
     persist through reloads
 -   Fixed height condition
 -   Fixed level condition
--   Fixed an error thrown when a mob type isn't specified in the **/mm
+-   修复了 an 错误 thrown when a mob type isn't specified in the **/mm
     mob spawn command**
--   Fixed null pointer error thrown in ChunkUnloadEvent
--   Fixed null pointer error thrown in EntityDeathEvents
+-   修复了 null pointer 错误 thrown in ChunkUnloadEvent
+-   修复了 null pointer 错误 thrown in EntityDeathEvents
 -   Fixed dashes displaying properly in mob strings
--   Fixed spawning mobs at specific location using command not working
+-   修复了 spawning mobs at specific location using command 不生效的问题
     in some cases
 -   Delayed skills will now execute after a mob dies if the \~onDeath
     trigger was used. **This does mean it is possible to put strain on
@@ -666,8 +666,8 @@ cases.
 -   RandomSpawning should now obey WorldGuard mob-spawning flags
 -   Fixed $level variable in names and messages
 -   Fixed drops being dropped twice
--   Fixed DropsPerLevel not working
--   Fixed an error being thrown by mob levels in random spawns
+-   修复了 DropsPerLevel 不生效的问题
+-   修复了 an 错误 being thrown by mob levels in random spawns
 -   Fixed projectiles hitting mobs when fired from a dispenser throwing
     an error
 -   Fixed the GCD and SetStance skills
@@ -815,13 +815,13 @@ particleName:horizontalSpread:verticalSpread:amount:&lt;speed&gt;:&lt;y-offset&g
 
 #### Bug Fixes
 
--   Fixed a bug where abilities would trigger sooner than intended
--   Fixed an issue on 1.7.9 where zombies would sometimes spawn as baby
+-   修复了 a 漏洞 where abilities would trigger sooner than intended
+-   修复了 an 问题 on 1.7.9 where zombies would sometimes spawn as baby
     zombies
 
 ### Beta Release v0.10.8
 
--   Added support for 1.7.9
+-   添加了对以下内容的支持： 1.7.9
 -   Various minor bug fixes
 
 ### Beta Release v0.10.5
@@ -883,14 +883,14 @@ can tweak for performance:
 
 -   Fixed Heroes EXP, SkillAPI Exp and Vault currency not always being
     granted properly
--   Fixed a rare error message with timer skills
--   Fixed a bug where MythicMobs' mob scanner was going off much more
+-   修复了 a rare 错误 message with timer skills
+-   修复了 a 漏洞 where MythicMobs' mob scanner was going off much more
     often than intended.
 -   Various other performance-related tweaks
 
 ### Beta Release v0.10.2
 
--   Fixed a bug where mobs weren't equipping armor
+-   修复了 a 漏洞 where mobs weren't equipping armor
 
 ### Beta Release v0.10.1
 
@@ -901,9 +901,9 @@ can tweak for performance:
 -   Fixed amounts and chance to work with all drop types in drop tables
 -   Changed amounts in drop tables to allow ranges \#-\# on all drop
     types
--   Fixed debugging not working on startup
--   Fixed a bug involving effects on mob targets
--   Fixed item attributes causing irrelevant errors on startup
+-   修复了 debugging 不生效的问题 on startup
+-   修复了 a 漏洞 involving effects on mob targets
+-   修复了 item attributes causing irrelevant 错误s on startup
 -   Fixed mobs not dropping aggro on targets that have already been
     killed
 -   Fixed creeper explosion damage not being changed properly
@@ -919,8 +919,8 @@ than adding +0.1 Movement Speed, which is kind of arbitrary.**
 
 #### New Features
 
--   Added support for 1.7.5
--   Added support for 1.6.4
+-   添加了对以下内容的支持： 1.7.5
+-   添加了对以下内容的支持： 1.6.4
 -   Added **Skill Triggers**. You can now specify an event trigger in a
     skill using the syntax **\~eventname** before or in place of the
     health modifier. Some triggers ignore the health modifier when it
@@ -974,7 +974,7 @@ LightningCreeper:
 
 #### Bug Fixes / Other
 
--   Fixed some bugs with Item attributes
+-   修复了 some 漏洞s with Item attributes
 -   Certain item attributes now apply as a percent modifier rather than
     as a static value, where it makes sense
 -   Implemented additional checks to prevent mobs from losing their
@@ -983,16 +983,16 @@ LightningCreeper:
     true
 -   Creepers' explosion yield is now based on their Damage value if one
     is defined
--   Fixed a bug where certain types of mobs wouldn't spawn using random
+-   修复了 a 漏洞 where certain types of mobs wouldn't spawn using random
     spawning
 -   Fixed mobs being able to be spawned via command blocks
 -   Hopefully fixed a bug where more random spawns were spawning than
     intended (unable to verify myself)
--   Fixed a bug where decimals were not being taken into account in
+-   修复了 a 漏洞 where decimals were not being taken into account in
     cooldowns
--   Fixed a bug where skill cooldowns less than 1 were not registering
+-   修复了 a 漏洞 where skill cooldowns less than 1 were not registering
     at all
--   Fixed a bug where certain items in drop tables would multiply every
+-   修复了 a 漏洞 where certain items in drop tables would multiply every
     time a mob was killed
 -   Various other bug fixes
 
@@ -1068,9 +1068,9 @@ also:
 
 -   Mobs should use abilities immediately at the intended health level
     instead of one hit after.
--   Fixed a bug with the spawners/listnear command involving
+-   修复了 a 漏洞 with the spawners/listnear command involving
     multi-worlds
--   Fixed a bug where the Message skill would not display mob health
+-   修复了 a 漏洞 where the Message skill would not display mob health
     correctly.
 -   The RepeatAllSkills option should now work as intended.
 -   Fixed Ranges in Health modifiers so they work properly.
@@ -1080,15 +1080,15 @@ also:
 
 #### Bug Fixes
 
--   Fixed a bug with Vault support
+-   修复了 a 漏洞 with Vault support
 
 ### Beta Release v0.8.1
 
 #### Bug Fixes
 
--   Fixed a bug with display names losing color codes on death
--   Fixed a bug with Heroes exp
--   Fixed a bug on servers without Vault
+-   修复了 a 漏洞 with display names losing color codes on death
+-   修复了 a 漏洞 with Heroes exp
+-   修复了 a 漏洞 on servers without Vault
 
 ### Beta Release v0.8.0
 
@@ -1148,7 +1148,7 @@ Lots of compatibility with other plugins!
 
 #### Bug Fixes
 
--   Fixed a bug or two with the Damage skill
+-   修复了 a 漏洞 or two with the Damage skill
 -   Fixed the Firework and RadiusFirework effects
 -   Lots of other bug fixes
 
@@ -1222,9 +1222,9 @@ SkeletonKingDrops:
     (oops)
 -   Fixed bugs with copied spawners sharing mob tables and not spawning
     new mobs
--   Fixed another bug with exp drops
+-   修复了 another 漏洞 with exp drops
 -   Fixed item amount ranges not being random
--   Fixed a bug with the outside condition not always working
+-   修复了 a 漏洞 with the outside condition not always working
 
 ### Beta Release v0.6.5
 
@@ -1247,10 +1247,10 @@ SkeletonKingDrops:
     on items.
 -   Adding attributes to items may still cause them to behave oddly.
     This is because Bukkit has no API for that stuff yet.
--   Fixed some errors with loot drops.
--   Fixed a bug with mobs not dropping the configured amount of exp
--   Fixed some bugs with effects not always firing properly
--   Fixed a bug where spawners would break when using multiple worlds,
+-   修复了 some 错误s with loot drops.
+-   修复了 a 漏洞 with mobs not dropping the configured amount of exp
+-   修复了 some 漏洞s with effects not always firing properly
+-   修复了 a 漏洞 where spawners would break when using multiple worlds,
     if a world was reloaded.
 -   Various other bug fixes
 
@@ -1286,7 +1286,7 @@ the block you're looking at, for use with the pushbutton skill.
 #### Bug Fixes / Other
 
 -   Mobs will now use more skills against other mobs, such as wolves
--   Fixed more mob-dupe issues with mob spawners and unloaded chunks.
+-   修复了 more mob-dupe 问题s with mob spawners and unloaded chunks.
 -   Switched to a better caching format. **You may want to delete and
     regenerate your SavedData/CachedMobs.yml**
 -   Skill cooldowns and delays should line up smoother and more
@@ -1299,12 +1299,12 @@ the block you're looking at, for use with the pushbutton skill.
 
 -   Items can now be referenced in most cases by name to prepare for a
     future where item IDs do not exist
--   Fixed a bug where Item Data values were not working (fixes issues
+-   修复了 a bug where Item Data values were 不生效的问题 (fixes issues
     with player heads)
--   Fixed a few issues that could cause mob spawners to break when the
+-   修复了 a few 问题s that could cause mob spawners to break when the
     chunk unloads.
 -   Fixed mobs not using abilities when attacking with bows
--   Fixed some other bugs associated with spawners and unloaded chunks
+-   修复了 some other 漏洞s associated with spawners and unloaded chunks
 -   Maybe fixed an issue with slimes splitting when they shouldn't?
     (needs more testing)
 
@@ -1429,9 +1429,9 @@ done (use the "coding name" for this):
 
 #### Bug Fixes
 
--   Fixed a bug when trying to spawn a mob without a display name set
--   Fixed a bug with item display names
--   Fixed a bug with item "amount" not defaulting to 1
+-   修复了 a 漏洞 when trying to spawn a mob without a display name set
+-   修复了 a 漏洞 with item display names
+-   修复了 a 漏洞 with item "amount" not defaulting to 1
 -   Fixed Slime's health not being set properly
 -   Corrected an incorrect item example...
 -   Various other bug fixes
@@ -1485,7 +1485,7 @@ radius:power:&lt;fire(true/balse)&gt;:&lt;destroyblocks(true/false)&gt;
 
 #### Bug Fixes
 
--   Fixed a last-second bug with Random Spawning conditions
+-   修复了 a last-second 漏洞 with Random Spawning conditions
 
 #### Converting from EBGE
 

@@ -1,591 +1,697 @@
 [[_TOC_]]
 
-# 5.10.0（正式版）
+# 5.10.0 (Release)
 
-## 通用
-- 新增 **1.21.7** 和 **1.21.8** 支持
-- 新增 `HAPPY_GHAST`（快乐恶魂）实体类型
-- 性能：更快的二次处理流程，优化了实体查找缓存和重载时的物品解析
-- 默认配置：添加了若干缺失的选项
+## 通用- 添加了 **1.21.7** and **1.21.8** 支持
+- Added `HAPPY_GHAST` entity type
+- 性能：faster second-pass processing and improved caching for entity lookups and item parsing on reload
+- 默认配置：added several missing options
 
-## API 与事件
-- 新增：`MythicReloadCompleteEvent`
+## API 与事件- New: `MythicReloadCompleteEvent`
 - 新增（核心）：`ReloadEvent`
-- 新增：`MythicPlayerVariableSetEvent`、`MythicPlayerVariableRemoveEvent`
-- `MythicHealMechanicEvent` 现在也会调用 `EntityRegainHealthEvent`
-- 为 `DamageMetadata` 添加了元数据访问
-- 在 `SkillTriggerMetadata` 中恢复了旧的元数据访问
-- 为 RPG 交叉兼容性奠定了 API 基础
+- New: `MythicPlayerVariableSetEvent`, `MythicPlayerVariableRemoveEvent`
+- `MythicHealMechanicEvent` now also calls `EntityRegainHealthEvent`
+- Added meta access to `DamageMetadata`
+- Added old meta access in `SkillTriggerMetadata`
+- Added API groundwork for RPG cross-compatibility
 
-## 占位符
-- 新增 `<target.armor>`、`<&lt>`、`<&gt>`、`<^dot>`、`<^dot2>`
-- 新增 `PlaceholderAngle`
-- 占位符现在支持更多位置（如物品浏览器解析）
-- 修复了泛型 `int`、`float` 和 `double` 占位符不解析变量的问题
-- 修复了复杂情况下 PlaceholderVector 不工作的问题
-- 修复了带物品 NBT（string/int/float/double）的占位符不解析的问题
+## 占位符- Added `<target.armor>`, `<&lt>`, `<&gt>`, `<^dot>`, `<^dot2>`
+- Added `PlaceholderAngle`
+- Placeholders now supported in more places (e.g., item browser parsing)
+- Fixed generic `int`, `float`, and `double` placeholders not parsing variables
+- 修复了 PlaceholderVector 不生效的问题 under complex cases
+- Fixed placeholders with Item NBT (string/int/float/double) not resolving
 
-## 变量
-- 新变量类型：`Set`、`List`、`Map`、`Boolean`、`Vector`、`Time`、**Item**、**MetaSkill**
-- [元变量占位符](/Skills/Placeholders#meta-variable-placeholders)：`<[scope].var.[name].keyword>` 支持关键词链式调用
-- 更新了 `Variable.ofType`；新增 `PolymorphicPlaceholder`
-- 生物变量可以设置所有已注册的变量类型
-- 内部：迁移了默认变量处理器供 Crucible 使用
+## 变量- 新增变量类型：`Set`, `List`, `Map`, `Boolean`, `Vector`, `Time`, **Item**, **MetaSkill**
+- [Meta Variable Placeholders](/Skills/Placeholders#meta-variable-placeholders): `<[scope].var.[name].keyword>` with keyword chaining
+- `Variable.ofType` updated; `PolymorphicPlaceholder` added
+- Mob Variables can set all registered variable types
+- Internals: relocated Default Variable handler for Crucible usage
 
-## 技能
-- **新增**：[`ForEach`](/Skills/Mechanics/ForEach) 和 [`ForEachValue`](/Skills/Mechanics/ForEachValue)
-- **新增**：`ClearTarget` 技能
-- 更新：`variableadd` / `variablesubtract` 支持新变量类型
-- 弹射物系列：
-  - 添加了许多缺失的弹射物选项
-  - 为 `shoot` 和 `volley` 添加了 `startYOffset`、`startForwardOffset`、`startSideOffset`
-- 环绕系列：
-  - 为 `ParticleOrbital` 半径添加了占位符支持
-  - 新增 `immuneDelay`；修复了多重命中免疫
-  - 移除了 `hugSurface` 的 `hs` 别名
-  - 改进了环绕物的目标定位逻辑
-- Aura：`sync=true` 现在强制使用同步调度器
-- Look 技能：细微行为调整
-- Summon：修复了 `useTargetYaw`/`useTargetPitch`
-- Stun：修复了 `freezeFacing` 反转问题；修复了较新版本的问题
+## 技能- **New**: [`ForEach`](/Skills/Mechanics/ForEach) and [`ForEachValue`](/Skills/Mechanics/ForEachValue)
+- **New**: `ClearTarget` mechanic
+- Updated: `variableadd` / `variablesubtract` to support new variable types
+- Projectile family:
+  - Added many missing projectile options
+  - Added `startYOffset`, `startForwardOffset`, `startSideOffset` to `shoot` and `volley`
+- Orbital family:
+  - 添加了 placeholder 支持 to `ParticleOrbital` radius
+  - Added `immuneDelay`; fixed multi-hit immunity
+  - Removed `hs` alias for `hugSurface`
+  - Improved targeting logic with orbitals
+- Aura: `sync=true` now forces sync scheduler
+- Look mechanic: minor behavioral tweaks
+- Summon: fixed `useTargetYaw`/`useTargetPitch`
+- Stun: fixed `freezeFacing` inversion; fixed on newer versions
 
-## 传送（仅 Paper）
-- **新增**了所有传送技能的选项（Paper）：
-  - 传送原因
-  - 保留载具
-  - 支持 Paper 的 `TeleportFlag`
-- 修复：解决了导致传送技能失效的回归问题；对新选项进行了额外优化
+## 传送（仅 Paper）- **Added** options to all teleport mechanics (Paper):
+  - Teleport cause
+  - Vehicle retention
+  - Support for Paper `TeleportFlag`s
+- Fixes: addressed regressions that broke teleport mechanics; additional polish to new options
 
-## 目标选择器与触发器
-- 目标选择器：
-  - 为 `@EntitiesInRadius` 和 `@EntitiesNearOrigin` 添加了 `shape`
-  - 添加了通用 `upoffset` 位置属性
-- 触发器：
-  - 潜影贝现在支持 `onShoot` 和 `onBowHit`
-  - 修复了掉落方块生物的 `onDeath`
+## 目标选择器与触发器- Targeters:
+  - Added `shape` to `@EntitiesInRadius` and `@EntitiesNearOrigin`
+  - Added universal `upoffset` location attribute
+- Triggers:
+  - Shulkers now support `onShoot` and `onBowHit`
+  - Fixed `onDeath` for falling block mobs
 
-## 条件
-- **新增**：[`VariableContains`](/Skills/Conditions/VariableContains)
-- **新增**：`projectileHasEnded`
-- **新增**：`isSkill{name=...}`
-- `mythicMobType` 条件：`exactmatch=false` 选项
-- 添加了 `xdiff` 和 `zdiff` 条件
-- 修复了健康条件解析触发器的问题
+## 条件- **New**: [`VariableContains`](/Skills/Conditions/VariableContains)
+- **New**: `projectileHasEnded`
+- **New**: `isSkill{name=...}`
+- `mythicMobType` condition: `exactmatch=false` option
+- 添加了 `xdiff` and `zdiff` 条件s
+- Fixed health conditional parsing triggers
 
-## 物品与装备
-- 物品标志：允许在 `Hide` 字段中使用完整标志（如 `HIDE_ATTRIBUTES`）
-- 兼容性：在 1.20.5 以上版本中丢弃不支持的 `HIDE_POTION_EFFECTS`
-- 物品系统：
-  - 重载时更快的物品缓存（也能解析占位符/变量）
-  - 修复了工具规则
-  - 修复了物品技能可能失败的情况
-  - 尝试修复 `ItemMatcher` 中 `vanillaonly=true` 的问题
+## 物品与装备- Item flags: allow full flags (e.g., `HIDE_ATTRIBUTES`) in `Hide` field
+- Compatibility: drop unsupported `HIDE_POTION_EFFECTS` on > 1.20.5
+- Item systems:
+  - Faster item cache on reload (also parses placeholders/variables)
+  - Fixed tool rules (closes #2027)
+  - Fixed cases where item mechanics could fail
+  - Attempted fix for `vanillaonly=true` in `ItemMatcher`
 
-## 生物与生成
-- 选项：
+## 生物与生成- Options:
   - `Options.Aware: false`
   - `Options.PreventKnockback`
-  - `Hidden: true`（阻止生物出现在列表中），并修复了使其无用的继承问题
-- 数据包：修复了数据包生成生物时生成位置不正确的问题
+  - `Hidden: true` (prevents mobs appearing in lists) and fixed inheritance making it useless
+- Datapacks: proper spawn location for mobs spawned by datapacks
 
-## 全息图与显示
-- 全息图：修复了之前构建版本中的多个回归问题
-- 文本显示子弹：
-  - 新增 `bulletRotation`
-  - 修复了 1.20_R1 上的旋转代码
+## 全息与展示实体- Holograms: fixed multiple regressions in previous builds
+- Text display bullets:
+  - Added `bulletRotation`
+  - Fixed rotation code on 1.20_R1
 
-## Bug 修复与其他
-- 为生成半径属性添加了占位符支持
-- 修复 NPE：启动时、`MythicConfig`、`ForEach`、`Summon`、带 `DisplayItem` 图腾的向量、目标设置
-- 修复了 1.21.4+ 上 recoil 技能的问题
-- 修复了其他插件在加载前调用某些方法时的错误
-- 修复了开发构建版本中引入的 aura `IllegalStateException`
-- 修复了极少数情况下的等级修正器错误
-- 修复了 `Log` 技能的消息解析
-- 修复了目标变量不存在时 `variableequals` 的警告
-- 修复了 `onShoot` aura 不设置 `<skill.var.bow-tension>` 的问题
-- 修复了各种导弹 `verticalOffset` 问题
-- 修复了 1.21.8 上发光效果的不可变列表错误
-- 修复了所有可驯服类型的 `setOwner`/`removeOwner`
+## 兼容性与杂项
+## 漏洞修复与其他- 添加了 placeholder 支持 to summon radius attributes
+- Fixed NPEs: startup (#2029), `MythicConfig`, `ForEach`, `Summon`, vector with `DisplayItem` totems, target setting
+- Fixed recoil mechanic on 1.21.4+
+- Fixed errors when other plugins call certain methods before load
+- Fixed auras `IllegalStateException` introduced in a dev build
+- 修复了 level modifier 错误s (rare cases)
+- Fixed `Log` mechanic message parsing
+- Fixed `variableequals` warnings when target variable absent
+- Fixed `onShoot` aura not setting `<skill.var.bow-tension>`
+- 修复了 various missile `verticalOffset` 问题s
+- 修复了 immutable list 错误s with glow on 1.21.8
+- Fixed `setOwner`/`removeOwner` for all tameable types
 
 # 5.9.5
 
-Bug 修复
+Bug Fixes
 ---------
 - 更新了一些依赖
-- 修复了带属性的物品在应该堆叠时不堆叠的问题
-- 修复了某些耐久度相关问题不使用新耐久度组件数据的问题
-- 修复了等级修正器的一些错误
-- 修复了较新版本上 recoil 效果的若干问题
-- 修复了 stun 技能的 freezeFacing 选项反转问题
+- Fixed items with attributes not stacking when they should
+- Fixed certain durability-related things not using data from the new durability components
+- 修复了 some 错误s with level modifiers
+- 修复了 several 问题s with recoil effect on newer versions
+- Fixed the freezeFacing option for the stun mechanic being inverted
 
 # 5.9.4
 
-Bug 修复
+Bug Fixes
 ---------
-- 为 raytraceTo 技能添加了 `ignoreEntities`
-- 修复了射线追踪技能中 `ignorePassable=false` 穿透屏障方块的问题
+- Added `ignoreEntities` for raytraceTo mechanic
+- Fixed `ignorePassable=false` in raytrace mechanics phasing through barrier blocks 
 
 # 5.9.3
 
-Bug 修复
+Bug Fixes
 ---------
-- 修复了 ignoreSameFaction 目标过滤器的若干问题
+- 修复了 some 问题s with ignoreSameFaction target filter
 
 # 5.9.2
 
-通用
+General
 -------
-- 为 `GoToOwner/Parent` AI 目标添加了 `teleportToWorld=true/false`。
-- 为 runaitargetselector 添加"goal/g"别名以匹配错误消息
-- 添加了 `%mythic_stat_...%` PAPI 占位符
-- 添加了 `<target.distanceSq>` 和 `<trigger.distanceSq>` 占位符
+- Added `teleportToWorld=true/false` to `GoToOwner/Parent` AI Goals.
+- Add "goal/g" aliases to runaitargetselector so they match the error message
+- Added `%mythic_stat_...%` papi placeholder
+- 添加了 `<target.distanceSq>` and `<trigger.distanceSq>` 占位符s
 
-条件
+Conditions
 ----------
-### 新增：CompareValues
+### NEW: CompareValues
 
-Bug 修复
+Bug Fixes
 ---------
-- 修复了 suicide 技能不计入生物伤害自身的问题（关闭 #1584）
-- 修复了较新版本上对话气泡 yaw/pitch 反转的问题
-- 可能修复了 MountMe 技能
-- 修复了配置物品 NBT 的 MapList 元素不工作的问题
-- 修复了原版战利品表掉落的 IllegalArgumentException（关闭 #1949）
-- 修复了复制生物生成器时生物类型的错误（关闭 #1951）
-- 修复了 shield 技能的错误（关闭 #1955）
-- 修复了 `<skill.targets>` 占位符中的 NPE（关闭 #1961）
-- 修复了 1.21.4 上的 ClientboundSetEntityDataPacket 错误
-- 修复了 PermissionFactionProvider 中将 OP 放入每个阵营的问题
-- 修复了非英文服务器上的 StackOverflowError
-- 修复了菜单图标配置错误时插件无法加载的问题
+- Fixed suicide mechanic not counting the mob as damaging itself closes #1584
+- Fixed speech bubbles having yaw/pitch inverted on newer versions
+- Fixed MountMe mechanic maybe
+- 修复了 MapList elements 不生效的问题 for configured item NBT
+- Fixed IllegalArgumentException with vanilla loot table drops closes #1949
+- Fixed error with mob types with copying mob spawners closes #1951
+- Fixed error in shield mechanic closes #1955
+- Fixed NPE in `<skill.targets>` placeholder closes #1961
+- 修复了 ClientboundSetEntityDataPacket 错误 on 1.21.4
+- Fixed ops being put into every faction in the PermissionFactionProvider
+- Fixed StackOverflowError on non-english servers
+- Fixed plugin not loading when a menu icon is misconfigured
 
 # 5.9.1
 
-Bug 修复
+Bug Fixes
 ---------
-- 修复了 VariableMath 技能不支持 double 变量
-- 修复了 ItemMatcher 的一些 bug
-- 修复了 moveTowardsTargetConditional AI 目标
-- 修复了弹射物弹跳问题
-- 修复了弹射物的其他若干问题
-- 优化了没有命中技能的弹射物
-- 修复了 `Options.Color` 在药水上不生效的问题
-- 修复了极高速度向量的弹射物可能导致服务器崩溃的错误
-- 修复了 1.21.5 上的射线追踪错误
-- 修复了自定义伤害属性不触发 onDamaged aura 的问题
-- 修复了弹射物上 `hitself` 不工作的问题
+- Fixed VariableMath mechanic not supporting double variables
+- 修复了 some 漏洞s with ItemMatcher
+- Fixed moveTowardsTargetConditional AI goal
+- Fixed bouncing projectiles
+- 修复了 several other 问题s with projectiles
+- 优化了 projectiles that don't have hit skills
+- 修复了 `Options.Color` 不生效的问题 on potions
+- Fixed error where projectiles with insanely high velocity could crash the server
+- 修复了 raytrace 错误 on 1.21.5
+- 修复了 custom damage stats 不触发的问题 onDamaged auras
+- 修复了 `hitself` 不生效的问题 on projectiles
 
 # 5.9.0
 
-通用
+General
 -------
-- 新增 `/pins regionRedefine` 指令。
-- 将包图标改为使用 Mythic 物品语法。
-- 缩放方程和 `LevelModifiers` 现在可以与任何属性配合使用。
-- 为所有数值占位符添加了 step 和 lerp 函数
+- Added `/pins regionRedefine` command.
+- Changed pack icons to use Mythic item syntax.
+- Scaling Equations and `LevelModifiers` can now work with any stats.
+- Added step and lerp functions to all numeric placeholders
 
 ```
 step(e, x) { 0, x < e; 1, x >= e
 lerp(a, b, r)
 ```
 
-技能
+Mechanics
 ---------
-### 新增：swingOffhand
-- 添加了 `swingOffhand` 技能（副手挥动）。
+### NEW: swingOffhand
+- 添加了 `swingOffhand` 技能.
 
-### 新增：setEntityPose
-- 添加了 `setEntityPose{pose=X}` 技能。
+### NEW: setEntityPose
+- 添加了 `setEntityPose{pose=X}` 技能.
 
-### 新增：setItemGroupCooldown
-- 添加了 `setItemGroupCooldown{group=namespace:key;ticks=20}` 技能。
+### NEW: setItemGroupCooldown
+- 添加了 `setItemGroupCooldown{group=namespace:key;ticks=20}` 技能.
 
 ### Hit
-- 为 hit 技能添加了 `scaleByAttackCooldown`（基于武器攻击冷却缩放伤害）。
+- Added `scaleByAttackCooldown` to hit mechanic (scales damage based on weapon attack cooldown).
 
 ### Leap
-- Leap 技能的 Noise 现在默认为 `0`。
+- Noise now defaults to `0` on the `Leap` mechanic.
 
 ### MetaSkill
-- 为 `MetaSkill` 技能添加了 `snapshotStats=true`。
+- 添加了 `snapshotStats=true` to `MetaSkill` 技能.
 
 ### Missile
-- 为 `missile` 技能添加了 `startWithParentVelocity` 选项。
+- 添加了 `startWithParentVelocity` 选项 to `missile` mechanic.
 
-### 弹射物
-- 为弹射物类型技能添加了 HitTargeter
+### Projectiles
+- Added HitTargeter to projectile type mechanics
 
-hitTarget/htr 接受一个实体目标选择器。由 htr 定位的实体将通过 onHit 处理并获取免疫延迟。
+hitTarget htr accepts an entity targeter. Entities targeted by htr would be processed through onHit and gain immune delay
 
 ### Slash
-- 为 SlashMechanic 添加了 `specificStep/ss`
+- Add `specificStep/ss` to SlashMechanic
 
 ### Totem
-- 为 Totem 技能添加了 `faceAwayFromCaster=true` 选项。
-- 为 Totem 技能添加了 `hugSurface=true` 选项。
+- `faceAwayFromCaster=true` option added to Totem mechanic.
+- `hugSurface=true` option added to Totem mechanic.
 
 ### Wait
-- 新增特殊关键词技能 `wait`
-- 将暂停技能树直到条件满足
+- New special keyword mechanic `wait`
+- Will pause the skill tree until a condition is met
 
-条件
+Conditions
 ----------
 
-### 新增：itemGroupOnCooldown
-- 添加了 `itemGroupOnCooldown{group=namespace:key}` 条件。
+### NEW: itemGroupOnCooldown
+- 添加了 `itemGroupOnCooldown{group=namespace:key}` 条件.
 
-### 新增：服务器版本条件
-- 添加了 `serverAfter{version=1.21.4;inclusive=true}`、`serverBefore{version=1.21.4;inclusive=false}` 和 `serverIsPaper` 条件。
+### NEW: Server Version Conditions
+- 添加了 `serverAfter{version=1.21.4;inclusive=true}`, `serverBefore{version=1.21.4;inclusive=false}`, and `serverIsPaper` 条件s.
 
 ### Stance
-- 将 `stance` 条件的默认 `strict` 值改为 `true`。
+- Changed default `strict` value to `true` for the `stance` condition.
 
-目标选择器
+Targeters
 ---------
-- 修复了 `@FloorOfTarget` 目标选择器的若干 bug。
-- 将位置选择器选项的默认 `faulty` 值改为 `false`。
-- 为 `@RingAroundOrigin` 目标选择器添加了 `relative=true/false`。
+- 修复了 several 漏洞s with `@FloorOfTarget` targeter.
+- Changed default `faulty=false` for location selector option.
+- 添加了 `relative=true/false` to `@RingAroundOrigin` 目标选择器.
 
-### 新增：`@PlayerLocationByName`
-### 新增：`@PredictedTargetLocation`
+### NEW: `@PlayerLocationByName`
+### NEW: `@PredictedTargetLocation`
 `@PredictedTargetLocation{ticks=X}`
-- 基于速度向量定位施法者目标在未来 X ticks 的预测位置
+- Targets the predicted location of the caster's target in the next X ticks based on their velocity
 
-触发器
+Triggers
 ---------
-- 将 `onTridentHit` 重命名为 `onProjectileHit`，`onTridentThrow` 重命名为 `onProjectileThrow`。
-- 添加了 `onProjectileLand` 触发器。
+- 将 `onTridentHit` 重命名为 `onProjectileHit`, `onTridentThrow` to `onProjectileThrow`.
+- 添加了 `onProjectileLand` 触发器.
 
-占位符
+Placeholders
 ------------
-### 新增：距离占位符
-- 添加了 `<target.distance>` 和 `<trigger.distance>` 占位符。
+### NEW: Distance Placeholders
+- 添加了 `<target.distance>` and `<trigger.distance>` 占位符s.
 
-### 新增：时间戳占位符
-- 添加了 `<utils.epoch>`、`<utils.epoch.millis>` 和 `<utils.epoch.ticks>` 占位符。
+### NEW: Epoch Placeholders
+- 添加了 `<utils.epoch>`, `<utils.epoch.millis>`, and `<utils.epoch.ticks>` 占位符s.
 
-物品
+Items
 -----
 
-### 原版战利品表掉落
-- 新增掉落类型 `- vanillaLootTable minecraft:table_name`，从原版战利品表和数据包中掉落物品。
+### Vanilla Loot Table Drop
+- Added new drop type `- vanillaLootTable minecraft:table_name` to drop items from vanilla loot tables and data packs.
 
-### BlockStates 组件
-- 添加了 `BlockStates` 组件支持，用于指定物品的方块状态：
+### BlockStates Component
+- 添加了对以下内容的支持： `BlockStates` component to specify block states on items:
   ```yaml
   TestBlockStates:
     Material: OAK_SLAB
-    Display: '含水的台阶'
+    Display: 'Waterlogged Slab'
     Options.Placeable: true
     BlockStates:
     - type top
     - waterlogged true
   ```
 
-### 滑翔翼组件
-- 为物品添加了 `Glider: true` 选项以实现滑翔翼组件。
+### Glider Component
+- 添加了 `Glider: true` 选项 to items to implement the Glider component.
 
-### UUID 和时间戳选项
-- 添加了 `Options.GenerateUUID: true/false` 和 `Options.GenerateTimestamp: true/false`，在生成时给物品分配 UUID 或时间戳。
+### UUID & Timestamp Options
+- Added `Options.GenerateUUID: true/false` and `Options.GenerateTimestamp: true/false` to assign a UUID or timestamp to items on generation.
 
 API
 ---
-### 新增：事件方法
-- 暴露了事件方法。
-- 添加了技能调用时的 `MythicSkillEvent`。
+### NEW: Event Methods
+- Exposed event methods.
+- Added `MythicSkillEvent` when a skill is called.
 
-### 新增：Crucible 与 RPG API
-- 暴露了 Crucible 和 RPG 功能的 API。
+### NEW: Crucible & RPG API
+- Exposed API for Crucible and RPG features.
 
-### 新增：数据包显示实体 API
-- 暴露了更多基于数据包的显示实体 API 方法。
+### NEW: Packet Display Entities API
+- Exposed more API methods for packet-based display entities.
 
-### 新增：仇恨表 API
-- 暴露了仇恨表映射。
+### NEW: Threat Table API
+- Exposed threat table map.
 
-### 移除：已弃用的装备槽位方法
-- 移除了非常旧的按编号引用装备槽位的弃用方法。
+### REMOVED: Deprecated Equipment Slot Method
+- Removed super-old deprecated method of referencing equipment slots by slot number.
 
-### AI 目标
-- 升级了 `ownerTarget` 和 `ownerAttacker` AI 目标，可被任何生物使用；添加了 `parentAttacker` 和 `parentTarget` AI 目标。
-- 重构了主人接口以提高一致性。
+### AI Goals
+- Upgraded `ownerTarget` and `ownerAttacker` AI goals to be used by any mob; added `parentAttacker` and `parentTarget` AI goals.
+- Refactored owner interfaces for consistency.
 
-Bug 修复与优化
+Bug Fixes & Optimizations
 -------------------------
-- 通用重构和内部清理。
-- 修复了某些情况下可终止技能的 `onTerminate` 不工作的问题。
-- 修复了弹射物目标过滤器的逻辑 bug。
-- 修复了重构后各种生物选项不应用的问题。
-- 修复了属性重构导致的若干 bug。
-- 修复了 API `get` 方法获取最大堆叠数的 bug。
-- 修复了 `ItemMatcher` 中的 `IllegalArgumentException`。
-- 修复了 1.21.5 上弹射物的 `NoSuchMethodError`。
-- 修复了新宠物 AI 功能的 bug。
-- 修复了 `MythicSkillEvent` 的异步错误。
-- 修复了初始显示数据包子弹旋转在旋转时不使用的问题。
-- 修复了 1.21.5 上玩家加入时发生的错误。
-- 修复了图腾上的 MEG 子弹不随生成实体旋转的问题。
-- 修复了最近引入的掉落 NPE。
-- 修复了掉落权重的异常。
-- 修复了上一个构建版本破坏装备的问题。
-- 修复了 Nexo 掉落不用于装备的问题。
-- 修复了可装备组件在 1.21.3 之前版本也应用的问题。
-- 修复了某些方块不适用于基于方块的子弹的问题。
-- 修复了较新版本上的 `swingArm` 技能。
-- 修复了加载自定义技能时的多个错误。
-- 修复了某些情况下 `MythicProvider` 注册过晚的问题。
-- 修复了 `PreventStingerLoss` 选项的拼写错误。
-- 修复了命中多个目标时 `scaleByAttackCooldown` 的问题。
-- 修复了 `@FloorOfTarget` 目标选择器的若干 bug。
+- 通用重构与内部清理.
+- 修复了 terminable `onTerminate` skill 不生效的问题 in some cases.
+- 修复了 logic 漏洞 with projectile target filters.
+- Fixed various mob options not applying since refactor.
+- 修复了 several 漏洞s arising from stats refactor.
+- Fixed API `get` method for max stack size.
+- Fixed `IllegalArgumentException` in `ItemMatcher`.
+- Fixed `NoSuchMethodError` with projectiles on 1.21.5.
+- Fixed bugs in new pet AI features.
+- 修复了 async 错误 in `MythicSkillEvent`.
+- Fixed initial display packet bullet rotation not being used when spinning.
+- 修复了 an 错误 occurring when a player joins on 1.21.5.
+- Fixed MEG bullets on totems not rotating with the spawning entity.
+- Fixed NPE with drops introduced recently.
+- Fixed breakage with drop weights.
+- Fixed last build breaking equipment.
+- 修复了 Nexo drops 不生效的问题 in equipment.
+- Fixed equippable component applying even on pre-1.21.3 versions.
+- 修复了 certain blocks 不生效的问题 with block‐based bullets.
+- Fixed `swingArm` mechanic on newer versions.
+- 修复了 multiple 错误s when loading custom mechanics.
+- Fixed `MythicProvider` being registered too late in some cases.
+- Fixed typo in `PreventStingerLoss` option.
+- Fixed issues with `scaleByAttackCooldown` when hitting multiple targets.
+- 修复了 several 漏洞s with `@FloorOfTarget` targeter.
 
 
 # 5.8.2
-## Bug 修复 / 其他
-
-- 优化了数据包实体
-- 优化了弹射物
-- TargetSelf 现在将忽略所有其他过滤器
-- 移除了一些次要的错误日志记录
-- 修复了 targetself = true 时 ENO（实体近原点）无视条件包含施法者的问题
-- 修复了弹射物上的 HitTargeter
-- 修复了一些自定义 AI 目标自几个版本前起无法加载的问题
-- 修复了物品匹配器及相关技能的一些问题
-- 修复了粒子在 1.20.X 版本上抛出错误的问题
-- 修复了物品工具规则中的 ClassCastException
-- 修复了较新版本上 MountTarget 技能失效的问题
-- 修复了 StatExecutor 中的 NPE
-- 修复了仇恨表即使伤害取消仍追踪仇恨的问题
-- 修复了仇恨不使用属性、伤害修正器之后最终伤害量的问题
-- 修复了 FancyDrops 伤害追踪不追踪弹射物或技能伤害的问题
-- 修复了 FancyDrops 计算贡献时不使用属性、伤害修正器之后最终伤害量的问题
-- 修复了 FancyDrops 伤害计算和排行榜计入已取消伤害的问题
-- 修复了死亡排行榜不向所有参与玩家显示的问题
-- 修复了终止引用始终被克隆的问题
-- 修复了 varequal 和 varrange 不使用技能元数据的问题
-- 修复了属性在启动时不使用基值的问题
-- 修复了 varinRange 条件无法作为目标条件引用技能变量的问题
-- 修复了 @ThreatTablePlayers 目标选择器中的 NPE
+## 漏洞修复 / 其他
+- 优化了 Packet Entities
+- 优化了 Projectiles
+- TargetSelf will now ignore all other filters
+- 移除了一些次要的错误日志
+- Fixed ENO including caster regardless of condition when targetself = true
+- Fixed HitTargeter on projectiles
+- Fixed some custom AI goals not loading since a few updates ago
+- 修复了 some 问题s with the item matcher and associated mechanics
+- 修复了 particles throwing 错误s on 1.20.X versions
+- Fixed ClassCastException in item tool rules
+- 修复了 MountTarget mechanic 损坏的问题 on newer versions
+- Fixed NPE in StatExecutor
+- Fixed threat tables tracking threat even if damage was cancelled
+- Fixed threat not using final damage amounts after stats, damage modifiers, etc
+- Fixed FancyDrops damage tracking not tracking projectile or skill damage
+- Fixed FancyDrops not using final damage amount after stats, damage modifiers, etc when calculating contributions
+- Fixed FancyDrops damage calculations and leaderboards taking cancelled damage into account
+- Fixed case where death leaderboards wouldn't show for all players involved
+- Fixed terminated reference always being cloned
+- Fixed varequal and varrange not using skill meta
+- Fixed stat not using base value on startup
+- Fixed varinRange condition not being able to reference skill variables as a TargetCondition
+- Fixed NPE in @ThreatTablePlayers targeter
 
 # 5.8.1
 
-通用
+General
 -------
-- 添加了缺失的粒子：`infested`、`block_crumble`、`trail`
-- 将缺失的原版属性添加为 Stats：`BLOCK_BREAK_SPEED`、`BLOCK_INTERACTION_RANGE`、`ENTITY_INTERACTION_RANGE`
-- 为 `dropItem` 技能添加了 `then=` 技能选项
-- 为 `remove` 技能添加了 `then=` 技能选项
-- 为 `MobsInRadius` 目标选择器的 `radius` 添加了占位符支持
-- 允许 message 技能在没有目标的情况下使用
+- Added missing particles `infested`, `block_crumble`, `trail`
+- Added missing vanilla attributes as stats: 
+  - BLOCK_BREAK_SPEED
+  - BLOCK_INTERACTION_RANGE
+  - ENTITY_INTERACTION_RANGE
+- 添加了 `then=` skill option to `dropItem` 技能
+- 添加了 `then=` skill option to `remove` 技能
+- 添加了 Placeholder 支持 for `radius` in `MobsInRadiusTargeter`
+- Allow message mechanic to be used without target
 
-Bug 修复 / 其他
+Bug Fixes / Other
 -----------------
-- 菜单性能优化
-- 重构和清理模板系统
-- 移除了一些杂散调试信息
-- 修复了生命偷取属性反向的问题
-- 修复了生命恢复属性的若干问题
-- 修复了 SkillMechanic 中的 ConcurrentModificationException
-- 修复了模板的一些 bug
-- 修复了分支元技能被可终止技能取消的问题
-- 修复了 shoot 技能第一 tick 期间弹射物旋转的问题
-- 修复了元数据深拷贝不按值克隆目标的问题
-- 修复了关于魔法值的控制台刷屏
+- Optimizations for menus
+- Refactor & cleanup Template System 
+- Removed some stray debugging
+- Fixed lifesteal stat being backwards
+- 修复了 some 问题s with health regen stat
+- Fixed ConcurrentModificationException in SkillMechanic
+- 修复了 some 漏洞s with templates
+- Fixed branched metaskills being canceled with terminable
+- Fixed projectile rotations during the first tick for the shoot mechanic
+- Fixed metadata deep clone not cloning targets by value
+- Fixed console spam about magic values
 
 # 5.8.0
 
-**注意：此更新包含各种优化、新技能、改进、bug 修复和额外的 API 功能。如发现问题请通过在 Issues 部分创建问题或在相应的 Discord 频道中告知我们来报告。**
+**`Note: This update includes various optimizations, new mechanics, improvements, bug fixes, and additional API features. Please report any issues you find by opening an Issue or letting us know in the appropriate Discord channel.`**
 
-通用
+General
 -------
-- 新增 1.21.3 和 1.21.4 支持
-- 大量微优化以提升性能（感谢 Taiyou！）
-- 在 `config-general.yml` 中添加了 `Configuration.General.AnnounceOpReload`，设置 Mythic 重载公告是否发送给所有在线 OP。
-- 优化了各种弹射物/实体选择技能，在关键区域移除了流的使用。
-- 添加了全局选项以自动对所有物品应用 FancyDrops（默认禁用）。
-- 添加了 `/mm m spawn [type] [amount] @targeter` 指令。
+- 添加了 1.21.3 and 1.21.4 支持
+- 大量微优化提升性能 (thank you, Taiyou!)
+- Added `Configuration.General.AnnounceOpReload` to `config-general.yml` to set whether Mythic reload announcements are sent to all online operators.
+- 优化了 various projectile/entity selection mechanics and removed stream usage in key areas (e.g., `IEntitySelector`, `PacketEntityRenderer`).
+- Added a global option to automatically apply FancyDrops to all items (disabled by default).
+- Added `/mm m spawn [type] [amount] @targeter` command.
 
-随机生成
+Random Spawning
 ---------------
-- **多种生物带权重**：现在可在随机生成器条目中使用加权值指定多种生物，例如：
-- **结构支持**：添加了 `Structures:` 列表选项，允许限制随机生成器仅在特定结构中生成生物
-- **新配置选项**：
-  - `RandomSpawning.MaxGenerationAttempts` 限制集群生成器生成时的尝试次数
-  - `RandomSpawning.LocalSpawningLimit` 和随机生成器上的新 `MaxLocalMobs` 选项用于覆盖本地限制
-- **重命名**：旧的 `GroupMultiplier` 选项现在在 `config-spawning.yml` 中名为 `LocalGroupMultiplier`
-- 对集群生成和结构检测逻辑进行了各种改进。
+- **Multiple Mobs with Weights**: You can now specify multiple mobs in a Random Spawner entry with weighted values, for example:
+  ```yaml
+  Deeps:
+    Types:
+    - RegularZombie 100
+    - BigZombie 50
+    - GiantZombie 5
+    Worlds: world
+    Chance: 0.1
+    Priority: 1
+    Action: ADD
+    PositionType: LAND
+  ```
+- **Structures Support**: Added a `Structures:` list option allowing you to limit a Random Spawner to spawn mobs only in specific structures:
+  ```yaml
+  Nether_Fortress:
+    Types:
+    - blaze_wisp 100
+    Worlds: world_nether
+    Chance: 0.02
+    Priority: 1
+    Action: ADD
+    PositionType: LAND
+    Structures:
+    - 'minecraft:fortress'
+    - 'incendium:forbidden_castle'
+  ```
+- **New Config Options**:
+  - `RandomSpawning.MaxGenerationAttempts` to limit how many attempts the cluster generator tries when spawning.
+  - `RandomSpawning.LocalSpawningLimit` and a new `MaxLocalMobs` option on individual Random Spawners to override local limits.
+- **Renamed**: The old `GroupMultiplier` option is now `LocalGroupMultiplier` in `config-spawning.yml`, and its default value logic has changed.
+- 对以下内容进行了多项改进： cluster generation and structure detection logic.
 
-生物
+Mobs
 ----
-- 精简了变体选项到 `Options.Variant`，适用于狼、猫、青蛙、村民等
-- 新增配置**自定义生物生成器物品**的能力，包括设置生成延迟、生成范围等
-- 添加了狼专属的 `Options.Variant` 用于自定义狼变体
+- Streamlined variant options to `Options.Variant` for wolves, cats, frogs, villagers, etc., allowing for custom variants.
+- 添加了以下能力： configure **custom mob spawner items**, including the ability to set spawn delay, spawn range, etc.
+- Added Wolf-specific `Options.Variant` for custom wolf variants.
 
-技能
+Mechanics
 ---------
-### 新增：followPath
-- 一个 Aura（光环），使目标生物沿定义的路径行走。
 
-### 新增：log
-- `log{message="调试到控制台，变量 <caster.var.test>"}` 用于简单日志记录。
+### `NEW: followPath`
+- An aura causing the target mob to walk along a defined path.
 
-### 新增：setTextDisplay
-- `setTextDisplay{text="text here"} @Target` 用于显示文本的技能。
+### `NEW: log`
+- `log{message="Debug to console with variables <caster.var.test>"}` for simple logging.
 
-### 新增：openTrades
-- 为目标玩家打开商人菜单的技能。
-  - `realTrade/real` 属性决定交易是否与真正的村民进行。
+### `NEW: setTextDisplay`
+- `setTextDisplay{text="text here"} @Target` mechanic for displaying text.
 
-### 新增：movePin
-- `movePin{pin=X}` 重新定位标点的技能。
+### `NEW: openTrades`
+- Opens a merchant menu for the targeted player.
+  - `realTrade/real` attribute determines if trades are with a real villager.
 
-### 新增：directionalVelocity
-- `directionalVelocity{yaw=50}` 基于指定角度向目标施加速度向量。
+### `NEW: movePin`
+- `movePin{pin=X}` mechanic to relocate pins.
 
-### 新增：rotateTowards
-- 使施法者朝向目标旋转。
+### `NEW: directionalVelocity`
+- `directionalVelocity{yaw=50}` applies velocity to the target based on specified angles.
 
-### 新增：setChunkForceLoaded
-- 强制加载目标位置的区块。
+### `NEW: rotateTowards`
+- Rotates the caster toward the target.
 
-### 新增：resetAI
-- 将生物的 AI 恢复为出厂默认值。
+### `NEW: setChunkForceLoaded`
+- Force-loads a chunk at the target location.
 
-### 新增：matchRotation
-- `matchRotation{of=@targeter}` 匹配给定目标的旋转角度。
+### `NEW: resetAI`
+- Reverts a mob’s AI to factory defaults.
 
-### 新增：clearExperience
-- 重置玩家的经验值。
+### `NEW: matchRotation`
+- `matchRotation{of=@targeter}` to match rotation of a given target.
 
-### 新增：setProjectileDirection
-- `setProjectileDirection{magnitude=1}` 用于控制弹射物方向。
+### `NEW: clearExperience`
+- Resets a player's experience points.
 
-### 新增：lookAtTarget
-- 一个使生物注视其当前目标的 AI 目标。
+### `NEW: setProjectileDirection`
+- `setProjectileDirection{magnitude=1}` for controlling projectile direction.
 
-### 更新：dropItem
-- 现在包含一个 `then=` 技能段落，以掉落的物品实体为目标。
+### `NEW: lookAtTarget`
+- An AI goal causing a mob to look at its current target.
 
-### 更新：setSpeed
-- 遵循配置的移动速度；如果未设置则默认为生物的基础速度。
+### `UPDATED: dropItem`
+- 现在包含 a `then=` skill section targeting dropped items.
 
-### 更新：consumeSlotItem
-- 正确移除数量为 `0` 的物品。
+### `UPDATED: setSpeed`
+- Respects the configured movement speed; defaults to mob's base if none is set.
 
-### 更新：shoot
-- 现在支持 `item=<material>` 用于自定义弹射物（例如 `item=REDSTONE`）。
+### `UPDATED: consumeSlotItem`
+- Properly removes items with `0` amount.
 
-### 更新：particleOrbital
-- 在施法者死亡/消失后终止，并支持 `ticks` 的占位符。
+### `UPDATED: shoot`
+- 现在支持 `item=<material>` for custom projectiles (e.g., `item=REDSTONE`).
 
-### recoil
-- 修复了 1.21+ 上的 recoil；占位符可在 recoil 值中使用。
+### `UPDATED: particleOrbital`
+- Terminates after the caster dies/despawns and supports placeholders for `ticks`.
 
-条件
+### `recoil`
+- Fixed recoil on 1.21+; placeholders can be used in recoil values.
+
+Conditions
 ----------
-### 新增：boundingBoxesOverlap
-### 新增：distanceFromPin
-### 新增：distanceFromLocation
-### 新增：PlaceholderBoolean
-### 新增：originDistanceFromPin
-### 新增：stringEmpty / stringNotEmpty
-### lookAt
-- 现在有 `distance`/`d` 属性（默认为 5），用于检查生物是否正注视该距离内的目标。
 
-目标选择器
+### `NEW: boundingBoxesOverlap`
+- Checks if bounding boxes overlap.
+
+### `NEW: distanceFromPin`
+- `distanceFromPin{pin=X;distance=<5}` condition.
+
+### `NEW: distanceFromLocation`
+- `distanceFromLocation{x=...;y=...;z=...;distance=...;world=...}` condition.
+
+### `NEW: PlaceholderBoolean`
+- True if a variable is 'true' or '1', otherwise false.
+
+### `NEW: originDistanceFromPin`
+- Checks distance from a specific pinned location.
+
+### `NEW: stringEmpty / stringNotEmpty`
+- Checks if a string is empty or not.
+
+### `lookAt`
+- 现在具有 `distance`/`d` attribute (defaults to 5) to check if a mob is looking at a target within that distance.
+
+Targeters
 ---------
-### 新增：@BlocksInPinRegion、@HighestBlock、@TrackedPlayers、@ChunksinWERegion、@PNO、@OwnerLocation、@ParentLocation、@WolfOwner
-### skipTargetsUpToIndex
-### @ObstructingBlock - 重写以获得更好的性能
 
-物品
------
-- 添加了 `Options.Glint: true` 以添加附魔光泽效果
-- 添加了 Mythic 颜色选择器
-- 添加了 Fancy Drops 的 `vfxmodel/vfxitemmodel` 支持
-- 添加了 `namespace:enchant_name` 支持
-- 添加了 `strict=true` 到所有物品条件/技能
-- 扩展了 `Equippable` 组件
-- 添加了 `#tag` 和 `*wildcard` 支持
-- 添加了 `Tool` 和 `UseCooldown` 子组件
-### 新增：`TooltipStyle` 组件
-### 新增：`Consumable` 组件
-### 新增：`Food` 组件
+### `NEW: @BlocksInPinRegion`
+- Targets blocks within a pin-defined region.
 
-属性（Stats）
+### `NEW: @HighestBlock`
+- Targets the highest block at the origin position.
+
+### `NEW: @TrackedPlayers`
+- Targets players currently rendering or tracking the mob.
+
+### `NEW: @ChunksinWERegion`
+- `@ChunksinWERegion{region=X}` targeter.
+
+### `NEW: @PNO`
+- Alias for `PlayersNearOrigin`.
+
+### `NEW: @OwnerLocation`
+- Targets the owner location of a tamed entity.
+
+### `NEW: @ParentLocation`
+- Targets the parent location.
+
+### `NEW: @WolfOwner`
+- Re-added targeter that selects the owner of a tamed wolf.
+
+### `skipTargetsUpToIndex`
+- Lets targeters skip the first N matched targets.
+
+### `@ObstructingBlock`
+- Rewritten for better performance.
+
+### `mobsInRadius`
+- 现在正确 detects vanilla mob types.### Placeholders
+- 添加了 rounding 支持 to `random.float` placeholder with syntax `<random.float.1to5{round=2}>`.
+- Added new math functions: `todegree(value)`, `toradian(value)`, and `clamp(value,min,max)`.
+- **NEW:** `caster.attack_cooldown` placeholder for vanilla swing cooldown.
+
+Items
 -----
-- 为最新 Minecraft 属性添加了新的 Mythic 属性：STEP_HEIGHT、ARMOR、ARMOR_TOUGHNESS、BURNING_TIME 等
+- Added `Options.Glint: true` to add the enchantment glint effect.
+- Added Mythic color picker for customizing color-related item properties.
+- 添加了 `vfxmodel/vfxitemmodel` 支持 for Fancy Drops using 1.21.3+ item models.
+- 添加了 `namespace:enchant_name` 支持 in the `Enchantments` option.
+- Added `strict=true` to all item conditions/mechanics to prevent matching Mythic items with vanilla items.
+- Extended `Equippable` component to support additional fields.
+- 添加了 `#tag` and `*wildcard` 支持 to `itemType` condition.
+- Added `Tool` and `UseCooldown` sub-components for more item customization.
+- Reordered item components so `TooltipStyle` loads last.
+
+### NEW: `TooltipStyle` component for advanced item tooltips.
+### NEW: `Consumable` component:
+  ```yaml
+  Item:
+    Consumable:
+      ConsumeSeconds: 5
+      HasParticles: true
+      Animation: SPEAR
+      Sound: entity.chicken.egg
+  ```
+
+### NEW: `Food` Component
+- Added Food components for items, enabling the creation of edible items:
+  ```yaml
+  NetheritePops:
+    Material: NETHERITE_SCRAP
+    Display: 'Delicious Scraps'
+    Food:
+      Nutrition: 2
+      Saturation: 2
+      EatSeconds: 2
+      CanAlwaysEat: true
+      Effects:
+      - regeneration{duration=60}```
+
+Stats
+-----
+- Added new Mythic Stats for the latest Minecraft attributes:
+  - `STEP_HEIGHT`
+  - `ARMOR`
+  - `ARMOR_TOUGHNESS`
+  - `BURNING_TIME`
+  - `EXPLOSION_KNOCKBACK_RESISTANCE`
+  - `FALL_DAMAGE_MULTIPLIER`
+  - `GRAVITY`
+  - `JUMP_STRENGTH`
+  - `KNOCKBACK_RESISTANCE`
+  - `MOVEMENT_EFFICIENCY`
+  - `OXYGEN_BONUS`
+  - `SAFE_FALL_DISTANCE`
+  - `SNEAKING_SPEED`
+  - `WATER_MOVEMENT_EFFICIENCY`
 
 API
 ---
-- 重构了 `EquipSlots` 以允许自定义槽位
-- 添加了 API 方法用于导出物品组件数据
-- 增强了 `BukkitItemMatcher` 的物品匹配能力
-- 暴露了更多插件触发器和事件调用
+- Refactored `EquipSlots` to allow for custom slots.
+- Added API methods for dumping item component data (e.g., `DropTable.usesWeights()`, `DropTable.GetDrops()`).
 
-## Bug 修复与优化
-- 预生成并存储默认生物属性以加快生成速度
-- 改进了世界检查以修复一些并发问题
-- 改进了占位符的四舍五入
-- 修复了随机生成生物偶尔生成在墙内或负坐标的问题
-- 修复了为较新版本构建时在较旧版本上加载失败的问题
-- 修复了某些情况下占位符 double 值的 NPE
-- 修复了苦力怕的 `onPrime` 触发器
-- 修复了自定义方块不能用作生物图腾头部的问题
-- 粒子效果不再被 Spigot 的默认视图范围错误限制
-- 修复了 `look` 技能的 `force=true` 选项
-- 修复了弹射物的负重力
-- 修复了 1.21+ 上的 recoil
-- 修复了生成器不保存及 `Spawners.DisableCommandSaving` 逻辑反转的问题
-- 修复了 `onDamaged` aura 不随技能伤害触发的问题
-- 修复了 `consumeSlotItem` 数量为 `0` 时失败的问题
-- 修复了默认药水等级为 `2` 而不是 `1`
-- 修复了烟花颜色加载 `RBG` 而不是 `RGB` 的问题
-- 修复了 `teleport{unsafe=false}` 不正确放置玩家的问题
-- 修复了 `hasItem`、`holding` 和其他物品条件以支持新物品匹配器
-- 修复了生命恢复属性错误治疗死亡玩家的问题
-- 修复了无法受伤实体的 MythicDamageEvent
-- 修复了 `mobsInRadius` 对某些原版类型失败的问题
-- 修复了生成器物品不应用正确生物数据的问题
-- 修复了子碰撞箱元数据操作导致栈溢出的问题
-- 修复了 `spin` 效果在施法者死亡时不停止的问题
-- 修复了 `EnderBeam` 技能中的 IllegalArgumentException
-- 修复了 `setDisplayEntityItem` 技能与 Crucible 生成物品不兼容的问题
-- 修复了物品显示插值/旋转问题
-- 修复了没有 `MovementSpeed` 的生物使用 `setSpeed` 技能卡住的问题
-- 修复了鸡骑士选项不工作的问题
-- 修复了 1.21.4 上各种船类型失效的问题
-- 许多额外的并发和缓存修复
+- Added API condition type `ISkillMetaLocationComparisonCondition`.
+- Enhanced item matching with `BukkitItemMatcher`.
+- Exposed more plugin triggers and event calls for custom expansions.
 
-旧版更新日志
+## 漏洞修复与优化- Pre-generate and store default mob attributes for faster performance on spawn.
+- Improved world checking to fix some concurrency issues.
+- Improved rounding with placeholders.
+- Fixed random spawning mobs occasionally spawning in walls or negative coordinates.
+- Fixed plugin failing to load on older versions when building for new.
+- Fixed NPE with placeholder doubles in certain situations.
+- Fixed `onPrime` trigger for creepers.
+- 修复了 custom blocks 不生效的问题 as mob totem heads.
+- Particle effects no longer limited by Spigot’s default view range incorrectly.
+- Fixed `force=true` option with `look` mechanic.
+- Fixed negative gravity on projectiles.
+- Fixed recoil on 1.21+.
+- Fixed spawners not saving correctly and reversed logic in `Spawners.DisableCommandSaving`.
+- 修复了 `onDamaged` aura 不触发的问题 with skill damage.
+- Fixed `consumeSlotItem` failing with item amounts of `0`.
+- Fixed default potion level being `2` instead of `1`.
+- Fixed fireworks color loading with `RBG` instead of `RGB`.
+- Fixed `teleport{unsafe=false}` not placing players properly on a solid block.
+- Fixed `hasItem`, `holding`, and other item conditions to support new item matcher.
+- Fixed health regen stat incorrectly healing dead players.
+- Fixed MythicDamageEvent for entities that cannot be damaged (canceled properly).
+- Fixed `mobsInRadius` failing with certain vanilla types.
+- Fixed spawner items not applying correct mob data.
+- Fixed sub-hitbox metadata manipulations causing stack overflow.
+- Fixed `spin` effect so it stops if caster is dead.
+- Fixed IllegalArgumentException in `EnderBeam` mechanic.
+- 修复了 `setDisplayEntityItem` mechanic 不生效的问题 properly with Crucible-generated items.
+- 修复了 item display interpolation/rotation 问题s.
+- Fixed mobs without `MovementSpeed` becoming stuck when using the `setSpeed` mechanic.
+- Fixed `setSpeed` mechanic to now base multiplier on the mob type’s default speed if no config value.
+- 修复了 `chicken jockey` option 不生效的问题.
+- 修复了 various boat types 损坏的问题 on 1.21.4.
+- Many additional concurrency and caching fixes (faster item lookups, distanceSquared, etc.).
+
+This release includes many new features, bug fixes, and optimizations. If you encounter any issues or unexpected behavior, please report them in the appropriate channels!
+
+
+
+Older Changelogs
 ================
--   [5.7.X 更新日志](/changelogs/5.7.x_changelogs)
--   [5.6.X 更新日志](/changelogs/5.6.x_changelogs)
--   [5.5.X 更新日志](/changelogs/5.5.x_changelogs)
--   [5.4.X 更新日志](/changelogs/5.4.x_changelogs)
--   [5.3.X 更新日志](/changelogs/5.3.x_changelogs)
--   [5.2.X 更新日志](/changelogs/5.2.x_changelogs)
--   [5.1.X 更新日志](/changelogs/5.1.x_changelogs)
--   [5.0.X 更新日志](/changelogs/5.0.x_changelogs)
--   [4.14.X 更新日志](/changelogs/4.14.x_changelogs)
--   [4.13.X 更新日志](/changelogs/4.13.x_changelogs)
--   [4.12.X 更新日志](/changelogs/4.12.x_changelogs)
--   [4.11.X 更新日志](/changelogs/4.11.x_changelogs)
--   [4.10.X 更新日志](/changelogs/4.10.x_changelogs)
--   [4.9.X 更新日志](/changelogs/4.9.x_changelogs)
--   [4.8.X 更新日志](/changelogs/4.8.x_changelogs)
--   [4.7.X 更新日志](/changelogs/4.7.x_changelogs)
--   [4.6.X 更新日志](/changelogs/4.6.x_changelogs)
--   [4.5.X 更新日志](/changelogs/4.5.x_changelogs)
--   [4.4.X 更新日志](/changelogs/4.4.x_changelogs)
--   [4.3.X 更新日志](/changelogs/4.3.x_changelogs)
--   [4.2.X 更新日志](/changelogs/4.2.x_changelogs)
--   [4.1.X 更新日志](/changelogs/4.1.x_changelogs)
--   [4.0.X 更新日志](/changelogs/4.0.x_changelogs)
--   [2.5.X 更新日志](/changelogs/2.5.x_changelogs)
--   [2.4.X 更新日志](/changelogs/2.4.x_changelogs)
--   [2.3.X 更新日志](/changelogs/2.3.x_changelogs)
--   [2.2.X 更新日志](/changelogs/2.2.x_changelogs)
--   [2.1.X 更新日志](/changelogs/2.1.x_changelogs)
--   [2.0.X 更新日志](/changelogs/2.0.x_changelogs)
--   [Pre-2.0 更新日志](/changelogs/pre-2.0_changelogs)
+-   [5.7.X Changelogs](/changelogs/5.7.x_changelogs)
+-   [5.6.X Changelogs](/changelogs/5.6.x_changelogs)
+-   [5.5.X Changelogs](/changelogs/5.5.x_changelogs)
+-   [5.4.X Changelogs](/changelogs/5.4.x_changelogs)
+-   [5.3.X Changelogs](/changelogs/5.3.x_changelogs)
+-   [5.2.X Changelogs](/changelogs/5.2.x_changelogs)
+-   [5.1.X Changelogs](/changelogs/5.1.x_changelogs)
+-   [5.0.X Changelogs](/changelogs/5.0.x_changelogs)
+-   [4.14.X Changelogs](/changelogs/4.14.x_changelogs)
+-   [4.13.X Changelogs](/changelogs/4.13.x_changelogs)
+-   [4.12.X Changelogs](/changelogs/4.12.x_changelogs)
+-   [4.11.X Changelogs](/changelogs/4.11.x_changelogs)
+-   [4.10.X Changelogs](/changelogs/4.10.x_changelogs)
+-   [4.9.X Changelogs](/changelogs/4.9.x_changelogs)
+-   [4.8.X Changelogs](/changelogs/4.8.x_changelogs)
+-   [4.7.X Changelogs](/changelogs/4.7.x_changelogs)
+-   [4.6.X Changelogs](/changelogs/4.6.x_changelogs)
+-   [4.5.X Changelogs](/changelogs/4.5.x_changelogs)
+-   [4.4.X Changelogs](/changelogs/4.4.x_changelogs)
+-   [4.3.X Changelogs](/changelogs/4.3.x_changelogs)
+-   [4.2.X Changelogs](/changelogs/4.2.x_changelogs)
+-   [4.1.X Changelogs](/changelogs/4.1.x_changelogs)
+-   [4.0.X Changelogs](/changelogs/4.0.x_changelogs)
+-   [2.5.X Changelogs](/changelogs/2.5.x_changelogs)
+-   [2.4.X Changelogs](/changelogs/2.4.x_changelogs)
+-   [2.3.X Changelogs](/changelogs/2.3.x_changelogs)
+-   [2.2.X Changelogs](/changelogs/2.2.x_changelogs)
+-   [2.1.X Changelogs](/changelogs/2.1.x_changelogs)
+-   [2.0.X Changelogs](/changelogs/2.0.x_changelogs)
+-   [Pre-2.0 Changelogs](/changelogs/pre-2.0_changelogs)

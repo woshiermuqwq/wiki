@@ -1,4 +1,4 @@
-## 粒子：宝库连接
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/VAULT_CONNECTION.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=vault_connection}
 ```
+
+
+
+

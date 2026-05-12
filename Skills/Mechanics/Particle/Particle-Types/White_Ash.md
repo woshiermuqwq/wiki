@@ -1,4 +1,4 @@
-## 粒子：白色灰烬
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/WHITE_ASH.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=white_ash}
 ```
+
+
+
+

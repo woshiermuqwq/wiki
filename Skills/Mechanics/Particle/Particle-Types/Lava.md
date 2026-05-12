@@ -1,4 +1,4 @@
-## 粒子：熔岩
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/LAVA.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=lava}
 ```
+
+
+
+

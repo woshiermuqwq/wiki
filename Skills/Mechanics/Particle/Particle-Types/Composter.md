@@ -1,4 +1,4 @@
-## 粒子：堆肥桶
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/COMPOSTER.gif)
 
 
@@ -12,3 +12,7 @@
   Skills:
   - particle{p=composter}
 ```
+
+
+
+

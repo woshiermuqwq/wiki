@@ -24,8 +24,8 @@ The valid malus types are
 ### Value Attribute
 When 实体的 AI calculates a path, it checks the block types along the potential path. By setting a malus using this function, you can make the entity more or less likely to walk over, around, or avoid certain blocks. For example:
 
-- A positive value (e.g., 1.0) means the entity will consider this block type harder to walk over or less favorable, causing the entity to try to avoid it.
-- A negative or zero value (e.g., -1.0 or 0.0) means the entity will consider this block type neutral or easier to walk over, making it more likely to choose paths with these blocks
+- A positive value (例如, 1.0) means the entity will consider this block type harder to walk over or less favorable, causing the entity to try to avoid it.
+- A negative or zero value (例如, -1.0 or 0.0) means the entity will consider this block type neutral or easier to walk over, making it more likely to choose paths with these blocks
 
 
 ## 示例

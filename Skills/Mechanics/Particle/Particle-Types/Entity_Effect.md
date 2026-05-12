@@ -1,12 +1,12 @@
-## 粒子：实体效果
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/ENTITY_EFFECT.gif)
 
 
 ## Attributes
 | Attribute | Aliases   | Description                                                          | Default |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| color | c | The color of the particle | #FF0000 |
-> This particle has a [Color](/Skills/Mechanics/Particle/Particle-Types#color) Datatype, 并继承其所有属性
+| color | c | 粒子的颜色 | #FF0000 |
+> 此粒子具有 [Color](/Skills/Mechanics/Particle/Particle-Types#color) 数据类型，并继承其所有属性
 
 
 
@@ -22,5 +22,7 @@
 - [x] mob_spell
 
 
-> 此粒子在 1.20.5 之前的版本中有不同的名称  
+> 此粒子在 1.20.5 之前的版本中具有不同的名称  
 > - [x] spell_mob
+
+

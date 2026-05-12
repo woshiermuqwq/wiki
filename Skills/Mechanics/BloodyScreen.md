@@ -7,7 +7,7 @@ Players must enable Fancy Graphics to see the effect.
 | 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | duration  | d         | The time (in ticks) that the effect is active                        | 20      |
-| cancel    | c         | If true, it 停止 any existing redscreen                             | false   |
+| cancel    | c         | If true, it stops any existing redscreen                             | false   |
 
 
 ## 示例

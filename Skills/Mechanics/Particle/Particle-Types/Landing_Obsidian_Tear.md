@@ -1,4 +1,4 @@
-## 粒子：黑曜石泪着陆
+## Particle
 ![img](/Skills/Mechanics/Particle/Particle-Types/images/LANDING_OBSIDIAN_TEAR.gif)
 
 
@@ -16,3 +16,5 @@
 
 ## Aliases
 - [x] landingobsidiantear
+
+
