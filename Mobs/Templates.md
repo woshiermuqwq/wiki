@@ -1,19 +1,19 @@
-模板 are a functionality that 允许 a 生物 to "继承" the characteristics of one or more 其他 生物.
+模板（Templates）是一项让生物"继承"一个或多个其他生物的特性的功能。
 
-若you are 已经 familiar with Object Oriented Programming，you将willthen 可能 find the following quite 类似 the c一旦pt of Inheritance。
+如果你已经熟悉面向对象编程，那么你会发现以下内容与"继承"的概念非常相似。
 
-But regardless, 模板 may 仍然 be found to be quite complicated to understand at first. As such, we 将 adding more nuanche to the c一旦pt as we go on explaining it, starting 从 very basics and gettings to the more complex use cases.
+不过无论如何，模板一开始可能还是相当难理解。因此我们将从最基础开始，逐步深入讲解，直到更复杂的应用场景。
 
 [[_TOC_]]
 
 ## 介绍
-As 已经 stated, 模板 允许 a 生物 to 继承 the characteristics of 另一个. But what does this even mean?
+如前所述，模板允许生物继承另一个生物的特性。但这到底是什么意思呢？
 
-To explain it in simpler terms, we will present, as an 示例, a 生物:
+为了用更简单的方式说明，我们以一个生物为例：
 ```yaml
 ZombieBrute:
   Type: ZOMBIE
-  Display: "&2Zombie Brute &7[Lv. <caster.level>]&r"
+  Display: "&2僵尸暴徒 &7[Lv. <caster.level>]&r"
   Health: 30
   Damage: 5
   Faction: Monster
@@ -47,24 +47,24 @@ ZombieBrute:
   - PROJECTILE 1.15
   - ENTITY_ATTACK 0.75
   KillMessages:
-  - '<target.name> was reduced to paste by a <caster.name>'
-  - 'Despite his best efforts, <target.name> could not prevail against a <caster.name>'
-  - '<target.name> was killed by a <caster.name>'
+  - '<target.name> 被 <caster.name> 打成了肉泥'
+  - '尽管竭尽全力，<target.name> 还是没能战胜 <caster.name>'
+  - '<target.name> 被 <caster.name> 杀死了'
   Skills:
   - skill{s=SelectRandomWeapon} @self ~onSpawn
   - skill{s=ZombieBrute_Bash} @target ~onTimer:60 0.4 ?targetwithin{d=10}
   - skill{s=CallZombies} @EIR ~onTimer:180 0.6
 ```
-That, 当 not complex to make, 肯定 has quite a number of elements 关联 it, 尚未 he? He got a 阵营, some 掉落, some 选项...
+这个生物虽然做起来不复杂，但确实关联了不少元素，对吧？它有阵营、掉落物、一些选项……
 
-Now, what if we wanted to create 另一个 生物 that shares some (if not most!) of the characteristics this 生物 has? We would normally need to copy-paste what we want from one 生物 to 另一个, and 当 that works on the short term, what if we want to later *修改* those characteristics? We would need to track down every instance of them being present on some 生物 and then change those, one by one. That has no scalability whatsoever!
+现在，如果我们想创建另一个与它具有部分（甚至大部分！）相同特征的生物呢？通常我们需要将想要的内容从一个生物复制粘贴到另一个。虽然短期来看这能行，但如果以后想要*修改*这些特征呢？我们需要找到每个使用这些特征的生物，然后一个一个地改。这完全不可扩展！
 
-But here, 模板 comes to the rescue: remember what we said originally? They 允许 to 继承 characteristics across 生物, and so, we would need to 仅 make one 生物 that has all of those common characteristics, and if we want to change some of them at a later date, 而不是 going 生物-by-生物, we could 仅 修改 that one 生物 and see the change being 自动 applied to any 生物 that uses it as a 模板!
+但这时候，模板就派上用场了：还记得我们最初说的吗？模板允许跨生物继承特征。所以我们只需要创建一个拥有所有通用特征的生物，如果以后想要修改其中某些特征，不需要逐个生物去改，只需要修改那一个模板生物，改动就会自动应用到所有使用它作为模板的生物上！
 
-And that brings us to our first, real 示例 of using 模板.
+接下来就是我们的第一个真正的模板使用示例。
 
-## Single 模板
-Let say that we want to make a group of 生物 share the 阵营, the 选项, the Ai, some of the 技能 and some 其他 element from ZombieBrute. First, we put those elements into a 生物
+## 单一模板
+假设我们想让一组生物共享僵尸暴徒的阵营、选项、AI、部分技能和其他一些元素。首先，我们把这些元素放到一个生物里：
 ```yaml
 MonsterFaction_Base:
   Type: ZOMBIE
@@ -91,15 +91,16 @@ MonsterFaction_Base:
   - PROJECTILE 0.75
   - ENTITY_ATTACK 0.75
   KillMessages:
-  - '<target.name> was killed by a <caster.name>'
+  - '<target.name> 被 <caster.name> 杀死了'
   Skills:
   - skill{s=SelectRandomWeapon} @self ~onSpawn
 ```
-And 一旦 we do that, 让我们 make the (now slimmer) ZombieBrute 继承 those
+
+建好模板后，让（现在精简了的）僵尸暴徒继承它：
 ```yaml
 ZombieBrute:
   Template: MonsterFaction_Base
-  Display: "&2Zombie Brute &7[Lv. <caster.level>]&r"
+  Display: "&2僵尸暴徒 &7[Lv. <caster.level>]&r"
   Health: 30
   Damage: 5
   Equipment:
@@ -114,73 +115,71 @@ ZombieBrute:
   DamageModifiers:
   - PROJECTILE 1.15
   KillMessages:
-  - '<target.name> was reduced to paste by a <caster.name>'
-  - 'Despite his best efforts, <target.name> could not prevail against a <caster.name>'
+  - '<target.name> 被 <caster.name> 打成了肉泥'
+  - '尽管竭尽全力，<target.name> 还是没能战胜 <caster.name>'
   Skills:
   - skill{s=ZombieBrute_Bash} @target ~onTimer:60 0.4 ?targetwithin{d=10}
   - skill{s=CallZombies} @EIR ~onTimer:180 0.6
 ```
-And there! With 仅 a simple line, `Template: MonsterFaction_Base`, is now being Inherited by `ZombieBrute`, with any elements contained in `MonsterFaction_Base` now being 自动 inherited by `ZombieBrute`
+好了！只需要简单一行 `Template: MonsterFaction_Base`，`ZombieBrute` 就继承了 `MonsterFaction_Base` 中的所有元素。
 
 ```mermaid
 flowchart TD
-    A[MonsterFaction_Base] -->|Is Inherited by| B[ZombieBrute]
+    A[MonsterFaction_Base] -->|被继承| B[ZombieBrute]
 ```
 
-But what about elements 即 present on 两者都 the 生物 and its 模板?
+但是，如果生物和它的模板都有某个相同元素会怎样呢？
 
-### Shared Elements
-When 两者都 the 生物 and its 模板 share some elements, one of the following three things happens:
-  * The element of the 模板 is overridden by the one in the 生物. (**Overridden**)
-    * 示例: 两者都 `MonsterFaction_Base` and `ZombieBrute` have a `PROJECTILE` DamageModifier, so the one in `ZombieBrute` 覆盖 the one in the 模板, and is the one 即 ultimately applied
-  * The element of the 模板 is added alongside the one of the 生物. (**Partially Overridden**)
-    * 示例: Since the 生物 has no `Faction` element, 它将 继承 the one in the 模板, ultimately being considered as part of the `Monsters` 阵营
-    * 示例: 两者都 `MonsterFaction_Base` and `ZombieBrute` have a DamageModifiers element, 与 模板 having `PROJECTILE` and `ENTITY_ATTACK`, 当 the 生物 has 仅 `PROJECTILE`. Since no `ENTITY_ATTACK` DamageModifier is specified in the 生物, the 模板 gets inherited, so in the end the `ZombieBrute` 生物 will take 75% of the 伤害 it would normally take 从 `ENTITY_ATTACK` 伤害 source, despite not having that DamageModifier 自身
-  * The elements of the 生物 and of the 模板 are applied 同时, if the elements are part of a 列表. (**Merged**)
-    * 示例: `Skills` and `KillMessages` are 两者都 一系列 技能 and messagges 分别, so 您可以 添加 them to 两者都 the 模板 and the 生物 and expect to see all of them to be present on the 生物
-    * `AIGoalSelectors` and `AITargetSelectors` are, 也, considered a 列表, so by adding more of them on the 生物, more Selectors are being added at the end of the 列表, 本质上 becoming 其他 Selectors 但具有 less importance than the ones in the 模板, 自从 Selectors 被放在 lower on the 列表 are followed 仅 the one ones 在...上方m 不能 be.
-      * To clear the Selectors of the 模板, 仅 use the `clear` Selector
+### 共享元素
+当生物和它的模板都包含某些相同元素时，会发生以下三种情况之一：
+  * 模板的元素被生物中的同名元素覆盖。（**覆盖 Overridden**）
+    * 例如：`MonsterFaction_Base` 和 `ZombieBrute` 都有 `PROJECTILE` 伤害修正，那么 `ZombieBrute` 中的会覆盖模板中的，最终生效的是生物自己的。
+  * 模板的元素与生物的元素并存。（**部分覆盖 Partially Overridden**）
+    * 例如：由于生物没有 `Faction` 元素，它将继承模板中的阵营，最终被视为 `Monsters` 阵营的成员。
+    * 例如：`MonsterFaction_Base` 和 `ZombieBrute` 都有 DamageModifiers 元素，模板中有 `PROJECTILE` 和 `ENTITY_ATTACK`，而生物只有 `PROJECTILE`。由于生物中没有指定 `ENTITY_ATTACK` 伤害修正，模板中的会被继承，所以最终 `ZombieBrute` 尽管自己没有设置该项，仍会减免 25% 来自 `ENTITY_ATTACK` 伤害源的伤害。
+  * 如果元素属于列表类型，生物和模板的元素会同时生效。（**合并 Merged**）
+    * 例如：`Skills` 和 `KillMessages` 分别是技能和消息的列表，所以你可以在模板和生物中都添加它们，最终生物会拥有全部。
+    * `AIGoalSelectors` 和 `AITargetSelectors` 也被视为列表，所以在生物上添加更多选择器时，新选择器会被追加到列表末尾，本质上优先级低于模板中的选择器。因为排在列表后面的选择器只有在排前面的都无法执行时才会被考虑。
+      * 要清除模板中的选择器，只需使用 `clear` 选择器。
 
-To make this more understandable, the following is 一系列 all of the elements a 模板 may have and how the 生物 will treat them if the 生物 has them 也
+为了让这一点更容易理解，下面列出了模板可能包含的所有元素，以及当生物也有这些元素时的处理方式：
 
-| **Element** *(in the 模板)* | **How 它是 inherited** *(if the 生物 has it 也)* |
-||---------------------------------------|----------------------------------------------------------------|
-| 类型 | Overridden |
-| 显示 | Overridden |
-| 血量 | Overridden |
-| 伤害 | Overridden |
-| Armor | Overridden |
-| Boss血条 | Overridden |
-| 阵营 | Overridden |
-| 坐骑 | Overridden |
-| Options  | 选项 | Partially Overridden (仅 the shared 选项 are overridden) |
-| Modules | Partially Overridden (仅 the shared modules are overridden) |
-| AIGoalSelectors | Merged* |
-| AITargetSelectors | Merged* |
-| 掉落 | Merged |
-| DamageModifiers | Partially Overridden (仅 the shared modifiers are overridden)|
-| 装备 | Partially Overridden (仅 装备 与 same 栏位 is overridden)|
-| KillMessages | Merged |
-| LevelModifiers | Partially Overridden (仅 the shared modifiers are overridden)|
-| 伪装 | Overridden |
-| 技能 | Merged |
-| Trades | Partially Overridden (仅 trades 与 same number are overridden)|
+| **元素** *(模板中的)* | **继承方式** *(如果生物也有)* |
+|------------------------|------------------------------|
+| Type                   | 覆盖                         |
+| Display                | 覆盖                         |
+| Health                 | 覆盖                         |
+| Damage                 | 覆盖                         |
+| Armor                  | 覆盖                         |
+| Bossbar                | 覆盖                         |
+| Faction                | 覆盖                         |
+| Mount                  | 覆盖                         |
+| Options                | 部分覆盖（只有同名选项被覆盖）|
+| Modules                | 部分覆盖（只有同名模块被覆盖）|
+| AIGoalSelectors        | 合并*                        |
+| AITargetSelectors      | 合并*                        |
+| Drops                  | 合并                         |
+| DamageModifiers        | 部分覆盖（只有同名伤害修正被覆盖）|
+| Equipment              | 部分覆盖（只有相同栏位的装备被覆盖）|
+| KillMessages           | 合并                         |
+| LevelModifiers         | 部分覆盖（只有同名等级修正被覆盖）|
+| Disguise               | 覆盖                         |
+| Skills                 | 合并                         |
+| Trades                 | 部分覆盖（只有相同编号的交易被覆盖）|
 
+*关于 AIGoalSelectors 和 AITargetSelectors 元素的行为需要特别说明，因为仅仅说"合并"有点过于简化了。生物的选择器实际上是添加到模板选择器列表的末尾。比如，如果模板有 `clear`、`meleeattack` 的 AI 目标，而生物有 `randomstroll`，最终生物会拥有 `clear`、`meleeattack`、`randomstroll` 作为其 AI 目标。
+如果想重置模板的选择器，可以使用 [`Exclude`](#排除元素) 元素，或者使用 `clear` 选择器，因为那会"删除"它之前的所有选择器。
 
-\* A special 注意 必须为 made regarding the 行为 of the AIGoalsSelector and the AITargetSelectors elements, as 仅 stating that 它们是 "merged" is a bit reductive. The selector of the 生物 are, in fact, added to the end of the 模板. So, 例如, if the 模板 has a `clear`,`meleeattack` AIGoals and the 生物 has a `randomstroll` one, the final 生物 will effectively have `clear`,`meleeattack`,`randomstroll` as its AIGoals.
-若one wishes to reset the Selectors 从 模板，one将can也 use the [`排除`](#排除-elements) element or use the `clear` Selector, as that will "delete" every Selector that came 之前 it。
-
-### Excluding Elements
-It is possible to stop a 生物 from inheriting unwanted elements from its 模板 using the following syntax
+### 排除元素
+可以使用以下语法阻止生物从模板中继承不想要的元素：
 ```yaml
   Exclude:
-  - Element1
-  - Element2
+  - 元素1
+  - 元素2
   - {...}
 ```
 
-So, 例如, if we wanted a 生物 to not 继承 the 装备, the AITargetSelectors and the 技能, we would be using
-
+例如，如果我们想要生物不继承装备、AI 攻击目标选择器和技能：
 ```yaml
 ExampleMob:
   Template: MobTemplate
@@ -189,10 +188,10 @@ ExampleMob:
   - AITargetSelectors
   - Skills
 ```
-And the 生物 will now not 继承 the specified elements.
+这样该生物就不会继承指定的元素了。
 
-## Chained 模板
-But why should we stop at 仅 one 模板? After all, 模板 can have a 模板, 也! Let revisit out 示例 from earlier, but this time splitting it up a little bit more
+## 链式模板
+但我们为什么要止步于单个模板呢？毕竟，模板本身也可以有模板！让我们重新审视之前的例子，这次再拆分得更细一些：
 
 ```yaml
 MonsterFaction_Base:
@@ -212,7 +211,7 @@ MonsterFaction_Base:
   - PROJECTILE 0.75
   - ENTITY_ATTACK 0.75
   KillMessages:
-  - '<target.name> was killed by a <caster.name>'
+  - '<target.name> 被 <caster.name> 杀死了'
 ```
 
 ```yaml
@@ -234,13 +233,12 @@ MonsterFaction_MeleeEntity:
   - randomstroll
   Skills:
   - skill{s=SelectRandomWeapon} @self ~onSpawn
-
 ```
 
 ```yaml
 ZombieBrute:
   Template: MonsterFaction_MeleeEntity
-  Display: "&2Zombie Brute &7[Lv. <caster.level>]&r"
+  Display: "&2僵尸暴徒 &7[Lv. <caster.level>]&r"
   Health: 30
   Damage: 5
   Drops:
@@ -249,28 +247,28 @@ ZombieBrute:
   DamageModifiers:
   - PROJECTILE 1.15
   KillMessages:
-  - '<target.name> was reduced to paste by a <caster.name>'
-  - 'Despite his best efforts, <target.name> could not prevail against a <caster.name>'
+  - '<target.name> 被 <caster.name> 打成了肉泥'
+  - '尽管竭尽全力，<target.name> 还是没能战胜 <caster.name>'
   Skills:
   - skill{s=ZombieBrute_Bash} @target ~onTimer:60 0.4 ?targetwithin{d=10}
   - skill{s=CallZombies} @EIR ~onTimer:180 0.6
 ```
 
-This way, we have created a new 生物, `MonsterFaction_MeleeEntity`, 即 using `MonsterFaction_Base` as a 模板.
+这样，我们创建了一个新生物 `MonsterFaction_MeleeEntity`，它使用 `MonsterFaction_Base` 作为模板。
 
-And with `ZombieBrute` using `MonsterFaction_MeleeEntity` as a 模板, it 不 继承 the 仅 elements of `MonsterFaction_MeleeEntity`, but 也 those that `MonsterFaction_MeleeEntity` 自身 inherited 最多 that point.
+而 `ZombieBrute` 使用 `MonsterFaction_MeleeEntity` 作为模板，它不仅继承了 `MonsterFaction_MeleeEntity` 的元素，还继承了 `MonsterFaction_MeleeEntity` 截至那一刻所继承的所有内容。
 
 ```mermaid
 flowchart TD
-    A[MonsterFaction_Base] -->|Is Inherited by| B[MonsterFaction_MeleeEntity] -->|Is Inherited by| C[ZombieBrute]
+    A[MonsterFaction_Base] -->|被继承| B[MonsterFaction_MeleeEntity] -->|被继承| C[ZombieBrute]
 ```
 
-## Multi 模板
-Up 直到 now we have shown how to use a single 模板 inside of a 生物, but a 生物 can use 多于 one at 同时.
+## 多重模板
+到目前为止，我们展示了如何在生物中使用单个模板。但一个生物可以同时使用多个模板。
 
-By 仅仅 using 一系列 模板 as the 模板 argument, we can make the 生物 继承 one 模板 之后 另一个 **从 leftmost on the 列表 to the rightmost**. Simply said, by making 一系列 模板, 它是 like we are chaining multiple 模板 一起, starting 从 leftmost one and ending 与 rightmost one.
+只需将模板列表作为 Template 参数的值，我们就可以让生物**从列表的最左侧到最右侧**依次继承模板。简单来说，通过给出模板列表，就像我们把多个模板串联起来，从最左边的开始，到最右边的结束。
 
-But 让我们 see an 示例 to make things clear:
+来看一个例子让事情更清楚：
 ```yaml
 DiamondArmorSet:
   Type: ZOMBIE
@@ -280,12 +278,12 @@ DiamondArmorSet:
   - Diamond_Leggings LEGS
   - Diamond_Boots FEET
 ```
-This 生物 不hing in particular by 自身, its 仅 characteristic being the diamond set of armor 它有 equipped. But if we use it like so:
+这个生物本身没有什么特别的，唯一的特征就是它装备了全套钻石盔甲。但如果这样使用：
 
 ```yaml
 ZombieBrute:
   Template: MonsterFaction_MeleeEntity, DiamondArmorSet
-  Display: "&2Zombie Brute &7[Lv. <caster.level>]&r"
+  Display: "&2僵尸暴徒 &7[Lv. <caster.level>]&r"
   Health: 30
   Damage: 5
   Drops:
@@ -294,25 +292,23 @@ ZombieBrute:
   DamageModifiers:
   - PROJECTILE 1.15
   KillMessages:
-  - '<target.name> was reduced to paste by a <caster.name>'
-  - 'Despite his best efforts, <target.name> could not prevail against a <caster.name>'
+  - '<target.name> 被 <caster.name> 打成了肉泥'
+  - '尽管竭尽全力，<target.name> 还是没能战胜 <caster.name>'
   Skills:
   - skill{s=ZombieBrute_Bash} @target ~onTimer:60 0.4 ?targetwithin{d=10}
   - skill{s=CallZombies} @EIR ~onTimer:180 0.6
 ```
 
-Then our dear `ZombieBrute` now will 生成 with a shiny new set of diamond armor, 自从 the `DiamondArmorSet` 模板 is overriding some of the equipments present in `MonsterFaction_MeleeEntity`
+那么我们亲爱的 `ZombieBrute` 现在会穿上一套闪亮的钻石盔甲生成，因为 `DiamondArmorSet` 模板覆盖了 `MonsterFaction_MeleeEntity` 中的部分装备。
 
 ```mermaid
 flowchart TD
-    A[MonsterFaction_Base] -->|Is Inherited by| B[MonsterFaction_MeleeEntity] --->|Is Inherited by| C[ZombieBrute]
-    D[DiamondArmorSet]  --> |Is Inherited by| C[ZombieBrute]
+    A[MonsterFaction_Base] -->|被继承| B[MonsterFaction_MeleeEntity] --->|被继承| C[ZombieBrute]
+    D[DiamondArmorSet]  --> |被继承| C[ZombieBrute]
 ```
 
-##
-
-## 物品 模板
-[物品](/物品/物品#模板) can use Templating like 生物 当 referencing 其他 物品!
+## 物品模板
+[物品](/Items/Items#template)也可以像生物一样使用模板，引用其他物品！
 ```yaml
 MyItem:
   Template: MyOtherItem
