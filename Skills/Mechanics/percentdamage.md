@@ -1,6 +1,6 @@
 ## 描述
 Deals damage equal to a percent of the player's max health, where 1 is
-100%. Inherits every attribute of the [Damage](/skills/mechanics/damage) 机制.
+100%. Inherits every attribute of the [Damage](/skills/mechanics/damage) 技能.
 
 
 ## 属性
@@ -8,7 +8,7 @@ Deals damage equal to a percent of the player's max health, where 1 is
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | percent   | p         | The percentage to damage the target                                  | 0.1     |
 | currentHealth | current, c, ch |Whether it calculates the percent from your original or current health| false   |
-> 此机制继承所有[damage](/skills/mechanics/damage) 机制
+> 此技能继承所有[damage](/skills/mechanics/damage) 技能
 >> The `amount` attribute is ignored 
 
 

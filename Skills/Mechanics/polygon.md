@@ -1,5 +1,5 @@
 ## 描述
-The Polygon meta-机制 can execute other skills in a polygon-shaped pattern. The exact number of vertices, the scale, the duration and other such elements of the polygon itself 可以 tweaked via the attributes below.
+The Polygon meta-技能 can execute other skills in a polygon-shaped pattern. The exact number of vertices, the scale, the duration and other such elements of the polygon itself 可以 tweaked via the attributes below.
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
@@ -7,7 +7,7 @@ The Polygon meta-机制 can execute other skills in a polygon-shaped pattern. Th
 | onPointSkill   | onPoint, oP | Meta-Skill executed at every vertex                     |<!--type:Metaskill-->|
 | onStarSkill    | onStar, oS  | Meta-Skill executed 在"start of the "star" of the polygon, aka the figure formed inside of the polygon by tweaking the "skip" parameter                     |<!--type:Metaskill-->|
 | onEdgeSkill    | onEdge, oE  | Meta-Skill executed on the segments that connects the vertices|<!--type:Metaskill-->|
-| onHitEntitySkill | onHitEntity, ohe, oh | 元技能，在 the polygon hits an entity. Only triggered once per entity inside the polygon area for every execution of the polygon 机制 |<!--type:Metaskill-->|
+| onHitEntitySkill | onHitEntity, ohe, oh | 元技能，在 the polygon hits an entity. Only triggered once per entity inside the polygon area for every execution of the polygon 技能 |<!--type:Metaskill-->|
 | Points         | p           | The amount of vertices of the polygon                   | 32            |
 | Duration       | d           | The amount of ticks the polygon should take to fully form. A value of 0 creates a polygon instantly                                                              | 0             |
 | DistanceBetween| distance, density, db | The distance between points in the polygon    | 0.1           |
@@ -28,7 +28,7 @@ The Polygon meta-机制 can execute other skills in a polygon-shaped pattern. Th
 | MatchCasterDirection | matchPlayerDirection, matchDirection, mcd, mpd, md, direction                    | Matches the direction of the polygon to the caster's facing direction                  | true         |
 | directiontowardstarget | dtt | Whether the yaw/pitch 应当 calculated so that the drawn shape aims to the target | false |
 | FromOrigin     |             | If the polygon should start in the origin of the metaskill | false      |
-| HitConditions  | conditions, cond, c, oC, hC | List of [Inline Conditions](/Skills/Inline-Conditions) that an entity must met to be hit by the polygon 机制          |<!--type:Conditions-->|
+| HitConditions  | conditions, cond, c, oC, hC | List of [Inline Conditions](/Skills/Inline-Conditions) that an entity must met to be hit by the polygon 技能          |<!--type:Conditions-->|
 
 ## 示例
 ```yaml

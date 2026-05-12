@@ -1,8 +1,8 @@
 ## 描述
 
-向目标实体或位置发射一支箭或物品弹射物，造成伤害。Shoot 机制在 2.4 版本中进行了重大更改。请参见下方了解更改前后的工作方式。
+向目标实体或位置发射一支箭或物品弹射物，造成伤害。Shoot 技能在 2.4 版本中进行了重大更改。请参见下方了解更改前后的工作方式。
 
-MM 4.11 中为 Shoot 和 Volley 添加了弹射物机制的大部分选项。
+MM 4.11 中为 Shoot 和 Volley 添加了弹射物技能的大部分选项。
 
 
 ## 属性
@@ -35,8 +35,8 @@ MM 4.11 中为 Shoot 和 Volley 添加了弹射物机制的大部分选项。
 | calculatefiringangle | cfa        | 如果设置且弹射物有 `gravity`，弹射物将在空中划出弧线后落在目标位置                                  | false   | 
 | verticalnoise  | vn  | 发射弹射物的垂直噪声（随机性） | ((1-`accuracy`)*45)/10 |
 | horizontalnoise | hn  | 发射弹射物的水平噪声（随机性）   | (1-`accuracy`)*45 |         
-| fromorigin| fo        | 弹射物是否应从机制的原点发射| false   |  
-> 此机制继承[伤害](/Skills/Mechanics/Damage)机制的所有*可继承*属性
+| fromorigin| fo        | 弹射物是否应从技能的原点发射| false   |  
+> 此技能继承[伤害](/Skills/Mechanics/Damage)技能的所有*可继承*属性
 
 ### Type 属性
 弹射物的类型可以为：

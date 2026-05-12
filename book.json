@@ -1,0 +1,7 @@
+{
+  "title": "MythicMobs 中文文档",
+  "language": "zh-CN",
+  "root": ".",
+  "plugins": ["search"],
+  "pluginsConfig": {}
+}

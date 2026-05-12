@@ -21,7 +21,7 @@ mob to the specified location:
   - teleportto{location=190,64,200;world=world_nether} @PIR{r=50}
 ```
 ##
-Teleports all of the players in a radius of 50 blocks to a locations that is 10 blocks above the caster of the 机制
+Teleports all of the players in a radius of 50 blocks to a locations that is 10 blocks above the caster of the 技能
 ```yaml
   Skills:
   - teleportto{location=@selflocation{y=10}} @PIR{r=50}

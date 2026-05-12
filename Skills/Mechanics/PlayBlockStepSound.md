@@ -2,7 +2,7 @@
   
 Plays the target block's step sound (The sound played when an entity walks on it).  
 
-> **This is a [Paper-Only] 机制!**
+> **This is a [Paper-Only] 技能!**
 
 
 ## 属性

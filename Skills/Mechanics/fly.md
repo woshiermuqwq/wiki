@@ -4,7 +4,7 @@ attribute.
 
 
 ## 属性
-> This 机制 inherits every *inheritable* attribute of the [Aura](/Skills/Mechanics/Aura) 机制
+> This 技能 inherits every *inheritable* attribute of the [Aura](/Skills/Mechanics/Aura) 技能
 
   
 ## 示例

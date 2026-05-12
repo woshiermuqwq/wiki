@@ -8,7 +8,7 @@ Creates an [aura] that, each tick, checks if a set of conditions is met: If so, 
 | terminateconditions | conditions, cond, c | The conditions to check against                  |<!--type:Conditions-->|
 | deep      |           | Whether the terminable aura, once its conditions have been met, should also stop the execution of the [metaskill] it has been called from                                       | false   |
 | onterminate | ox      | 要执行的[元技能] once the onStart is terminated            |<!--type:Metaskill-->|
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 ### Deep Attribute
 The deep attribute is quite peculiar: when enabled, other than the onStart metaskill, it makes the terminate aura also affect the metaskill it was originally called from. So, if we had a situation like the following
@@ -18,15 +18,15 @@ ExampleSkill:
   - terminable{deep=true;...}
   - skill:test1
   - delay 100
-  - 机制2
+  - 技能2
 
 SecondarySkill:
   Skills:
-  - 机制1
+  - 技能1
   - delay 200
-  - 机制3
+  - 技能3
 ```
-Then the `ExampleSkill` and the subsequently called `SecondarySkill` metaskill would be stopped if the terminable aura had its conditions met: so, for example, if the terminable aura stopped the execution after 10 ticks, neither `机制2` or `机制3` could be triggered  
+Then the `ExampleSkill` and the subsequently called `SecondarySkill` metaskill would be stopped if the terminable aura had its conditions met: so, for example, if the terminable aura stopped the execution after 10 ticks, neither `技能2` or `技能3` could be triggered  
 
 ## 示例
 ```yaml

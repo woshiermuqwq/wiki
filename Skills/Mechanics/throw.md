@@ -22,10 +22,10 @@ GroundSlam:
   - throw{velocity=15;velocityY=5} @PlayersInRadius{r=5}
 ```
 ##
-This complex example shows how the throw 机制 可以 used in
-conjunction with other 机制s to make quite amazing effects. The
+This complex example shows how the throw 技能 可以 used in
+conjunction with other 技能s to make quite amazing effects. The
 caster unleashes a powerful shockwave that deals 50 damage (25 hearts)
-to all players within 10 blocks and using the **throw** 机制 causes
+to all players within 10 blocks and using the **throw** 技能 causes
 them to be flung a small bit into the air. There is also extra effects
 added to make the attack more appealing to look at and intimidating.
 ```yaml

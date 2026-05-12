@@ -13,16 +13,16 @@ ModelEngine 让任何使用 BlockBench 的人都能快速轻松地创建自定�
 <!-- ![image](uploads/5862ab1f31634ae0211a3c226d834540/image.png) -->
 ![image](uploads/934d66a2973c6e2cabce6d87cc0033db/left.png)
 
-### 机制
+### 技能
 
-ModelEngine 通过几个机制来应用到生物上。
+ModelEngine 通过几个技能来应用到生物上。
 
 要将 "kindletronjr" 模型应用到生物上，在生物的 skills 部分使用：
 `- model{mid=kindletronjr;n=false} @self ~onSpawn`
 要播放你制作好的攻击动画，在生物的 skills 部分使用：
 `- state{mid=kindletronjr;s=attack;} @self ~onAttack`
 
-完整属性和机制列表请访问 ModelEngine Wiki：
+完整属性和技能列表请访问 ModelEngine Wiki：
 https://git.mythiccraft.io/mythiccraft/model-engine-4/-/wikis/home
 
 ### 示例：

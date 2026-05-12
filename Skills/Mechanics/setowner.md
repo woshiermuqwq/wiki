@@ -2,7 +2,7 @@
 Sets the "owner" attribute of the Mythic Mob to the given target. This is a special attribute used within MythicMobs, and different from the normal "vanilla" owner of a mob.  
 
 Does nothing if the caster is not a Mythic Mob.  
-If the casting mob is a `Wolf`,`Cat` or `Parrot` and the target is a Player, then the 机制 will _also_ set their Vanilla Owner as the targeted player.  
+If the casting mob is a `Wolf`,`Cat` or `Parrot` and the target is a Player, then the 技能 will _also_ set their Vanilla Owner as the targeted player.  
 
 Works with the [@Owner Targeter](/Skills/Targeters/Owner), and the [Owner Condition](/skills/conditions/owner).  
 
@@ -10,7 +10,7 @@ While an Owner is set, a mob will never attack or target it, even if specified o
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

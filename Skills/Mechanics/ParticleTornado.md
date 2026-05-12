@@ -21,7 +21,7 @@ Creates a tornado styled particle effect.
 | cloudvspread | cvs    | The vertical spreading of the cloud.                                 | 1.8     |
 | cloudpspeed  | cps    | Speed of the playing of the cloud particles                          | 2       |
 | cloudyoffset | cyo    | Y Offsetting of the entire tornado. (1 + your desired height)        | 1.8     |
-> 此机制继承所有[Particle](/skills/mechanics/particle) 机制
+> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
 
 
 ## 示例

@@ -1,12 +1,12 @@
 ## 描述
-Undoes a previous paste done via the [fawePaste] 机制, based on its id or on the schematic used
+Undoes a previous paste done via the [fawePaste] 技能, based on its id or on the schematic used
 
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | pasteID   | pid, id   | The id of the paste that needs to be undone                          |         |
-> This 机制 inherits every *inheritable* attribute of the [Aura](/Skills/Mechanics/Aura) 机制
+> This 技能 inherits every *inheritable* attribute of the [Aura](/Skills/Mechanics/Aura) 技能
 
 
 ## 示例

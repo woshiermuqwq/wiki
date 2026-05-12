@@ -7,7 +7,7 @@ If the Parent is a `Player`, this information 将不会 persist across player re
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

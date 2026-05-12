@@ -3,7 +3,7 @@ Force a block physics update 在target location
 
 
 ## 属性
->*This 机制 has no attributes*
+>*This 技能 has no attributes*
 
 
 ## 示例

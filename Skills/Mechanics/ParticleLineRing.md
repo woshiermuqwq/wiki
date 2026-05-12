@@ -13,7 +13,7 @@ Creates a particleline ring.
 | ringpoints | rp       | The number of points in the line ring                                | 16      |
 | ringradius | rr       | The radius of the line ring                                          | 0.5     |
 | maxdistance     | md  | The maximum distance the line can reach                              | 256     |
-> 此机制继承所有[Particle](/skills/mechanics/particle) 机制
+> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
 
 
 ## 示例

@@ -16,7 +16,7 @@
 | ignoreArmor | ia, i   | 是否忽略护甲，但在计算总伤害时仍会使用附魔修饰符                                                                       | false   |
 | preventknockback | pkb, pk | 是否防止击退                             | false   |
 | preventimmunity  | pi      | 是否在造成伤害后将目标的[伤害免疫刻]设为 0 来防止伤害免疫                                                | false   |
-| damagecause | dc, cause | 设置此伤害机制的伤害原因.<br/> (此选项仅适用于 1.17+)                                                                     | entity_attack<!--type:DamageCause--> |
+| damagecause | dc, cause | 设置此伤害技能的伤害原因.<br/> (此选项仅适用于 1.17+)                                                                     | entity_attack<!--type:DamageCause--> |
 | ignoreenchantments |ignoreenchants, ie  | 是否在计算总伤害时忽略附魔.<br>(此选项仅适用于 1.19+) | false         |
 | noanger   | na        | 是否在伤害实体时产生愤怒            | false   |
 | ignoreinvulnerability | ignoreinvulnerable, ii | 是否在造成伤害前将目标的[伤害免疫刻]设为 0 来忽略伤害免疫                                 | false   |
@@ -25,10 +25,10 @@
 | ignoreeffects| ieff   | 是否忽略效果                             | false   |
 | ignoreresistance | ir | 是否忽略抗性                          | false   |
 | poweraffectsdamage | pad | 技能强度是否影响造成的伤害              | true    |
-| tags         | tag    | 允许你为伤害机制指定任意数量的标签 使用 `tags=THIS,THAT` 语法. 所有插入的标签将被转为大写，因此在检查标签时请始终使用大写名称 |         |
+| tags         | tag    | 允许你为伤害技能指定任意数量的标签 使用 `tags=THIS,THAT` 语法. 所有插入的标签将被转为大写，因此在检查标签时请始终使用大写名称 |         |
 | rawtags      | rtag   | 与 tags 相同，放在这里的内容也会被当作标签，但不会像 tags 那样转为大写 |  |
 | damagetype| element, e| *成为 Tags 之一*                                            |         |
-| triggerSkills | ts    | 伤害机制是否也能触发 `onAttack` 相关触发器       | false  |
+| triggerSkills | ts    | 伤害技能是否也能触发 `onAttack` 相关触发器       | false  |
 
 [damage immunity ticks]: /skills/mechanics/setnodamageticks
 
@@ -41,7 +41,7 @@ Note: Only `entity_attack`, `entity_sweep_attack`, `thorns`, `sonic_boom`, `enti
 这意味着 `<trigger.name>` 不会返回 "Unknown".
 
 ### Element 属性
-As seen above, the damage 机制 offers the ability to set an "element" 对于damage, like so:
+As seen above, the damage 技能 offers the ability to set an "element" 对于damage, like so:
 
 ```yaml
 - damage{amount=10;element=FIRE} @target ~onUse
@@ -69,7 +69,7 @@ DamageModTest:
 这允许你为这种伤害类型设置任意标签，配合 [DamageTag](/skills/conditions/damagetag) condition.  
 
 标签是任意的，因此可以有任意名称，只要不包含无效字符即可.  
-You can set an indefinite number of tags for each damage 机制. 
+You can set an indefinite number of tags for each damage 技能. 
 
 ## 示例
 ```yaml
@@ -85,12 +85,12 @@ FreezeBlast:
   - potion{t=SLOW;d=120;l=6} @PIR{r=6}
   - damage{a=120;pkb=true} @PIR{r=6}
 ```
-A more complex use of the **damage** 机制 can give illusions of say
+A more complex use of the **damage** 技能 can give illusions of say
 Ice attacks like the example above. Which uses effects to make the
 targets of the mob appear as if they were frozen by using particles (On
 a repeating interval to create a sort of lingering frost effect as well)
 and inflicting Slowness level 7 (which is -105% movement speed.) slowing
-the mob to a halt. Additionally, the 机制 inflicts 120 damage (60
+the mob to a halt. Additionally, the 技能 inflicts 120 damage (60
 hearts) to players within 6 blocks.
 
 ##

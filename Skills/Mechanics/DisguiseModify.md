@@ -1,7 +1,7 @@
 ## 描述
 Modifies an *already* applied disguise on the target entity.  
-Like the [Disguise](/skills/mechanics/disguise) 机制, [LibsDisguises](https://www.spigotmc.org/resources/libs-disguises-free.81/) 必须 installed. [Here](/Mobs/Disguises) you can find our documentation on the matter.  
-The syntax 对于disguise in this 机制 is completely equivalent to the one used in the `/modifydisguise` command.
+Like the [Disguise](/skills/mechanics/disguise) 技能, [LibsDisguises](https://www.spigotmc.org/resources/libs-disguises-free.81/) 必须 installed. [Here](/Mobs/Disguises) you can find our documentation on the matter.  
+The syntax 对于disguise in this 技能 is completely equivalent to the one used in the `/modifydisguise` command.
 
 
 ## 属性

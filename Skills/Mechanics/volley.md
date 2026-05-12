@@ -1,7 +1,7 @@
 ## 描述
 Shoots a volley of arrows or item-projectiles 在targeted entity or
 location that deals damage. Can use any attribute from the Shoot
-机制.
+技能.
 
 
 ## 属性
@@ -12,7 +12,7 @@ location that deals damage. Can use any attribute from the Shoot
 | radius    | r       | The radius of the volley                          | 1       |
 | yoffset   | y       | The y offset of the target location of the projectiles | 0  |
 | canPickup   | pickup  | Whether the arrows 可以 picked up by players             | true    |
-> This 机制 inherits every *inheritable* attribute of the [Shoot](/Skills/Mechanics/Shoot) 机制
+> This 技能 inherits every *inheritable* attribute of the [Shoot](/Skills/Mechanics/Shoot) 技能
 
 
 ## 示例

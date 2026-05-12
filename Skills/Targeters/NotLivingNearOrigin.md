@@ -9,7 +9,7 @@
 
 
 ## 示例
-This 机制 will say in the global chat the UUID of every non living 实体 in a 10 方块 半径 from 自身 一旦 it ends
+This 技能 will say in the global chat the UUID of every non living 实体 in a 10 方块 半径 from 自身 一旦 it ends
 ```yaml
 ExampleSkill:
   Skills:

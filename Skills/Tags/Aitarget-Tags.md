@@ -1,8 +1,8 @@
-An ***自动 generated*** document that lists all the aitargets, grouped by tags/functionality.
+一份按标签/功能分类的***自动生成***文档，列出了所有 AI 目标选择器。
 
-Tags are added by the wiki editing team and are not a feature 即 reflected in the 插件 code, but 仅 某事 more akin to a search aid.
+标签由 Wiki 编辑团队添加，并非插件代码中的实际功能，而更像是一种搜索辅助手段。
 
-Each aitarget can have 多于 one tag, and 它是 listed under each section for all the tags 它有.
+每个 AI 目标选择器可以拥有多个标签，并在其所拥有的每个标签对应分类下列出。
 
 [[_TOC_]]
 

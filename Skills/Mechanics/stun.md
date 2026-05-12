@@ -1,7 +1,7 @@
 ## 描述
 Holds the target in place temporarily.
 
-> This 机制 can cause Spigot to kick the player (`PlayerName moved wrongly!`)
+> This 技能 can cause Spigot to kick the player (`PlayerName moved wrongly!`)
 
 
 ## 属性
@@ -11,7 +11,7 @@ Holds the target in place temporarily.
 | gravity   | g         | Remove gravity from target when stunned (1.9+)                       | false   |
 | facing    | face, f   | When false, entity cannot rotate or look around when stunned         | false   |
 | noknockback | nokb, kb | When true, entity cannot be knocked back when stunned               | false   |
-> 此机制继承所有[Aura] 机制 
+> 此技能继承所有[Aura] 技能 
 >> - The `interval` attribute is **set** at `1`
 
 > Remember to use the aura's `duration` attribute to set a duration 对于stun

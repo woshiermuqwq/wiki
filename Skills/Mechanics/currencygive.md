@@ -1,6 +1,6 @@
 ## 描述
 Gives money to players.  
-This 机制 needs the Vault plugin and an economy plugin installed to
+This 技能 needs the Vault plugin and an economy plugin installed to
 work and Vault 必须 enabled in the MythicMobs `config-general.yml` file
 ```yaml
     Vault:

@@ -3,11 +3,11 @@ The Projectile skill fires a meta-"projectile" that 可以 decorated
 using particle and sound effects.  
 It's great for creating complex, aesthetically pleasing skills, such as
 shadow bolts, balls of ice, or even meteors.  
-It has a lot of options (more than any other 机制) and 可以 a bit of a
+It has a lot of options (more than any other 技能) and 可以 a bit of a
 nightmare to jump into without knowing what you're doing.  
 It will disappear after hitting an entity or location that is able to stop the projectile. This behavior 可以 configured via attributes like `stopatblock`, `stopatentity` and `stopconditions`
 
-It is of importance to note that other 机制s (such as [Missile](/skills/mechanics/missile) and [Totem](/skills/mechanics/totem)) are an "extension" of this 机制, and can as such use a great deal of this 机制's attributes. The attributes that those 机制s can use are listen in [Inheritable Attributes](/skills/mechanics/projectile#inheritable-attributes)
+It is of importance to note that other 技能s (such as [Missile](/skills/mechanics/missile) and [Totem](/skills/mechanics/totem)) are an "extension" of this 技能, and can as such use a great deal of this 技能's attributes. The attributes that those 技能s can use are listen in [Inheritable Attributes](/skills/mechanics/projectile#inheritable-attributes)
 
 [[_TOC_]]
 
@@ -36,7 +36,7 @@ It is of importance to note that other 机制s (such as [Missile](/skills/mechan
 | SideOffset | soffset, so | The value of this attribute gets inherited by StartSideOffset and EndSideOffset if no value is specified for them                                                | 0       |  
 | StartSideOffset | ssoffset, sso | How far to the side of the mob the projectile starts      |sideoffset|
 | EndSideOffset | endoffset, esoffset, eso | How far to the side of the target location the projectile will end up                                                                                   |sideoffset|
-| startingdirection | startingdir, startdir, sdir | Start direction of the projectile. For now, it only works if inherited by a missile 机制                                                      |@Targeted<!--type:Targeter-->|
+| startingdirection | startingdir, startdir, sdir | Start direction of the projectile. For now, it only works if inherited by a missile 技能                                                      |@Targeted<!--type:Targeter-->|
 | HorizontalOffset | hO | Horizontal Offset will rotate the projectile's horizontal starting velocity around a 360-degree axis                                                                      | 0        |
 | VerticalOffset   | vO | Vertical Offset will add a [slope](https://en.wikipedia.org/wiki/Grade_(slope)) to the projectile's starting direction. To give it a specific angle, you can use [this image](https://en.wikipedia.org/wiki/Grade_(slope)#/media/File:Slope_quadrant.svg) as reference: the value you need 将会 the number shown in red divided by 100 (so if you want 40°, you will need to input 83.9/100 = `0.839`)| 0        |
 | Accuracy  | ac, a     | Determines the accuracy of the projectile                           | 1        |
@@ -50,13 +50,13 @@ It is of importance to note that other 机制s (such as [Missile](/skills/mechan
 | HitSelf   |           | Whether the projectile can hit the caster                           | false    |
 | HitPlayers | hp       | Whether the projectile can hit players                              | true     |
 | HitNonPlayers | hnp   | Whether the projectile can hit non player entities                  | false    |
-| HitTarget | ht        | Whether the projectile can hit the 机制's target                | true     |
-| HitTargetOnly | hto   | Whether the projectile can **only** hit the 机制's target       | false    |
+| HitTarget | ht        | Whether the projectile can hit the 技能's target                | true     |
+| HitTargetOnly | hto   | Whether the projectile can **only** hit the 技能's target       | false    |
 | ImmuneDelay | immune, id | Sets the immunity delay (when the target 可以 hit by the projectile again) | 2000  |
 | hitConditions | conditions, cond, c | A list of conditions that a target must meet in order 对于projectile 能够击中它. **Premium Only** Mechanic  |<!--type:Conditions-->|
 | stopconditions | stpcond | A list of conditions that a target must meet in order 对于projectile to end 当击中它们时                                                                         | null     |
 | doEndSkillOnHit | esoh | Whether the onEnd metaskill 应当 run when the projectile ends by hitting an entity | true |
-| fromorigin | fo       | Whether the projectile should start from the origin of the 机制 | false    |
+| fromorigin | fo       | Whether the projectile should start from the origin of the 技能 | false    |
 | requireLineOfSight | rlos, los, requirelos | Whether the starting point must have line-of-sight to the origin.  Values 可以 `true`, `false`, `PLAYERS_ONLY`                                             | PLAYERS_ONLY<!--type:Projectile_HighAccuracyMode-->|
 | drawHitbox |          | Draw the hitbox of the projectile, useful for debugging             | false    |
 | tickinterpolation | interpolation, ti | Interpolates the specified amount of additional points between each tick of the projectile. The onTick and onHit skills 将会 applied there as well. Useful to fill in the gaps with super-fast projectiles and also prevent entities from being "skipped over"      | 0        |
@@ -81,7 +81,7 @@ It is of importance to note that other 机制s (such as [Missile](/skills/mechan
 ## Special Notes
 
 **For the <u>onStart</u> Skill:** onStart skills work in a special way -
-any buff or "special effect" 机制s fired by onStart that have a
+any buff or "special effect" 技能s fired by onStart that have a
 duration (such as ParticleTornado) will attach to the projectile for
 their duration, which allows for some interesting effects.
 
@@ -112,7 +112,7 @@ ones are pending further testing).
 ## Projectile Bullets
 
 The bullet type that will represent the projectile. These 可以 specified via the BulletType attribute.
-These work with the projectile, missile, and orbital 机制s.
+These work with the projectile, missile, and orbital 技能s.
 
 | BulletType  | Aliases      | Description                                                               |
 |-------------|--------------|---------------------------------------------------------------------------|

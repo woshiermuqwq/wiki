@@ -1,5 +1,5 @@
 ## 描述
-Special 目标选择器 to 目标 a 区域. Only works with specific 机制
+Special 目标选择器 to 目标 a 区域. Only works with specific 技能
 
 
 ## 属性

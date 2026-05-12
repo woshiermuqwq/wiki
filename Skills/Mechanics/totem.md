@@ -1,6 +1,6 @@
 ## 描述
-The totem 机制 places an invisible "totem", similar to the
-[projectile](/skills/mechanics/projectile) 机制, except that it
+The totem 技能 places an invisible "totem", similar to the
+[projectile](/skills/mechanics/projectile) 技能, except that it
 doesn't move. Much like projectiles, you can use onTick skills to create
 effects in order to identify the totem's location.
 

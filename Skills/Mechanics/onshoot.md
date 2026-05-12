@@ -13,7 +13,7 @@ Applies an aura to the target that triggers a skill when they shoot with a bow. 
 | cancelEvent | cE      | Whether or not to cancel the event that triggered the aura           | false   |
 | forceaspower | fap    | Whether to pass the force of the bow as the skill's power            | true    |
 
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 
 ## 示例

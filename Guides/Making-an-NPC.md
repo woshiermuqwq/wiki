@@ -1,6 +1,6 @@
 **难度：初学者**
 
-使用一些基本技巧，你可以通过 MythicMobs 创建高灵活性的 NPC。基本思路是创建一个无 AI/移动且不会消失的生物，然后可以为其附加各种机制和技能，如消息、指令或任何你能想到的技能。
+使用一些基本技巧，你可以通过 MythicMobs 创建高灵活性的 NPC。基本思路是创建一个无 AI/移动且不会消失的生物，然后可以为其附加各种技能和技能，如消息、指令或任何你能想到的技能。
 
 # 第一步 - 基础 NPC
 
@@ -30,7 +30,7 @@ NPC_Steve:
 
 # 第二步 - 添加消息和指令
 
-你可以使用 [Message](/Skills/mechanics/message) 和 [Command](/Skills/mechanics/command) 机制为 NPC 添加消息或指令。在本指南中，我们将使用 @trigger 和 onInteract，使右键点击 NPC 的用户看到消息或运行指令。测试时请确保处于生存模式，因为创造模式玩家无法被定位。
+你可以使用 [Message](/Skills/mechanics/message) 和 [Command](/Skills/mechanics/command) 技能为 NPC 添加消息或指令。在本指南中，我们将使用 @trigger 和 onInteract，使右键点击 NPC 的用户看到消息或运行指令。测试时请确保处于生存模式，因为创造模式玩家无法被定位。
 
 ### 消息
 此示例在玩家右键点击 NPC 时向其发送一条消息。我们添加了通用属性 `cd=3`，使其在两次点击之间有一个 3 秒的冷却。
@@ -46,7 +46,7 @@ NPC_Steve:
   - command{c="dm open shops-blocks <trigger.name>"} @trigger ~onInteract
 ```
 
-你可以为 NPC 添加任意数量的技能或机制，不限于消息和指令。你可以运行任何机制和任何元技能。
+你可以为 NPC 添加任意数量的技能或技能，不限于消息和指令。你可以运行任何技能和任何元技能。
 
 
 # 第三步 - ModelEngine（可选）
@@ -68,7 +68,7 @@ NPC_Steve:
   - model{m=SteveModel;n=name;save=true} @self ~onSpawn
 ```
 
-model 机制的属性说明：
+model 技能的属性说明：
 - `m=SteveModel` 这里填写你的模型名称，例如我们的文件路径为 `plugins/ModelEngine/Blueprints/SteveModel.bbmodel`
 - `n=name` 这是创建的[铭牌骨骼](https://git.mythiccraft.io/mythiccraft/model-engine-4/-/wikis/Modeling/Bone-Behaviors#nametag)名称。
 - `save=true` 告诉 ModelEngine 该模型应当被保存，即使跨重启也保留。

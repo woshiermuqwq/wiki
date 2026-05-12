@@ -1,7 +1,7 @@
 ## 描述
 Applies an [aura] to the target that triggers a skill when they jump.
 
-> **This is a [Paper-Only] 机制!**
+> **This is a [Paper-Only] 技能!**
 
 
 ## 属性
@@ -9,7 +9,7 @@ Applies an [aura] to the target that triggers a skill when they jump.
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | onJump    | oJ, onjumpskill | The Metaskill to execute if the target jumps                   |<!--type:Metaskill-->|
 | cancelevent | cE      | Whether to cancel the event when it is triggered                     | false   |
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 ## 示例
 Apply an onJump aura to yourself. Whenever you jump it will put level 1 slow falling on you for 1 second.

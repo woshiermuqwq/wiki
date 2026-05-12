@@ -21,7 +21,7 @@ damage. Can use any aura attribute
 | deflectconditions | dconditions | If `deflectProjectiles` is enabled, it will have to follow the specified set of conditions to work |<!--type:Conditions-->|
 | modDamageType | damagetype | The [type](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html) of the damage that 必须 received in order to trigger the onHit metaskill |<!--type:DamageCause--> |
 
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 
 ## 示例

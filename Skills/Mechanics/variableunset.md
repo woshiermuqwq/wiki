@@ -3,7 +3,7 @@ Unsets a [variable](/skills/variables).
 
 
 ## 属性
-> This 机制 inherits every *inheritable* attribute of the [SetVariable](skills/mechanics/setvariable) 机制
+> This 技能 inherits every *inheritable* attribute of the [SetVariable](skills/mechanics/setvariable) 技能
 
 
 ## 示例

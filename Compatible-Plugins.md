@@ -24,5 +24,5 @@ MythicMobs 与 Minecraft 中许多流行的插件兼容，并且有通过 API �
 -   [SkillAPI](https://www.spigotmc.org/resources/skillapi-premium.28029/) - 生物可掉落 SkillAPI 经验等更多功能。
 -   [TerrainControl](https://www.spigotmc.org/resources/terraincontrol.2214/) - 在 TC 生物群系中生成自定义生物
 -   [Vault](https://www.spigotmc.org/resources/vault.41918/) - 处理货币的特殊技能和条件
--   [WeaponMechanics](https://www.spigotmc.org/resources/weaponmechanics.99913/) - 生物可用的机制！
+-   [WeaponMechanics](https://www.spigotmc.org/resources/weaponmechanics.99913/) - 生物可用的技能！
 -   [WorldGuard](https://dev.bukkit.org/projects/worldguard) - 使用 WG 区域的生成和条件

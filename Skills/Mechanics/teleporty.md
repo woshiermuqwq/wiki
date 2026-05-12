@@ -1,6 +1,6 @@
 ## 描述
 Teleports the caster to the specified Y coordinate.  
-No target is required for this 机制, as the caster will always be the one that is teleported.  
+No target is required for this 技能, as the caster will always be the one that is teleported.  
 
 
 ## 属性

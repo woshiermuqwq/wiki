@@ -1,8 +1,8 @@
 ## 介绍
 ThThe 值 of certain 属性 can be not 仅 a static 值, but 也 a 值 containing 占位符.
-> While this piece of information 不是 contained in the documentation, 您可以 检查 it by using the [MythicScribe](https://marketplace.visualstudio.com/物品?itemName=Lxlp.mythicscribe) extension and hovering over an 属性 or a 机制
+> While this piece of information 不是 contained in the documentation, 您可以 检查 it by using the [MythicScribe](https://marketplace.visualstudio.com/物品?itemName=Lxlp.mythicscribe) extension and hovering over an 属性 or a 技能
 
-Those 属性 that can have 占位符 in their 值 are 总是 parsed when the associated 机制 is executed, so that their 值 can 总是 better reflect the current state of the 生物, the 目标, the [SkillTree](/技能/SkillTrees) and the likes
+Those 属性 that can have 占位符 in their 值 are 总是 parsed when the associated 技能 is executed, so that their 值 can 总是 better reflect the current state of the 生物, the 目标, the [SkillTree](/技能/SkillTrees) and the likes
 
 ## Parsing Order
 

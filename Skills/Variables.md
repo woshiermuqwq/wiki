@@ -3,7 +3,7 @@
 [[_TOC_]]
 
 # 变量 类型
-变量可以是多种类型之一，类型在使用 [setVariable](/skills/mechanics/setvariable) 机制初始化变量时定义。类型之间通常可以互换，MythicMobs 会尽力将特定变量应用到任何需要的情境中，但如果你尝试将某种变量类型用于无意义的场景，则会抛出错误。
+变量可以是多种类型之一，类型在使用 [setVariable](/skills/mechanics/setvariable) 技能初始化变量时定义。类型之间通常可以互换，MythicMobs 会尽力将特定变量应用到任何需要的情境中，但如果你尝试将某种变量类型用于无意义的场景，则会抛出错误。
 
 | **类型** | **描述** |
 |----------|----------------------------------|
@@ -28,12 +28,12 @@
 |----------|---------------------------------------------------------------------------------------------|
 | SKILL | 在当前技能树上。始终是临时的，会在当前技能队列结束时消失。 |
 | CASTER | 在施法生物上。 |
-| TARGET | 在机制/条件的目标上。 |
+| TARGET | 在技能/条件的目标上。 |
 | WORLD | 在当前世界上。 |
 | GLOBAL | 在服务器上。 |
 
 # 用法
-所有变量机制和条件都接受 `var=` 和 `scope=` 属性来确定你要操作的变量及其所在位置。你也可以使用 `var=scope.variable_name` 来简写作用域。以下示例将返回相同的结果：
+所有变量技能和条件都接受 `var=` 和 `scope=` 属性来确定你要操作的变量及其所在位置。你也可以使用 `var=scope.variable_name` 来简写作用域。以下示例将返回相同的结果：
 ```yaml
     - setvariable{var=target.somevariable; ...}
     - setvariable{var=somevariable;scope=target; ...}
@@ -139,7 +139,7 @@
 ```yaml
   # 创建你的位置变量
   - setvariable{var=skill.example;type=LOCATION;val=world,1,2,3}
-  - setvarloc{var=skill.specialexample;val=@selflocation} # 你也可以通过此特殊机制设置位置变量
+  - setvarloc{var=skill.specialexample;val=@selflocation} # 你也可以通过此特殊技能设置位置变量
 
   # 增加坐标值
   - variableadd{var=skill.example;amount=1,2,3}
@@ -194,7 +194,7 @@
   # 执行元技能
   - vskill{variable=skill.example}
 ```
-> 如果元技能包含元机制（如 skill 或 projectile），你必须在执行前等待 15~21 tick 以防止错误。
+> 如果元技能包含元技能（如 skill 或 projectile），你必须在执行前等待 15~21 tick 以防止错误。
 
 ### Item（物品）
 ```yaml
@@ -219,7 +219,7 @@
   - giveitem{variable=skill.example}
   - takeitem{variable=skill.example}
 
-  # 对于所有接受 drop/droptable 作为可选值的机制，也可以使用 itemvariable 掉落类型
+  # 对于所有接受 drop/droptable 作为可选值的技能，也可以使用 itemvariable 掉落类型
   # 来掉落存储在指定物品变量中的物品
   - equip{item=itemvariable{variable=skill.item} head} @self
   - giveitem{item=itemvariable{variable=skill.item}} @self
@@ -234,10 +234,10 @@
 > - 不要使用 <target.item.itemstack.HAND> 占位符设置变量，而是使用上面展示的 slot: 前缀
 
 
-## 变量 机制
-变量机制是利用变量的特殊机制。它们可以以实体、位置为目标，也可以没有目标，但目标可能会影响结果，具体取决于你使用的作用域。例如，如果你没有以实体为目标，尝试获取目标作用域的变量显然会失败。
+## 变量 技能
+变量技能是利用变量的特殊技能。它们可以以实体、位置为目标，也可以没有目标，但目标可能会影响结果，具体取决于你使用的作用域。例如，如果你没有以实体为目标，尝试获取目标作用域的变量显然会失败。
 
-| 机制 | 描述 |
+| 技能 | 描述 |
 |--------------------------------------------------------|--------------------------------------------------|
 | [SetVariable](/skills/mechanics/setvariable) | 初始化并设置变量。 |
 | [SetVariableLocation](/skills/mechanics/setvariablelocation) | 设置变量，其值取决于目标位置。 |
@@ -260,7 +260,7 @@
 | @[VariableLocation](/Skills/Targeters/VariableLocation) | 以指定 Location 变量中存储的位置为目标。 |
 
 # 变量 占位符
-变量可以在任何允许占位符的 MythicMobs 机制或值中引用。通常使用格式 `<scope.var.variable>`。
+变量可以在任何允许占位符的 MythicMobs 技能或值中引用。通常使用格式 `<scope.var.variable>`。
 
 变量占位符还可以使用元关键词来改变占位符的输出，甚至可以链式使用多个元关键词来获得"复合"效果。
 

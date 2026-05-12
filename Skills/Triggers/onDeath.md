@@ -1,6 +1,6 @@
 ## 描述
 Ex执行 the 技能 when the 生物 dies.
-If若the 服务器 is a Paper one，it将ispossible to cancel the death 事件 只要 cancelevent 机制 is synched. The 血量 that the 生物 has 之后 这是 基于指定的内容 in the `ReviveHealth` 选项。
+If若the 服务器 is a Paper one，it将ispossible to cancel the death 事件 只要 cancelevent 技能 is synched. The 血量 that the 生物 has 之后 这是 基于指定的内容 in the `ReviveHealth` 选项。
 > The associated [@触发器](/技能/目标选择器/触发器) is the 实体 that killed the 施法者
 
 

@@ -8,7 +8,7 @@ is not currently raining, but only if fire spread is enabled.
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | damage    | d         | The amount of damage the strike will deal                            | 0.01337 |
-> This 机制 inherits every *inheritable* attribute of the [Damage](/Skills/Mechanics/Damage) 机制
+> This 技能 inherits every *inheritable* attribute of the [Damage](/Skills/Mechanics/Damage) 技能
 
   
 ## 示例

@@ -4,7 +4,7 @@ Ta以all the 实体 in a ring near the [原点]为目标。
 
 
 ## 属性
-> This 机制 继承 every 属性 of the [EntitiesInRing] 目标选择器
+> This 技能 继承 every 属性 of the [EntitiesInRing] 目标选择器
 
 
 ## 示例

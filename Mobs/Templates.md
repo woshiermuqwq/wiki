@@ -137,7 +137,7 @@ When 两者都 the 生物 and its 模板 share some elements, one of the followi
     * 示例: Since the 生物 has no `Faction` element, 它将 继承 the one in the 模板, ultimately being considered as part of the `Monsters` 阵营
     * 示例: 两者都 `MonsterFaction_Base` and `ZombieBrute` have a DamageModifiers element, 与 模板 having `PROJECTILE` and `ENTITY_ATTACK`, 当 the 生物 has 仅 `PROJECTILE`. Since no `ENTITY_ATTACK` DamageModifier is specified in the 生物, the 模板 gets inherited, so in the end the `ZombieBrute` 生物 will take 75% of the 伤害 it would normally take 从 `ENTITY_ATTACK` 伤害 source, despite not having that DamageModifier 自身
   * The elements of the 生物 and of the 模板 are applied 同时, if the elements are part of a 列表. (**Merged**)
-    * 示例: `Skills` and `KillMessages` are 两者都 一系列 机制 and messagges 分别, so 您可以 添加 them to 两者都 the 模板 and the 生物 and expect to see all of them to be present on the 生物
+    * 示例: `Skills` and `KillMessages` are 两者都 一系列 技能 and messagges 分别, so 您可以 添加 them to 两者都 the 模板 and the 生物 and expect to see all of them to be present on the 生物
     * `AIGoalSelectors` and `AITargetSelectors` are, 也, considered a 列表, so by adding more of them on the 生物, more Selectors are being added at the end of the 列表, 本质上 becoming 其他 Selectors 但具有 less importance than the ones in the 模板, 自从 Selectors 即 placed lower on the 列表 are followed 仅 the one ones 在...上方m 不能 be.
       * To clear the Selectors of the 模板, 仅 use the `clear` Selector
 

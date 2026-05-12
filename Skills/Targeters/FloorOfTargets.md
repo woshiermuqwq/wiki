@@ -9,7 +9,7 @@
 
 
 ## 示例
-This 机制 will mask the 方块 below every 玩家 in a 10 方块 半径 to ice
+This 技能 will mask the 方块 below every 玩家 in a 10 方块 半径 to ice
 ```yaml
 ExampleSkill1:
   Skills:

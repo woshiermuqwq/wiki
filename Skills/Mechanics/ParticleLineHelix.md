@@ -14,8 +14,8 @@ Creates a particle line helix effect 在targeted entity or location.
 | helixradius     | hr  | The radius of the helix effect                                       | 1       |
 | helixrotation   | rot | The rotation of the helix effect                                     | 0       |
 | maxdistance     | md  | The maximum distance the line can reach                              | 256     |
-> 此机制继承所有[Particle](/skills/mechanics/particle) 机制
->> The particles are generated “per point” in this 机制, so keeping `amount` low is recommended.
+> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
+>> The particles are generated “per point” in this 技能, so keeping `amount` low is recommended.
 
 
 ## 示例

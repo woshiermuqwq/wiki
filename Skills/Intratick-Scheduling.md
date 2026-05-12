@@ -1,13 +1,13 @@
-TThe [delay] 机制可以usedto 应用 a delay not 仅 *between* ticks, but 也 inside of the same tick via a `delay 0` 机制。
+TThe [delay] 技能可以usedto 应用 a delay not 仅 *between* ticks, but 也 inside of the same tick via a `delay 0` 技能。
 
 # DISCLAIMER
-ThThis 不是 an intended 机制. It 仅 a side-效果 that consistently works 因为 of how the 插件 scheduler operates
+ThThis 不是 an intended 技能. It 仅 a side-效果 that consistently works 因为 of how the 插件 scheduler operates
 
 While i have extensively tested this 行为 之后 discovering it 之前 documenting it, 它是 仍然 very possible that new applications or game-breaking 行为 are 仍然 present. If you have any information useful to further expand this page and, by proxy, the knowledge available to every 其他 MythicMobs user, let me know: [Lxlp Discord Profile](https://discord.com/users/353257382811533322)
 
 ## Single Delay
 
-You 必须 imagine each 机制 as 一系列 instructions 即 executed orderly. In this scenario, using a `delay 0` 机制 允许 "schedule" the subsequent 机制 to be executed *之后* every 其他 non delayed 机制 that tick.
+You 必须 imagine each 技能 as 一系列 instructions 即 executed orderly. In this scenario, using a `delay 0` 技能 允许 "schedule" the subsequent 技能 to be executed *之后* every 其他 non delayed 技能 that tick.
 
 ```mermaid
 flowchart LR
@@ -38,7 +38,7 @@ Skill2:
 >> - `1` 否则
 
 ## Multiple Delays
-This 行为 works with multiple delays 也: each time a new `delay 0` is executed, the subsequent 机制 are pushed a the back of the execution line *再次*
+This 行为 works with multiple delays 也: each time a new `delay 0` is executed, the subsequent 技能 are pushed a the back of the execution line *再次*
 
 ```mermaid
 flowchart LR
@@ -90,8 +90,8 @@ ExampleSkill:
   - delay 0
   - setSkillCooldown{s=ExampleSkill;seconds=<skill.cooldown>/20} @self
 ```
-> > In this 示例 if no `delay 0` is set then the `setSkillCooldown` would have run regardless, but the new 冷却 值 would 已被 overridden by ExampleSkill, as the 冷却 对于 元技能 is set *之后* any non delayed 机制 in the 元技能 are executed.
-> Using a `delay 0` 允许 to 应用 a delay to the setSkillCooldown 机制, allowing it to set the 冷却 *之后* ExampleSkill 已被 set *没有* needing to wait for an extra tick, which could have allowed for possible edge cases to cause a bug
+> > In this 示例 if no `delay 0` is set then the `setSkillCooldown` would have run regardless, but the new 冷却 值 would 已被 overridden by ExampleSkill, as the 冷却 对于 元技能 is set *之后* any non delayed 技能 in the 元技能 are executed.
+> Using a `delay 0` 允许 to 应用 a delay to the setSkillCooldown 技能, allowing it to set the 冷却 *之后* ExampleSkill 已被 set *没有* needing to wait for an extra tick, which could have allowed for possible edge cases to cause a bug
 
 
 ```yaml
@@ -104,4 +104,4 @@ ExampleSkill:
 
 
 <!-- LINKS -->
-[delay]: /技能/机制/delay
+[delay]: /技能/技能/delay

@@ -1,7 +1,7 @@
 ## 描述
 给予目标物品. Supports Droptables.  
 
-This 机制 do nothing when targeted target's have no space in its inventory.  
+This 技能 do nothing when targeted target's have no space in its inventory.  
 
 fakeLooting was added in 4.12 MM and it makes the item being given show up on the screen and fly toward the players inventory like when a player picks an item up off of the ground.
 

@@ -49,7 +49,7 @@
 ### 多份掉落
 <details><summary>让参与战斗的每个玩家都获得掉落</summary>
 <br>
-可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下机制来实现：
+可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下技能来实现：
 &emsp;
 
 ```yaml
@@ -62,7 +62,7 @@
 
 <details><summary>仅让造成伤害最多的 X 个玩家获得掉落</summary>
 <br>
-可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下机制来实现：
+可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下技能来实现：
 &emsp;
 
 ```yaml
@@ -78,7 +78,7 @@
 ### 特定掉落
 <details><summary>仅让造成伤害最多的玩家获得掉落</summary>
 <br>
-可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下机制来实现：
+可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下技能来实现：
 &emsp;
 
 ```yaml
@@ -93,7 +93,7 @@
 
 <details><summary>让造成伤害最多的前 X 个玩家各自获得特定掉落</summary>
 <br>
-可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下机制来实现：
+可以通过启用生物的[仇恨表模块](/Mobs/ThreatTables)并在生物死亡时执行以下技能来实现：
 
 ```yaml
   Skills:

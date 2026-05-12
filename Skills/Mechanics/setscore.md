@@ -1,11 +1,11 @@
 ## 描述
 Modifies the scoreboard-objective value of a fake player name. Works
-like the [Modify Score](/skills/mechanics/modifyscore) 机制, but is
+like the [Modify Score](/skills/mechanics/modifyscore) 技能, but is
 only capable of performing the **set**-action.
 
 
 ## 属性
-> This 机制 inherits every *inheritable* attribute of the [ModifyScore](/Skills/Mechanics/modifyscore) 机制
+> This 技能 inherits every *inheritable* attribute of the [ModifyScore](/Skills/Mechanics/modifyscore) 技能
 >> - The `action` attribute is **set** at `SET` and cannot be modified
 
   

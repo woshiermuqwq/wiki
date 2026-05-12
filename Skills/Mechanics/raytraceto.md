@@ -1,7 +1,7 @@
 ## 描述
-Traces a ray to the target, like the [Raytrace](/skills/mechanics/raytrace) 机制, but with additional attributes regarding the start and end position of the ray.
+Traces a ray to the target, like the [Raytrace](/skills/mechanics/raytrace) 技能, but with additional attributes regarding the start and end position of the ray.
 
-> **This is a [Premium-Only] 机制!**
+> **This is a [Premium-Only] 技能!**
 
 
 ## 属性
@@ -9,7 +9,7 @@ Traces a ray to the target, like the [Raytrace](/skills/mechanics/raytrace) 机�
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | startyoffset | syo, ystartoffset, ys | The offset on the y axis of the starting point of the ray | 0   |
 | targetyoffset| tyo, ytargetoffset, yt| The offset on the y axis of the ending point of the ray | 0     |
-| fromorigin| fo        | If they ray should start from the origin of the 机制             | false   |
+| fromorigin| fo        | If they ray should start from the origin of the 技能             | false   |
 | useeyelocation | uel  | If they ray should start from the eye location of the caster         | false   |
 | forwardoffset| startfoffset, sfo | The forward offset of the starting point of the ray       | 0       |
 | sideoffset| soffset, sso | The side offset of the starting point of the ray                  | 0       |

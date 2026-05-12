@@ -3,7 +3,7 @@ Plays the effect of an eye of ender breaking 在location of the targeter.
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

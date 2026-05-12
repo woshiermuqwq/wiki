@@ -17,7 +17,7 @@ Creates an orbiting Atom effect 在location.
 | ticks     | t         | The amount of ticks during which the atom will persist               | 1       |
 | interval  | in        | The interval of the updates of the atom                              | 10      |
 | velocity  | v         | The velocity of the atom                                             | 80      |
-> 此机制继承所有[particle](/skills/mechanics/Particle) 机制
+> 此技能继承所有[particle](/skills/mechanics/Particle) 技能
 
 
 ## 示例

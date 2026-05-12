@@ -1,5 +1,5 @@
 ## 描述
-Will break a block 在target location. This 机制 will also drop
+Will break a block 在target location. This 技能 will also drop
 the block (with exception of Bedrock). REQUIRES `forcesync=true`.
 
 

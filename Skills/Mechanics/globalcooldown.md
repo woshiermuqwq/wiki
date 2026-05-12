@@ -3,7 +3,7 @@
 The Global Cooldown skill lets you set a caster's global
 cooldown, used in conjunction with the [offgcd](/skills/conditions/offgcd) condition if you want a
 mob's abilities to have a global, over-all shared cooldown. This 可以 useful for allowing a mob to only use a single skill at a time rather than multiple by giving the cooldown to each skill the mob uses.  
-> This is a no-target 机制, and the affected entity will always be the caster
+> This is a no-target 技能, and the affected entity will always be the caster
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |

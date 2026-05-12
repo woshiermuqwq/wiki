@@ -9,7 +9,7 @@
 
 
 ## 示例
-This 机制 will 伤害 every 实体 in a 2 方块 半径 从 目标 of the 生物 一旦 executed
+This 技能 will 伤害 every 实体 in a 2 方块 半径 从 目标 of the 生物 一旦 executed
 ```yaml
 ExampleSkill1:
   Skills:

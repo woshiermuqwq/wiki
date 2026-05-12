@@ -1,6 +1,6 @@
 **难度：初学者**
 
-你可能有一个特殊生物生成时（如 Boss）想让服务器上的玩家知道。可以使用 [Message 机制](/skills/mechanics/message) 结合 [onSpawn 触发器](/Skills/Triggers/onSpawn) 来实现。
+你可能有一个特殊生物生成时（如 Boss）想让服务器上的玩家知道。可以使用 [Message 技能](/skills/mechanics/message) 结合 [onSpawn 触发器](/Skills/Triggers/onSpawn) 来实现。
 
 值得注意的是，对于从当前未加载区块中的生成器生成的生物，此方法可能不起作用。
 

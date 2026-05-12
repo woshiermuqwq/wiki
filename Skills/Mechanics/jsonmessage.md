@@ -1,7 +1,7 @@
 ## 描述
 Sends a json-format chat message to the target player(s). JSON-messages
 are capable of hover-events, click events and some other perks that are
-unavailable in the other message 机制s. They also support [color
+unavailable in the other message 技能s. They also support [color
 codes](https://htmlcolorcodes.com/bukkit-color-codes/) and [message
 variables](/skills/stringvariables).
 
@@ -12,9 +12,9 @@ page](https://www.minecraftjson.com/) or [this
 one](http://minecraft.tools/en/tellraw.php) for help.
 
 > Note that double quotes 必须 replaced with single quotes in
-JSON-message 机制s
+JSON-message 技能s
 
-Please do not post issues relating to this 机制 in the bug-report
+Please do not post issues relating to this 技能 in the bug-report
 subforums unless you're certain that your syntax is correct.
 
 
@@ -51,7 +51,7 @@ Skills:
 And click events 可以 created like this. This is especially useful for
 the /mm signal command to create interactive quest mobs. This example
 would send the signal &lt;signal&gt; to the mob casting the json-message
-机制, if the player clicks on the click-event.  
+技能, if the player clicks on the click-event.  
   
 ![](http://fs5.directupload.net/images/160309/gjxvhpd8.jpg)
 ```yaml

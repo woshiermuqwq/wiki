@@ -1,7 +1,7 @@
 ## 描述
 Replaces blocks in a region using WorldEdit. Needs a [@region](/Skills/Targeters/Region) or similar targeter
 
-> **This is a [Premium-Only] 机制!**
+> **This is a [Premium-Only] 技能!**
 
 
 ## 属性

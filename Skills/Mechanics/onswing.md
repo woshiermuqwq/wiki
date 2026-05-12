@@ -7,7 +7,7 @@ Applies an aura to the target that triggers a skill when they swing (left click)
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | onSwing   | onswingskill, osw | Skill to execute if the target swings / left clicks          |<!--type:Metaskill-->|
 
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 
 ## 示例

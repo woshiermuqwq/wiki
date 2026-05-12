@@ -1,18 +1,18 @@
-# [THIS PAGE HAS BEEN MOVED!](/技能/机制)
+# [THIS PAGE HAS BEEN MOVED!](/技能/技能)
 
-效果 机制 are now part of the 机制 wiki page!
+效果 技能 are now part of the 技能 wiki page!
 
 <!--
-技能 效果 (or 效果 机制) are a special 类型 of 机制
+技能 效果 (or 效果 技能) are a special 类型 of 技能
 具体 designed to create special 效果. These are called 仅
-like any 其他 [技能 机制][] in your 生物 技能 列表, or 您可以
+like any 其他 [技能 技能][] in your 生物 技能 列表, or 您可以
 添加 them to your own 技能 and even combine them.
 
 Most 效果 are able to 目标 两者都 实体 and 位置. You control
 what your 效果 targets using a [目标选择器][].
 
 
-# THIS PAGE IS CURRENTLY BEING MOVED OVER TO THE 机制 ONE, SOME LINKS MAY BECOME TEMPORARILY BROKEN DURING THIS PROCESS
+# THIS PAGE IS CURRENTLY BEING MOVED OVER TO THE 技能 ONE, SOME LINKS MAY BECOME TEMPORARILY BROKEN DURING THIS PROCESS
 
 
 ## 语法
@@ -30,12 +30,12 @@ what your 效果 targets using a [目标选择器][].
 
 
 #### Audience
-Audience arguments可以usedto 显示 the 效果 仅 to a specific group of 玩家, 而不是 the entire 服务器, by using the `audience=<audience type>` 属性 in an 效果 机制 and specifying an audience 类型 to use. This can be useful in preventing 也 many 粒子 from being displayed to 每个人 unnecessarily, and can reduce client-side lag to some extent。
+Audience arguments可以usedto 显示 the 效果 仅 to a specific group of 玩家, 而不是 the entire 服务器, by using the `audience=<audience type>` 属性 in an 效果 技能 and specifying an audience 类型 to use. This can be useful in preventing 也 many 粒子 from being displayed to 每个人 unnecessarily, and can reduce client-side lag to some extent。
 
 The audience 类型 are:
-- `self`/`caster`: the 施法者 of the 机制
-- `nonSelfWorld`/`nonSelf`: every 玩家 in the 世界 其他 than the 施法者 of the 机制
-- `target`: the 目标 of the 机制
+- `self`/`caster`: the 施法者 of the 技能
+- `nonSelfWorld`/`nonSelf`: every 玩家 in the 世界 其他 than the 施法者 of the 技能
+- `target`: the 目标 of the 技能
 - `world`: every 玩家 in the 世界
 - `nearby`: every nearby 玩家
 - `tracked`: every 玩家 who clients can render the 施法者
@@ -50,7 +50,7 @@ Of particular relevance is the `audience=@Targeter` 属性, that 允许 any 实�
 ```
 
 ## 效果
-| 效果 机制 | Description |
+| 效果 技能 | Description |
 |----------------------|-----------------------------------------------------------------------|
 | [Atom][] | Creates electron-esque orbitals. |
 | [BlackScreen][] | Blacks 移除 目标 screen 对于 持续时间 |
@@ -90,25 +90,25 @@ Of particular relevance is the `audience=@Targeter` 属性, that 允许 any 实�
 | [TotemOfUndying][] | Plays the 效果 of a 玩家 resurrecting |
 
 
-  [技能 机制]: /技能/机制/
+  [技能 技能]: /技能/技能/
   [目标选择器]: /技能/目标选择器/
-  [Atom]: /技能/机制/atom
-  [BlackScreen]: /技能/机制/blackscreen
-  [BlockMask]: /技能/机制/blockmask
-  [BlockUnmask]: /技能/机制/blockunmask
-  [BlockWave]: /技能/机制/blockwave
-  [BloodyScreen]: /技能/机制/bloodyscreen
-  [Ender]: /技能/机制/ender
-  [EnderBeam]: /技能/机制/enderbeam
-  [Explosion]: /技能/机制/FakeExplosion
+  [Atom]: /技能/技能/atom
+  [BlackScreen]: /技能/技能/blackscreen
+  [BlockMask]: /技能/技能/blockmask
+  [BlockUnmask]: /技能/技能/blockunmask
+  [BlockWave]: /技能/技能/blockwave
+  [BloodyScreen]: /技能/技能/bloodyscreen
+  [Ender]: /技能/技能/ender
+  [EnderBeam]: /技能/技能/enderbeam
+  [Explosion]: /技能/技能/FakeExplosion
   [Firework]: /技能/效果/firework
   [Flames]: /技能/效果/flames
   [Geyser]: /技能/效果/geyser
-  [Glow]: /技能/机制/glow
+  [Glow]: /技能/技能/glow
   [GuardianBeam]: /效果/guardianbeam
   [ItemSpray]: /技能/效果/itemspray
-  [闪电]: /技能/机制/FakeLightning
-  [粒子]: /技能/机制/粒子
+  [闪电]: /技能/技能/FakeLightning
+  [粒子]: /技能/技能/粒子
   [ParticleBox]: /技能/效果/particlebox
   [ParticleEquation]: /技能/效果/particleequation
   [ParticleLine]: /技能/效果/particleline
@@ -127,7 +127,7 @@ Of particular relevance is the `audience=@Targeter` 属性, that 允许 any 实�
   [StopSound]: /技能/效果/stopsound
   [ThunderLevel]: /技能/效果/thunderlevel
   [TotemOfUndying]: /技能/效果/totemOfUndying
-  [Atom]: /技能/机制/atom
+  [Atom]: /技能/技能/atom
   [ParticleVortex]: /技能/效果/particlevortex
   [DNA]: /技能/效果/dna
   [PlayAnimation]: /技能/效果/playanimation

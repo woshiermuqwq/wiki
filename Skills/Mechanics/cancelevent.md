@@ -1,14 +1,14 @@
 ## 描述
 
-Cancel the Event that triggered the skill. This 机制 has several
+Cancel the Event that triggered the skill. This 技能 has several
 important requirements in order to execute properly:
 
--   **The 机制 or initial skill 必须 run with sync=true.**
+-   **The 技能 or initial skill 必须 run with sync=true.**
 > Example: -
     skill{s=CancelEventSkill;sync=true} ~onDamaged
 -   No delays allowed.
 -   Not all triggers are associated with events that 可以 cancelled. 
--   Other 机制s that listens to the same trigger will still be triggered even if the event is ultimately cancelled.
+-   Other 技能s that listens to the same trigger will still be triggered even if the event is ultimately cancelled.
 
 ### Compatible Triggers
 -   ~onAttack
@@ -26,7 +26,7 @@ important requirements in order to execute properly:
 > This is not a complete list, and other triggers may work too, the ones listed here are just the confirmed ones
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

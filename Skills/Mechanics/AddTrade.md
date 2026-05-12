@@ -1,6 +1,6 @@
 ## 描述
 Changes the trades of a villager.  
-The villager will become a nitwit if it doesn't have any profession assigned when using this 机制.
+The villager will become a nitwit if it doesn't have any profession assigned when using this 技能.
 
 
 ## 属性

@@ -74,7 +74,7 @@ SkeletonKing:
 
 最后，我们为生物添加一些技能，赋予它有趣的能力！
 
-我们添加了 2 个机制和 2 个元技能到生物上，元技能将在下面的技能文件中创建。前往[机制](/Skills/Mechanics)、[目标选择器](/Skills/Targeters)和[触发器](/Skills/Triggers)页面了解各机制的作用！
+我们添加了 2 个技能和 2 个元技能到生物上，元技能将在下面的技能文件中创建。前往[技能](/Skills/Mechanics)、[目标选择器](/Skills/Targeters)和[触发器](/Skills/Triggers)页面了解各技能的作用！
 ```yaml
 SkeletonKing:
   Type: WITHER_SKELETON
@@ -98,7 +98,7 @@ SkeletonKing:
   - skill{s=SummonSkeletons} @self 0.1
   - skill{s=SmashAttack} @target 0.2
 ```
-在某些机制后面加上 0.2 和 0.1 是给它们一个执行概率，意味着它们不会 100% 触发。概率基于 1，所以 0.2 是 20% 的概率。
+在某些技能后面加上 0.2 和 0.1 是给它们一个执行概率，意味着它们不会 100% 触发。概率基于 1，所以 0.2 是 20% 的概率。
 
 # 技能文件
 `/plugins/MythicMobs/Skills/SkeletonKing.yml`
@@ -108,11 +108,11 @@ SkeletonKing:
 ### SummonSkeletons
 我们的技能内部 ID 为 `SummonSkeletons`，这是调用技能时使用的名称。我们给它设了 15 秒的冷却，意味着技能一旦执行，在该时长内不会再次触发。
 
-机制：
+技能：
 - [message](/mechanics/message) 向生物周围 40 半径内的所有玩家发送消息，通知骷髅正在生成。我们使用 caster.name 占位符来获取生物的 Display 设置，以及 &co 占位符来插入冒号（直接使用冒号会干扰语法）。
-- [delay 20](/mechanics/delay) 在消息和下一条机制之间添加 20 ticks（1 秒）的延迟
-- [summon](/mechanics/summon) 生成 2 只基础骷髅，随机放置在骷髅王周围 5 个方块内。summon 机制支持原版生物（如我们所用）或其他 MythicMobs（使用它们的内部 ID）。
-我们重复了 delay 和 summon 机制，将在 3 秒内总共生成 6 只骷髅。
+- [delay 20](/mechanics/delay) 在消息和下一条技能之间添加 20 ticks（1 秒）的延迟
+- [summon](/mechanics/summon) 生成 2 只基础骷髅，随机放置在骷髅王周围 5 个方块内。summon 技能支持原版生物（如我们所用）或其他 MythicMobs（使用它们的内部 ID）。
+我们重复了 delay 和 summon 技能，将在 3 秒内总共生成 6 只骷髅。
 
 ```yaml
 SummonSkeletons:
@@ -133,7 +133,7 @@ SummonSkeletons:
 我们使用条件确保目标在一定距离内，如果目标太远，技能不会执行。
 - [TargetWithin{d=25}]() 确保目标在生物 25 个方块范围内
 
-机制：
+技能：
 - [message](/mechanics/message) 向 40 方块半径内的所有玩家显示攻击警告
 - [teleport](/mechanics/teleport) 将生物直接传送到目标玩家位置
 - [sound](/mechanics/Sound) 在生物位置播放末影人传送音效

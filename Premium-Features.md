@@ -6,7 +6,7 @@ Premium
 -   访问 Premium 支持频道
 -   更快获取最新版本
 -   访问开发构建版本
--   访问尊享专属机制，如[射线追踪](/skills/mechanics/raytrace)和[连锁制导弹射物](/skills/mechanics/chainmissile)！
+-   访问尊享专属技能，如[射线追踪](/skills/mechanics/raytrace)和[连锁制导弹射物](/skills/mechanics/chainmissile)！
 -   可使用自定义伤害类型和伤害修正
 -   可在以下场景使用数学和[占位符](/Skills/Placeholders)：
     - 生物属性（生命值、伤害等）
@@ -17,7 +17,7 @@ Premium
 -   可使用[内联目标条件](/skills/Inline-Conditions)
 -   可在[弹射物技能](/skills/mechanics/projectile)中使用命中条件和弹跳
 -   可使用条件性 [AI 目标/目标选择器](/Mobs/Custom-AI)
--   可在任何机制中使用 `origin=@targeter`
+-   可在任何技能中使用 `origin=@targeter`
 -   更多更多！
 
 MythicMobs Premium 解锁的任何新功能也可用于兼容的 Mythic 插件，如 Crucible、RPG、Enchants、Achievements、Dungeons 等！

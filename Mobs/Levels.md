@@ -6,7 +6,7 @@ Or, for more advanced configs you could change their 掉落 完全 取决于 wha
 
 生物 等级 can 也 be influenced by 世界 scaling (see below), [Random
 生成器](/Random%20Spawns) or the [SetLevel
-机制](/技能/机制/setlevel).
+技能](/技能/技能/setlevel).
 
 ```yaml
 Zombie:

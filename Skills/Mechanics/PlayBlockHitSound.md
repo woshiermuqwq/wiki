@@ -1,7 +1,7 @@
 ## 描述
 Plays the target block's hit (damage) sound.  
 
-> **This is a [Paper-Only] 机制!**
+> **This is a [Paper-Only] 技能!**
 
 
 ## 属性

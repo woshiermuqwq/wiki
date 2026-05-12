@@ -15,7 +15,7 @@ There are bits of embedded data in the wiki in the form of html comments. These 
 Those are added to the 默认 值 field of any 属性.
 There are two 类型 of data can be embedded, and they可以used一起 and put in any order. So long as 它们是 *there* 某处 它是 fine。
 
-This 也 works for universal 属性 即 not inside any specific 机制
+This 也 works for universal 属性 即 not inside any specific 技能
 
 `| type      | types, t  | A list of entity types to match           |<!--type:EntityType--><!--list--> |`
 
@@ -53,9 +53,9 @@ This is set by putting a comment in the 属性 header of the 属性 表
 The 值 可以是 ETA for 实体 or LTA for 位置
 
 ## 示例 Pages
-- [机制 Wiki Page](Wiki-Editors-Resources/ExampleMechanic)
-- [目标选择器 Wiki Page](Wiki-Editors-Resources/ExampleMechanic "Uses the same syntax as the 机制 one")
-- [条件 Wiki Page](Wiki-Editors-Resources/ExampleMechanic "Uses the same syntax as the 机制 one")
+- [技能 Wiki Page](Wiki-Editors-Resources/ExampleMechanic)
+- [目标选择器 Wiki Page](Wiki-Editors-Resources/ExampleMechanic "Uses the same syntax as the 技能 one")
+- [条件 Wiki Page](Wiki-Editors-Resources/ExampleMechanic "Uses the same syntax as the 技能 one")
 
 ## [Test Page](Wiki-Editors-Resources/Test-Page)
 

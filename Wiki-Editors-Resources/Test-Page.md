@@ -55,7 +55,7 @@ The following is 一系列 the implemented 粒子, 关联 their DataType group. 
 
 | Ash | 方块 Crack | | |
 |:---:|:-----------:|:-:|:-:|
-| <a href="/技能/机制/粒子/粒子-类型/Ash"><img src="https://imgur.com/ggCYoIB.gif"></a> | <a href="/技能/机制/粒子/粒子-类型/BlockCrack"><img src="https://imgur.com/bHpnok7.gif"></a> |
+| <a href="/技能/技能/粒子/粒子-类型/Ash"><img src="https://imgur.com/ggCYoIB.gif"></a> | <a href="/技能/技能/粒子/粒子-类型/BlockCrack"><img src="https://imgur.com/bHpnok7.gif"></a> |
 
 
 

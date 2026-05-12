@@ -15,9 +15,9 @@ You can force a new line in the hologram by using `\n`
 | chatprefix| cp        | The prefix 对于chat message            | &lt;caster.name&gt;&f&lt;&co&gt;  |
 | duration  | d, ticks, time, t | The amount of time the hologram 将会 displayed for.               | MESSAGE LENGTH * 4  |
 | sendchatmessage | chatmessage, chat | Whether the message shows up in chat                   | true    |
-| audience  |           | The [Audience] of the 机制                                       | tracked<!--type:Audience--> |
+| audience  |           | The [Audience] of the 技能                                       | tracked<!--type:Audience--> |
 
-> 此机制继承所有[Aura] 机制  
+> 此技能继承所有[Aura] 技能  
 >> - The `auraname` attribute is **set** at `#speaking`
 >> - The `charges` attribute is **set** at `1`  
 >> - The `maxStacks` attribute is **set** at `1`  

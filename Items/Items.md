@@ -362,7 +362,7 @@ MyExampleItem:
     Animation: SPEAR
     Sound: item.crossbow.quick_charge_3
     ConsumeEffects:
-    # 以下是特殊机制，仅此字段中可用
+    # 以下是特殊技能，仅此字段中可用
     - potion{type=absorption;d=200}
     - randomteleport{radius=5}
     - removePotion{type=wither}

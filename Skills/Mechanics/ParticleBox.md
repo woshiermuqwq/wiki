@@ -6,7 +6,7 @@
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | radius    | r         | The radius of the box to draw                                        | 5       |
-> 此机制继承所有[Particle](/skills/mechanics/particle) 机制
+> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
 
 
 ## 示例

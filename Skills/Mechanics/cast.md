@@ -1,5 +1,5 @@
 ## 描述
-Cast is an [Aura] 机制 similar to
+Cast is an [Aura] 技能 similar to
 [Skill](/skills/mechanics/skill) in that it executes a skill, however
 Cast instead "casts" the skill similar to how you'd expect an RPG hero
 or monster to do so. Cast will execute the given skill if the cast
@@ -21,7 +21,7 @@ will also interrupt casting, such as cancelling on move or teleport.
 | skillname | spellname, sn | Display name of the spell in the cast bar                        |         |
 | showCastBar | castbar, cb | Whether to show the cast bar                                     | true    |
 | cancelOnMove | com    | Whether to cancel the aura if the caster moves                       | false   |
-> 此机制继承所有[Aura] 机制
+> 此技能继承所有[Aura] 技能
 >> - The `auraName` attribute is **set** at `#casting` and **cannot be changed**
 >> - The `charges` attribute is **set** at `1` and **cannot be changed**
 >> - The `maxStacks` attribute is **set** at `1` and **cannot be changed**

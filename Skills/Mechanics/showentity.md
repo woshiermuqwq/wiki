@@ -1,9 +1,9 @@
 ## 描述
-Shows the caster, if hidden via the use of the [hide] 机制, to the targeted players.
+Shows the caster, if hidden via the use of the [hide] 技能, to the targeted players.
 
 
 ## 属性
-> *This 机制 has  no attributes*
+> *This 技能 has  no attributes*
 
 
 ## 示例

@@ -10,10 +10,10 @@
 | type      | t         | The type of the bullet                                               | arrow   |
 | damage    | d         | The damage of the bullet                                             | 5       |
 | bounce    |           | Whether the bullet should bounce                                     | false   |
-| interval  | int, i    | how often in ticks this 机制 updates                             | 4       |
-| onTick    | oT, m, meta, ontickskill, s, skill | the skill this 机制 calls each interval |<!--type:Metaskill-->|
-| onHit     | oH, onhitskill | the skill this 机制 calls when it hits the target           |<!--type:Metaskill-->|
-| onEnd     | oE, onendskill | the skill this 机制 calls when it ends                      |<!--type:Metaskill-->|
+| interval  | int, i    | how often in ticks this 技能 updates                             | 4       |
+| onTick    | oT, m, meta, ontickskill, s, skill | the skill this 技能 calls each interval |<!--type:Metaskill-->|
+| onHit     | oH, onhitskill | the skill this 技能 calls when it hits the target           |<!--type:Metaskill-->|
+| onEnd     | oE, onendskill | the skill this 技能 calls when it ends                      |<!--type:Metaskill-->|
 | startyoffset | syo    | The starting y offset of the bullet                                  | 0       |
 | forwardoffset | startfoffset, sfo | The forward offset of the bullet                         | 0       |
 | fromorigin | fo | Whether to shoot the shulker bullet from the origin                        | false   |

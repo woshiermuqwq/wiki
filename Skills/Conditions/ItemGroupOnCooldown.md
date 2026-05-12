@@ -1,6 +1,6 @@
 ## 描述
 检查目标玩家的指定物品组是否处于冷却中。  
-另请参阅相关的 [SetItemGroupCooldown 机制](/Skills/Mechanics/SetItemGroupCooldown)。
+另请参阅相关的 [SetItemGroupCooldown 技能](/Skills/Mechanics/SetItemGroupCooldown)。
 
 
 ## 属性

@@ -14,7 +14,7 @@
 Conditions:
 - damageTag{tag=WITCHCURSES}
 ```
-用于检查 [Damage](/skills/mechanics/damage) 机制或继承其属性的机制中指定的伤害标签。
+用于检查 [Damage](/skills/mechanics/damage) 技能或继承其属性的技能中指定的伤害标签。
 
 
 ## 别名

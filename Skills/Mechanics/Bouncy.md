@@ -7,7 +7,7 @@ Applies an aura to the target that makes it bouncy
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | onBounceSkill | onbounce, ob | 要执行的元技能 on bounce                            |<!--type:Metaskill-->|
 | cancelevent | ce, canceldamage, cd | Whether to cancel fall damage 对于duration of the aura| false |
-> 此机制继承所有[Aura](Skills/Mechanics/Aura) 机制
+> 此技能继承所有[Aura](Skills/Mechanics/Aura) 技能
 
 
 ## 示例

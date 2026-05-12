@@ -1,5 +1,5 @@
 ## 描述
-Sets if the target of the 机制 should have a collidable hitbox or not.
+Sets if the target of the 技能 should have a collidable hitbox or not.
 <br>The result is equivalent to the [Collidable](/Mobs/Options#collidable) Option.
 
 

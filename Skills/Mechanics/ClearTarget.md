@@ -1,9 +1,9 @@
 ## 描述
-Forces the target of the 机制 to reset its current target
+Forces the target of the 技能 to reset its current target
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

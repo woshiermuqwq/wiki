@@ -1,11 +1,11 @@
 ## 描述
 Causes the casting goat mob to ram the targeted entity
 
-> **This is a [Paper-Only] 机制!**
+> **This is a [Paper-Only] 技能!**
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

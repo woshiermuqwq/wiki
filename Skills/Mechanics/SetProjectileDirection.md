@@ -10,7 +10,7 @@ Sets the calling projectile's movement direction to the given target
 
 
 ## 示例
-Once called by a projectile, this 机制 will change the projectile's direction based on its current direction
+Once called by a projectile, this 技能 will change the projectile's direction based on its current direction
 ```yaml
   Skills:
   - setprojectiledirection @ProjectileForward{f=10;rot=45}

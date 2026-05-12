@@ -1,5 +1,5 @@
 ## 描述
-Targets the 位置 stored in the specified 变量. One such 变量可以setvia the [SetVariableLocation](/技能/机制/setvariablelocation) 机制。
+Targets the 位置 stored in the specified 变量. One such 变量可以setvia the [SetVariableLocation](/技能/技能/setvariablelocation) 技能。
 
 ## 属性
 

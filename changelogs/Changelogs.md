@@ -32,9 +32,9 @@
 - 生物变量可以设置所有已注册的变量类型
 - 内部：迁移了默认变量处理器供 Crucible 使用
 
-## 机制
+## 技能
 - **新增**：[`ForEach`](/Skills/Mechanics/ForEach) 和 [`ForEachValue`](/Skills/Mechanics/ForEachValue)
-- **新增**：`ClearTarget` 机制
+- **新增**：`ClearTarget` 技能
 - 更新：`variableadd` / `variablesubtract` 支持新变量类型
 - 弹射物系列：
   - 添加了许多缺失的弹射物选项
@@ -45,16 +45,16 @@
   - 移除了 `hugSurface` 的 `hs` 别名
   - 改进了环绕物的目标定位逻辑
 - Aura：`sync=true` 现在强制使用同步调度器
-- Look 机制：细微行为调整
+- Look 技能：细微行为调整
 - Summon：修复了 `useTargetYaw`/`useTargetPitch`
 - Stun：修复了 `freezeFacing` 反转问题；修复了较新版本的问题
 
 ## 传送（仅 Paper）
-- **新增**了所有传送机制的选项（Paper）：
+- **新增**了所有传送技能的选项（Paper）：
   - 传送原因
   - 保留载具
   - 支持 Paper 的 `TeleportFlag`
-- 修复：解决了导致传送机制失效的回归问题；对新选项进行了额外优化
+- 修复：解决了导致传送技能失效的回归问题；对新选项进行了额外优化
 
 ## 目标选择器与触发器
 - 目标选择器：
@@ -78,7 +78,7 @@
 - 物品系统：
   - 重载时更快的物品缓存（也能解析占位符/变量）
   - 修复了工具规则
-  - 修复了物品机制可能失败的情况
+  - 修复了物品技能可能失败的情况
   - 尝试修复 `ItemMatcher` 中 `vanillaonly=true` 的问题
 
 ## 生物与生成
@@ -97,11 +97,11 @@
 ## Bug 修复与其他
 - 为生成半径属性添加了占位符支持
 - 修复 NPE：启动时、`MythicConfig`、`ForEach`、`Summon`、带 `DisplayItem` 图腾的向量、目标设置
-- 修复了 1.21.4+ 上 recoil 机制的问题
+- 修复了 1.21.4+ 上 recoil 技能的问题
 - 修复了其他插件在加载前调用某些方法时的错误
 - 修复了开发构建版本中引入的 aura `IllegalStateException`
 - 修复了极少数情况下的等级修正器错误
-- 修复了 `Log` 机制的消息解析
+- 修复了 `Log` 技能的消息解析
 - 修复了目标变量不存在时 `variableequals` 的警告
 - 修复了 `onShoot` aura 不设置 `<skill.var.bow-tension>` 的问题
 - 修复了各种导弹 `verticalOffset` 问题
@@ -117,14 +117,14 @@ Bug 修复
 - 修复了某些耐久度相关问题不使用新耐久度组件数据的问题
 - 修复了等级修正器的一些错误
 - 修复了较新版本上 recoil 效果的若干问题
-- 修复了 stun 机制的 freezeFacing 选项反转问题
+- 修复了 stun 技能的 freezeFacing 选项反转问题
 
 # 5.9.4
 
 Bug 修复
 ---------
-- 为 raytraceTo 机制添加了 `ignoreEntities`
-- 修复了射线追踪机制中 `ignorePassable=false` 穿透屏障方块的问题
+- 为 raytraceTo 技能添加了 `ignoreEntities`
+- 修复了射线追踪技能中 `ignorePassable=false` 穿透屏障方块的问题
 
 # 5.9.3
 
@@ -147,13 +147,13 @@ Bug 修复
 
 Bug 修复
 ---------
-- 修复了 suicide 机制不计入生物伤害自身的问题（关闭 #1584）
+- 修复了 suicide 技能不计入生物伤害自身的问题（关闭 #1584）
 - 修复了较新版本上对话气泡 yaw/pitch 反转的问题
-- 可能修复了 MountMe 机制
+- 可能修复了 MountMe 技能
 - 修复了配置物品 NBT 的 MapList 元素不工作的问题
 - 修复了原版战利品表掉落的 IllegalArgumentException（关闭 #1949）
 - 修复了复制生物生成器时生物类型的错误（关闭 #1951）
-- 修复了 shield 机制的错误（关闭 #1955）
+- 修复了 shield 技能的错误（关闭 #1955）
 - 修复了 `<skill.targets>` 占位符中的 NPE（关闭 #1961）
 - 修复了 1.21.4 上的 ClientboundSetEntityDataPacket 错误
 - 修复了 PermissionFactionProvider 中将 OP 放入每个阵营的问题
@@ -164,7 +164,7 @@ Bug 修复
 
 Bug 修复
 ---------
-- 修复了 VariableMath 机制不支持 double 变量
+- 修复了 VariableMath 技能不支持 double 变量
 - 修复了 ItemMatcher 的一些 bug
 - 修复了 moveTowardsTargetConditional AI 目标
 - 修复了弹射物弹跳问题
@@ -190,31 +190,31 @@ step(e, x) { 0, x < e; 1, x >= e
 lerp(a, b, r)
 ```
 
-机制
+技能
 ---------
 ### 新增：swingOffhand
-- 添加了 `swingOffhand` 机制（副手挥动）。
+- 添加了 `swingOffhand` 技能（副手挥动）。
 
 ### 新增：setEntityPose
-- 添加了 `setEntityPose{pose=X}` 机制。
+- 添加了 `setEntityPose{pose=X}` 技能。
 
 ### 新增：setItemGroupCooldown
-- 添加了 `setItemGroupCooldown{group=namespace:key;ticks=20}` 机制。
+- 添加了 `setItemGroupCooldown{group=namespace:key;ticks=20}` 技能。
 
 ### Hit
-- 为 hit 机制添加了 `scaleByAttackCooldown`（基于武器攻击冷却缩放伤害）。
+- 为 hit 技能添加了 `scaleByAttackCooldown`（基于武器攻击冷却缩放伤害）。
 
 ### Leap
-- Leap 机制的 Noise 现在默认为 `0`。
+- Leap 技能的 Noise 现在默认为 `0`。
 
 ### MetaSkill
-- 为 `MetaSkill` 机制添加了 `snapshotStats=true`。
+- 为 `MetaSkill` 技能添加了 `snapshotStats=true`。
 
 ### Missile
-- 为 `missile` 机制添加了 `startWithParentVelocity` 选项。
+- 为 `missile` 技能添加了 `startWithParentVelocity` 选项。
 
 ### 弹射物
-- 为弹射物类型机制添加了 HitTargeter
+- 为弹射物类型技能添加了 HitTargeter
 
 hitTarget/htr 接受一个实体目标选择器。由 htr 定位的实体将通过 onHit 处理并获取免疫延迟。
 
@@ -222,11 +222,11 @@ hitTarget/htr 接受一个实体目标选择器。由 htr 定位的实体将通�
 - 为 SlashMechanic 添加了 `specificStep/ss`
 
 ### Totem
-- 为 Totem 机制添加了 `faceAwayFromCaster=true` 选项。
-- 为 Totem 机制添加了 `hugSurface=true` 选项。
+- 为 Totem 技能添加了 `faceAwayFromCaster=true` 选项。
+- 为 Totem 技能添加了 `hugSurface=true` 选项。
 
 ### Wait
-- 新增特殊关键词机制 `wait`
+- 新增特殊关键词技能 `wait`
 - 将暂停技能树直到条件满足
 
 条件
@@ -332,8 +332,8 @@ Bug 修复与优化
 - 修复了 Nexo 掉落不用于装备的问题。
 - 修复了可装备组件在 1.21.3 之前版本也应用的问题。
 - 修复了某些方块不适用于基于方块的子弹的问题。
-- 修复了较新版本上的 `swingArm` 机制。
-- 修复了加载自定义机制时的多个错误。
+- 修复了较新版本上的 `swingArm` 技能。
+- 修复了加载自定义技能时的多个错误。
 - 修复了某些情况下 `MythicProvider` 注册过晚的问题。
 - 修复了 `PreventStingerLoss` 选项的拼写错误。
 - 修复了命中多个目标时 `scaleByAttackCooldown` 的问题。
@@ -350,10 +350,10 @@ Bug 修复与优化
 - 修复了 targetself = true 时 ENO（实体近原点）无视条件包含施法者的问题
 - 修复了弹射物上的 HitTargeter
 - 修复了一些自定义 AI 目标自几个版本前起无法加载的问题
-- 修复了物品匹配器及相关机制的一些问题
+- 修复了物品匹配器及相关技能的一些问题
 - 修复了粒子在 1.20.X 版本上抛出错误的问题
 - 修复了物品工具规则中的 ClassCastException
-- 修复了较新版本上 MountTarget 机制失效的问题
+- 修复了较新版本上 MountTarget 技能失效的问题
 - 修复了 StatExecutor 中的 NPE
 - 修复了仇恨表即使伤害取消仍追踪仇恨的问题
 - 修复了仇恨不使用属性、伤害修正器之后最终伤害量的问题
@@ -373,10 +373,10 @@ Bug 修复与优化
 -------
 - 添加了缺失的粒子：`infested`、`block_crumble`、`trail`
 - 将缺失的原版属性添加为 Stats：`BLOCK_BREAK_SPEED`、`BLOCK_INTERACTION_RANGE`、`ENTITY_INTERACTION_RANGE`
-- 为 `dropItem` 机制添加了 `then=` 技能选项
-- 为 `remove` 机制添加了 `then=` 技能选项
+- 为 `dropItem` 技能添加了 `then=` 技能选项
+- 为 `remove` 技能添加了 `then=` 技能选项
 - 为 `MobsInRadius` 目标选择器的 `radius` 添加了占位符支持
-- 允许 message 机制在没有目标的情况下使用
+- 允许 message 技能在没有目标的情况下使用
 
 Bug 修复 / 其他
 -----------------
@@ -387,21 +387,21 @@ Bug 修复 / 其他
 - 修复了生命恢复属性的若干问题
 - 修复了 SkillMechanic 中的 ConcurrentModificationException
 - 修复了模板的一些 bug
-- 修复了分支元技能被可终止机制取消的问题
-- 修复了 shoot 机制第一 tick 期间弹射物旋转的问题
+- 修复了分支元技能被可终止技能取消的问题
+- 修复了 shoot 技能第一 tick 期间弹射物旋转的问题
 - 修复了元数据深拷贝不按值克隆目标的问题
 - 修复了关于魔法值的控制台刷屏
 
 # 5.8.0
 
-**注意：此更新包含各种优化、新机制、改进、bug 修复和额外的 API 功能。如发现问题请通过在 Issues 部分创建问题或在相应的 Discord 频道中告知我们来报告。**
+**注意：此更新包含各种优化、新技能、改进、bug 修复和额外的 API 功能。如发现问题请通过在 Issues 部分创建问题或在相应的 Discord 频道中告知我们来报告。**
 
 通用
 -------
 - 新增 1.21.3 和 1.21.4 支持
 - 大量微优化以提升性能（感谢 Taiyou！）
 - 在 `config-general.yml` 中添加了 `Configuration.General.AnnounceOpReload`，设置 Mythic 重载公告是否发送给所有在线 OP。
-- 优化了各种弹射物/实体选择机制，在关键区域移除了流的使用。
+- 优化了各种弹射物/实体选择技能，在关键区域移除了流的使用。
 - 添加了全局选项以自动对所有物品应用 FancyDrops（默认禁用）。
 - 添加了 `/mm m spawn [type] [amount] @targeter` 指令。
 
@@ -421,7 +421,7 @@ Bug 修复 / 其他
 - 新增配置**自定义生物生成器物品**的能力，包括设置生成延迟、生成范围等
 - 添加了狼专属的 `Options.Variant` 用于自定义狼变体
 
-机制
+技能
 ---------
 ### 新增：followPath
 - 一个 Aura（光环），使目标生物沿定义的路径行走。
@@ -430,14 +430,14 @@ Bug 修复 / 其他
 - `log{message="调试到控制台，变量 <caster.var.test>"}` 用于简单日志记录。
 
 ### 新增：setTextDisplay
-- `setTextDisplay{text="text here"} @Target` 用于显示文本的机制。
+- `setTextDisplay{text="text here"} @Target` 用于显示文本的技能。
 
 ### 新增：openTrades
-- 为目标玩家打开商人菜单的机制。
+- 为目标玩家打开商人菜单的技能。
   - `realTrade/real` 属性决定交易是否与真正的村民进行。
 
 ### 新增：movePin
-- `movePin{pin=X}` 重新定位标点的机制。
+- `movePin{pin=X}` 重新定位标点的技能。
 
 ### 新增：directionalVelocity
 - `directionalVelocity{yaw=50}` 基于指定角度向目标施加速度向量。
@@ -504,7 +504,7 @@ Bug 修复 / 其他
 - 添加了 Mythic 颜色选择器
 - 添加了 Fancy Drops 的 `vfxmodel/vfxitemmodel` 支持
 - 添加了 `namespace:enchant_name` 支持
-- 添加了 `strict=true` 到所有物品条件/机制
+- 添加了 `strict=true` 到所有物品条件/技能
 - 扩展了 `Equippable` 组件
 - 添加了 `#tag` 和 `*wildcard` 支持
 - 添加了 `Tool` 和 `UseCooldown` 子组件
@@ -533,7 +533,7 @@ API
 - 修复了苦力怕的 `onPrime` 触发器
 - 修复了自定义方块不能用作生物图腾头部的问题
 - 粒子效果不再被 Spigot 的默认视图范围错误限制
-- 修复了 `look` 机制的 `force=true` 选项
+- 修复了 `look` 技能的 `force=true` 选项
 - 修复了弹射物的负重力
 - 修复了 1.21+ 上的 recoil
 - 修复了生成器不保存及 `Spawners.DisableCommandSaving` 逻辑反转的问题
@@ -549,10 +549,10 @@ API
 - 修复了生成器物品不应用正确生物数据的问题
 - 修复了子碰撞箱元数据操作导致栈溢出的问题
 - 修复了 `spin` 效果在施法者死亡时不停止的问题
-- 修复了 `EnderBeam` 机制中的 IllegalArgumentException
-- 修复了 `setDisplayEntityItem` 机制与 Crucible 生成物品不兼容的问题
+- 修复了 `EnderBeam` 技能中的 IllegalArgumentException
+- 修复了 `setDisplayEntityItem` 技能与 Crucible 生成物品不兼容的问题
 - 修复了物品显示插值/旋转问题
-- 修复了没有 `MovementSpeed` 的生物使用 `setSpeed` 机制卡住的问题
+- 修复了没有 `MovementSpeed` 的生物使用 `setSpeed` 技能卡住的问题
 - 修复了鸡骑士选项不工作的问题
 - 修复了 1.21.4 上各种船类型失效的问题
 - 许多额外的并发和缓存修复

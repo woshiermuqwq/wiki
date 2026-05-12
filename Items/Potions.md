@@ -26,7 +26,7 @@ The 持续时间 of the 药水 效果 measured in ticks <sup>(*20 ticks is 1 sec
 all 支持 药水 效果 are listed on the [spigot javadocs](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/药水/PotionEffectType.html)的complete 列表。
 
 <!--
-This is a 完整列表 all 药水 效果 当前 usable by MythicMobs. These can be utilized by 也 药水 based 物品 or the [药水 机制](/技能/机制/药水).
+This is a 完整列表 all 药水 效果 当前 usable by MythicMobs. These can be utilized by 也 药水 based 物品 or the [药水 技能](/技能/技能/药水).
 
 | **药水 类型** | **Description** |
 |------------------------|---------------------------------------------------------------------------------------------------------------------|

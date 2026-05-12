@@ -7,8 +7,8 @@
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | points    | pts       | The number of points to draw representing the ring                   | 8       |
 | radius    | r         | The radius of the ring around the target                             | 10      |
-> 此机制继承所有[Particle](/skills/mechanics/particle) 机制
->> The particles are generated “per point” in this 机制, so keeping `amount` low is recommended.
+> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
+>> The particles are generated “per point” in this 技能, so keeping `amount` low is recommended.
 
 
 ## 示例

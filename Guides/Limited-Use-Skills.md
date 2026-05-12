@@ -12,13 +12,13 @@ FireballSkill:
   - variableequals{var=caster.fireballs;val=7} false
   Skills:
   - setvariable{var=caster.fireballs;val=<caster.var.fireballs|0>+1}
-  - <在此放置你的技能机制>
+  - <在此放置你的技能技能>
 ```
-在此示例中，每次技能运行时我们都给变量加 "1"，如果变量不存在则通过[变量回退值](/Skills/Variables#variable-fallback)将其设为 0，然后正常执行我们的机制。
+在此示例中，每次技能运行时我们都给变量加 "1"，如果变量不存在则通过[变量回退值](/Skills/Variables#variable-fallback)将其设为 0，然后正常执行我们的技能。
 
 技能设置了 [VariableEquals](/skills/conditions/variableequals) 条件，这意味着一旦变量达到 7，条件将阻止技能继续运行。
 
-如果你想要重置计数器，可以简单地使用 [VariableUnset]() 机制。
+如果你想要重置计数器，可以简单地使用 [VariableUnset]() 技能。
 ```yaml
 Skills:
 - variableunset{var=caster.fireballs}

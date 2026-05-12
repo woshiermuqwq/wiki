@@ -1,5 +1,5 @@
 ## 描述
-修改弹射物, missile, or orbital that activated the 机制.
+修改弹射物, missile, or orbital that activated the 技能.
 
 
 ## 属性

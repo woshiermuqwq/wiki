@@ -14,7 +14,7 @@ Executes the specified metaskill *once and separately* for each value of the spe
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | values    | val, v    | The list or map formatted string to iterate on                       |         |
 
-> 此机制继承所有[Skill](/skills/mechanics/skill) 机制
+> 此技能继承所有[Skill](/skills/mechanics/skill) 技能
 
 
 ## 示例

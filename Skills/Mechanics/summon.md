@@ -3,7 +3,7 @@
 在目标周围生成给定类型的生物。
 
 <!--
-To utilize the summon 机制 in Mythic Mobs, you will need the following:
+To utilize the summon 技能 in Mythic Mobs, you will need the following:
 
 1. Minecraft: make sure you have a working installation of Minecraft Java Edition on your computer
 

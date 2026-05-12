@@ -3,7 +3,7 @@ Gives a copy of the caster's slot to the target.
 
 Won't consume the item in the given slot of caster.  
 
-This 机制 does nothing when the target has no space in its inventory.  
+This 技能 does nothing when the target has no space in its inventory.  
 
 fakeLooting was added in 4.12 and it makes the item being given show up on the screen and fly toward the players inventory like when a player picks an item up off of the ground.
 

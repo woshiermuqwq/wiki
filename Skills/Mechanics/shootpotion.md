@@ -7,7 +7,7 @@ potion effect of the given type to all entities hit.
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | velocity  | v         | The velocity of the thrown potion                                    | 1       |
-> This 机制 inherits every *inheritable* attribute of the [Potion](/Skills/Mechanics/Potion) 机制
+> This 技能 inherits every *inheritable* attribute of the [Potion](/Skills/Mechanics/Potion) 技能
 
 
 ## 示例

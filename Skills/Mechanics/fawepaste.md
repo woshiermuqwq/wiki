@@ -2,16 +2,16 @@
 Pastes a Schematic using the FAWE Plugin found here: [FAWE](https://www.spigotmc.org/resources/fast-async-worldedit.13932/)
 
 You must create a `Schematics` folder in your MythicMob directory and put the schematics you will use inside that folder.<br>
-If the schematic defined in the 机制 is not found inside mm's `Schematics` folder, FAWE's and WE's 将会 then checked for its presence
+If the schematic defined in the 技能 is not found inside mm's `Schematics` folder, FAWE's and WE's 将会 then checked for its presence
 
-> **This is a [Premium-Only] 机制!**
+> **This is a [Premium-Only] 技能!**
 
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | schematic | s         | Which schematic to load                                              |         |
-| pasteID   | pid, id   | The paste's id. Can be used to undo the paste via the [undoPaste] 机制 |   |
+| pasteID   | pid, id   | The paste's id. Can be used to undo the paste via the [undoPaste] 技能 |   |
 | pasteAir  | air, a    | Should air be pasted?                                                | false   |
 | xOffset   | x, xo     | The X offset of pasting the Schematic from the target                | 0       |
 | yOffset   | y, yo     | The Y offset of pasting the Schematic from the target                | 0       |

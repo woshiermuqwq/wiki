@@ -3,7 +3,7 @@ Makes the caster swing their arm
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## Example

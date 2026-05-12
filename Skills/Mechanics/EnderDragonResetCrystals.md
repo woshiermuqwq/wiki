@@ -3,7 +3,7 @@ Generates the EnderDragon crystals if an enderdragon battle is going on in the t
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

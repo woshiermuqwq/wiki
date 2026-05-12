@@ -1,8 +1,8 @@
-An ***自动 generated*** document that lists all the 条件, grouped by tags/functionality.
+一份按标签/功能分类的***自动生成***文档，列出了所有条件。
 
-Tags are added by the wiki editing team and are not a feature 即 reflected in the 插件 code, but 仅 某事 more akin to a search aid.
+标签由 Wiki 编辑团队添加，并非插件代码中的实际功能，而更像是一种搜索辅助手段。
 
-Each 条件 can have 多于 one tag, and 它是 listed under each section for all the tags 它有.
+每个条件可以拥有多个标签，并在其所拥有的每个标签对应分类下列出。
 
 [[_TOC_]]
 
@@ -38,8 +38,8 @@ These 条件 have not been tagged 还.
 | [Charged](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/charged) | MythicMobs | 检查 if the 目标 creeper is charged |
 | [Crouching](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/crouching) | MythicMobs | This 条件 检查 if the 目标 玩家 is crouching or not. |
 | [Cuboid](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/cuboid) | MythicMobs | Whether the 目标 is 在...内 a cuboid that has `location1` and `location2` as opposite vertices |
-| [DamageAmount](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/DamageAmount) | MythicMobs | 检查 for a 范围 of 伤害 the 实体 也k, if the skilltree originated from a [onDamaged 触发器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDamaged) or an [onDamaged 光环](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/机制/ondamaged). |
-| [DamageCause](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/DamageCause) | MythicMobs | 检查 the cause of the 伤害 the 实体 也k, if the skilltree originated from a [onDamaged 触发器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDamaged) or an [onDamaged 光环](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/机制/ondamaged) |
+| [DamageAmount](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/DamageAmount) | MythicMobs | 检查 for a 范围 of 伤害 the 实体 也k, if the skilltree originated from a [onDamaged 触发器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDamaged) or an [onDamaged 光环](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/技能/ondamaged). |
+| [DamageCause](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/DamageCause) | MythicMobs | 检查 the cause of the 伤害 the 实体 也k, if the skilltree originated from a [onDamaged 触发器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDamaged) or an [onDamaged 光环](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/技能/ondamaged) |
 | [Damagetag](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/damagetag) | MythicMobs | 检查 是否 the 伤害 that caused the current 技能 树 has a specific tag |
 | [Dawn](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/dawn) | MythicMobs | 检查 if the time in the 世界 at the 目标 位置 is dawn, from 22000 to 2000 in-game time. |
 | [Day](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/day) | MythicMobs | 检查 if the time in the 世界 at the 目标 位置 is day, from 2000 to 10000 in-game time. |
@@ -145,7 +145,7 @@ These 条件 have not been tagged 还.
 | [NearClaim](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/nearClaim) | MythicMobs | 检查 if the 目标 位置 is near any claims of any 支持 插件 |
 | [Night](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/night) | MythicMobs | 检查 if the time is night, from 14000 to 22000 in-game time |
 | [Notinregion](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/notinregion) | MythicMobs | 检查 if the 目标 位置 is **not** 在...内 the given WorldGuard 区域 |
-| [Offgcd](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/offgcd) | MythicMobs | 检查 if the 目标 生物 has an active [Global 冷却](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/机制/globalcooldown) |
+| [Offgcd](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/offgcd) | MythicMobs | 检查 if the 目标 生物 has an active [Global 冷却](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/技能/globalcooldown) |
 | [Onblock](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/onblock) | MythicMobs | 匹配 the 方块 the 目标 实体 is standing on |
 | [Onground](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/onground) | MythicMobs | If the 目标 实体 is standing on solid ground |
 | [OriginDistanceFromPin](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/条件/OriginDistanceFromPin) | MythicMobs | 检查 if the [@原点](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/原点) is 在...内 a certain 距离 of a specified [pin](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Pins) |

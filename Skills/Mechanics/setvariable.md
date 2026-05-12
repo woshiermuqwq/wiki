@@ -17,7 +17,7 @@ placeholders to store data.
 ### 不可继承属性
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| value     | val, v, amount, a    | The value to set the variable to. Must be applicable for `type` or the 机制 will fail. Should be surrounded in double-quotes if using spaces or semicolons. Value can also include placeholders, even from PlaceholderAPI                                                                       |         |
+| value     | val, v, amount, a    | The value to set the variable to. Must be applicable for `type` or the 技能 will fail. Should be surrounded in double-quotes if using spaces or semicolons. Value can also include placeholders, even from PlaceholderAPI                                                                       |         |
 | type      | t         | The [type](/skills/variables#variable_types) of the variable. Set to STRING if you are using text instead of numbers                                                          | INTEGER<!--type:VariableType--> |
 
 

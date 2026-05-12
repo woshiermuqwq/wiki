@@ -33,7 +33,7 @@ another_mob:
 #### Display
 设置生物的显示名称。
 此选项支持颜色代码和[占位符]。
-**生物的名称不会自行更改或更新，你必须使用 [setname] 机制来更改或更新它。**
+**生物的名称不会自行更改或更新，你必须使用 [setname] 技能来更改或更新它。**
 ```yml
 example_mob:
   Type: zombie
@@ -342,7 +342,7 @@ Head（头部方块）的值是实际的方块类型，放置在世界中后将�
 <img src="https://i.imgur.com/yOc8Hnm.gif" alt="Mob Totem" width="50%">
 
 #### Variables
-与其在 `~onSpawn` 中使用大量 `setvariable` 机制，你可以通过 Variables 生物字段让生物在生成时就带有已设置好的[变量](/Skills/Variables)。
+与其在 `~onSpawn` 中使用大量 `setvariable` 技能，你可以通过 Variables 生物字段让生物在生成时就带有已设置好的[变量](/Skills/Variables)。
 
 ```yaml
 VariableZombie:

@@ -1,10 +1,10 @@
 ## 描述
 Makes the target entity glow (like with the Glowing potion effect).  
-This 机制 is also an [aura].
+This 技能 is also an [aura].
 
 > **[Glow API](https://www.spigotmc.org/resources/api-glowapi-1-9-1-10.19422/)** is required for minecraft version 1.16.
 
-> Please note that this 机制 is not actually giving the *glowing* effect in any form: it will just *look* like it. If you want to check against the presence of this 机制, you must check against the presence of the applied aura (an [hasaura](/skills/conditions/hasaura) condition con do the trick, for instance)
+> Please note that this 技能 is not actually giving the *glowing* effect in any form: it will just *look* like it. If you want to check against the presence of this 技能, you must check against the presence of the applied aura (an [hasaura](/skills/conditions/hasaura) condition con do the trick, for instance)
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
@@ -12,7 +12,7 @@ This 机制 is also an [aura].
 | auraname  | buffname, debuffname | The name of the aura                                      | #glowing|
 | color     | c         | The [color] with which the entity will glow                          | white<!--type:GlowColor--> |
 | audience  |           | The [audience] of the glow effect                                    | nearby<!--type:Audience--> |
-> 此机制继承所有[Aura] 机制 
+> 此技能继承所有[Aura] 技能 
 >> - The `auraname` attribute is **defaulted** at `#glowing`
 >> - The `charges` attribute is **set** at `1` and cannot be modified.  
 >> - The `maxStacks` attribute is **set** at `1` and cannot be modified.  

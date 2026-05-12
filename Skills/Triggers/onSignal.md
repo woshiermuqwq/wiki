@@ -1,7 +1,7 @@
 ## 描述
 ThThis 触发器 has a special syntax: `~onSignal:<signal>`
 
-Ex执行 the 技能 when the 生物 receives a 信号 从 [信号](/技能/机制/信号) 机制.
+Ex执行 the 技能 when the 生物 receives a 信号 从 [信号](/技能/技能/信号) 技能.
 A A 信号 必须为 alphanumeric.
 
 > The associated [@触发器](/技能/目标选择器/触发器) is the 实体 that sent the 信号
@@ -26,7 +26,7 @@ DUMMY_MOB:
     - message{m=MOO} @World ~onSignal:MOO_FOR_ME
 ```
 ##
-You may 也 choose to not specify a 信号 for this 触发器, in which case the associated 机制 将 triggered every time the 生物 receives a generic 信号.
+You may 也 choose to not specify a 信号 for this 触发器, in which case the associated 技能 将 triggered every time the 生物 receives a generic 信号.
 ```yml
 DUMMY_MOB:
   Type: COW

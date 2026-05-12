@@ -1,8 +1,8 @@
-An ***自动 generated*** document that lists all the 目标选择器, grouped by tags/functionality.
+一份按标签/功能分类的***自动生成***文档，列出了所有目标选择器。
 
-Tags are added by the wiki editing team and are not a feature 即 reflected in the 插件 code, but 仅 某事 more akin to a search aid.
+标签由 Wiki 编辑团队添加，并非插件代码中的实际功能，而更像是一种搜索辅助手段。
 
-Each 目标选择器 can have 多于 one tag, and 它是 listed under each section for all the tags 它有.
+每个目标选择器可以拥有多个标签，并在其所拥有的每个标签对应分类下列出。
 
 [[_TOC_]]
 
@@ -84,7 +84,7 @@ These 目标选择器 have not been tagged 还.
 | [Ring](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/Ring) | MythicMobs | Targets 位置 in a specified ring 在...周围 施法者. |
 | [SelfEyeLocation](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/SelfEyeLocation) | MythicMobs | Targets the 施法者 eye 位置 |
 | [SelfLocation](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/SelfLocation) | MythicMobs | Targets the 施法者 位置 |
-| [Self](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/Self) | MythicMobs | Targets the 施法者 of the 机制 |
+| [Self](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/Self) | MythicMobs | Targets the 施法者 of the 技能 |
 | [Siblings](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/Siblings) | MythicMobs | Targets any 生物 that share the same 父级 as the 施法者 |
 | [生成器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/生成器) | MythicMobs | Targets the 位置 of the specified 生物 生成器 |
 | [SpawnLocation](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/SpawnLocation) | MythicMobs | Targets the 世界 生成 位置 |
@@ -99,7 +99,7 @@ These 目标选择器 have not been tagged 还.
 | [RandomThreatTargetLocation](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/RandomThreatTargetLocation) | MythicMobs | Targets the 位置 of a random 实体 on the casting 生物 [仇恨表](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ThreatTables) |
 | [RandomThreatTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/RandomThreatTarget) | MythicMobs | Targets a random 实体 on the casting 生物 [仇恨表](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ThreatTables) |
 | [ThreatTable](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/ThreatTable) | MythicMobs | Targets every 实体 on the casting 生物 [仇恨表](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ThreatTables) |
-| [TrackedLocation](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/TrackedLocation) | MythicMobs | Targets the 施法者 [Tracked 位置](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/机制/tracklocation) |
+| [TrackedLocation](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/TrackedLocation) | MythicMobs | Targets the 施法者 [Tracked 位置](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/技能/tracklocation) |
 | [TrackedPlayers](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/TrackedPlayers) | MythicMobs | Targets 玩家 即 在...内 the render 距离 of the 施法者 |
 | [TriggerLocation](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/TriggerLocation) | MythicMobs | Targets the 位置 of the 实体 that triggered the skilltree |
 | [触发器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/目标选择器/触发器) | MythicMobs | Targets the 实体 that triggered the skilltree |

@@ -1,15 +1,15 @@
 **难度：初学者**
 
-大多数生物类型在 Minecraft 中都有自己的默认行为，其中许多可以通过 [CancelEvent](/skills/mechanics/cancelevent) 机制来阻止，让你能够用自定义操作替换原版行为！
+大多数生物类型在 Minecraft 中都有自己的默认行为，其中许多可以通过 [CancelEvent](/skills/mechanics/cancelevent) 技能来阻止，让你能够用自定义操作替换原版行为！
 
 一个常见的例子是用 ~onAttack 取消生物的攻击，然后用你自己的攻击技能代替。
 
-请记住，CancelEvent 需要原始机制上的 `sync=true` 通用属性，且并非所有触发器都受支持。可用触发器列表见 [CancelEvent](/skills/mechanics/cancelevent) 机制页面。你还可能遇到一些特殊情况，如取消死亡事件来创建自定义死亡效果，或取消伤害事件来自定义伤害但陷入死循环的情况，以下是针对这些情况的技巧。
+请记住，CancelEvent 需要原始技能上的 `sync=true` 通用属性，且并非所有触发器都受支持。可用触发器列表见 [CancelEvent](/skills/mechanics/cancelevent) 技能页面。你还可能遇到一些特殊情况，如取消死亡事件来创建自定义死亡效果，或取消伤害事件来自定义伤害但陷入死循环的情况，以下是针对这些情况的技巧。
 
 # 攻击
 这是一个取消生物攻击并创建自己的攻击技能代替的示例。
 
-在你的生物上运行此机制：
+在你的生物上运行此技能：
 
 `- skill{s=FireAttack;sync=true} @target ~onAttack`
 
@@ -22,7 +22,7 @@ FireAttack:
   - ignite @target
 ```
 
-你也可以对远程生物使用 onShoot 触发器，因为它们的默认射击无法被修改，你可以先取消它，然后用 [Projectile](/skills/mechanics/projectile) 或 [Shoot](/skills/mechanics/shoot) 等机制创建自己的射击！
+你也可以对远程生物使用 onShoot 触发器，因为它们的默认射击无法被修改，你可以先取消它，然后用 [Projectile](/skills/mechanics/projectile) 或 [Shoot](/skills/mechanics/shoot) 等技能创建自己的射击！
 
 以下示例，如果应用到骷髅上，会使其发射多支造成更多伤害的箭，而不是标准的单箭攻击。
 
@@ -47,7 +47,7 @@ ArrowVolley:
 
 `- cancelevent{sync=true} @self ~onDamaged ?~holding{m=DIAMOND_SWORD}`
 
-以下示例将取消生物受到的所有伤害，并用 damage 机制替代，使生物始终受到固定数值的伤害，无论使用什么武器。由于我们取消了伤害然后直接对生物造成伤害，会导致死循环，因此我们使用 damageTag 来检查标签是否存在——如果标签存在，则不取消伤害，生物将正常受伤。
+以下示例将取消生物受到的所有伤害，并用 damage 技能替代，使生物始终受到固定数值的伤害，无论使用什么武器。由于我们取消了伤害然后直接对生物造成伤害，会导致死循环，因此我们使用 damageTag 来检查标签是否存在——如果标签存在，则不取消伤害，生物将正常受伤。
 
 `- skill{s=SelfDamage;sync=true} @self ~onDamaged`
 
@@ -62,7 +62,7 @@ SelfDamage:
 
 # 死亡
 
-你可能想取消死亡事件来创建带有华丽效果的自定义死亡。我们需要使用 remove 机制移除生物，而不是让它因伤害自然消失。所以如果取消死亡，请注意 onDeath 技能将不起作用，需要将它们合并到这里，比如发放奖励等内容。
+你可能想取消死亡事件来创建带有华丽效果的自定义死亡。我们需要使用 remove 技能移除生物，而不是让它因伤害自然消失。所以如果取消死亡，请注意 onDeath 技能将不起作用，需要将它们合并到这里，比如发放奖励等内容。
 
 `- skill{s=DeathSkill;sync=true} @self ~onDeath`
 

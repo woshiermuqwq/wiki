@@ -12,7 +12,7 @@
 | `/mm pins wand [包] [标点名]` | mythicmobs.command.pins | 手持标点魔杖时，左键单击创建多点标点并指向它，右键单击从多点标点中移除最近的点 |
 
 
-## 机制
+## 技能
 - [MovePin](/Skills/Mechanics/MovePin)
 
 ## 目标选择器

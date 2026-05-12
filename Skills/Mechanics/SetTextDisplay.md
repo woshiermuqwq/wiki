@@ -5,7 +5,7 @@ Sets the text component of target Text Display entity
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| text      | t         | The text to use. If not set, the 机制 will remove the text from the entity instead                                                                                        |         |
+| text      | t         | The text to use. If not set, the 技能 will remove the text from the entity instead                                                                                        |         |
 
 
 ## 示例

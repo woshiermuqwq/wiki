@@ -1,6 +1,6 @@
 ## 描述
 PrProvides no 目标.
-Useful for 机制 with no 目标 input
+Useful for 技能 with no 目标 input
 
 
 ## 属性

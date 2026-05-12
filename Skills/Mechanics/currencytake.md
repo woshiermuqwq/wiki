@@ -1,6 +1,6 @@
 ## 描述
 Takes money from players.  
-This 机制 needs the Vault plugin and an economy plugin installed to
+This 技能 needs the Vault plugin and an economy plugin installed to
 work.  
 It also requires Vault being enabled in the [config.yml](/configuration/)
 ```yaml

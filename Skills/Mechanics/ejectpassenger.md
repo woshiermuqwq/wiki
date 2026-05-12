@@ -1,11 +1,11 @@
 ## 描述
 Ejects any passengers that are currently riding the mob.   
 
-> **This is a no-target 机制, and the affected entity will always be the caster**
+> **This is a no-target 技能, and the affected entity will always be the caster**
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

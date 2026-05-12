@@ -3,7 +3,7 @@ Causes the player's screen to black out.
 
 
 ## 属性
-> 此机制继承所有[Aura](/Skills/Mechanics/Aura) 机制
+> 此技能继承所有[Aura](/Skills/Mechanics/Aura) 技能
 >> - The `auraname` attribute is **set** at `#blackScreen`
 >> - The `maxStacks` attribute is **set** at `1`  
 >> - The `refreshDuration` attribute is **set** at `true`  

@@ -1,7 +1,7 @@
 ## 描述
 向目标发送聊天消息，前提是目标为玩家。 [Color
 codes](/Skills/Placeholders#color-codes) and
-[variables](/Skills/Variables) are useable in this 机制.
+[variables](/Skills/Variables) are useable in this 技能.
 
 * Allows hex colors in the format **`<#FFFFFF>`**
 * Supports gradients in the format **`<gradient:#color1:#color2>text</gradient>`**

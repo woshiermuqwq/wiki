@@ -1,6 +1,6 @@
 ## 描述
 Modifies the damage event that triggered the skill.  
-This 机制 必须 synced, meaning that either the 机制 or the initial skill calling it 必须 run with the `sync=true` attribute.
+This 技能 必须 synced, meaning that either the 技能 or the initial skill calling it 必须 run with the `sync=true` attribute.
 
 
 ## 属性

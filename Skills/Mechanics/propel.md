@@ -1,5 +1,5 @@
 ## 描述
-Propels the caster of the 机制 towards the target.
+Propels the caster of the 技能 towards the target.
 
 
 ## 属性

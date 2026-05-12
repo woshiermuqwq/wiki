@@ -1,5 +1,5 @@
 ## 描述
-制导弹射物（Missile）机制类似于弹射物机制 and can use any of the [Projectile's Inheritable Attributes](/skills/mechanics/projectile#inheritable-attributes).  
+制导弹射物（Missile）技能类似于弹射物技能 and can use any of the [Projectile's Inheritable Attributes](/skills/mechanics/projectile#inheritable-attributes).  
 然而，制导弹射物具有追踪能力，会跟踪其目标.
 制导弹射物可以同时以位置和实体为目标.
 
@@ -19,7 +19,7 @@
 | highAccuracyMode | ham| Whether to use high-accuracy mode, which raytraces every tick to ensure the projectile cannot ever go through anything. Values 可以 `true`, `false`, `PLAYERS_ONLY`         | PLAYERS_ONLY<!--type:Projectile_HighAccuracyMode-->|
 | hitnonplayers | hnp   | Whether the missile should hit non player entities                   | true    |
 
-> This 机制 inherits every inheritable attribute of the [Projectile](/skills/mechanics/projectile#inheritable-attributes) 机制
+> This 技能 inherits every inheritable attribute of the [Projectile](/skills/mechanics/projectile#inheritable-attributes) 技能
 >> - The `hitnonplayers ` attribute is **defaulted** at `true`
 
 

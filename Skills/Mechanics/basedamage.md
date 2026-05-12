@@ -1,6 +1,6 @@
 ## 描述
 Damages the target entity for a percentage of the mob's damage.  
-Inherits every attribute of the [Damage](/skills/mechanics/damage) 机制.  
+Inherits every attribute of the [Damage](/skills/mechanics/damage) 技能.  
 
 
 ## 属性
@@ -8,7 +8,7 @@ Inherits every attribute of the [Damage](/skills/mechanics/damage) 机制.
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | multiplier       | m       | The percentage of damage to deal                                | 1       |
 | useAttribute | attribute, attr | Whether the damage should use the real entity's attack attribute, instead of its raw base damage                                                                 | false   | 
-> 此机制继承所有[Damage](/skills/mechanics/damage) 机制
+> 此技能继承所有[Damage](/skills/mechanics/damage) 技能
 >> The `amout` attribute is ignored
 
 

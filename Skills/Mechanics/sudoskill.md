@@ -1,16 +1,16 @@
 ## 描述
-The SudoSkill 机制 allows you to force the targeted entity to “cast”
+The SudoSkill 技能 allows you to force the targeted entity to “cast”
 a MythicMobs [Metaskill], even if the targeted entity is a player.  
-No single 机制s 可以 used straight: they have to be in a [Metaskill]!  
+No single 技能s 可以 used straight: they have to be in a [Metaskill]!  
 
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| setcasterastrigger | cat |Sets the trigger of the called metaskill to the caster of this 机制|false|
+| setcasterastrigger | cat |Sets the trigger of the called metaskill to the caster of this 技能|false|
 | target    | t         | Sets the inherited targets of the called metaskill to the specified ones |     |
 
-> 此机制继承所有[Skill](/skills/mechanics/skill) 机制
+> 此技能继承所有[Skill](/skills/mechanics/skill) 技能
 
 ### SetCasterAsTrigger Attribute
 If `setcasterastrigger` is `true`, the trigger of the skill 将会 set to

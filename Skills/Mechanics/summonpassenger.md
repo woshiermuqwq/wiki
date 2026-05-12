@@ -14,7 +14,7 @@
   Skills:
   - summonPassenger{type=MyZombie}
 ```
-Will summon the mob "MyZombie" to ride the caster of the 机制.
+Will summon the mob "MyZombie" to ride the caster of the 技能.
 
 
 ## 别名

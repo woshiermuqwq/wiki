@@ -5,7 +5,7 @@
 条件用于决定某个动作是否可以执行。
 
 条件可以在以下位置使用 [1]：
--   [技能机制](/skills/mechanics/skill)
+-   [技能技能](/skills/mechanics/skill)
 -   [掉落表](/drops/Drops#drop-tables)
 -   [生成器](/Spawners)
 -   [随机生成](/Random%20Spawns)

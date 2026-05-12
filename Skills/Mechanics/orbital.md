@@ -8,7 +8,7 @@ during its orbit.
 Much like projectile, it's great for creating complex skills, such as a
 fire shield, and is a very complex skill to master.  
 
-Added projectile bullets to Orbital in MM 4.11. See how to use them on the [projectiles 机制](/skills/mechanics/projectile) page.
+Added projectile bullets to Orbital in MM 4.11. See how to use them on the [projectiles 技能](/skills/mechanics/projectile) page.
 
 
 ## 属性
@@ -50,11 +50,11 @@ Added projectile bullets to Orbital in MM 4.11. See how to use them on the [proj
 | shareSubHitboxCooldown | shcd | Whether all meg sub hitboxes should share the same immune delay with its base entity | true | 
 
 
-> 此机制继承所有[Aura](/skills/mechanics/aura) 机制
+> 此技能继承所有[Aura](/skills/mechanics/aura) 技能
   
 
 ### onStart 属性
-onStart skills work in a special way - any buff or "special effect" 机制s fired by onStart that have a
+onStart skills work in a special way - any buff or "special effect" 技能s fired by onStart that have a
 duration (such as ParticleTornado) will attach to the projectile for their duration, which allows for some interesting effects.
 
 ### onTick 属性
@@ -94,8 +94,8 @@ IceShield-Hit:
 
 ##
 
-This example shows how the orbital 可以 removed via the [Auraremove](`auraremove`) 机制.
-<br>The mob `ExampleMob` create the shield from the previous example once it gets damaged with a 20% chance, but unlike the previous example this time the orbital also has an auraName attribute. When the mob receives a REMOVESHIELD signal, he will both remove the orbital via the auraremove 机制 and the orbital's auraName while also sending a SHIELDREMOVED signal back to the trigger of the metaskill
+This example shows how the orbital 可以 removed via the [Auraremove](`auraremove`) 技能.
+<br>The mob `ExampleMob` create the shield from the previous example once it gets damaged with a 20% chance, but unlike the previous example this time the orbital also has an auraName attribute. When the mob receives a REMOVESHIELD signal, he will both remove the orbital via the auraremove 技能 and the orbital's auraName while also sending a SHIELDREMOVED signal back to the trigger of the metaskill
 
 ```yaml
 # Mob File

@@ -3,7 +3,7 @@ Modifies the scoreboard-objective value of the casting mob.
 Does not support targeters.
 
 ## 属性
-> 此机制继承所有[ModifyGlobalScore](/Skills/Mechanics/modifyglobalscore) 机制
+> 此技能继承所有[ModifyGlobalScore](/Skills/Mechanics/modifyglobalscore) 技能
 
   
 ## 示例

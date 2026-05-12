@@ -1,11 +1,11 @@
 ## 描述
-The description of the 机制: what 它会, how 它会 it, and possible 注意.
+The description of the 技能: what 它会, how 它会 it, and possible 注意.
 
-> **This is a [Paper-Only] 机制!**
+> **This is a [Paper-Only] 技能!**
 
-> **This is a [Premium-Only] 机制!**
+> **This is a [Premium-Only] 技能!**
 
-> **This is a no-目标 机制, and the affected 实体 总会 be the 施法者**
+> **This is a no-目标 技能, and the affected 实体 总会 be the 施法者**
 
 | [Implemented 占位符] |
 |--------------------------------|
@@ -20,14 +20,14 @@ The description of the 机制: what 它会, how 它会 it, and possible 注意.
 | attribute3| | The description of what the 属性 does | 默认 值|
 | attribute4|The description of what the 属性 does **<[Premium-Only]>**|默认 值|
 <!-- Optional, if an inheritance is in place -->
-> This 机制 继承 every *inheritable* 属性 of the [ExampleMechanic2](/技能/机制/ExampleMechanic2) 机制
+> This 技能 继承 every *inheritable* 属性 of the [ExampleMechanic2](/技能/技能/ExampleMechanic2) 技能
 >> - The `attribute4` 属性 is **defaulted** at `0`
 >> - The `attribute5` 属性 is **set** at `0` and 不能 be modified
 <!-- If inherited attributes have their default value changed -->
 <!-- Use a list only if more than one element is present -->
 
 <!-- If the mechanic does not have any attributes-->
-> *This 机制 has no 属性*
+> *This 技能 has no 属性*
 
 ### Attribute1 属性
 what the 属性 does, how 它会 it, what 值 are accepted and so on. 可选, 仅 if necessary的more in-depth explanation。

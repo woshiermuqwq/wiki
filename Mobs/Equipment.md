@@ -1,4 +1,4 @@
-The 装备 section in a 生物 配置 定义 what kind of 装备 the 生物 will 生成 with. The 装备 只会 be applied to the 生物 when it spawns or 期间 a reload, and can be changed 之后wards by using the [Equip 机制](/技能/机制/equip).
+The 装备 section in a 生物 配置 定义 what kind of 装备 the 生物 will 生成 with. The 装备 只会 be applied to the 生物 when it spawns or 期间 a reload, and can be changed 之后wards by using the [Equip 技能](/技能/技能/equip).
 
 若the PreventOtherDrops 选项 不是 启用，then the 生物将willnaturally 掉落 all of its equipped 物品 on death。
 

@@ -3,7 +3,7 @@ Sets the tongue target for a frog caster to the target entity.
 
 
 ## 属性
-> *This 机制 has no attribute*
+> *This 技能 has no attribute*
 
 
 ## 示例

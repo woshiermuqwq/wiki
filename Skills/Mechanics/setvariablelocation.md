@@ -7,7 +7,7 @@ Sets a value of type string. The value will depend on the location passed to the
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | value     | val, v, a, amount | The target location                                          | @self   |
-> This 机制 inherits every *inheritable* attribute of the [SetVariable](skills/mechanics/setvariable) 机制
+> This 技能 inherits every *inheritable* attribute of the [SetVariable](skills/mechanics/setvariable) 技能
 
 
 ## 示例

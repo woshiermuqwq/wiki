@@ -10,7 +10,7 @@ Applies an [aura] on the target player that triggers a [metaskill] when they typ
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | onChatSkill | onchat, oc, then  | 要执行的[元技能] when the player chats           |<!--type:Metaskill-->|
 
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 ## onChatSkill Attribute
 When the metaskill is execute, a new [skill-scoped variable] containing what has been said in chat is set, called `input`.  
@@ -29,7 +29,7 @@ ExampleSkill2:
   - message{m="SILENCE!"} @trigger
   - ignite @trigger
 ```
-This below example uses the [StringEquals](/skills/conditions/stringequals) condition to check what the player typed! The message 机制 will only appear if the player typed `QueenOfAnts is a noob`.
+This below example uses the [StringEquals](/skills/conditions/stringequals) condition to check what the player typed! The message 技能 will only appear if the player typed `QueenOfAnts is a noob`.
 ```yaml
 YourMob:
   Type: ZOMBIE

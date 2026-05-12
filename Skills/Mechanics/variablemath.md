@@ -2,14 +2,14 @@
 设置变量 to the result of a math equation, where 'x' is the
 [variable](/skills/variables)'s current value.  
 
-Basically a setvariable 机制 with some extra spices
+Basically a setvariable 技能 with some extra spices
 
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | equation  | eq, e     | The operation to be done, 必须 inside quotes                      | x       |
-> This 机制 inherits every *inheritable* attribute of the [SetVariable](skills/mechanics/setvariable) 机制
+> This 技能 inherits every *inheritable* attribute of the [SetVariable](skills/mechanics/setvariable) 技能
 
   
 ## 示例

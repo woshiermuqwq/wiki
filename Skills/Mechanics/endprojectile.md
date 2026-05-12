@@ -1,5 +1,5 @@
 ## 描述
-Terminates the projectile this 机制 has been called from, activating its onEnd skill in the process.
+Terminates the projectile this 技能 has been called from, activating its onEnd skill in the process.
 
 
 ## 属性

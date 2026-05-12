@@ -10,7 +10,7 @@ The buff received is multiplied by the amount of stacks the aura has
 | type      | t, modifier, mod, m | The [stat modifier] to use         | ADDITIVE<!--type:StatModifier-->|
 | value     | val, v    | The value to use 对于stat                                        | 0.0     |
 
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 
 ## 示例

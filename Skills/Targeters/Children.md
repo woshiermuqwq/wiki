@@ -1,6 +1,6 @@
 ## 描述
 Ta以any 子级 实体 summoned by the 施法者为目标。
-Works for 玩家 casters, if the [summon] 机制 was used and the `summonerIsOwner` 属性 was set to `true`.
+Works for 玩家 casters, if the [summon] 技能 was used and the `summonerIsOwner` 属性 was set to `true`.
 
 
 ## 属性
@@ -20,4 +20,4 @@ Works for 玩家 casters, if the [summon] 机制 was used and the `summonerIsOwn
 
 
 <!-- LINKS -->
-[summon]: /技能/机制/summon
+[summon]: /技能/技能/summon

@@ -1,8 +1,8 @@
-An ***自动 generated*** document that lists all the 触发器, grouped by tags/functionality.
+一份按标签/功能分类的***自动生成***文档，列出了所有触发器。
 
-Tags are added by the wiki editing team and are not a feature 即 reflected in the 插件 code, but 仅 某事 more akin to a search aid.
+标签由 Wiki 编辑团队添加，并非插件代码中的实际功能，而更像是一种搜索辅助手段。
 
-Each 触发器 can have 多于 one tag, and 它是 listed under each section for all the tags 它有.
+每个触发器可以拥有多个标签，并在其所拥有的每个标签对应分类下列出。
 
 [[_TOC_]]
 
@@ -29,7 +29,7 @@ These 触发器 have not been tagged 还.
 | 触发器 | 插件 | Description |
 |----------|--------|-------------|
 | [OnAttack](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onAttack) | MythicMobs | 执行 the 技能 when the 生物 攻击 an 实体. |
-| [OnSkillDamage](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onSkillDamage) | MythicMobs | 执行 the 技能 when the 生物 deals 伤害 to 其他 实体 via a 机制 |
+| [OnSkillDamage](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onSkillDamage) | MythicMobs | 执行 the 技能 when the 生物 deals 伤害 to 其他 实体 via a 技能 |
 | [OnBowHit](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onBowHit) | MythicMobs | 执行 a 技能 when the 生物 弹射物 hits an 实体. |
 | [OnBlockPlace](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBlockPlace) | MythicMobs | When the 玩家 places the 自定义 方块 or a furniture |
 | [OnBlockBreak](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBlockBreak) | MythicMobs | When the 玩家 breaks a 自定义 方块 or a furniture |
@@ -93,8 +93,8 @@ These 触发器 have not been tagged 还.
 | [OnPressF_OFFHAND](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPressF_OFFHAND) | MythicCrucible | When a 玩家 presses F to swap the 物品, and it ends up in the offhand |
 | [OnPaint](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPaint) | MythicCrucible | When a [Paint Brush](Paint-Brush) paints a furniture |
 | [OnBreak](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBreak) | MythicCrucible | 执行 the 技能 when the 玩家 holding or equipping the 物品 breaks it |
-| [OnFurnitureInventoryOpen](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFurnitureInventoryOpen) | MythicCrucible | 触发器 when the [Furniture Inventory](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/机制/furnitureinventory) is opened |
-| [OnFurnitureInventoryClose](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFurnitureInventoryClose) | MythicCrucible | 触发器 when the [Furniture Inventory](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/机制/furnitureinventory) is closed |
+| [OnFurnitureInventoryOpen](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFurnitureInventoryOpen) | MythicCrucible | 触发器 when the [Furniture Inventory](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/技能/furnitureinventory) is opened |
+| [OnFurnitureInventoryClose](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFurnitureInventoryClose) | MythicCrucible | 触发器 when the [Furniture Inventory](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/技能/furnitureinventory) is closed |
 | [OnCancelUse](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onCancelUse) | MythicCrucible | 执行 the 技能 when the 玩家 stops using the 物品. |
 | [OnStartDestroyBlock](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onStartDestroyBlock) | MythicCrucible | 执行 the 技能 when the 玩家 holding or equipping the 物品 starts destroying a 方块 |
 | [OnStopDestroyBlock](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onStopDestroyBlock) | MythicCrucible | 执行 the 技能 when the 玩家 holding or equipping the 物品 stops destroying a 方块 |

@@ -7,7 +7,7 @@ Modifies the threat level that the caster holds with the target entities
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | mode      | m         | How the threat 应当 assigned                                    | taunt<!--type:ThreatMode-->|
 
-> 此机制继承所有[threat](/skills/mechanics/threat) 机制
+> 此技能继承所有[threat](/skills/mechanics/threat) 技能
 
 
 ## 示例

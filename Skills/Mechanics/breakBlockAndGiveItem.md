@@ -1,5 +1,5 @@
 ## 描述
-Breaks the block at a target location and gives item(s). This 机制 will also drop the block (with exception of Bedrock). REQUIRES `forcesync=true`.
+Breaks the block at a target location and gives item(s). This 技能 will also drop the block (with exception of Bedrock). REQUIRES `forcesync=true`.
 
 
 ## 属性

@@ -19,7 +19,7 @@ SkeletonKing:
 你可以在生物头顶的铭牌中显示其生命值，可用多种方式实现。以下是两个示例：一个以数字形式显示生命值（15/20），另一个带有一个随生物血量减少而变化的进度条。
 
 ### 数字方式
-需要结合 [SetName](/skills/mechanics/setname) 机制和 [~onDamaged](/Skills/Triggers/onDamaged) 触发器。我们利用生物的 display 选项来设置信息，使用 caster.hp 和 caster.mhp 占位符来获取当前生命值和最大生命值。
+需要结合 [SetName](/skills/mechanics/setname) 技能和 [~onDamaged](/Skills/Triggers/onDamaged) 触发器。我们利用生物的 display 选项来设置信息，使用 caster.hp 和 caster.mhp 占位符来获取当前生命值和最大生命值。
 ```yaml
 SkeletonKing:
   Type: WITHER_SKELETON

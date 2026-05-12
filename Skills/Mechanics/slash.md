@@ -1,5 +1,5 @@
 ## 描述
-The Slash meta-机制 can execute other skills in a slash-shaped pattern. The exact shape, size, location, rotation and other such elements of the slash itself 可以 tweaked via the attributes below.
+The Slash meta-技能 can execute other skills in a slash-shaped pattern. The exact shape, size, location, rotation and other such elements of the slash itself 可以 tweaked via the attributes below.
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
@@ -7,7 +7,7 @@ The Slash meta-机制 can execute other skills in a slash-shaped pattern. The ex
 | onStartSkill   | onStart, oS | Meta-Skill executed 在start of the slash           |<!--type:Metaskill-->|
 | onEndSkill     | onEnd, oE   | Meta-Skill executed 在end of the slash             |<!--type:Metaskill-->|
 | onPointSkill   | onPoint, oP | Meta-Skill executed at every point of the slash         |<!--type:Metaskill-->|
-| onHitEntitySkill | onHitEntity, ohe, oh | 元技能，在 a point of the slash hits an entity. Only triggered once per entity for every execution of the slash 机制                 |<!--type:Metaskill-->|
+| onHitEntitySkill | onHitEntity, ohe, oh | 元技能，在 a point of the slash hits an entity. Only triggered once per entity for every execution of the slash 技能                 |<!--type:Metaskill-->|
 | Points         | p           | The amount of points in the slash                       | 32            |
 | specificStep   | ss          | Define a specific step/index from the generated points which 应当 shown, when the supplied value is greaten than 0 | 0 |
 | Duration       | d           | The amount of ticks the slash should "travel" for. A value of 0 executes an instantaneous slash                                                                         | 0             |
@@ -29,17 +29,17 @@ The Slash meta-机制 can execute other skills in a slash-shaped pattern. The ex
 | MatchCasterDirection | matchPlayerDirection, matchDirection, mcd, mpd, md, direction                    | Matches the direction of the slash to the caster's facing direction                    | true          |
 | directionTowardsTarget | dtt | If the yaw/pitch 应当 calculated to aim to the target | false      |
 | FromOrigin     |             | If the slash should start in the origin of the metaskill | false        |
-| HitConditions  | conditions, cond, c, oC, hC | List of [Inline Conditions](/Skills/Inline-Conditions) that an entity must met to be hit by the slash 机制            |<!--type:Conditions-->|
+| HitConditions  | conditions, cond, c, oC, hC | List of [Inline Conditions](/Skills/Inline-Conditions) that an entity must met to be hit by the slash 技能            |<!--type:Conditions-->|
 
 ## 示例
-This is a basic example of how a slash 机制 might look like once implemented
+This is a basic example of how a slash 技能 might look like once implemented
 ```yaml
 ExampleSkill:
   Skills:
   - slash{y=1.8;w=4;h=2;mpd=true;a=180;oP=[ - effect:particles{p=CRIT} ];roll=-45to45}
 ```
 ##
-If you have [Crucible] installed, then the following is an example on how you can put the slash 机制 into an item
+If you have [Crucible] installed, then the following is an example on how you can put the slash 技能 into an item
 ```yaml
 SlashSword:
   Id: NETHERITE_SWORD

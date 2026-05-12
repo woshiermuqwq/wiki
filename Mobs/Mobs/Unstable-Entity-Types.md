@@ -13,7 +13,7 @@ Could get aggroed by 其他 实体.
 
 ### All breedable animals
 ThThey can 通常 be fed by some 物品 and, subsequently, try to breed.
-This can be handled by intercepting the 事件 [~onBreed](/技能/触发器/onBreed) (and then 也 cancelling it or some 其他 机制) or 完全 prevented by using the [Age](/生物/选项#age) 选项
+This can be handled by intercepting the 事件 [~onBreed](/技能/触发器/onBreed) (and then 也 cancelling it or some 其他 技能) or 完全 prevented by using the [Age](/生物/选项#age) 选项
 
 ### Most Boss
 Have an hardcoded ai or some 其他 hardcoded features.
@@ -102,7 +102,7 @@ Gets aggroed by wolves
 Has an hardcoded ai.
 
 ### SQUID
-DoDo not work with 机制 例如 [lunge](/技能/机制/lunge) and [throw](/技能/机制/throw).
+DoDo not work with 技能 例如 [lunge](/技能/技能/lunge) and [throw](/技能/技能/throw).
 This 也 应用 to GLOW_SQUID
 
 ### VEX

@@ -105,7 +105,7 @@ LuckyDroptable:
 
 
 ## 装备掉落表
-也可以使用掉落表来配置装备组合。这类掉落表可以直接在生物的 [Equipment 元素](/Mobs/Mobs#equipment)中使用，或者通过 [Equip 机制](/skills/mechanics/equip)使用。
+也可以使用掉落表来配置装备组合。这类掉落表可以直接在生物的 [Equipment 元素](/Mobs/Mobs#equipment)中使用，或者通过 [Equip 技能](/skills/mechanics/equip)使用。
 其语法与"普通"掉落表类似，只是在这种情况下，需要指定一个装备槽位。
 
 ### 示例

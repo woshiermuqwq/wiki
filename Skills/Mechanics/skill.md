@@ -9,15 +9,15 @@ targeter is specified.
 
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| skill     | s, $, (), m, 机制s, meta, spell | The metaskill to be executed                      |<!--type:Metaskill-->|
+| skill     | s, $, (), m, 技能s, meta, spell | The metaskill to be executed                      |<!--type:Metaskill-->|
 | forcesync | sync      | Whether to force the skill to be run synchroniously with Minecraft   | false   |
-| branch    | b, fork, f | Whether the called metaskill's skilltree should branch off from the skilltree of the calling 机制. The branch will originally clone the skilltree, but any changes made to the branch 将不会 reflect on the original skilltree                                              | false   |
+| branch    | b, fork, f | Whether the called metaskill's skilltree should branch off from the skilltree of the calling 技能. The branch will originally clone the skilltree, but any changes made to the branch 将不会 reflect on the original skilltree                                              | false   |
 | executeafterdeath | continueafterdeath | Whether the metaskill 应当 able to be called after the caster's death                                                                                 | false   |
 | snapshotcasterstats | snapshotstats, scs | Whether the caster's stats 在moment of the skill execution 应当 "saved in memory", so that every subsequent check/fetch operation made against them returns the saved amount. This 可以 useful if the metaskill includes somewhat big delays and the caster's stats can change during the metaskill execution | false |
 ### Branch Attribute
 Every time a skill is triggered from the mob file via a trigger, a `SkillTree` is generated. The `SkillTree` holds many informations, and among them there are the [Skill-Scoped Variables](/Skills/Variables#variable-scopes) and the [Skill Parameters](/Skills/Metaskills#skill-parameters-premium-feature) and their value.  
 
-This makes their value accessible from any 机制 or metaskill that is being called from the same skilltree they are in, but it also makes them **unique**: there can exist only one `Skill Scoped Variable` or one `Skill Parameter` with the same name in the `SkillTree`, and setting more than one will override the value.
+This makes their value accessible from any 技能 or metaskill that is being called from the same skilltree they are in, but it also makes them **unique**: there can exist only one `Skill Scoped Variable` or one `Skill Parameter` with the same name in the `SkillTree`, and setting more than one will override the value.
 
 ## 
 
@@ -41,7 +41,7 @@ TestSkill_3:
 
 ## 
 
-The `branch` Attribute, meanwhile, makes this no longer true: 如果设置 to true on a skill 机制, it makes the called metaskill have a brand new `SkillTree`, without it sharing any skill scoped variable or skill parameter
+The `branch` Attribute, meanwhile, makes this no longer true: 如果设置 to true on a skill 技能, it makes the called metaskill have a brand new `SkillTree`, without it sharing any skill scoped variable or skill parameter
 
 ```yaml
 TestSkill_1:

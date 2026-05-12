@@ -25,7 +25,7 @@ internal_mobname:
   - velocity{m=set;x=0;y=0;z=0} @self ~onDamaged
 ```
 ##
-While the example above works most of the time, the bow's ARROW_KNOCKBACK enchantment will still manage to move them. This 可以 prevented by doing a slight modification to the 机制, as shown below.
+While the example above works most of the time, the bow's ARROW_KNOCKBACK enchantment will still manage to move them. This 可以 prevented by doing a slight modification to the 技能, as shown below.
 ```yaml
 internal_mobname:
   Type: Zombie

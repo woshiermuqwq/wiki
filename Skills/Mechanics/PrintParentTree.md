@@ -1,9 +1,9 @@
 ## 描述
-Prints debug information regarding the Metaskill executing the 机制 and its SkillTree
+Prints debug information regarding the Metaskill executing the 技能 and its SkillTree
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

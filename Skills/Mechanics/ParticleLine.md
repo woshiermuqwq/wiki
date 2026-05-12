@@ -13,8 +13,8 @@
 | zigzags         | zzs | Amount of zigzags when using the zigzag option                       | 10      |
 | zigzagOffset    | zzo | Offset of each zigzag                                                | 0.2     |
 | maxdistance     | md  | The maximum distance the line can reach                             | 256      |
-> 此机制继承所有[Particle](/skills/mechanics/particle) 机制
->> The particles are generated “per point” in this 机制, so keeping `amount` low is recommended.
+> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
+>> The particles are generated “per point” in this 技能, so keeping `amount` low is recommended.
 
 
 ## 示例

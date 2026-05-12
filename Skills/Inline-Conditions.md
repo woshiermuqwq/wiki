@@ -1,4 +1,4 @@
-In-Line 条件可以usedon individual 机制 and 目标选择器 to save you from having to create an entire 元技能 for more basic things and to give you more flexibility inside existing 元技能. You can use standard 条件 to 检查 再次st the 施法者, TriggerCondtions to 检查 再次st the 触发器, and TargetConditions to 检查 再次st the 目标。
+In-Line 条件可以usedon individual 技能 and 目标选择器 to save you from having to create an entire 元技能 for more basic things and to give you more flexibility inside existing 元技能. You can use standard 条件 to 检查 再次st the 施法者, TriggerCondtions to 检查 再次st the 触发器, and TargetConditions to 检查 再次st the 目标。
 
 In-Line 条件可以usedin 生物 文件, 技能 文件 and if you have Crucible, 它们可以 be used in 物品 文件 也。
 
@@ -6,7 +6,7 @@ In-Line 条件可以usedin 生物 文件, 技能 文件 and if you have Crucible
 
 # 条件
 
-These 条件 will 检查 再次st the 施法者 自身, they go at the end of a 机制 line and begin with `?`. In the below 示例 the 消息 只会 be sent if 它是 当前 raining.
+These 条件 will 检查 再次st the 施法者 自身, they go at the end of a 技能 line and begin with `?`. In the below 示例 the 消息 只会 be sent if 它是 当前 raining.
 ```yaml
 SkeletalKnight:
   Type: WITHER_SKELETON
@@ -20,7 +20,7 @@ For the 条件 to be true, 您可以 use `?` and 对于 条件 to be false 您�
 
 # TriggerConditions
 
-You can 也 检查 再次st the 触发器 of the 机制. It is the same process as above but 您使用 a `~` 之后 the ?. The below 示例 只会 send a 消息 to the 玩家 who hit the 生物, if that 玩家 is holding a wooden sword.
+You can 也 检查 再次st the 触发器 of the 技能. It is the same process as above but 您使用 a `~` 之后 the ?. The below 示例 只会 send a 消息 to the 玩家 who hit the 生物, if that 玩家 is holding a wooden sword.
 ```yaml
 SkeletalKnight:
   Type: WITHER_SKELETON
@@ -34,7 +34,7 @@ Just like the standard 条件, for true 您可以 use `?~` and 对于 条件 to 
 
 ### Multiple 条件
 
-You are able to use as many In-line 条件 and TriggerConditions as 您需要 in your 机制. Just remember that *all* 条件 必须 be met 对于 机制 to run, in this below 示例 the 消息 只会 be sent if 它是 raining, *and* night, *and* the 玩家 who attacked the 生物 is holding a wooden sword.
+You are able to use as many In-line 条件 and TriggerConditions as 您需要 in your 技能. Just remember that *all* 条件 必须 be met 对于 技能 to run, in this below 示例 the 消息 只会 be sent if 它是 raining, *and* night, *and* the 玩家 who attacked the 生物 is holding a wooden sword.
 
 ```yaml
 SkeletalKnight:

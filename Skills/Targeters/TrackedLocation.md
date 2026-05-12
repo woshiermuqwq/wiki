@@ -1,5 +1,5 @@
 ## 描述
-以施法者 [Tracked 位置](/技能/机制/tracklocation)为目标。
+以施法者 [Tracked 位置](/技能/技能/tracklocation)为目标。
 
 
 ## 属性

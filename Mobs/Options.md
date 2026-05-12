@@ -135,7 +135,7 @@ Defaults to `false`.
 #### KnockbackResistance
 Aknockback resisted from 攻击. This 选项 can be 任何地方 between `0` and `1`的percentage。
 But a 生物 with 100% knockback resistance can 仍然 be knocked back by a bow 附魔: `ARROW_KNOCKBACK` (punch 附魔).
-For true knockback resistance, see the [速度向量](/技能/机制/速度向量) 机制 page. Defaults to `0`.
+For true knockback resistance, see the [速度向量](/技能/技能/速度向量) 技能 page. Defaults to `0`.
 ```yml
   Options:
     KnockbackResistance: 0.5
@@ -177,7 +177,7 @@ Defaults to `10`.
 ```
 
 #### NoGravity
-Whether the 生物 不应 have gravity. If set to `true`, the 生物 **CANNOT** have the [速度向量](/技能/机制/速度向量) 机制 used on it.
+Whether the 生物 不应 have gravity. If set to `true`, the 生物 **CANNOT** have the [速度向量](/技能/技能/速度向量) 技能 used on it.
 Defaults to `false`.
 ```yml
   Options:
@@ -274,7 +274,7 @@ Defaults to `false`.
 ```
 
 #### ReviveHealth
-When the 生物 death 事件 gets cancelled (via a [Cancelevent](/技能/机制/cancelevent) 机制 [~onDeath](/技能/触发器/onDeath)) the one specified is the 数量 of 血量 the 生物 将 set to. If the 值 is `-1`, the 生物 will heal to its own max 血量 值.
+When the 生物 death 事件 gets cancelled (via a [Cancelevent](/技能/技能/cancelevent) 技能 [~onDeath](/技能/触发器/onDeath)) the one specified is the 数量 of 血量 the 生物 将 set to. If the 值 is `-1`, the 生物 will heal to its own max 血量 值.
 ```yaml
 #This mob will always return to 50 health every time the death event is cancelled
 ExampleMob:

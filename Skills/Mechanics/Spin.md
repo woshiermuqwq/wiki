@@ -1,6 +1,6 @@
 ## 描述
 Causes the target entity to spin around 对于given duration.  
-When a mob casts the spin 机制 repeatedly it will move upwards while spinning.
+When a mob casts the spin 技能 repeatedly it will move upwards while spinning.
 
 
 ## 属性
@@ -8,7 +8,7 @@ When a mob casts the spin 机制 repeatedly it will move upwards while spinning.
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | velocity  | v         | The velocity the target spins at                                     | 18      |
 
-> 此机制继承所有[Aura](/Skills/Mechanics/Aura) 机制
+> 此技能继承所有[Aura](/Skills/Mechanics/Aura) 技能
 
 ### Velocity Attribute
 When you set velocity to 0, this mob's direction 将会 locked.

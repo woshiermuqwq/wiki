@@ -18,7 +18,7 @@ something. Can use any aura attribute
 | damageMultiplier | multiplier, m | An optional multiplier to the original hit's damage       | 1       |
 | modDamageType | damagetype | The [type](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html) of the damage inflicted                                |<!--type:DamageCause--> |
 
-> 此机制继承所有[aura] 机制
+> 此技能继承所有[aura] 技能
 
 
 ## 示例

@@ -1,7 +1,7 @@
 ## 描述
 Traces a ray to the target.
 
-> **This is a [Premium-Only] 机制!**
+> **This is a [Premium-Only] 技能!**
 
 | [Implemented Placeholders]     |
 |--------------------------------|

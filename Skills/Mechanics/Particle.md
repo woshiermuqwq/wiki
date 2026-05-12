@@ -22,19 +22,19 @@ A list of particle types 可以 found **[here](/Skills/Mechanics/Particle/Partic
 | speed     | s         | The “speed” of the particles. If a particle has a [DataType](/Skills/Mechanics/Particle/Particle-Types#datatypes), this attribute will behave inconsistently. | 0    |
 | yOffset   | y         | The Y offset of the particles from the target                        | 0       |
 | viewDistance | vd     | The distance the particles are rendered                              | 128     |
-| fromorigin| fo        | Should the particles be generated from the origin of the 机制    | false   |
+| fromorigin| fo        | Should the particles be generated from the origin of the 技能    | false   |
 | directional| d        | Does the particle use directional travel. The [particle type] used must not have additional data (extra attributes)                                                             | false   | 
 | directionReversed| dr | Reverses the direction of the particles.                             | false   | 
 | direction | dir       | Specifies a vector 对于particles to move towards.          | 0,0,0 (x,y,z) | 
-| fixedyaw  | yaw       | Sets the yaw of the location target(s) of the 机制. This is ignored if it remains -1111 | -1111   |
-| fixedpitch| pitch     | Sets the pitch of the location target(s) of the 机制. This is ignored if it remains -1111 | -1111   |
+| fixedyaw  | yaw       | Sets the yaw of the location target(s) of the 技能. This is ignored if it remains -1111 | -1111   |
+| fixedpitch| pitch     | Sets the pitch of the location target(s) of the 技能. This is ignored if it remains -1111 | -1111   |
 | audience  |           | The [audience] of the particle effect                                | nearby<!--type:Audience--> |
 | color     | c         | The color of the particle, if supported                              |<!--type:Color-->|
 | exactoffsets | eo     | Changes the formula with which random spawn locations 对于particles are computed | false |
 
 
 #### Extra Attributes
-Depending on the specific [particle type] used, extra attributes will become available to use inside particle-related 机制s too. you can find more by accessing the specific particle's page from the [particle types wiki page]
+Depending on the specific [particle type] used, extra attributes will become available to use inside particle-related 技能s too. you can find more by accessing the specific particle's page from the [particle types wiki page]
 
 #### Mob-Type Particles \[**Premium Only**\]
 This particle type will replace the spawned particle with the selected entity. The entity will act as a normal one, being able to attack, be hit, activate skills and so on. The entity will have no parent/owner relationship with the caster.

@@ -7,7 +7,7 @@ mob for each entity that takes damage this way.
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | damage    | d,dmg     | 要造成的伤害量                                         | 1       |
 | heal      | h         | The amount of healing per mob damaged                                | 1       |
-> This 机制 inherits every *inheritable* attribute of the [Damage](/Skills/Mechanics/Damage) 机制
+> This 技能 inherits every *inheritable* attribute of the [Damage](/Skills/Mechanics/Damage) 技能
 
 
 ## 示例

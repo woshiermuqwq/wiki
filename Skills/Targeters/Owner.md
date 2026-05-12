@@ -1,6 +1,6 @@
 ## 描述
 Ta以主人 of the casting 生物为目标。
-The 主人可以setvia the [SetOwner](/技能/机制/setowner) 机制。
+The 主人可以setvia the [SetOwner](/技能/技能/setowner) 技能。
 
 
 ## 属性

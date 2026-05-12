@@ -29,6 +29,6 @@ That it!
 
 若a 生物 has 仇恨表 启用，it将will总是 目标 the 实体 与 highest 仇恨 等级 on its own 仇恨表. This process is fully automated and 基于 which 实体 does how much 伤害 to the 生物. Naturally, the 实体 (通常 a 玩家) dealing the most 伤害, will gain the most 仇恨 and become the 目标 of the 生物。
 
-However if you would like to manually make your 生物 目标 specific entites, or 仅 throw in some tweaks that make your 生物 targeting even smarter, 您可以 do so using the [仇恨 机制](/技能/机制/仇恨).
+However if you would like to manually make your 生物 目标 specific entites, or 仅 throw in some tweaks that make your 生物 targeting even smarter, 您可以 do so using the [仇恨 技能](/技能/技能/仇恨).
 
 仇恨表 也 附带 an API, 包括 a “taunt” method and 仇恨 altering method if 另一个 插件 author ever wanted to have 技能 or abilities that interact with 仇恨.

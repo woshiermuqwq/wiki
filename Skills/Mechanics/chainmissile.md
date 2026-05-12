@@ -1,7 +1,7 @@
 ## 描述
 Shoots a chaining homing missile 在target  
 
-> **This is a [Premium-Only] 机制!**
+> **This is a [Premium-Only] 技能!**
 
 
 ## 属性
@@ -10,8 +10,8 @@ Shoots a chaining homing missile 在target
 | bounces   | b         | How many times the chain should bounce                               | 2       |
 | bounceradius | bouncerange, radius, range, r | How far the skill will bounce to a new target | 5       |
 | returnToCaster | return, rtc | If the missile should return to the caster | false | 
-| bounceConditions | conditions, cond, c | The conditions 对于skill to bounce, similar to the [chain](/skills/mechanics/chain) 机制 |<!--type:Conditions-->| 
-> 此机制继承所有[Missile](Skills/Mechanics/Missile) 机制
+| bounceConditions | conditions, cond, c | The conditions 对于skill to bounce, similar to the [chain](/skills/mechanics/chain) 技能 |<!--type:Conditions-->| 
+> 此技能继承所有[Missile](Skills/Mechanics/Missile) 技能
 
 
 ## 示例

@@ -1,10 +1,10 @@
 ## 描述
 Removes the given amount from the casting player's held item. 
 
-> **This is a no-target 机制, and the affected player will always be the caster**
+> **This is a no-target 技能, and the affected player will always be the caster**
 
 <details><summary>Easier Alternative:</summary>
-The [consumeslot](skills/mechanics/consumeslot) 机制 is likely an easier choice for most use-cases, since it can target entities directly and choose which slot to remove from.
+The [consumeslot](skills/mechanics/consumeslot) 技能 is likely an easier choice for most use-cases, since it can target entities directly and choose which slot to remove from.
 </details>
 
 ## 属性

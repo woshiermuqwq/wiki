@@ -4,12 +4,12 @@ every entity. To change the ai of an entity, you need to use clear
 first. After that you can use the runaitargetselector and add the goals
 you need. Unlike the mob configuration, if you use the
 runaitargetselector skill, you can only use one pathfindergoal in the
-机制. But aslong as you dont use clear, the pathfindergoal is added
+技能. But aslong as you dont use clear, the pathfindergoal is added
 to the end of the already existing goals of the entity.
 
 A list of available targets 可以 found [here](/Mobs/Custom-AI#ai-target-selectors)
 
-> **This is a no-target 机制, and the affected entity will always be the caster**
+> **This is a no-target 技能, and the affected entity will always be the caster**
 
 
 ## 属性

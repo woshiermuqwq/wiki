@@ -1,7 +1,7 @@
 ## 描述
 移除目标的光环.  
 
-You can decide if the aura executes its `onEnd` metaskill via the `DoEndSkillOnTerminate` attribute of the [Aura](/skills/mechanics/aura) 机制.
+You can decide if the aura executes its `onEnd` metaskill via the `DoEndSkillOnTerminate` attribute of the [Aura](/skills/mechanics/aura) 技能.
 
 
 ## 属性

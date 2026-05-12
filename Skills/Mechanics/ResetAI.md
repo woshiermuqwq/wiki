@@ -3,7 +3,7 @@ Attempts to resets the AI of a casting mob to the base type's default.
 
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例

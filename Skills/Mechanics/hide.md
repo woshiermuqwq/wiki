@@ -1,16 +1,16 @@
 ## 描述
 Hides the caster from the targeted players for a set duration.  
 
-> The hidden entity can then be shown via the used of the [showentity] 机制.  
+> The hidden entity can then be shown via the used of the [showentity] 技能.  
 
 
 ## 属性
 | 属性 | 缩写 | 描述 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | auraname  | buffname, debuffname | The name of the aura                                      | #hiding |
-| ignoreAuraOptions| iao, permanent, perma | This will make the 机制 ignore any [aura]-related option and the `duration` attribute      | false   | 
+| ignoreAuraOptions| iao, permanent, perma | This will make the 技能 ignore any [aura]-related option and the `duration` attribute      | false   | 
 
-> 此机制继承所有[Aura] 机制  
+> 此技能继承所有[Aura] 技能  
 >> - The `auraname` attribute is **defaulted** at `#hiding`
 >> - The `charges` attribute is **set** at `1`  
 >> - The `maxStacks` attribute is **set** at `1`  

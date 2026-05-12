@@ -4,10 +4,10 @@ This skill requires Libs' Disguises to be installed to enable Disguise functiona
 
 See [Extra: Disguises](/Mobs/Disguises) for how to apply and use disguises.
 
-> **This is a no-target 机制, and the affected entity will always be the caster**
+> **This is a no-target 技能, and the affected entity will always be the caster**
 
 ## 属性
-> *This 机制 has no attributes*
+> *This 技能 has no attributes*
 
 
 ## 示例
