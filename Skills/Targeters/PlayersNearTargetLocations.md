@@ -1,0 +1,26 @@
+## 描述
+以all 玩家 near the inherited 目标 位置为目标。
+
+
+## 属性
+| 属性 | 别名 | Description | 默认 |
+|-----------|-----------|----------------------------------------------------------------------|---------|
+| 半径 | r | The 半径 of the 目标选择器 | 5 |
+
+
+## 示例
+This 机制 will 伤害 every 玩家 in a 2 方块 半径 从 目标 of the 生物 一旦 executed
+```yaml
+ExampleSkill1:
+  Skills:
+  - skill{s=ExampleSkill2} @target
+
+ExampleSkill2:
+  Skills:
+  - damage{a=10} @PlayersNearTargetLocations{r=2}
+```
+
+
+## 别名
+- [x] playersNearTargetLocation
+- [x] PNTL

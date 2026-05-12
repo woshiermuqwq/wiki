@@ -1,0 +1,22 @@
+## 描述
+以位置 of all 玩家 in a given 半径 在...周围 施法者为目标。
+
+
+## 属性
+| 属性 | 别名 | Description | 默认 |
+|-----------|-----------|----------------------------------------------------------------------|---------|
+| 半径 | r | The 半径 of the 目标选择器 | 5 |
+| yoffset | y | The y 偏移 of the targeted 位置 | 0 |
+
+
+## 示例
+```yaml
+  Skills:
+  - effect:particles @PlayerLocationsInRadius{r=10}
+```
+
+
+## 别名
+- [x] LocationRadius
+- [x] PLIR
+- [x] PLR

@@ -1,0 +1,21 @@
+## 描述
+Toggles a piston 在target location
+
+
+## 属性
+> *This 机制 has no attributes*
+
+
+## 示例
+```yaml
+  Skills:
+  - togglepiston @Location{loc=10,20,30}
+```
+
+
+## 别名
+- [x] piston
+
+
+<!--TAGS-->
+<!--tag:World-->
