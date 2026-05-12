@@ -1,72 +1,72 @@
-Lets you make simple or advanced calculations. Any 占位符 that 返回 a number is 支持.
-You can use math in most places that支持占位符。
+让你可以执行简单或高级的计算。任何返回数字的占位符均受支持。你可以在大多数支持占位符的地方使用数学表达式。
 
 [[_TOC_]]
 
-## Operators
-大部分se operators可以foundhere https://www.objecthunter.net/exp4j/#Built-in_operators。
-### Math Operators
+## 运算符
+大部分运算符可在此处查阅：https://www.objecthunter.net/exp4j/#Built-in_operators
 
-| Operator | Description | 示例 |
-|:--------:|:----------------:|:---------:|
-| + | Unary plus | 2 + 2 |
-| - | Unary minus | 2 - 2 |
-| * | Multiplication | 2 * 2 |
-| / | Division | 2 / 2 |
-| ^ | 战力 | 2 ^ 2 |
-| % | Remainder | 2 % 2 |
+### 数学运算符
 
-### 布尔值 Operators
-| Operators | Description | 示例 |
-|:---------:|:------------------------:|:-------:|
-| \< | Less than | 2<5 |
-| \<= | Less than or 等于 | 2<=5 |
-| \> | Greater than | 5>1 |
-| \>= | Greater than or 等于 | 5>=0 |
-| \== | Equals | 0==0 |
+| 运算符 |    说明    |  示例  |
+|:------:|:---------:|:------:|
+|   +    |   一元加   | 2 + 2  |
+|   -    |   一元减   | 2 - 2  |
+|   *    |    乘法    | 2 * 2  |
+|   /    |    除法    | 2 / 2  |
+|   ^    |    乘方    | 2 ^ 2  |
+|   %    |    取余    | 2 % 2  |
 
-*布尔值 operators将返回`1` if the expression is true and `0` if 它是 false.*。
+### 布尔运算符
+| 运算符 |       说明       | 示例  |
+|:------:|:---------------:|:----:|
+|   \<   |      小于        | 2<5  |
+|  \<=   |   小于或等于     | 2<=5 |
+|   \>   |      大于        | 5>1  |
+|  \>=   |   大于或等于     | 5>=0 |
+|  \==   |      等于        | 0==0 |
 
-
-## Functions
-大部分se functions可以foundhere https://www.objecthunter.net/exp4j/#Built-in_functions。
-
-| Function | Description |
-|:----------------:|:----------------------------------------------------------------|
-| abs(x) | the absolute 值 of (x) |
-| acos(x) | arc cosine |
-| asin(x) | arc sine |
-| atan(x) | arc tangent |
-| cbrt(x) | cubic root |
-| ceil(x) | nearest upper 整数 |
-| cos(x) | cosine |
-| csch(x) | hyperbolic cosecant |
-| exp(x) | euler number raised to the 战力 (e^x) |
-| floor(x) | nearest lower 整数 |
-| log(x) | logarithmus naturalis (base e) |
-| log2(x) | logarithm to base 2 |
-| log10(x) | logarithm to base 10 |
-| logb(x) | logarithm to base b |
-| sec(x) | secant |
-| sech(x) | hyperbolic secant |
-| sin(x) | sine |
-| sinh(x) | hyperbolic sine |
-| sqrt(x) | square root |
-| tan(x) | tangent |
-| tanh(x) | hyperbolic tangent |
-| signum(x) | signum of a 值 |
-| toradian(x) | converts from degrees to radians |
-| todegree(x) | converts from radians to degrees |
-| min(x, y) | minimum |
-| max(x, y) | maximum |
-| atan2(y, x) | principal 值 of the arc tangent of y/x, expressed in radians |
-| random(min, max) | random with limits |
-| clamp(值, min, max) | Clamps a number between a given minimum and maximum. If the number you provide is 小于 the minimum, it将返回the minimum. If 它是 大于 the maximum, it 返回 the maximum. If 它是 在...之间 minimum and maximum, it 返回 the number unchanged |。
-
-NOTE: You can request to 添加 more operators and functions by making a suggestion ticket in our [issues page](https://git.mythiccraft.io/mythiccraft/MythicMobs/-/issues)
+*布尔运算符表达式为真时返回 `1`，为假时返回 `0`。*
 
 
-## 示例 Usage
+## 函数
+大部分函数可在此处查阅：https://www.objecthunter.net/exp4j/#Built-in_functions
+
+|     函数        | 说明                                                   |
+|:---------------:|:------------------------------------------------------|
+|     abs(x)      | x 的绝对值                                              |
+|    acos(x)      | 反余弦                                                  |
+|    asin(x)      | 反正弦                                                  |
+|    atan(x)      | 反正切                                                  |
+|    cbrt(x)      | 立方根                                                  |
+|    ceil(x)      | 向上取整                                                |
+|     cos(x)      | 余弦                                                    |
+|    csch(x)      | 双曲余割                                                |
+|     exp(x)      | 欧拉数的 x 次幂（e^x）                                   |
+|    floor(x)     | 向下取整                                                |
+|     log(x)      | 自然对数（以 e 为底）                                    |
+|    log2(x)      | 以 2 为底的对数                                          |
+|    log10(x)     | 以 10 为底的对数                                         |
+|    logb(x)      | 以 b 为底的对数                                          |
+|     sec(x)      | 正割                                                    |
+|    sech(x)      | 双曲正割                                                |
+|     sin(x)      | 正弦                                                    |
+|    sinh(x)      | 双曲正弦                                                |
+|    sqrt(x)      | 平方根                                                  |
+|     tan(x)      | 正切                                                    |
+|    tanh(x)      | 双曲正切                                                |
+|   signum(x)     | 符号函数                                                |
+|  toradian(x)    | 角度转弧度                                              |
+|  todegree(x)    | 弧度转角度                                              |
+|   min(x, y)     | 取最小值                                                |
+|   max(x, y)     | 取最大值                                                |
+|  atan2(y, x)    | y/x 反正切的主值，以弧度表示                              |
+| random(min, max) | 指定范围内的随机数                                      |
+| clamp(value, min, max) | 将数值限制在给定的最小值和最大值之间。如果提供的数值小于最小值，返回最小值；大于最大值，返回最大值；在范围内则原样返回 |
+
+注意：如需请求添加更多运算符和函数，可在我们的[问题页面](https://git.mythiccraft.io/mythiccraft/MythicMobs/-/issues)提交建议。
+
+
+## 使用示例
 ```yml
 MyCoolMob:
   Type: HUSK
@@ -76,8 +76,8 @@ MyCoolMob:
     - clear
   Skills:
     - skill{s=[
-      - setvar{var=skill.test;type=FLOAT;val="<caster.hp> <= <caster.mhp>"} #returns 1 or 0 if the mob's health is less than or equal to its max health
-      - message{m=<skill.var.test>} #sends the player a message to see the value
+      - setvar{var=skill.test;type=FLOAT;val="<caster.hp> <= <caster.mhp>"} # 如果生物生命值小于或等于最大生命值则返回 1，否则返回 0
+      - message{m=<skill.var.test>} # 向玩家发消息以查看值
       ]} @trigger ~onInteract
 ```
 
@@ -86,7 +86,7 @@ MyCoolItem:
   Id: STICK
   Skills:
     - skill{s=[
-        - setvar{var=skill.test;type=FLOAT;val="1>=0"} #returns 1 since the expression evaluates to true
-        - message{m=<skill.var.test>} #sends the player a message to see the value
+        - setvar{var=skill.test;type=FLOAT;val="1>=0"} # 表达式为真，返回 1
+        - message{m=<skill.var.test>} # 向玩家发消息以查看值
       ]} @Self ~onUse
 ```

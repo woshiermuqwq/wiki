@@ -1,17 +1,17 @@
-Audience 属性可以usedto 显示 an 效果 仅 to a specific group of 玩家, 而不是 the entire 服务器, by using the `audience=<audience type>` 属性 in a 技能 that supports audiences and specifying an audience 类型 to use. This can be useful in preventing 也 many 粒子 from being displayed to 每个人 unnecessarily, and can reduce client-side lag to some extent。
+受众属性用于控制效果只展示给特定的玩家群体，而不是全服所有玩家。在支持受众的技能中使用 `audience=<受众类型>` 属性并指定一种受众类型即可。这对于避免过多粒子效果不必要地展示给所有人非常有用，也能在一定程度上减轻客户端卡顿。
 
-The audience 类型 are:
-- `self`/`caster`: the 施法者 of the 技能
-- `nonSelfWorld`/`nonSelf`: every 玩家 in the 世界 其他 than the 施法者 of the 技能
-- `target`: the 目标 of the 技能
-- `world`: every 玩家 in the 世界
-- `tracked`/`trackedplayers`/: every 玩家 whose client can render the 施法者
-- `nearby`/`nearbyplayers`: every nearby 玩家 (closer than `65536` 方块)
-- `@Targeter`: every 玩家 that the 目标选择器 targets
+受众类型包括：
+- `self`/`caster`：技能的施法者
+- `nonSelfWorld`/`nonSelf`：当前世界中除施法者外的所有玩家
+- `target`：技能的目标
+- `world`：当前世界中的所有玩家
+- `tracked`/`trackedplayers`：客户端能渲染施法者的所有玩家
+- `nearby`/`nearbyplayers`：附近的所有玩家（距离小于 65536 格）
+- `@Targeter`：目标选择器所选中目标的所有玩家
 
-> The 默认 值 is `tracked`
+> 默认值为 `tracked`
 
-Of particular relevance is the `audience=@Targeter` 属性, that 允许 any 实体 目标选择器 to be used as the audience of the 效果
+其中 `audience=@Targeter` 属性尤为实用，它允许使用任意实体目标选择器来作为效果的受众。
 ```yaml
     Skills:
     - effect:particles{particle=reddust;y=2;audience=@Owner} @self
