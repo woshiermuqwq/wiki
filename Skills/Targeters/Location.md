@@ -1,17 +1,17 @@
 ## 描述
-以specified coordinates in a 世界为目标。
+选取世界中的指定坐标
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 位置 | loc, l, c | The full 位置, in the `x,y,z,yaw,pitch` 格式 | |
-| x | | If `location` 不是 set, 它是 the x coordinate of the 目标 位置 | 0 |
-| y | | If `location` 不是 set, 它是 the y coordinate of the 目标 位置 | 0 |
-| z | | If `location` 不是 set, 它是 the z coordinate of the 目标 位置 | 0 |
-| yaw | | If `location` 不是 set, 它是 the yaw of the 目标 位置 | 0 |
-| pitch | | If `location` 不是 set, 它是 the pitch of the 目标 位置 | 0 |
-| 世界 | w | The 世界 to 目标. If not set, 它将 目标 the 施法者 世界 | |
+| location  | loc, l, c | 完整坐标，格式为 `x,y,z,yaw,pitch`                   |         |
+| x         |           | 若未设置 `location`，则为目标位置的 X 坐标 | 0     |
+| y         |           | 若未设置 `location`，则为目标位置的 Y 坐标 | 0     |
+| z         |           | 若未设置 `location`，则为目标位置的 Z 坐标 | 0     |
+| yaw       |           | 若未设置 `location`，则为目标位置的偏航角         | 0      |
+| pitch     |           | 若未设置 `location`，则为目标位置的俯仰角       | 0      |
+| world     | w         | 目标所在的世界。若不设置，则使用施法者所在的世界    |        |
 
 
 ## 示例

@@ -3,7 +3,7 @@ Generates the portal of the EnderDragon battle
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | withPortals | wp, p   | Whether to generate the portal of the EnderDragon battle             | false   |
 

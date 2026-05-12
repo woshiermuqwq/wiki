@@ -1,16 +1,16 @@
 ## 描述
-以all MythicMobs or 原版 覆盖 of the given 类型(s) in a 半径 在...周围 原点为目标。
+选取原点周围半径内指定类型的所有 MythicMob 或原版覆写生物
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 半径 of the 目标选择器 | 5 |
-| 类型 | 类型, t | The 类型(s) of the 目标 MythicMobs. Can be a 列表 |<!--列表-->|
+| radius    | r         | 选取半径                                           | 5       |
+| types     | type, t   | 目标 MythicMob 的类型。支持列表                  |<!--list-->|
 
 
 ## 示例
-This 技能 will ignite every 生物 of the given 类型 in a 半径 around 自身 when it ends
+此技能结束时将点燃其周围半径内指定类型的所有生物
 ```yaml
 ExampleSkill:
   Skills:

@@ -1,9 +1,9 @@
 ## 描述
-以位置 of the inherited targets为目标。
+选取继承目标的位置
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例

@@ -1,11 +1,11 @@
 ## 描述
-Opens the trades of the casting villager to the target player
+Opens the trades of the casting villager to the 目标 player
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| realTrade | real      | Whether the opened trades 应当 the ones of the actual villager instead of a copy of them, so that they do not impact the casting villager                                  | true    |
+| realTrade | real      | Whether the opened trades should be the ones of the actual villager instead of a copy of them, so that they do not impact the casting villager                                  | true    |
 
 
 ## 示例

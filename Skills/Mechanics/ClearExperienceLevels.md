@@ -1,5 +1,5 @@
 ## 描述
-Clears the experience levels 对于targeted players
+Clears the experience levels for the targeted players
 
 
 ## 属性

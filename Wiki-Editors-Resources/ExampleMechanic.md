@@ -1,51 +1,49 @@
 ## 描述
-The description of the 技能: what 它会, how 它会 it, and possible 注意.
+技能的描述：它做什么、如何运作，以及可能的注意事项。
 
-> **This is a [Paper-Only] 技能!**
+> **这是一个 [Paper 专属] 技能！**
 
-> **This is a [Premium-Only] 技能!**
+> **这是一个 [Premium 专属] 技能！**
 
-> **This is a no-目标 技能, and the affected 实体 总会 be the 施法者**
+> **这是一个无目标技能，受影响的实体将始终是施法者**
 
-| [Implemented 占位符] |
+| [已实现的占位符]     |
 |--------------------------------|
-| `<skill.var.example1>` |
-| `<skill.var.example2>` |
+| `<skill.var.example1>`         |
+| `<skill.var.example2>`         |
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| attribute1| alias1, alias2| The description of what the 属性 does | 默认 值|
-| attribute2| alias3 | The description of what the 属性 does | 默认 值|
-| attribute3| | The description of what the 属性 does | 默认 值|
-| attribute4|The description of what the 属性 does **<[Premium-Only]>**|默认 值|
-<!-- Optional, if an inheritance is in place -->
-> This 技能 继承 every *inheritable* 属性 of the [ExampleMechanic2](/技能/技能/ExampleMechanic2) 技能
->> - The `attribute4` 属性 is **defaulted** at `0`
->> - The `attribute5` 属性 is **set** at `0` and 不能 be modified
-<!-- If inherited attributes have their default value changed -->
-<!-- Use a list only if more than one element is present -->
+| attribute1| alias1, alias2| 描述该属性做什么                 | 默认值|
+| attribute2| alias3    | 描述该属性做什么                     | 默认值|
+| attribute3|           | 描述该属性做什么                     | 默认值|
+| attribute4|           |描述该属性做什么 **<[Premium 专属]>**|默认值|
+<!-- 可选，如果存在属性继承 -->
+> 此技能继承 [ExampleMechanic2](/Skills/Mechanics/ExampleMechanic2) 技能的每一个*可继承*属性
+>> - `attribute4` 属性的**默认值**为 `0`
+>> - `attribute5` 属性被**固定**为 `0` 且无法修改
+<!-- 如果继承属性的默认值被修改 -->
+<!-- 仅当有多个元素时才使用列表 -->
 
-<!-- If the mechanic does not have any attributes-->
-> *This 技能 has no 属性*
+<!-- 如果技能没有任何属性 -->
+> *此技能无属性*
 
 ### Attribute1 属性
-what the 属性 does, how 它会 it, what 值 are accepted and so on. 可选, 仅 if necessary的more in-depth explanation。
-
+对属性功能、运作方式、接受的取值等进行更深入的说明。可选，仅在必要时提供。
 
 ## 示例
-the 示例 below的description。
+下方示例的说明。
 ```yaml
   Skills:
   - examplemechanic{attribute1=value1} @targeter
 ```
-## <!-- Use ## to separate different 示例 -->
-An其他 示例:
+## <!-- 使用 ## 来分隔不同示例 -->
+另一个示例：
 ```yaml
   Skills:
   - examplemechanic{attribute1=value1;attribute2=value2} @targeter
 ```
-
 
 ## 别名
 - [x] mechanic_alias_1
@@ -54,4 +52,4 @@ An其他 示例:
 <!-- LINKS -->
 [Paper-Only]: https://papermc.io/downloads/all
 [Premium-Only]: Premium-Features
-[Implemented 占位符]: /技能/占位符#变量-占位符
+[Implemented Placeholders]: /Skills/Placeholders#variable-placeholders

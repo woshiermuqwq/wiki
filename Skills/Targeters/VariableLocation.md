@@ -1,12 +1,12 @@
 ## 描述
-Targets the 位置 stored in the specified 变量. One such 变量可以setvia the [SetVariableLocation](/技能/技能/setvariablelocation) 技能。
+选取指定变量中存储的位置。此类变量可通过 [SetVariableLocation](/skills/mechanics/setvariablelocation) 技能设置。
 
 ## 属性
 
-| 属性 | 别名 | Description | 默认 |
+| 属性      | 别名  | 描述                                                | 默认值 |
 |----------------|----------|------------------------------------------------------------|:-------:|
-| 变量 | 名称, n, var, key, k | The 名称 of the 变量. | |
-| 作用域 | s | The 作用域 of the 变量. Can optionally be set in the 名称, using the 作用域.名称 syntax | |
+| variable       | name, n, var, key, k | 变量名称                      |         |
+| scope          | s        | 变量的作用域。也可在名称中使用 `scope.name` 语法设置                                                                        |         |
 
 ## 示例
 ```yaml

@@ -1,19 +1,19 @@
 ## 描述
-Ta以random points in a cone 在...前方 the 施法者为目标。
-Note: Cone is fixed on the y-axis, and 不能 be rotated up or down
+在施法者面前的锥形区域内随机选点。  
+注意：锥形在 Y 轴上是固定的，无法上下旋转。
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 角度 | a | The 角度 of the cone | 90 |
-| 范围 | r | The length of the cone | 16 |
-| points | p | The number of points that 将 targeted 在...内 cone | 角度\*范围\*0.1|
-| slices | s | This 定义 how many layers or subdivisions (slices) the cone is divided into along its length (范围).<br>More slices 结果 in a finer resolution | floor(`range`) |
-| minpoints | mp | The minimum number of points to be generated for each slice | 1 |
-| 旋转 | rot | The 旋转 of the cone | 0 |
-| yoffset | yo, y | The y 偏移 of the cone | 0 |
-|| exact | e | Whether to use a precise method to distribute points uniformly 跨过 cone surface 而不是 randomly generating them | false |
+| angle     | a         | 锥形的角度                                                | 90      |
+| range     | r         | 锥形的长度                                               | 16      |
+| points    | p         | 锥形内选取的点数  | angle\*range\*0.1|
+| slices    | s         | 定义锥形沿长度方向分为多少层（切片）。<br>切片越多，分辨率越高                   | floor(`range`) |
+| minpoints | mp        | 每层生成的最小点数          | 1       |
+| rotation  | rot       | 锥形的旋转角度                                             | 0       |
+| yoffset   | yo, y     | 锥形的 Y 轴偏移                                             | 0       |
+| exact     | e         | 是否使用精确方法将点均匀分布在锥面上，而非随机生成                                                    | false   | 
 
 
 ## 示例

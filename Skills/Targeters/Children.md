@@ -1,10 +1,10 @@
 ## 描述
-Ta以any 子级 实体 summoned by the 施法者为目标。
-Works for 玩家 casters, if the [summon] 技能 was used and the `summonerIsOwner` 属性 was set to `true`.
+选取由施法者召唤的所有子实体。  
+对玩家施法者也有效，前提是使用了 [summon] 技能并将 `summonerIsOwner` 属性设为 `true`。
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例
@@ -15,9 +15,9 @@ Works for 玩家 casters, if the [summon] 技能 was used and the `summonerIsOwn
 
 
 ## 别名
-- [x] 子级
+- [x] child
 - [x] summons
 
 
 <!-- LINKS -->
-[summon]: /技能/技能/summon
+[summon]: /skills/mechanics/summon

@@ -1,6 +1,6 @@
 ## 描述
-Ex执行 the 技能 when the 生物 teleports.
-> There is no associated [@触发器](/技能/目标选择器/触发器)
+生物传送时执行技能。  
+> 没有关联的 [@trigger](/Skills/Targeters/Trigger)
 
 
 ## 示例
@@ -8,7 +8,6 @@ Ex执行 the 技能 when the 生物 teleports.
 EXAMPLE_MOB:
   Type: ENDERMAN
   Skills:
-    # sends a message to all the players in the world
-    # when the mob teleports
-    - message{m=TELEPORT} @World ~onTeleport
+    # 生物传送时向世界中所有玩家发送消息
+    - message{m=传送} @World ~onTeleport
 ```

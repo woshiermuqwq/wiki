@@ -1,22 +1,22 @@
 ## 描述
-以all 方块 in a 半径 of the inherited targets为目标。
+选取继承目标周围半径范围内的所有方块。
 
 
-### 属性
-| 属性 | 别名 | Description | 默认 |
+## 属性 
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 半径 of the 目标选择器 | 2 |
-| radiusy | ry, yradius, yr | The y component of the 半径 | 半径 |
-| 形状 | s | The 形状 of the selected 方块. Can be `SPHERE`, `CUBE` | SPHERE<!--类型:形状-->|
-| noise | n | The randomness of the 目标选择器 | 0 |
-| noair | na | Whether air 不应 be targeted | true |
-| 仅air | oa | Whether 仅 air 应为 targeted | false |
-| nearorigin| no | Whether the 目标选择器 should 目标 the 原点 | false |
+| radius    | r         | 选取半径                                           | 2       |
+| radiusy   | ry, yradius, yr | 半径的 Y 轴分量                                  | radius  |
+| shape     | s         | 选择区域的形状。可选 `SPHERE`（球体）、`CUBE`（立方体）            | SPHERE<!--type:Shape-->|
+| noise     | n         | 选取的随机程度                                       | 0       |
+| noair     | na        | 是否不选取空气方块                                   | true    |
+| onlyair   | oa        | 是否仅选取空气方块                                  | false   |
+| nearorigin| no        | 是否同时选取原点                        | false   |
 
 
 ## 示例
 
-Those 元技能 will allow you to 目标 every non air 方块 in a 10 方块 半径 在...周围 触发器 of the skilltree
+以下嵌套技能可选取技能树触发器周围 10 格半径内的所有非空气方块
 
 ```yaml
 ExampleSkill1:

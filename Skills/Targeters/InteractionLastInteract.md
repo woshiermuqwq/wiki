@@ -1,13 +1,13 @@
 ## 描述
-以last 实体 that interacted 与 施法者, if the 施法者 is of the `INTERACTION` [类型](/生物/生物#类型)为目标。
+选取最后一个与施法者交互的实体，前提是施法者的 [Type](/Mobs/Mobs#type) 为 `INTERACTION`。
 
 
 ## 属性
-> *This 条件 has no 属性*
+> *此条件没有属性*
 
 
 ## 示例
-The following 示例 would ignite the last 实体 that interacted 与 施法者 一旦 every 100 ticks
+以下示例每 100 刻点燃一次最后一个与施法者交互的实体
 ```yaml
 ExampleInteractionEntity:
   Type: INTERACTION

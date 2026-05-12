@@ -1,5 +1,5 @@
 ## 描述
-创建爆炸 effect 在specified target. Will play the sound and the particle effects, but won't cause any damage.
+Creates an explosion effect at the specified 目标. Will play the sound and the 粒子 effects, but won't cause any damage.
 
 
 ## 属性

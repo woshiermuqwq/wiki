@@ -1,11 +1,11 @@
 ## 描述
-Sets the head pitch of the target entity
+Sets the head 俯仰角(pitch) of the 目标 entity
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| amount    | a, pitch, p | The value the pitch 将会 set to                                 | 0       |
+| amount    | a, 俯仰角(pitch), p | The value the 俯仰角(pitch) 将被设为 to                                 | 0       |
 
 
 ## 示例

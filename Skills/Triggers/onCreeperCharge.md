@@ -1,7 +1,7 @@
 ## 描述
-Ex执行 the 技能 when the casting creeper is charged.
+施法苦力怕被充能时执行技能。  
 
-> The associated [@触发器](/技能/目标选择器/触发器) is the 施法者 自身
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为施法者自身
 
 
 ## 示例
@@ -9,9 +9,8 @@ Ex执行 the 技能 when the casting creeper is charged.
 EXAMPLE_MOB:
   Type: CREEPER
   Skills:
-    # sends a message to all the players in the world
-    # when the mob gets charge
-    - message{m=CHARGED} @World ~onCreeperCharge
+    # 生物被充能时向世界中所有玩家发送消息
+    - message{m=已充能} @World ~onCreeperCharge
 ```
 
 

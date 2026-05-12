@@ -1,15 +1,15 @@
 ## 描述
-Ex执行 the 技能 when the 生物 hears a sound, [if this feature 已被 启用](/生物/生物#hearing).
-The `<skill.var.volume>` [占位符](/技能/占位符#变量-占位符)可以usedin the triggered 技能 to 返回 a float 值 between 1 and 15 representing the 距离 从 sound source。
+生物[启用了听觉功能](/Mobs/Mobs#hearing)后，听到声音时执行技能。  
+触发技能中可使用 `<skill.var.volume>` [占位符](/Skills/Placeholders#variable-placeholders) 获取表示声源距离的浮点值（1-15）
 
-> > The associated [@触发器](/技能/目标选择器/触发器) is the 实体 that generated the sound
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为发出声音的实体  
 
-> > The associated [@原点](/技能/目标选择器/原点) is the 位置 该 sound was generated
+> 关联的 [@origin](/Skills/Targeters/Origin) 为声音产生的位置  
 
-| [Implemented 占位符](/技能/占位符#变量-占位符) |
+| [已实现的占位符](/Skills/Placeholders#variable-placeholders)     |
 |--------------------------------|
-| `<skill.var.volume>` |
-| `<skill.var.sound-type>` |
+| `<skill.var.volume>`           |
+| `<skill.var.sound-type>`       |
 
 
 ## 示例
@@ -19,7 +19,7 @@ ICanHearYou:
   Hearing:
     Enabled: true
   Skills:
-  - message{m="I can hear you <trigger.name>! <skill.var.volume>? Way too loud!"} @trigger ~onHear
+  - message{m="我能听到你，<trigger.name>！<skill.var.volume>？太吵了！"} @trigger ~onHear
 ```
 
 

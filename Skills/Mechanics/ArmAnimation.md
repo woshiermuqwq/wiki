@@ -1,5 +1,5 @@
 ## 描述
-Makes the caster swing their arm
+Makes the 施法者 swing their arm
 
 
 ## 属性

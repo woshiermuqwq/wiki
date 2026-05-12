@@ -1,9 +1,9 @@
 ## 描述
-执行 the 技能 when the 生物 breeds with 另一个 生物.
+生物与另一只生物繁殖时执行技能。
 
-> This 触发器 has [`@Father`](/技能/目标选择器/Father) and [`@M其他`](/技能/目标选择器/M其他) 目标选择器.
+> 此触发器提供 [`@Father`](/Skills/Targeters/Father) 和 [`@Mother`](/Skills/Targeters/Mother) 目标选择器。
 
-> The associated [@触发器](/技能/目标选择器/触发器) is the 玩家 that made the 施法者 breed
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为使施法者繁殖的玩家
 
 
 ## 示例
@@ -11,7 +11,6 @@
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world
-    # when the mob breeds
+    # 生物繁殖时向世界中所有玩家发送消息
     - message{m=LET'S GET THIS BREAD} @World ~onBreed
 ```

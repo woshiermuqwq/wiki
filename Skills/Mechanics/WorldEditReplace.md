@@ -5,7 +5,7 @@ Replaces blocks in a region using WorldEdit. Needs a [@region](/Skills/Targeters
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | from      | f | The material to replace                                      | AIR<!--type:MATERIAL--> |
 | to        | t | The material to set in place of the replaced one             | AIR<!--type:MATERIAL--> |

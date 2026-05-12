@@ -1,20 +1,20 @@
 ## 描述
-Executes the specified metaskill *once and separately* for each value of the specified list/map formatted value. Each metaskill that 将会 called will have special skill parameters set depending on the iterated value:
+Executes the specified metaskill *once and separately* for each value of the specified list/map formatted value. Each metaskill that will be called will have special skill parameters set depending on the iterated value:
 - For list-formatted inputs
-  - `<skill.value>` 对于iterated value
-  - `<skill.index>` 对于index of the value
+  - `<skill.value>` for the iterated value
+  - `<skill.index>` for the index of the value
 - For map-formatted inputs
-  - `<skill.key>` 对于iterated key
-  - `<skill.value>` 对于iterated value
-  - `<skill.index>` 对于index of the key-value pair
+  - `<skill.key>` for the iterated key
+  - `<skill.value>` for the iterated value
+  - `<skill.index>` for the index of the key-value pair
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | values    | val, v    | The list or map formatted string to iterate on                       |         |
 
-> 此技能继承所有[Skill](/skills/mechanics/skill) 技能
+> 此技能继承[Skill](/skills/技能/skill) 技能
 
 
 ## 示例

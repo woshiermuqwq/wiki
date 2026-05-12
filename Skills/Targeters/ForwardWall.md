@@ -1,15 +1,15 @@
 ## 描述
-以a plane of 方块 在...前方 the 施法者为目标。
+选取施法者面前的一个方块平面
 
 
 ## 属性
 
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| forward | f, 数量, a | How distant should the targeted point be (accept decimals) | 5.0 |
-| yoffset | y | The y 偏移 of the plane (accept decimals) | 0.0 |
-| 高度 | h | The 高度 of the plane (whole numbers 仅) | 2 |
-| 宽度 | w | The 宽度 of the plane (whole numbers 仅) | 3 |
+| forward   | f, amount, a | 目标点距离施法者多远（支持小数）        | 5.0     |
+| yoffset   | y         | 平面的 Y 轴偏移（支持小数）                          | 0.0     |
+| height    | h         | 平面的高度（仅整数）                         | 2       |
+| width     | w         | 平面的宽度（仅整数）                          | 3       |
 
 
 ## 示例

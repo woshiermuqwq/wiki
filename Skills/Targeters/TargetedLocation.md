@@ -1,9 +1,9 @@
 ## 描述
-通过[目标选择器 选项](/技能/目标选择器#目标选择器-选项)以inherited targeted 位置. Useful for [以Filtering为目标。](/技能/元技能#targets-filtering) by为目标。
+选取继承的目标位置。配合[目标选择器选项](/Skills/Targeters#targeter-options)用于[目标过滤](/Skills/Metaskills#targets-filtering)。
 
 
 ## 属性
-> *This 目标选择器 has no 属性*
+> *此目标选择器没有属性*
 
 
 ## 示例

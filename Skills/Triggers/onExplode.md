@@ -1,8 +1,8 @@
 ## 描述
-Ex执行 the 技能 when the 生物 explodes.
-`m`mobGriefing` gamerule 必须为 设为 true for this to work.
-GeGenerally, this 触发器 仅 works with creepers and TNTs 自从 它们是 the 仅 生物 to 实际上 explode
-> There is no associated [@触发器](/技能/目标选择器/触发器)
+生物爆炸时执行技能。  
+`mobGriefing` 游戏规则必须设为 true 才能生效。  
+通常此触发器仅对苦力怕和 TNT 有效，因为它们是仅有的会爆炸的实体  
+> 没有关联的 [@trigger](/Skills/Targeters/Trigger)
 
 
 ## 示例
@@ -10,7 +10,6 @@ GeGenerally, this 触发器 仅 works with creepers and TNTs 自从 它们是 th
 EXAMPLE_MOB:
   Type: CREEPER
   Skills:
-    # sends a message to all the players in the world
-    # when the mob explodes
-    - message{m=EXPLODE} @World ~onExplode
+    # 生物爆炸时向世界中所有玩家发送消息
+    - message{m=爆炸} @World ~onExplode
 ```

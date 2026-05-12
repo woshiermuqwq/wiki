@@ -1,21 +1,21 @@
 ## 描述
-Sets the world's time. Depending on the attributes used, the change in time 可以 absolute or relative to the target player.
+Sets 世界的 time. Depending on the attributes used, the change in time can be absolute or relative to the 目标 player.
 
-Time 技能s 必须 synced to function. "sync=true;"
+Time 技能s must be synced to function. "sync=true;"
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| mode      | m         | The mode used in the time 技能. Can be ADD/SET/RESET             | ADD<!--type:Time_Mode-->|
-| amount    | ticks, t, amt | The amount of ticks by which the time 将会 changed            | 20      |
-| personal  |           | Sets whether to change the global time or the player's client time   | false   |
-| relative  |           | Sets whether to keep the player's time synchronized to its world time with an offset                                                                                         | true    |
+| mode      | m         | The mode used in the time 技能的所有属性。 Can be ADD/SET/RESET             | ADD<!--type:Time_Mode-->|
+| amount    | ticks, t, amt | The amount of ticks by which the time will be changed            | 20      |
+| personal  |           | Sets whether to change the global time or 玩家的 client time   | false   |
+| relative  |           | Sets whether to keep 玩家的 time synchronized to its world time with an offset                                                                                         | true    |
 
 #### Mode Attribute
-The different values the mode attribute 可以 all have different effects
+The different values the mode attribute can be all have different effects
 - **`ADD`** - Sets the current time of the world with an offset
 - **`SET`** - Sets the current time of the world
-- **`RESET`** - Re-syncs the target's world time with the server world time, if it is not already synced
+- **`RESET`** - Re-syncs 目标的 world time with the server world time, if it is not already synced
 
 ## 示例
 ```yaml

@@ -1,13 +1,13 @@
 ## 描述
-以施法者 目标为目标。
+选取施法者的目标。
 
-- If the 施法者 is a 生物, targets its 目标
-- If the 施法者 is a 玩家, targets the 实体 the 玩家 is looking at, if close enough
+- 如果施法者是生物，选取其攻击目标
+- 如果施法者是玩家，选取玩家正在注视的实体（需足够近）
 
-注意 that some 类型 of 实体, 例如 the Ghast, 因为 of their hardcoded ai, 永远不会 结果 to have a 目标, making this 目标选择器 useless on them
+注意，某些类型的实体（如恶魂）由于硬编码的 AI，永远不会有目标，因此此目标选择器对它们无效
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例

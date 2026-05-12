@@ -1,17 +1,17 @@
 ## 描述
-Sets the EnderDragon phase on the target EnderDragon entity
+Sets the EnderDragon phase on the 目标 EnderDragon entity
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | phase     | p         | The phase to set                                                    | CIRCLING<!--type:EnderDragonPhase--> |
 
 ### Phase Attribute
 The possible values of the phase attribute (at the time of writing) are listed below.  
-The most up to date list 可以 found in the [javadoc](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EnderDragon.Phase.html).  
+The most up to date list can be found in the [javadoc](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/entity/EnderDragon.Phase.html).  
 
-| Phase                 | Description                                                                    |
+| Phase                 | 描述                                                                    |
 |-----------------------|--------------------------------------------------------------------------------|
 | BREATH_ATTACK         | The dragon will attack with dragon breath at its current location              |
 | CHARGE_PLAYER         | The dragon will charge a player                                                |
@@ -31,7 +31,7 @@ The most up to date list 可以 found in the [javadoc](https://hub.spigotmc.org/
   Skills:
   - enderDragonSetPhase{p=CHARGE_PLAYER} @self ~onDamaged 0.2
 ```
-> The dragon will charge a player after being damaged. Please note that is not possible to determine which player 将会 targeted by the dragon
+> The dragon will charge a player after being damaged. Please note that is not possible to determine which player will be targeted by the dragon
 
 
 ## 别名

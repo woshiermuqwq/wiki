@@ -1,23 +1,23 @@
 ## 描述
-以位置 of the "原点" or "source" of a meta-技能. While 即 通常 the casting 生物, there are special cases where this 不是 true (例如 与 弹射物 技能, 该 "原点" is the 位置 of the 弹射物)为目标。
+选取嵌套技能的"原点"或"源点"位置。通常情况下原点就是施法生物本身，但在特殊场景下会有所不同（例如与 Projectile 技能配合时，"原点"是弹射物的位置）
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例
-The 原点 目标选择器 is 极其 versatile. Take the following 元技能, 例如:
+原点目标选择器用途极其广泛。以下面的嵌套技能为例：
 ```yaml
 ExampleSkill:
   Skills:
   - effect:particles @origin
 ```
-IfIf 它是 executed by a 生物 normally, if将显示the 粒子 at its 位置, 自从 the 原点 of the 技能 is 自身. In this aspect, `origin` 不 behave differently from a `self` 目标选择器。
+如果由生物正常执行，粒子会显示在该生物的位置上，因为技能的原点就是它本身。就这一点而言，`origin` 和 `self` 目标选择器没有区别。  
 
-BuBut if the 元技能 is executed inside a meta 技能 or 之后 manually changing a 技能 原点 via the [原点 Universal 属性](/技能/技能#universal-属性), the 原点 of the 技能 will change most of the times, and the 粒子 将 displayed in a different spot.
+但如果该嵌套技能是在嵌套技能内部执行、或是通过[Origin 通用属性](/Skills/Mechanics#universal-attributes)手动改变了技能的原点，那么原点在大多数情况下会发生变化，粒子也会显示在不同的位置。  
 
-The exact position of the `origin` changes 基于 the context, and more information regarding this 行为可以foundin wiki pages 对于 various 技能 that *do* make use of this。
+`origin` 的确切位置会根据上下文而变化，关于这一行为的更多信息可以在各种会改变原点的技能的维基页面中找到。
 
 ## 别名
 - [x] source

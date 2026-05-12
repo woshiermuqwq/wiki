@@ -1,9 +1,9 @@
 ## 描述
-以位置 of the [父级](/技能/目标选择器/父级) of the casting 生物为目标。
+选取施法生物的[父实体](/Skills/Targeters/Parent)的位置
 
 
 ## 属性
-> *This 目标选择器 has no 属性*
+> *此目标选择器没有属性*
 
 
 ## 示例

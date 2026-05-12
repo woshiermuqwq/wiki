@@ -1,20 +1,20 @@
 ## 描述
-Applies an [aura] to the target that applies a specific [stat] to them.  
-The buff received is multiplied by the amount of stacks the aura has
+Applies an [光环] to the 目标 that 施加 a specific [stat] to them.  
+The buff received is multiplied by the amount of stacks the 光环 has
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | stat      | s         | The [stat] to apply                                           |<!--type:Stat-->|
 | type      | t, modifier, mod, m | The [stat modifier] to use         | ADDITIVE<!--type:StatModifier-->|
-| value     | val, v    | The value to use 对于stat                                        | 0.0     |
+| value     | val, v    | The value to use for the stat                                        | 0.0     |
 
-> 此技能继承所有[aura] 技能
+> 此技能继承[光环] 技能
 
 
 ## 示例
-The following aura will double the critical strike chance of the caster for 5 seconds
+The following 光环 will double the critical strike chance of the 施法者 for 5 seconds
 ```yaml
   Skills:
   - stataura{auraName=exampleaura;d=100;stat=CRITICAL_STRIKE_CHANCE;type=COMPOUND_MULTIPLIER;val=2} @self

@@ -1,10 +1,10 @@
 ## 描述
 Modifies the damage event that triggered the skill.  
-This 技能 必须 synced, meaning that either the 技能 or the initial skill calling it 必须 run with the `sync=true` attribute.
+This 技能 must be synced, meaning that either the 技能 or the initial skill calling it must be run with the `sync=true` attribute.
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | amount    | a         | The amount of the operation                                          | 1       |
 | damagetype| type, dt, t | The type of the damage to evaluate                                 | ALL     |
@@ -25,3 +25,4 @@ This 技能 必须 synced, meaning that either the 技能 or the initial skill c
 <!--TAGS-->
 <!--tag:Damage-->
 <!--tag:Meta-->
+

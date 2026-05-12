@@ -1,5 +1,5 @@
 ## 描述
-Clears experience 对于target player
+Clears experience for the 目标 player
 
 
 ## 属性

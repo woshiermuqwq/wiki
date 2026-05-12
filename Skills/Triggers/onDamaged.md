@@ -1,16 +1,16 @@
 ## 描述
-执行 the 技能 when the 生物 takes 伤害.
-> The associated [@触发器](/技能/目标选择器/触发器) is the 实体 that dealt the 伤害
+生物受到伤害时执行技能。
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为造成伤害的实体
 
-| [Implemented 占位符](/技能/占位符#变量-占位符) |
+| [已实现的占位符](/Skills/Placeholders#variable-placeholders)     |
 |--------------------------------|
-| `<skill.var.damage-amount>` |
-| `<skill.var.damage-type>` |
-| `<skill.var.damage-cause>` |
+| `<skill.var.damage-amount>`    |
+| `<skill.var.damage-type>`      |
+| `<skill.var.damage-cause>`     |
 
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onDamaged)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onDamaged)
 
 
 ## 示例
@@ -18,9 +18,8 @@
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world
-    # when the mob takes damage
-    - message{m=DAMAGED} @World ~onDamaged
+    # 生物受到伤害时向世界中所有玩家发送消息
+    - message{m=受到伤害} @World ~onDamaged
 ```
 
 

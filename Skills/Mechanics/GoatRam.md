@@ -1,5 +1,5 @@
 ## 描述
-Causes the casting goat mob to ram the targeted entity
+Causes the casting goat 生物 to ram the targeted entity
 
 > **This is a [Paper-Only] 技能!**
 

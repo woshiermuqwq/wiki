@@ -1,12 +1,12 @@
-If若your ModelEngine model vanishes on a 服务器 restart，or 当您 leave the area the 生物将isin, 您需要 to make sure the Model has the `save` 属性 设为 true。
+如果你的 ModelEngine 模型在服务器重启后消失，或者当你离开生物所在区域后消失，你需要确保模型的 `save` 属性设为 true。
 
-Your current 生物 文件 may have a line like the following:
+你当前的生物文件中可能有一行类似这样：
 ```yaml
 Skills:
 - model{m=Duck;n=name} @self ~onSpawn
 ```
 
-WWhile 您可以 solve the issue by adding the following:
+你可以通过添加以下内容来解决此问题：
 ```yaml
 Skills:
 - model{m=Duck;n=name;save=true} @self ~onSpawn

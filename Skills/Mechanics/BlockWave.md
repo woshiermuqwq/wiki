@@ -5,14 +5,14 @@ Note that the blockwave effect will never actually change any blocks in the worl
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| material  | m         | The [material] used 对于blockwave                                | <!--type:Material-->|
-| radius    | r         | The radius of the blockwave effect                                   | 2       |
-| radiusy   | ry        | The y radius of the blockwave effect                                 |`radius` |
+| material  | m         | The [material] used for the blockwave                                | <!--type:Material-->|
+| 半径    | r         | The 半径 of the blockwave effect                                   | 2       |
+| radiusy   | ry        | The y 半径 of the blockwave effect                                 |`半径` |
 | duration  | d         | Duration of the effect in ticks                                      | 15      |
 | shape     | s         | The shape of the effect (Sphere/Cube)                                | sphere<!--type:Shape-->|
-| velocity  | v         | The speed of the effect                                              | 0.2     |
+| 速度  | v         | The speed of the effect                                              | 0.2     |
 | horizontalvelocity | velocityh, vh | The speed of the effect in the horizontal direction     | 0       |
 | specificvelocities | sv | Whether to make use of the `vx`, `vy` and `vz` attributes          | false   |
 | velocityx | vx        | The speed of the effect on the x axis                                | 0       |
@@ -20,7 +20,7 @@ Note that the blockwave effect will never actually change any blocks in the worl
 | velocityz | vz        | The speed of the effect on the z axis                                | 0       |
 | noise     | n         | The noise of the effect                                              | 0       |
 | hidesourceblock | hidesource, hsb, hs  | Whether to hide the source block                    | true    |  
-| ignoreair | ia        | Whether air blocks 应当 ignored                                 | true    |
+| ignoreair | ia        | Whether air blocks should be ignored                                 | true    |
 
 ### Material Attribute
 If material is left blank, it will use whatever material type it is used on. 

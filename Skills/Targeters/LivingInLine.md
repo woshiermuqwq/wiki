@@ -1,12 +1,12 @@
 ## 描述
-以any 实体 in a line 在...之间 inherited 目标 and the casting 生物为目标。
+选取继承目标与施法生物之间连线上的所有实体
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 距离 between each point in the line and the 半径 around each point where 实体 将 targeted | 1 |
-| fromorigin| fo | If the line 应为 drawn 从 原点 of the 元技能 | false |
+| radius    | r         | 连线上各点之间的间距，同时也是每个点周围选取实体的半径                                                                | 1       |
+| fromorigin| fo        | 是否从嵌套技能的原点开始画线         | false   |
 
 
 ## 示例

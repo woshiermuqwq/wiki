@@ -1,9 +1,9 @@
 ## 描述
-以all the 玩家 on the casting 生物 [仇恨表](/生物/ThreatTables)为目标。
+选取施法生物[仇恨表](/Mobs/ThreatTables)上的所有玩家
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例

@@ -1,16 +1,16 @@
 ## 描述
-Ta以主人 of the casting 生物为目标。
-The 主人可以setvia the [SetOwner](/技能/技能/setowner) 技能。
+选取施法生物的所有者。  
+所有者可通过 [SetOwner](/Skills/mechanics/setowner) 技能设置。
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例
-This 元技能 will send a 消息 to the 主人 of the casting 生物
+此嵌套技能将向施法生物的所有者发送一条消息
 ```yaml
 ExampleSkill:
   Skills:
-  - message{m="Hello there!"} @Owner
+  - message{m="你好！"} @Owner
 ```

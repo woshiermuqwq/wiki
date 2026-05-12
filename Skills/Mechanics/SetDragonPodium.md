@@ -1,5 +1,5 @@
 ## 描述
-Sets the position of the dragon's podium (aka the point the dragon circles around) 在target location. paper 1.18.2+ only.
+Sets the position of the dragon's podium (aka the point the dragon circles around) at the 目标 location. paper 1.18.2+ only.
 
 
 ## 属性

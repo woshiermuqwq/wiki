@@ -1,17 +1,17 @@
 ## 描述
-Ex执行 the 技能 when the 生物 shoots a 弹射物.
-FoFor 示例, skeletons with bows will shoot arrows; ghasts, blazes, or ender dragon will shoot some 类型 of fireball.
+生物发射弹射物时执行技能。  
+例如，持弓的骷髅会射箭；恶魂、烈焰人或末影龙会发射某种火球。  
 
-> The associated [@触发器](/技能/目标选择器/触发器) is the 施法者
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为施法者
 
-| [Implemented 占位符](/技能/占位符#变量-占位符) |
+| [已实现的占位符](/Skills/Placeholders#variable-placeholders)     |
 |--------------------------------|
-| `<skill.var.bow-tension>` |
+| `<skill.var.bow-tension>`      |
 
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onShoot)
-- [MythicRPG](/../../../mythicrpg/-/wikis/技能/触发器/onShoot)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onShoot)
+- [MythicRPG](/../../../mythicrpg/-/wikis/Skills/Triggers/onShoot)
 
 
 ## 示例
@@ -19,9 +19,8 @@ FoFor 示例, skeletons with bows will shoot arrows; ghasts, blazes, or ender dr
 EXAMPLE_MOB:
   Type: SKELETON
   Skills:
-    # sends a message to all the players in the world
-    # when the skeleton shoots from a bow
-    - message{m=I SHOT AN ARROW} @World ~onShoot
+    # 骷髅射箭时向世界中所有玩家发送消息
+    - message{m=我射了一支箭} @World ~onShoot
 ```
 
 

@@ -3,9 +3,9 @@ Takes experience levels to the targeted players
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| amount    | a         | The amount of levels to take                                         | 0       |
+| amount    | a         | 要扣除的等级数                                         | 0       |
 
 
 ## 示例
@@ -23,3 +23,4 @@ ExampleMob:
 
 <!--TAGS-->
 <!--tag:Experience-->
+

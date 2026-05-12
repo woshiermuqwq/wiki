@@ -1,15 +1,15 @@
 ## 描述
-以first solid 方块 在...下方 inherited targets为目标。
+选取继承目标下方第一个实心方块
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| tries | t, max, m | The maximum number of attempts the 目标选择器 will make to fetch the targets | 3 |
+| tries     | t, max, m | 目标选择器尝试选取目标的最大次数 | 3 |
 
 
 ## 示例
-This 技能 will mask the 方块 below every 玩家 in a 10 方块 半径 to ice
+此技能将 10 格半径内所有玩家脚下的方块替换为冰
 ```yaml
 ExampleSkill1:
   Skills:

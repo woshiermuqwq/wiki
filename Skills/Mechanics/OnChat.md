@@ -1,16 +1,16 @@
 ## 描述
-Applies an [aura] on the target player that triggers a [metaskill] when they type a chat message
+Applies an [光环] on the 目标 player that 触发 a [metaskill] when they type a chat message
 
 | [Implemented Placeholders]     |
 |--------------------------------|
 | `<skill.var.input>`            |
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| onChatSkill | onchat, oc, then  | 要执行的[元技能] when the player chats           |<!--type:Metaskill-->|
+| onChatSkill | onchat, oc, then  | The [metaskill] to execute when the player chats           |<!--type:Metaskill-->|
 
-> 此技能继承所有[aura] 技能
+> 此技能继承[光环] 技能
 
 ## onChatSkill Attribute
 When the metaskill is execute, a new [skill-scoped variable] containing what has been said in chat is set, called `input`.  
@@ -18,7 +18,7 @@ Its value can then be fetched via the `<skill.var.input>` placeholder.
 
 
 ## 示例
-The `ExampleSkill` metaskill will create an aura on every player in a 20 blocks radius. If those players were to chat during its 10 seconds duration, a message would be sent to them and they would be set on fire.
+The `ExampleSkill` metaskill will create an 光环 on every player in a 20 blocks 半径. If those players were to chat during its 10 seconds duration, a message would be sent to them and they would be set on fire.
 ```yaml
 ExampleSkill:
   Skills:
@@ -29,7 +29,7 @@ ExampleSkill2:
   - message{m="SILENCE!"} @trigger
   - ignite @trigger
 ```
-This below example uses the [StringEquals](/skills/conditions/stringequals) condition to check what the player typed! The message 技能 will only appear if the player typed `QueenOfAnts is a noob`.
+This below example uses the [StringEquals](/skills/条件/stringequals) 条件 to check what the player typed! The message 技能 will only appear if the player typed `QueenOfAnts is a noob`.
 ```yaml
 YourMob:
   Type: ZOMBIE

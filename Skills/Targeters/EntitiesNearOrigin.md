@@ -1,14 +1,14 @@
 ## 描述
-Ta以all 实体 in the given 半径 在...周围 原点 of the 元技能为目标。
-This 目标选择器 is an extension of the **[EntitiesInRadius 目标选择器](/技能/目标选择器/EntitiesInRadius)** and can, as such, **use any of its 属性**
+选取嵌套技能原点周围指定半径内的所有实体。  
+此目标选择器是 **[EntitiesInRadius 目标选择器](/Skills/Targeters/EntitiesInRadius)** 的扩展，因此**可以使用它的所有属性**
 
 
 ## 属性
->*This 目标选择器 has no 唯一 属性, but can use the [EntitiesInRadius](/技能/目标选择器/EntitiesInRadius) ones*
+>*此目标选择器没有独有属性，但可以使用 [EntitiesInRadius](/Skills/Targeters/EntitiesInRadius) 的属性*
 
 
 ## 示例
-In this 示例, when the created 弹射物 ends for whatever reason, 它将 伤害 every living 实体 in a 2 方块 半径 around 自身
+在此示例中，当创建的弹射物以任何方式结束时，都会对自身周围 2 格半径内的所有活体实体造成伤害
 ```yaml
   Skills:
   - projectile{...;

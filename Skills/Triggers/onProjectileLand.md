@@ -1,8 +1,8 @@
 ## 描述
-执行 a 技能 when the 生物 special 弹射物 类型 (trident, snowball, wither skull, llama spit etc) lands on the ground 没有 hitting an 实体.
+生物的特殊弹射物类型（三叉戟、雪球、凋零骷髅头、羊驼口水等）未命中实体而落地时执行技能。
 
-### Compatible 弹射物
-[> Reference onProjectileH它是 <](/技能/触发器/onProjectileHit#compatible-弹射物)
+### 兼容的弹射物
+[> 参考 onProjectileHit 的兼容列表 <](/Skills/Triggers/onProjectileHit#compatible-projectiles)
 
 
 ## 示例
@@ -12,7 +12,7 @@ YourAverageDrowned:
   Equipment:
   - TRIDENT HAND
   Skills:
-  - message{m="Awww..."} @target ~onProjectileLand
+  - message{m="哎呀……"} @target ~onProjectileLand
 ```
 
 

@@ -1,13 +1,13 @@
 ## 描述
-Modifies the threat level that the caster holds with the target entities
+Modifies the 仇恨 level that the 施法者 holds with the 目标 entities
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| mode      | m         | How the threat 应当 assigned                                    | taunt<!--type:ThreatMode-->|
+| mode      | m         | How the 仇恨 should be assigned                                    | taunt<!--type:ThreatMode-->|
 
-> 此技能继承所有[threat](/skills/mechanics/threat) 技能
+> 此技能继承[仇恨](/skills/技能/仇恨) 技能
 
 
 ## 示例
@@ -19,3 +19,4 @@ Modifies the threat level that the caster holds with the target entities
 
 <!--TAGS-->
 <!--tag:Threat-->
+

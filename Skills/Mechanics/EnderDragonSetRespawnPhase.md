@@ -1,17 +1,17 @@
 ## 描述
-Sets the EnderDragon respawn phase if an EnderDragon battle is going on in the target location's dimension
+Sets the EnderDragon respawn phase if an EnderDragon battle is going on in the 目标 location's dimension
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | phase     | p         | The phase to set                                                     | NONE<!--type:DragonBattleRespawnPhase--> |
 
 ### Phase Attribute
 The possible values of the phase attribute (at the time of writing) are listed below.  
-The most up to date list 可以 found in the [javadoc](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/boss/DragonBattle.RespawnPhase.html).  
+The most up to date list can be found in the [javadoc](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/boss/DragonBattle.RespawnPhase.html).  
 
-| Phase                 | Description                                                                    |
+| Phase                 | 描述                                                                    |
 |-----------------------|--------------------------------------------------------------------------------|
 | END                   | The end of the respawn sequence                                                |
 | NONE                  | No respawn is in progress                                                      |

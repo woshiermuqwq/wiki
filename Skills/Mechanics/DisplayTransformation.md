@@ -3,7 +3,7 @@ Sets the targeted display entity's transformations
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | action    | a         | The action to use. Can be `SET`, `ADD`, `MULTIPLY`, `DIVIDE`         | SET<!--type:DisplayTransformation_Action-->|
 | transformationtype | transformation, type, tt | The type of the transformation. Can be `TRANSLATION`, `SCALE`, `RIGHT_ROTATION`, `LEFT_ROTATION`                                                 | TRANSLATION<!--type:TRANSLATION,SCALE,RIGHT_ROTATION,LEFT_ROTATION-->|

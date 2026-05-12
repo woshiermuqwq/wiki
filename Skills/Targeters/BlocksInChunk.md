@@ -1,16 +1,16 @@
 ## 描述
-以all 方块 in a chunk relative to the inherited 目标(s)为目标。
+选取继承目标所在区块内的所有方块
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| noair | na | Whether air 不应 be targeted | true |
-| 仅air | oa | Whether 仅 air 应为 targeted | false |
-| nearorigin| no | Whether the 目标选择器 should 也 目标 the 原点 | false |
+| noair     | na        | 是否不选取空气方块                                   | true    |
+| onlyair   | oa        | 是否仅选取空气方块                                  | false   |
+| nearorigin| no        | 是否同时选取原点                   | false   |
 
 
 ## 示例
-Those 元技能 will 目标 every non air 方块 in the chunk 该 触发器 of the skilltree is located
+以下嵌套技能将选取技能树触发器所在区块内的所有非空气方块
 ```yaml
 ExampleSkill1:
   Skills:

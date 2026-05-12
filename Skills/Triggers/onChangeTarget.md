@@ -1,7 +1,7 @@
 ## 描述
-执行 the 技能 when the 生物 changes 目标.
+生物切换目标时执行技能。
 
-> **需要 [ThreatTables](/生物/ThreatTables) to be 启用**
+> **需要启用 [ThreatTables](/Mobs/ThreatTables)**
 
 
 ## 示例
@@ -11,9 +11,8 @@ EXAMPLE_MOB:
   Modules:
     ThreatTable: true
   Skills:
-    # sends a message to all the players in the world
-    # when the mob's target changes
-    - message{m=Target Changed} @World ~onChangeTarget
+    # 生物切换目标时向世界中所有玩家发送消息
+    - message{m=目标已更改} @World ~onChangeTarget
 ```
 
 

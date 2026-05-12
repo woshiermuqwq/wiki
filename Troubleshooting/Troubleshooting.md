@@ -1,21 +1,21 @@
-若you are having problems with a feature，see if you将canfind it down below: by following the associated link, 您将 land on a page that gives you a step-by-step guide as to how to troubleshoot your issue. If you 仍然 不能 solve your issue, consider asking for help over our [discord]。
+如果你在使用某个功能时遇到了问题，可以在下方查找相关条目：点击对应链接，你将被引导至一个逐步排查问题的页面。如果仍然无法解决问题，可以到我们的 [Discord] 寻求帮助。
 
-## General Guidelines
-#### Creative 模式
-Never test in creative for whatever reason. It will break most things. Test in survival 模式 instead.
+## 通用指南
+#### 创造模式
+无论如何都不要在创造模式下测试。这会导致大多数功能异常。请在生存模式下进行测试。
 
-#### Max 血量
-Spigot 默认情况下 limits the max 血量 of 生物 to 2048. You can change this limit in your `spigot.yml` 文件 by changing `maxHealth` to a higher number.
+#### 最大生命值
+Spigot 默认将生物的最大生命值限制为 2048。你可以在 `spigot.yml` 文件中修改 `maxHealth` 为一个更大的值来提升此限制。
 
-#### Console logs deaths
-若you are seeing 消息 in your Console 例如 "Skeletal Knight was slain by PlayerName" and you 不要 want to see those，you将canhead to `/spigot.yml` and set `log-named-deaths` to false, then restart your 服务器。
+#### 控制台日志中的死亡消息
+如果你在控制台中看到了类似 "Skeletal Knight was slain by PlayerName" 的消息而你不想看到这些，可以前往 `/spigot.yml`，将 `log-named-deaths` 设为 false，然后重启服务器。
 
-## Specific Features
+## 特定功能
 ### MythicMobs
-- [RandomSpawns](./RandomSpawns)
+- [随机生成](./RandomSpawns)
 
 ### ModelEngine
-- [ModelEngine Model Vanishes](./ModelEngine-Model-Vanishes)
+- [ModelEngine 模型消失](./ModelEngine-Model-Vanishes)
 
 <!-- LINKS -->
 [discord]: https://www.mythiccraft.io/discord

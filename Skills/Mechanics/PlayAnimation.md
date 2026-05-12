@@ -3,7 +3,7 @@ Forces the entity to play an animation
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | animation | a, effect, e | The animation to play                                             | 1       |
 | audience  |           | The [audience] of the effect                                         | world<!--type:Audience--> |
@@ -20,7 +20,7 @@ Forces the entity to play an animation
 
 
 ## 示例
-Causes the caster to swing their arm.
+Causes the 施法者 to swing their arm.
 ```yaml
 SwingSkill:
   Skills:

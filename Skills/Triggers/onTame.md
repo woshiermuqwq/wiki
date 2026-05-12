@@ -1,7 +1,7 @@
 ## 描述
-Ex执行 the 技能 when the 玩家 tames the 生物.
+玩家驯服生物时执行技能。  
 
-> The associated [@触发器](/技能/目标选择器/触发器) is the 玩家 that tamed the 生物
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为驯服该生物的玩家
 
 
 ## 示例
@@ -9,7 +9,6 @@ Ex执行 the 技能 when the 玩家 tames the 生物.
 EXAMPLE_MOB:
   Type: WOLF
   Skills:
-    # sends a message to all the players in the world
-    # when a player tames the mob
-    - message{m=I GOT TAMED} @World ~onTame
+    # 玩家驯服生物时向世界中所有玩家发送消息
+    - message{m=我被驯服了} @World ~onTame
 ```

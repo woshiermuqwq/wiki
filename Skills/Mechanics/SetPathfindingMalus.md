@@ -1,9 +1,9 @@
 ## 描述
-Sets the pathfinding malus of a mob, influencing how a particular entity evaluates different types of blocks when calculating its path
+Sets the pathfinding malus of a 生物, influencing how a particular entity evaluates different types of blocks when calculating its path
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | malus     | type, malustype | The type of block or terrain the entity can encounter        | OPEN    |
 | value     | amount    | A weight that represents how "undesirable" the associated block or terrain is for pathfinding. Can be negative                                                                                       | 0.0     |
@@ -22,7 +22,7 @@ The valid malus types are
  
 
 ### Value Attribute
-When the entity's AI calculates a path, it checks the block types along the potential path. By setting a malus using this function, you can make the entity more or less likely to walk over, around, or avoid certain blocks. For example:
+When 实体的 AI calculates a path, it checks the block types along the potential path. By setting a malus using this function, you can make the entity more or less likely to walk over, around, or avoid certain blocks. For example:
 
 - A positive value (e.g., 1.0) means the entity will consider this block type harder to walk over or less favorable, causing the entity to try to avoid it.
 - A negative or zero value (e.g., -1.0 or 0.0) means the entity will consider this block type neutral or easier to walk over, making it more likely to choose paths with these blocks

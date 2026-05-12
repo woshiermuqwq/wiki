@@ -1,61 +1,59 @@
 > [!important]
-> This is 某事 important you should know.
+> 这是一条你需要了解的重要信息。
 
+以下是已实现的粒子列表，按它们所属的 DataType 分组。根据粒子所属的 DataType，可以使用的属性也会相应变化。
 
-The following is 一系列 the implemented 粒子, 关联 their DataType group. Based on the DataType 它们有, the 属性 that可以used与m change 相应地。
+**此列表的最新版本始终位于 Spigot Javadoc 中，[点击此处查看](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html)。**
 
-**The most 最多 date version of this 列表 is 总是 going to be in the spigot Javadoc located [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/粒子.html)**
-
-- [DataTypes](#datatypes)
+- [DataType](#datatypes)
   - [ItemStack](#itemstack)
   - [BlockData](#blockdata)
   - [MaterialData](#materialdata)
   - [DustOptions](#dustoptions)
   - [DustTransition](#dusttransition)
-- [粒子](#粒子)
+- [粒子](#particles)
 
-# DataTypes
+# DataType
 
 ## ItemStack
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| material | m | The material the 粒子 将 基于 | STONE |
-
+| material  | m         | 粒子所基于的材质                           | STONE   |
 
 ## BlockData
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| material | m | The material the 粒子 将 基于 | STONE |
+| material  | m         | 粒子所基于的材质                           | STONE   |
 
 ```yaml
   - effect:particles{particle=block_crack;material=COBBLESTONE}
 ```
 
 ## MaterialData
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| material | m | The material the 粒子 将 基于 | STONE |
+| material  | m         | 粒子所基于的材质                           | STONE   |
 
 ## DustOptions
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| color | c | The color of the 粒子 | #FF0000 |
-| size | | The size of the 粒子 | 1 |
+| color     | c         | 粒子的颜色                                            | #FF0000 |
+| size      |           | 粒子的大小                                             | 1       |
 
 ## DustTransition
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| color | c, color1, c1, fromcolor, fc | The color the 粒子 starts as | #FF0000 |
-| color2 | c2, tocolor, tc | The color the 粒子 transitions to | #0000FF |
-| size | | The size of the 粒子 | 1 |
+| color     | c, color1, c1, fromcolor, fc | 粒子起始颜色                 | #FF0000 |
+| color2    | c2, tocolor, tc | 粒子过渡到的颜色                         | #0000FF |
+| size      |           | 粒子的大小                                             | 1       |
 
 ##
 # 粒子
 
 
-| Ash | 方块 Crack | | |
+| Ash | Block Crack |   |   |
 |:---:|:-----------:|:-:|:-:|
-| <a href="/技能/技能/粒子/粒子-类型/Ash"><img src="https://imgur.com/ggCYoIB.gif"></a> | <a href="/技能/技能/粒子/粒子-类型/BlockCrack"><img src="https://imgur.com/bHpnok7.gif"></a> |
+| <a href="/skills/mechanics/Particle/Particle-Types/Ash"><img src="https://imgur.com/ggCYoIB.gif"></a>       | <a href="/skills/mechanics/Particle/Particle-Types/BlockCrack"><img src="https://imgur.com/bHpnok7.gif"></a>                                                                                                      |
 
 
 
@@ -67,7 +65,7 @@ The following is 一系列 the implemented 粒子, 关联 their DataType group. 
 ![block_crack](https://imgur.com/bHpnok7.gif)
 ### [BlockData](#blockdata)
 ### 别名
-- [x] 方块
+- [x] block
 - [x] blockcrack
 
 ##
@@ -81,15 +79,15 @@ The following is 一系列 the implemented 粒子, 关联 their DataType group. 
 ##
 ### shriek
 ![image](https://imgur.com/eSmLMUL.gif)
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 旋转 | rot, r | the 旋转 of the 粒子 | 0 |
+| rotation  | rot, r    | 粒子的旋转角度                                         | 0       |
 
 ##
 ### sculk_charge
-![image](https://示例.org/)
-| 属性 | 别名 | Description | 默认 |
+![image](https://example.org/)
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 旋转 | rot, r | the 旋转 of the 粒子 | 0 |
+| rotation  | rot, r    | 粒子的旋转角度                                         | 0       |
 ### 别名
 - [x] sculkcharge

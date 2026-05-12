@@ -1,27 +1,27 @@
 ## 描述
-Creates a tornado styled particle effect.
+Creates a tornado styled 粒子 effect.
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| maxradius | mr        | Max radius of the highest tornado “disk” shape                       | 3       |   
+| maxradius | mr        | Max 半径 of the highest tornado “disk” shape                       | 3       |   
 | yoffset   | yo        | The yoffset of the effect                                            | 0.8     | 
 | height    | h         | # of disks desired * 2 + 1                                           | 4       |
-| interval  | i         | How fast the particles vertically render. This 可以 experimented with “rotationspeed” as well                                                                        | 4       |
+| interval  | i         | How fast the 粒子 vertically render. This can be experimented with “rotationspeed” as well                                                                        | 4       |
 | duration  | d         | Duration of the effect in ticks                                      | 200     |
-| rotationspeed | rs    | How fast the particles will horizontally render. This 可以 experimented with “interval” as well                                                                             | 0.04    |
-| sliceheight | sh      | Any value below 1 will cause an incomplete tornado, while anything above 10 will cause different sized spheres to appear in a strange order. This has yet to be fully defined   | 64      |
-| stoponcasterdeath | scd | Whether the effect should stop upon the death of its caster        | true    |
+| rotationspeed | rs    | How fast the 粒子 will horizontally render. This can be experimented with “interval” as well                                                                             | 0.04    |
+| sliceheight | sh      | Any value below 1 将导致 an incomplete tornado, while anything above 10 将导致 different sized spheres to appear in a strange order. This has yet to be fully defined   | 64      |
+| stoponcasterdeath | scd | Whether the effect should stop upon the death of its 施法者        | true    |
 | stoponentitydeath | sed |Whether the effect should stop upon the death of the entity it is used on|true|
-| cloudparticle | cp    | The particle type 在base of the tornado. Typically something like the “impact” as a tornado spins around, hence the largeexplode default value                    |largeexplode<!--type:Particle-->|
-| cloudsize | cs        | The radius of the cloud's particle appearances                       | 5       |
-| cloudamount | ca      | How many particles will appear at each randomly generated cloud location. | 1  |
+| cloudparticle | cp    | The 粒子 type at the base of the tornado. Typically something like the “impact” as a tornado spins around, hence the largeexplode default value                    |largeexplode<!--type:粒子-->|
+| cloudsize | cs        | The 半径 of the cloud's 粒子 appearances                       | 5       |
+| cloudamount | ca      | How many 粒子 will appear at each randomly generated cloud location. | 1  |
 | cloudhspread | chs    | The horizontal spreading of the cloud.                               | 1       |
 | cloudvspread | cvs    | The vertical spreading of the cloud.                                 | 1.8     |
-| cloudpspeed  | cps    | Speed of the playing of the cloud particles                          | 2       |
+| cloudpspeed  | cps    | Speed of the playing of the cloud 粒子                          | 2       |
 | cloudyoffset | cyo    | Y Offsetting of the entire tornado. (1 + your desired height)        | 1.8     |
-> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
+> 此技能继承[粒子](/skills/技能/粒子) 技能
 
 
 ## 示例

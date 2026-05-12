@@ -1,26 +1,26 @@
 ## 描述
-播放音效 from either the vanilla game or a resource pack 在targeted entity or location. An extensive list of sounds 可以 found [here](https://misode.github.io/sounds/). Using multiple sounds stacked together can give the impression of an entirely new sound.
+Plays a sound from either the vanilla game or a resource pack at the targeted entity or location. An extensive list of sounds can be found [here](https://misode.github.io/sounds/). Using multiple sounds stacked together can give the impression of an entirely new sound.
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | sound     | s         | 要播放的音效                             | entity.zombie.attack_iron_door<!--type:Sound-->|
-| pitch     | p         | 音效的音高. Can be between 0.01 and 2.0                  | 1.0     |
+| 俯仰角(pitch)     | p         | 音效的音高. Can be between 0.01 and 2.0                  | 1.0     |
 | volume    | v         | 音效的音量.                                             | 1.0     |
-| radius    | r         | The radius in which the sound 将会 heard                      | `volume`*16 |
+| 半径    | r         | The 半径 in which the sound will be heard                      | `volume`*16 |
 | soundcategory | category, sc | The category at which the sound is played, useful for resourcepacks | MASTER<!--type:SoundCategory-->|
 | audience  |           | The [audience] of the effect                                         | world<!--type:Audience--> |
 
 ### SoundCategory Attribute
-A list of sound categories 可以 found [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/SoundCategory.html).
+A list of sound categories can be found [here](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/SoundCategory.html).
 
 ### Volume Attribute
-The “volume” attribute, while above the value of "1", doesn't define the percentage of the loudness of the sound, but rather determines how far (measured in blocks) the sound 可以 heard at maximum volume.
+The “volume” attribute, while above the value of "1", doesn't define the percentage of the loudness of the sound, but rather determines how far (measured in blocks) the sound can be heard at maximum volume.
 
-The formula for this is v * 16 = maxvolume distance. For example if you use “1” 对于volume attribute, the sound 可以 heard at maximum volume in a radius of 16 blocks around the source. If you used “20” however, the sound 可以 heard at maximum volume in a 320 block radius! (20 * 16)
+The formula for this is v * 16 = maxvolume distance. For example if you use “1” for the volume attribute, the sound can be heard at maximum volume in a 半径 of 16 blocks around the source. If you used “20” however, the sound can be heard at maximum volume in a 320 block 半径! (20 * 16)
 
-While the value is between 0 and 1, the sound is still played in a 16 blocks radius, but with diminished volume, with 0.1 being 10% of normal volume, 0.4 being 40% of normal volume and so on
+While the value is between 0 and 1, the sound is still played in a 16 blocks 半径, but with diminished volume, with 0.1 being 10% of normal volume, 0.4 being 40% of normal volume and so on
 
 
 ## 示例
@@ -30,7 +30,7 @@ EndermanAttack:
   - sound{s=entity.enderman.scream} @self
 ```
 ##
-The below example plays a sound from your resource pack. A good guide on adding custom sounds 可以 found [here](https://mcmodels.net/guides/4-sounds).
+The below example 播放 a sound from your resource pack. A good guide on adding custom sounds can be found [here](https://mcmodels.net/guides/4-sounds).
 ```yaml
 BossSoundEffect:
   Skills:

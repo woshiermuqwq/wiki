@@ -1,15 +1,15 @@
 ## 描述
-Puts the metaskill on hold (like the [delay](/skills/mechanics/delay) 技能) until a set of conditions is met.  
+Puts the metaskill on hold (like the [delay](/skills/技能/delay) 技能) until a set of 条件 is met.  
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| conditions | cond, c, until | Conditions to check against. When the conditions are met, the metaskill will continue |<!--type:Conditions-->|
-| interval | i | How often, in ticks, the 技能 should check against its condition          | 1       |
-| timeout | timeouttime, tt | The maximum amount of ticks to wait before the metaskill is put out of hold even if conditions aren't met                                                                  | 200     |
+| 条件 | cond, c, until | 条件 to check against. When the 条件 are met, the metaskill will continue |<!--type:条件-->|
+| interval | i | How often, in ticks, the 技能 should check against its 条件          | 1       |
+| timeout | timeouttime, tt | The maximum amount of ticks to wait before the metaskill is put out of hold even if 条件 aren't met                                                                  | 200     |
 | cancelSkill | cancel, cs | Whether, once a timeout happens, the metaskill should cancel execution instead of resuming                                                                            | false   |
-| cancelConditions | cc, unless | A set of conditions that, if met, will make the 技能 resolve and the metaskill resume immediatly, like if the primary set of `conditions` was met      |<!--type:Conditions-->|
+| cancelConditions | cc, unless | A set of 条件 that, if met, will make the 技能 resolve and the metaskill resume immediatly, like if the primary set of `条件` was met      |<!--type:条件-->|
 
 
 ## 示例

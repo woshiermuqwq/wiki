@@ -1,19 +1,19 @@
 ## 描述
-以random points in a ring 在...周围 施法者为目标。
+在施法者周围的环形区域中随机选取点
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 半径 of the ring | 5 |
-| points | p | The number of points to generate | 10 |
-| 数量 | a | How many of the generated points 应为 targeted | 1 |
-| rotationx | rotx, rx | The 旋转 on the x axis | 0 |
-| rotationy | roty, ry | The 旋转 on the y axis | 0 |
-| rotationz | rotz, rz | The 旋转 on the z axis | 0 |
-| offsetx | offx, ox | The 偏移 on the x axis | 0 |
-| offsety | offy, oy | The 偏移 on the y axis | 0 |
-| offsetz | offz, oz | The 偏移 on the z axis | 0 |
+| radius    | r         | 环形的半径                                               | 5       |
+| points    | p         | 生成的点数量                                     | 10      |
+| amount    | a         | 从生成的点中选取多少个                  | 1       |
+| rotationx | rotx, rx  | X 轴旋转角度                                           | 0       |
+| rotationy | roty, ry  | Y 轴旋转角度                                           | 0       |
+| rotationz | rotz, rz  | Z 轴旋转角度                                           | 0       |
+| offsetx   | offx, ox  | X 轴偏移                                             | 0       |
+| offsety   | offy, oy  | Y 轴偏移                                             | 0       |
+| offsetz   | offz, oz  | Z 轴偏移                                             | 0       |
 
 
 ## 示例

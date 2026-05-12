@@ -1,16 +1,16 @@
 ## 描述
-Ta以a specific 实体 by their UUID. Can be a 占位符为目标。
-This 目标选择器 will 目标 任何事物, 无论 目标选择器 过滤
+通过实体的 UUID 选取特定实体。支持占位符。  
+此目标选择器会选取任何实体，不受目标选择器过滤器的影响
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| uuid | u | The uuid of the 实体 | 0 |
+| uuid      | u         | 实体的 UUID                                               | 0       |
 
 
 ## 示例
-The following 生物 will remember the uuid of the 实体 that first hit it 之后 it spawned, and will continue to ignite them every 10 seconds 之后 that
+以下生物会记住生成后第一个攻击它的实体的 UUID，之后每 10 秒点燃该实体一次
 ```yaml
 VengefulMob:
   Type: ZOMBIE

@@ -1,13 +1,13 @@
 ## 描述
-Applies an aura to the target that makes it bouncy
+Applies an 光环 to the 目标 that 使 it bouncy
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| onBounceSkill | onbounce, ob | 要执行的元技能 on bounce                            |<!--type:Metaskill-->|
-| cancelevent | ce, canceldamage, cd | Whether to cancel fall damage 对于duration of the aura| false |
-> 此技能继承所有[Aura](Skills/Mechanics/Aura) 技能
+| onBounceSkill | onbounce, ob | The metaskill to execute on bounce                            |<!--type:Metaskill-->|
+| cancelevent | ce, canceldamage, cd | Whether to cancel fall damage for the duration of the 光环| false |
+> 此技能继承[光环](Skills/技能/光环) 技能
 
 
 ## 示例

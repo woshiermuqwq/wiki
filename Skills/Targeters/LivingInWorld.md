@@ -1,9 +1,9 @@
 ## 描述
-以all living 实体 in the 施法者 世界为目标。
+选取施法者所在世界中的所有活体实体
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例
@@ -11,7 +11,7 @@
 EntityCount:
   Skills:
   - setvariable{var=skill.count;val=<skill.targets>} @LivingInWorld
-  - message{m="There are <skill.var.count> entities loaded in the current world"} @self
+  - message{m="当前世界已加载 <skill.var.count> 个实体"} @self
 ```
 
 

@@ -1,107 +1,106 @@
-一份按标签/功能分类的***自动生成***文档，列出了所有触发器。
+一份***自动生成***的文档，按标签/功能分组列出了所有触发器（trigger）。
 
-标签由 Wiki 编辑团队添加，并非插件代码中的实际功能，而更像是一种搜索辅助手段。
+标签由维基编辑团队添加，并非插件代码中反映的功能，而是一种辅助搜索的手段。
 
-每个触发器可以拥有多个标签，并在其所拥有的每个标签对应分类下列出。
+每个触发器可以有多个标签，并在其拥有的每个标签分类下分别列出。
 
 [[_TOC_]]
 
-[>> Go to top](#)
+[>> 回到顶部](#)
 ## Paper-Only
-| 触发器 | 插件 | Description |
+| 触发器 | 插件 | 描述 |
 |----------|--------|-------------|
-| [OnJump](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onJump) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 jumps |
-| [OnProjectileThrow](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onProjectileThrow) | MythicMobs | 执行 the 技能 when the special 弹射物 物品 is thrown |
+| [OnJump](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onJump) | MythicMobs | 持有或装备该物品的玩家跳跃时执行技能 |
+| [OnProjectileThrow](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onProjectileThrow) | MythicMobs | 特殊弹射物物品被投掷时执行技能 |
 
 
-[>> Go to top](#)
+[>> 回到顶部](#)
 ## ProtocolLib-Only
-| 触发器 | 插件 | Description |
+| 触发器 | 插件 | 描述 |
 |----------|--------|-------------|
-| [OnPressQ](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPressQ) | MythicMobs | When a 玩家 presses Q to 掉落 the 物品 |
-| [OnPressCtrlQ](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPressCtrlQ) | MythicMobs | When a 玩家 presses Ctrl+Q to 掉落 a 堆叠 of 物品 |
+| [OnPressQ](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPressQ) | MythicMobs | 玩家按下 Q 键丢弃物品时 |
+| [OnPressCtrlQ](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPressCtrlQ) | MythicMobs | 玩家按下 Ctrl+Q 丢弃整组物品时 |
 
 
-[>> Go to top](#)
-## Untagged
-These 触发器 have not been tagged 还.
+[>> 回到顶部](#)
+## 未标记
+以下触发器尚未被标记。
 
-| 触发器 | 插件 | Description |
+| 触发器 | 插件 | 描述 |
 |----------|--------|-------------|
-| [OnAttack](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onAttack) | MythicMobs | 执行 the 技能 when the 生物 攻击 an 实体. |
-| [OnSkillDamage](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onSkillDamage) | MythicMobs | 执行 the 技能 when the 生物 deals 伤害 to 其他 实体 via a 技能 |
-| [OnBowHit](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onBowHit) | MythicMobs | 执行 a 技能 when the 生物 弹射物 hits an 实体. |
-| [OnBlockPlace](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBlockPlace) | MythicMobs | When the 玩家 places the 自定义 方块 or a furniture |
-| [OnBlockBreak](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBlockBreak) | MythicMobs | When the 玩家 breaks a 自定义 方块 or a furniture |
-| [OnItemPickup](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onItemPickup) | MythicMobs | When the 玩家 picks up an 物品. |
-| [OnItemDrop](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onItemDrop) | MythicMobs | When the 玩家 掉落 an 物品 |
-| [OnHear](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onHear) | MythicMobs | 执行 the 技能 when the 生物 hears a sound, [if this feature 已被 启用](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/生物#hearing) |
-| [OnCombat](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onCombat) | MythicMobs | The 默认 触发器 if 没有 was used |
-| [OnConsume](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onConsume) | MythicMobs | Triggered when the 物品 is eaten |
-| [OnCrouch](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onCrouch) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 starts to crouch |
-| [OnCreeperCharge](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onCreeperCharge) | MythicMobs | 执行 the 技能 when the casting creeper is charged |
-| [OnUnCrouch](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onUnCrouch) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 stops to crouch |
-| [OnDamaged](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDamaged) | MythicMobs | 执行 the 技能 when the 生物 takes 伤害. |
-| [OnDropCombat](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDropCombat) | MythicMobs | 执行 the 技能 when the 生物 掉落 战斗. |
-| [OnDeath](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDeath) | MythicMobs | 执行 the 技能 when the 生物 dies |
-| [OnDespawn](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onDespawn) | MythicMobs | 执行 the 技能 when the 生物 despawns. |
-| [OnEnterCombat](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onEnterCombat) | MythicMobs | 执行 the 技能 when the 生物 enters 战斗. |
-| [OnExplode](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onExplode) | MythicMobs | 执行 the 技能 when the 生物 explodes |
-| [OnPrime](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onPrime) | MythicMobs | 执行 the 技能 when the 生物, 必须为 a creeper, is primed (i.e |
-| [OnInteract](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onInteract) | MythicMobs | 执行 the 技能 when a 玩家 interacts with, or *right-clicks*, the 生物 |
-| [OnKill](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onKill) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 kills 另一个 实体 |
-| [OnPlayerKill](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onPlayerKill) | MythicMobs | 执行 the 技能 when the 生物 kills a 玩家 |
-| [OnShoot](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onShoot) | MythicMobs | 执行 the 技能 when the 生物 shoots a 弹射物 |
-| [OnSignal](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onSignal) | MythicMobs | This 触发器 has a special syntax: `~onSignal:<signal>` |
-| [OnSpawn](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onSpawn) | MythicMobs | 执行 the 技能 when the 生物 spawns |
-| [OnSpawnOrLoad](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onSpawnOrLoad) | MythicMobs | 执行 the 技能 when 也 [~onSpawn](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onSpawn) or [~onLoad](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onLoad) would 触发器. |
-| [OnPotionSplash](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPotionSplash) | MythicMobs | 执行 the 技能 when the 药水 is splashed |
-| [OnSwing](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onSwing) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 left clicks |
-| [OnChangeTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onChangeTarget) | MythicMobs | 执行 the 技能 when the 生物 changes 目标. |
-| [OnTeleport](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onTeleport) | MythicMobs | 执行 the 技能 when the 生物 teleports |
-| [OnTimer](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onTimer) | MythicMobs | This 触发器 has a special syntax: `~onTimer:<ticks>` |
-| [OnUse](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onUse) | MythicMobs | 执行 the 技能 when the 玩家 holding the 物品 right-clicks. |
-| [OnRightClick](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onRightClick) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 right-clicks |
-| [OnReady](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onReady) | MythicMobs | 执行 the 技能 when the 生物 is ready to 生成 from a [生成器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生成器) |
-| [OnFish](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFish) | MythicMobs | When a 玩家 holding or equipping the 物品 is fishing, ie casting the line out |
-| [OnFishBite](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFishBite) | MythicMobs | Executed when, 对于 玩家 holding or equipping the 物品, 有 bite on the hook and 它是 ready to be reeled in |
-| [OnFishCatch](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFishCatch) | MythicMobs | When a 玩家 holding or equipping the 物品 has successfully caught a fish and is reeling it in. |
-| [OnFishGrab](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFishGrab) | MythicMobs | When a 玩家 holding or equipping the 物品 has successfully caught an 实体 |
-| [OnFishGround](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFishGround) | MythicMobs | When a bobber casted by a 玩家 holding or equipping the 物品 is stuck in the ground |
-| [OnFishReel](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFishReel) | MythicMobs | When a 玩家 holding or equipping the 物品 reels in their hook 没有 receiving any bites |
-| [OnFishFail](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFishFail) | MythicMobs | When a 玩家 holding or equipping the 物品 fails to catch a bite 当 fishing 通常 由于 poor timing |
-| [OnTame](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onTame) | MythicMobs | 执行 the 技能 when the 玩家 tames the 生物 |
-| [OnEquip](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onEquip) | MythicMobs | When the 物品 is equipped as an armor piece |
-| [OnUnEquip](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onUnEquip) | MythicMobs | When the 物品 is unequipped as an armor piece |
-| [OnPressF](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPressF) | MythicMobs | When a 玩家 presses F to swap the 物品 |
-| [OnProjectileHit](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onProjectileHit) | MythicMobs | 执行 a 技能 when the 生物 special 弹射物 类型 (trident, snowball, wither skull, llama spit etc) hits an 实体. |
-| [OnProjectileLand](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onProjectileLand) | MythicMobs | 执行 a 技能 when the 生物 special 弹射物 类型 (trident, snowball, wither skull, llama spit etc) lands on the ground 没有 hitting an 实体. |
-| [OnLoad](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onLoad) | MythicMobs | 执行 the 技能 when the 生物 is loaded 之后 a 服务器 restart. |
-| [OnJoin](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onJoin) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 joins the 服务器 |
-| [OnRespawn](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onRespawn) | MythicMobs | 执行 the 技能 when the 玩家 holding or equipping the 物品 respawns |
-| [OnBreed](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onBreed) | MythicMobs | 执行 the 技能 when the 生物 breeds with 另一个 生物. |
-| [OnTrade](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onTrade) | MythicMobs | 执行 the 技能 when the villager trades with a 玩家 |
-| [OnChangeWorld](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onChangeWorld) | MythicMobs | 执行 the 技能 when the 施法者 changes 世界. |
-| [OnBucket](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/技能/触发器/onBucket) | MythicMobs | 执行 the 技能 when the cow is milked or when an 实体 is stored in a bucket (axolotl and the 其他 bucketable ones) |
-| [OnPickup](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPickup) | MythicCrucible | 执行 the 技能 when the 物品 is picked up by a 玩家 |
-| [OnBlockRotate](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBlockRotate) | MythicCrucible | 执行 the 技能 when the furniture is rotated |
-| [OnBlockSit](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBlockSit) | MythicCrucible | 执行 the 技能 when a 玩家 sits on the furniture |
-| [OnHold](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onHold) | MythicCrucible | 执行 the 技能 when the 玩家 holds the 物品 |
-| [OnUnHeld](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onUnHeld) | MythicCrucible | 执行 the 技能 when the 玩家 stops holding the 物品 |
-| [OnFurnitureStateChange](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFurnitureStateChange) | MythicCrucible | When the state of the furniture changes |
-| [OnPressF_HAND](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPressF_HAND) | MythicCrucible | When a 玩家 presses F to swap the 物品, and it ends up in the main hand |
-| [OnPressF_OFFHAND](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPressF_OFFHAND) | MythicCrucible | When a 玩家 presses F to swap the 物品, and it ends up in the offhand |
-| [OnPaint](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onPaint) | MythicCrucible | When a [Paint Brush](Paint-Brush) paints a furniture |
-| [OnBreak](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onBreak) | MythicCrucible | 执行 the 技能 when the 玩家 holding or equipping the 物品 breaks it |
-| [OnFurnitureInventoryOpen](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFurnitureInventoryOpen) | MythicCrucible | 触发器 when the [Furniture Inventory](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/技能/furnitureinventory) is opened |
-| [OnFurnitureInventoryClose](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onFurnitureInventoryClose) | MythicCrucible | 触发器 when the [Furniture Inventory](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/技能/furnitureinventory) is closed |
-| [OnCancelUse](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onCancelUse) | MythicCrucible | 执行 the 技能 when the 玩家 stops using the 物品. |
-| [OnStartDestroyBlock](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onStartDestroyBlock) | MythicCrucible | 执行 the 技能 when the 玩家 holding or equipping the 物品 starts destroying a 方块 |
-| [OnStopDestroyBlock](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/技能/触发器/onStopDestroyBlock) | MythicCrucible | 执行 the 技能 when the 玩家 holding or equipping the 物品 stops destroying a 方块 |
-| [OnClassGain](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/技能/触发器/onClassGain) | MythicRPG | 触发器 when the archetype is gained |
-| [OnClassLoss](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/技能/触发器/onClassLoss) | MythicRPG | 触发器 when the archetype is lost/removed |
-| [OnLevelUp](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/技能/触发器/onLevelUp) | MythicRPG | 触发器 when the [archetype](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Archetypes) [等级 up](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Archetypes/Leveling) |
-| [OnQuickcastOpen](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/技能/触发器/onQuickcastOpen) | MythicRPG | 触发器 when the 玩家 与 archetype starts the quick cast |
-| [OnQuickCastClose](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/技能/触发器/onQuickCastClose) | MythicRPG | 触发器 when the 玩家 与 archetype ends the quick cast |
-| [OnLearnSpell](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/技能/触发器/onLearnSpell) | MythicRPG | 触发器 when the 玩家 与 archetype learns a new spell |
-
+| [OnAttack](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onAttack) | MythicMobs | 生物攻击实体时执行技能 |
+| [OnSkillDamage](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onSkillDamage) | MythicMobs | 生物通过技能对其他实体造成伤害时执行技能 |
+| [OnBowHit](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onBowHit) | MythicMobs | 生物的弹射物命中实体时执行技能 |
+| [OnBlockPlace](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onBlockPlace) | MythicMobs | 玩家放置自定义方块或家具时 |
+| [OnBlockBreak](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onBlockBreak) | MythicMobs | 玩家破坏自定义方块或家具时 |
+| [OnItemPickup](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onItemPickup) | MythicMobs | 玩家拾取物品时 |
+| [OnItemDrop](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onItemDrop) | MythicMobs | 玩家丢弃物品时 |
+| [OnHear](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onHear) | MythicMobs | 生物[启用了听觉功能](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/Mobs#hearing)后，听到声音时执行技能 |
+| [OnCombat](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onCombat) | MythicMobs | 未指定触发器时的默认触发器 |
+| [OnConsume](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onConsume) | MythicMobs | 物品被食用时触发 |
+| [OnCrouch](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onCrouch) | MythicMobs | 持有或装备该物品的玩家开始潜行时执行技能 |
+| [OnCreeperCharge](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onCreeperCharge) | MythicMobs | 施法苦力怕被充能时执行技能 |
+| [OnUnCrouch](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onUnCrouch) | MythicMobs | 持有或装备该物品的玩家停止潜行时执行技能 |
+| [OnDamaged](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onDamaged) | MythicMobs | 生物受到伤害时执行技能 |
+| [OnDropCombat](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onDropCombat) | MythicMobs | 生物脱离战斗时执行技能 |
+| [OnDeath](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onDeath) | MythicMobs | 生物死亡时执行技能 |
+| [OnDespawn](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onDespawn) | MythicMobs | 生物被清除时执行技能 |
+| [OnEnterCombat](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onEnterCombat) | MythicMobs | 生物进入战斗时执行技能 |
+| [OnExplode](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onExplode) | MythicMobs | 生物爆炸时执行技能 |
+| [OnPrime](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onPrime) | MythicMobs | 生物（必须是苦力怕）被点燃时执行技能 |
+| [OnInteract](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onInteract) | MythicMobs | 玩家与生物交互（即右键点击）时执行技能 |
+| [OnKill](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onKill) | MythicMobs | 持有或装备该物品的玩家击杀另一实体时执行技能 |
+| [OnPlayerKill](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onPlayerKill) | MythicMobs | 生物杀死玩家时执行技能 |
+| [OnShoot](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onShoot) | MythicMobs | 生物发射弹射物时执行技能 |
+| [OnSignal](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onSignal) | MythicMobs | 此触发器具有特殊语法：`~onSignal:<signal>`。生物收到信号时执行技能 |
+| [OnSpawn](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onSpawn) | MythicMobs | 生物生成时执行技能 |
+| [OnSpawnOrLoad](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onSpawnOrLoad) | MythicMobs | [~onSpawn](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onSpawn) 或 [~onLoad](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onLoad) 任一触发器触发时执行技能 |
+| [OnPotionSplash](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPotionSplash) | MythicMobs | 药水溅射时执行技能 |
+| [OnSwing](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onSwing) | MythicMobs | 持有或装备该物品的玩家左键点击时执行技能 |
+| [OnChangeTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onChangeTarget) | MythicMobs | 生物切换目标时执行技能 |
+| [OnTeleport](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onTeleport) | MythicMobs | 生物传送时执行技能 |
+| [OnTimer](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onTimer) | MythicMobs | 此触发器具有特殊语法：`~onTimer:<ticks>`。每 n 刻执行一次技能 |
+| [OnUse](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onUse) | MythicMobs | 持有该物品的玩家右键点击时执行技能 |
+| [OnRightClick](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onRightClick) | MythicMobs | 持有或装备该物品的玩家右键点击时执行技能 |
+| [OnReady](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onReady) | MythicMobs | 生物准备从[刷怪器](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Spawners)生成时执行技能 |
+| [OnFish](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFish) | MythicMobs | 持有或装备该物品的玩家抛竿钓鱼时 |
+| [OnFishBite](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFishBite) | MythicMobs | 持有或装备该物品的玩家的鱼钩有咬钩且可收线时 |
+| [OnFishCatch](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFishCatch) | MythicMobs | 持有或装备该物品的玩家成功钓到鱼并收线时 |
+| [OnFishGrab](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFishGrab) | MythicMobs | 持有或装备该物品的玩家成功钓到实体时 |
+| [OnFishGround](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFishGround) | MythicMobs | 持有或装备该物品的玩家抛出的浮漂卡在地面上时 |
+| [OnFishReel](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFishReel) | MythicMobs | 持有或装备该物品的玩家在无咬钩的情况下收线时 |
+| [OnFishFail](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFishFail) | MythicMobs | 持有或装备该物品的玩家钓鱼时因时机不当错失咬钩时 |
+| [OnTame](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onTame) | MythicMobs | 玩家驯服生物时执行技能 |
+| [OnEquip](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onEquip) | MythicMobs | 物品被装备为盔甲时 |
+| [OnUnEquip](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onUnEquip) | MythicMobs | 物品被卸下盔甲时 |
+| [OnPressF](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPressF) | MythicMobs | 玩家按下 F 键交换物品时 |
+| [OnProjectileHit](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onProjectileHit) | MythicMobs | 生物的特殊弹射物类型（三叉戟、雪球、凋零骷髅头、羊驼口水等）命中实体时执行技能 |
+| [OnProjectileLand](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onProjectileLand) | MythicMobs | 生物的特殊弹射物类型落地（未命中实体）时执行技能 |
+| [OnLoad](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onLoad) | MythicMobs | 服务器重启后生物被加载时执行技能 |
+| [OnJoin](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onJoin) | MythicMobs | 持有或装备该物品的玩家加入服务器时执行技能 |
+| [OnRespawn](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onRespawn) | MythicMobs | 持有或装备该物品的玩家重生时执行技能 |
+| [OnBreed](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onBreed) | MythicMobs | 生物与另一只生物繁殖时执行技能 |
+| [OnTrade](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onTrade) | MythicMobs | 村民与玩家交易时执行技能 |
+| [OnChangeWorld](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onChangeWorld) | MythicMobs | 施法者切换世界时执行技能 |
+| [OnBucket](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Skills/Triggers/onBucket) | MythicMobs | 牛被挤奶或将实体装入桶时执行技能（美西螈及其他可装桶生物） |
+| [OnPickup](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPickup) | MythicCrucible | 物品被玩家拾取时执行技能 |
+| [OnBlockRotate](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onBlockRotate) | MythicCrucible | 家具被旋转时执行技能 |
+| [OnBlockSit](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onBlockSit) | MythicCrucible | 玩家坐在家具上时执行技能 |
+| [OnHold](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onHold) | MythicCrucible | 玩家持有该物品时执行技能 |
+| [OnUnHeld](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onUnHeld) | MythicCrucible | 玩家停止持有该物品时执行技能 |
+| [OnFurnitureStateChange](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFurnitureStateChange) | MythicCrucible | 家具状态改变时 |
+| [OnPressF_HAND](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPressF_HAND) | MythicCrucible | 玩家按下 F 键交换物品且物品最终在主手时 |
+| [OnPressF_OFFHAND](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPressF_OFFHAND) | MythicCrucible | 玩家按下 F 键交换物品且物品最终在副手时 |
+| [OnPaint](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onPaint) | MythicCrucible | [画笔](Paint-Brush)对家具进行涂色时 |
+| [OnBreak](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onBreak) | MythicCrucible | 持有或装备该物品的玩家损坏该物品时执行技能 |
+| [OnFurnitureInventoryOpen](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFurnitureInventoryOpen) | MythicCrucible | [家具物品栏](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Mechanics/furnitureinventory)打开时触发 |
+| [OnFurnitureInventoryClose](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onFurnitureInventoryClose) | MythicCrucible | [家具物品栏](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Mechanics/furnitureinventory)关闭时触发 |
+| [OnCancelUse](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onCancelUse) | MythicCrucible | 玩家停止使用该物品时执行技能 |
+| [OnStartDestroyBlock](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onStartDestroyBlock) | MythicCrucible | 持有或装备该物品的玩家开始破坏方块时执行技能 |
+| [OnStopDestroyBlock](https://git.lumine.io/mythiccraft/mythiccrucible/-/wikis/Skills/Triggers/onStopDestroyBlock) | MythicCrucible | 持有或装备该物品的玩家停止破坏方块时执行技能 |
+| [OnClassGain](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Skills/Triggers/onClassGain) | MythicRPG | 获得职业时触发 |
+| [OnClassLoss](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Skills/Triggers/onClassLoss) | MythicRPG | 失去/移除职业时触发 |
+| [OnLevelUp](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Skills/Triggers/onLevelUp) | MythicRPG | [职业](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Archetypes)[升级](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Archetypes/Leveling)时触发 |
+| [OnQuickcastOpen](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Skills/Triggers/onQuickcastOpen) | MythicRPG | 拥有该职业的玩家开始快速施法时触发 |
+| [OnQuickCastClose](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Skills/Triggers/onQuickCastClose) | MythicRPG | 拥有该职业的玩家结束快速施法时触发 |
+| [OnLearnSpell](https://git.lumine.io/mythiccraft/mythicrpg/-/wikis/Skills/Triggers/onLearnSpell) | MythicRPG | 拥有该职业的玩家学习新法术时触发 |

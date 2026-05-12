@@ -1,9 +1,9 @@
 ## 描述
-以all 玩家 in the 服务器为目标。
+选取服务器上的所有玩家
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例
@@ -11,10 +11,10 @@
 PlayerCount_ServerWide:
   Skills:
   - setvariable{var=skill.count;val=<skill.targets>} @PlayersOnServer{targetself=true}
-  - message{m="There are <skill.var.count> entities loaded in the current world"} @self
+  - message{m="当前世界已加载 <skill.var.count> 个实体"} @self
 ```
 
 
 ## 别名
-- [x] 服务器
-- [x] 每个人
+- [x] server
+- [x] everyone

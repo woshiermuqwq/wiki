@@ -1,13 +1,13 @@
 ## 描述
-Adds an attribute modifier to the attributable target
+Adds an attribute modifier to the attributable 目标
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | attribute | attr      | The [attribute]                      | GENERIC_LUCK<!--type:PaperAttribute--> |
 | operation | op        | The [operation] to perform                                        | ADD_NUMBER<!--type:PaperAttributeOperation--> |
-| name      | modifierName | The name of the modifier                                    | <caster.uuid> |
+| name      | modifierName | The name of the modifier                                    | <施法者.uuid> |
 | amount    | amt, a    | The modifier of the attribute                                          | 0     |
 | duration  | dur       | The duration of the attribute                                          | 0     |
 

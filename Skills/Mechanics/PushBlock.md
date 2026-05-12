@@ -1,15 +1,15 @@
 ## 描述
-Pushes the block 在target location in the given direction using piston logic.  
-Direction 可以 either cardinal direction or a location targeter. If given a targeter, the block 将会 pushed once towards that location.
-Mechanic follows piston rules and will push other connected slime blocks as well, but only if they're adjacent or in front of the block - it cannot push connected blocks behind the pushed block.  
+Pushes the block at the 目标 location in the given direction using piston logic.  
+Direction 可以是 cardinal direction or a location targeter. If given a targeter, the block will be pushed once towards that location.
+技能 follows piston rules and will push other connected slime blocks as well, but only if they're adjacent or in front of the block - it cannot push connected blocks behind the pushed block.  
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | direction | dir, d    | The direction of the movement. Can also be a Targeter                | NORTH<!--type:NORTH,SOUTH,EAST,WEST,UP,DOWN-->|
-| onPush    | then      | 要执行的元技能 once the block has been successfully pushed |<!--type:Metaskill-->|
-| onFail    |           | 要执行的元技能 if the block failed to be pushed            |<!--type:Metaskill-->|
+| onPush    | then      | The metaskill to execute once the block has been successfully pushed |<!--type:Metaskill-->|
+| onFail    |           | The metaskill to execute if the block failed to be pushed            |<!--type:Metaskill-->|
 
 ### Direction Attribute
 The direction attribute can either be a `named direction` or a `targeter`

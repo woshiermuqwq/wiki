@@ -1,30 +1,29 @@
-一份按标签/功能分类的***自动生成***文档，列出了所有 AI 目标选择器。
+一份***自动生成***的文档，按标签/功能分组列出了所有 AI 目标选择器（aitarget）。
 
-标签由 Wiki 编辑团队添加，并非插件代码中的实际功能，而更像是一种搜索辅助手段。
+标签由维基编辑团队添加，并非插件代码中反映的功能，而是一种辅助搜索的手段。
 
-每个 AI 目标选择器可以拥有多个标签，并在其所拥有的每个标签对应分类下列出。
+每个 AI 目标选择器可以有多个标签，并在其拥有的每个标签分类下分别列出。
 
 [[_TOC_]]
 
-[>> Go to top](#)
-## Untagged
-These aitargets have not been tagged 还.
+[>> 回到顶部](#)
+## 未标记
+以下 AI 目标选择器尚未被标记。
 
-| Aitarget | 插件 | Description |
+| AI 目标选择器 | 插件 | 描述 |
 |----------|--------|-------------|
-| [HurtByTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/HurtByTarget) | MythicMobs | Targets whatever 攻击 the 生物 |
-| [IronGolems](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/IronGolems) | MythicMobs | Targets Iron Golems |
-| [Monsters](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/Monsters) | MythicMobs | Targets monsters |
-| [Nearestconditionaltarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/nearestconditionaltarget) | MythicMobs | Causes the 生物 to 目标 基于 条件. |
-| [NearestOtherFaction](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/NearestOtherFaction) | MythicMobs | Targets ANY 实体 处于不同阵营 |
-| [NearestOtherFactionMonsters](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/NearestOtherFactionMonsters) | MythicMobs | Targets any monster 处于不同阵营 |
-| [OwnerAttacker](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/OwnerAttacker) | MythicMobs | Targets whatever 攻击 the 生物 主人 |
-| [OwnerTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/OwnerTarget) | MythicMobs | Targets whatever the 生物 主人 攻击 |
-| [ParentHurtBy](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/ParentHurtBy) | MythicMobs | Targets the 实体 that 攻击 the 生物 父级 |
-| [ParentTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/ParentTarget) | MythicMobs | Targets the 实体 即 being hit by the 施法者 父级 |
-| [玩家](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/玩家) | MythicMobs | Targets 玩家 |
-| [SpecificFaction](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/SpecificFaction) | MythicMobs | Causes the 生物 to 目标 a specific 阵营. |
-| [SpecificFactionMonsters](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/SpecificFactionMonsters) | MythicMobs | Causes the 生物 to 目标 monsters of a specific 阵营. |
-| [Villagers](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/ai/targets/Villagers) | MythicMobs | Targets villagers |
-| [自定义-AI](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/生物/自定义-AI) | MythicMobs | Clears all of the 生物 AI |
-
+| [HurtByTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/HurtByTarget) | MythicMobs | 以攻击该生物的任何实体为目标 |
+| [IronGolems](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/IronGolems) | MythicMobs | 以铁傀儡为目标 |
+| [Monsters](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/Monsters) | MythicMobs | 以怪物为目标 |
+| [Nearestconditionaltarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/nearestconditionaltarget) | MythicMobs | 使生物基于条件选择目标。 |
+| [NearestOtherFaction](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/NearestOtherFaction) | MythicMobs | 以不同阵营的任何实体为目标 |
+| [NearestOtherFactionMonsters](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/NearestOtherFactionMonsters) | MythicMobs | 以不同阵营的任何怪物为目标 |
+| [OwnerAttacker](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/OwnerAttacker) | MythicMobs | 以攻击生物所有者的任何实体为目标 |
+| [OwnerTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/OwnerTarget) | MythicMobs | 以生物所有者攻击的任何实体为目标 |
+| [ParentHurtBy](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/ParentHurtBy) | MythicMobs | 以攻击生物父实体的实体为目标 |
+| [ParentTarget](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/ParentTarget) | MythicMobs | 以施法者父实体正在攻击的实体为目标 |
+| [Players](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/Players) | MythicMobs | 以玩家为目标 |
+| [SpecificFaction](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/SpecificFaction) | MythicMobs | 使生物以特定阵营为目标。 |
+| [SpecificFactionMonsters](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/SpecificFactionMonsters) | MythicMobs | 使生物以特定阵营的怪物为目标。 |
+| [Villagers](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/ai/targets/Villagers) | MythicMobs | 以村民为目标 |
+| [Custom-AI](https://git.lumine.io/mythiccraft/MythicMobs/-/wikis/Mobs/Custom-AI) | MythicMobs | 清除生物的所有 AI |

@@ -4,7 +4,7 @@ Sets the base value of the targeted entity's [attribute][]
 
 ## 属性
 
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | attribute | attr      | The [attribute][] to set             | GENERIC_LUCK<!--type:PaperAttribute--> |
 | amount    | amt, a    | The amount of the attribute                                            | 0     |

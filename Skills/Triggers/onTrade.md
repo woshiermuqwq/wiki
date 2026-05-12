@@ -1,7 +1,7 @@
 ## 描述
-Ex执行 the 技能 when the villager trades with a 玩家.
+村民与玩家交易时执行技能。  
 
-> The associated [@触发器](/技能/目标选择器/触发器) is the 玩家 that traded 与 villager
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为与村民交易的玩家
 
 
 ## 示例
@@ -9,7 +9,6 @@ Ex执行 the 技能 when the villager trades with a 玩家.
 EXAMPLE_MOB:
   Type: VILLAGER
   Skills:
-    # sends a message to all the players in the world
-    # when the mob's target changes
-    - message{m=TRADED} @World ~onTrade
+    # 生物切换目标时向世界中所有玩家发送消息
+    - message{m=已交易} @World ~onTrade
 ```

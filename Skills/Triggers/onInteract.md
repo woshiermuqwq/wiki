@@ -1,11 +1,11 @@
 ## 描述
-Ex执行 the 技能 when a 玩家 interacts with, or *right-clicks*, the 生物.
-> The associated [@触发器](/技能/目标选择器/触发器) is the 玩家 that interacted 与 施法者
+玩家与生物交互（即右键点击）时执行技能。  
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为与施法者交互的玩家
 
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onInteract)
-- [MythicRPG](/../../../mythicrpg/-/wikis/技能/触发器/onInteract)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onInteract)
+- [MythicRPG](/../../../mythicrpg/-/wikis/Skills/Triggers/onInteract)
 
 
 ## 示例
@@ -13,7 +13,6 @@ Ex执行 the 技能 when a 玩家 interacts with, or *right-clicks*, the 生物.
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world
-    # when a player right-clicks the mob
-    - message{m=INTERACTED} @World ~onInteract
+    # 玩家右键点击生物时向世界中所有玩家发送消息
+    - message{m=已交互} @World ~onInteract
 ```

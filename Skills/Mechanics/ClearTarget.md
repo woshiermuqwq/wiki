@@ -1,5 +1,5 @@
 ## 描述
-Forces the target of the 技能 to reset its current target
+Forces the 目标 of the 技能 to reset its current 目标
 
 
 ## 属性

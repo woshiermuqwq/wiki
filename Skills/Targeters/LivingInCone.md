@@ -1,16 +1,16 @@
 ## 描述
-以all living 实体 in cone with a specified 角度, length and 旋转 relative to facing 方向为目标。
+以施法者朝向为基准，在指定角度、长度和旋转的锥形区域内选取所有活体实体
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 角度 | a | The 角度 of the cone | 90 |
-| 范围 | r | The length of the cone | 16 |
-| 旋转 | rot | The 旋转 of the cone | 0 |
-| usepitch | pitch, p | Whether to generate the cone 也 取决于 the 施法者 pitch | false |
-| yoffset | yo | The y 偏移 to be added to the generated cone 位置 | 0 |
-| living仅 | lo | Whether to 目标 仅 living 实体 | true |
+| angle     | a         | 锥形的角度                                                | 90      |
+| range     | r         | 锥形的长度                                               | 16      |
+| rotation  | rot       | 锥形的旋转角度                                             | 0       |
+| usepitch  | pitch, p  | 锥形的生成是否也取决于施法者的俯仰角    | false   |
+| yoffset   | yo        | 要添加到生成的锥形位置的 Y 轴偏移            | 0       |
+| livingonly | lo       | 是否仅选取活体实体                               | true    |
 
 
 ## 示例

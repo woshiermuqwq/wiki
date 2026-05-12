@@ -1,21 +1,21 @@
 ## 描述
-若to 目标 仅 its outline, its 位置 and so on，返回the # of points 目标 位置 that comprise a rectangle. Depending on the 参数, some elements of the rectangle can be modified, 例如 it being filled or not,。
+返回构成一个矩形的目标位置点。根据参数可以修改矩形的各种属性，例如是否填充、是否仅绘制边框、位置等
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| x | | The size of the rectangle on the **x** axis | 1 |
-| y | | The size of the rectangle on the **y** axis | 1 |
-| z | | The size of the rectangle on the **z** axis | 1 |
-| xOffset | | The 偏移 of the rectangle on the **x** axis | 0 |
-| yOffset | | The 偏移 of the rectangle on the **y** axis | 0 |
-| zOffset | | The 偏移 of the rectangle on the **z** axis | 0 |
-| points | p, density, d | 数量 of points per cube 'line' | 10 |
-| filled | fill, f | If the rectangle 应为 filled | false |
-| outline | edge, 仅Edge, e, 仅Outline, o | If 仅 the outline 应为 drawn | false |
-| 旋转 | r | The 3D 旋转 of the rectangle | 0,0,0 |
-| fromOrigin| 原点 | If the rectangle 应为 drawn 从 原点 of the 元技能 | false |
+| x         |           | 矩形在 **x** 轴上的大小                          | 1       |
+| y         |           | 矩形在 **y** 轴上的大小                          | 1       |
+| z         |           | 矩形在 **z** 轴上的大小                          | 1       |
+| xOffset   |           | 矩形在 **x** 轴上的偏移                        | 0       |
+| yOffset   |           | 矩形在 **y** 轴上的偏移                        | 0       |
+| zOffset   |           | 矩形在 **z** 轴上的偏移                        | 0       |
+| points    | p, density, d | 每条立方体"边线"上的点数                                 | 10      |
+| filled    | fill, f   | 是否填充矩形                                    | false   |
+| outline   | edge, onlyEdge, e, onlyOutline, o | 是否仅绘制边框          | false   |
+| rotation  | r         | 矩形的 3D 旋转角度                                     | 0,0,0   |
+| fromOrigin| origin    | 是否从嵌套技能的原点开始绘制矩形    | false   |
 
 
 ## 示例

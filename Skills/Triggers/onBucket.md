@@ -1,6 +1,6 @@
 ## 描述
-Ex执行 the 技能 when the cow is milked or when an 实体 is stored in a bucket (axolotl and the 其他 bucketable ones).
-> The associated [@触发器](/技能/目标选择器/触发器) is the 施法者 自身
+牛被挤奶或将实体装入桶时执行技能（如美西螈及其他可装桶生物）。  
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为施法者自身
 
 
 ## 示例
@@ -9,7 +9,7 @@ ANormalCow:
   Type: Cow
   Skills:
   - skill{s=[
-    - message{m="HOW DARE YOU?!?"} @trigger
+    - message{m="大胆！"} @trigger
     - sound{s=entity.creeper.primed}
     - explosion{yield=5;delay=30}
     ];cd=2} @self ~onBucket

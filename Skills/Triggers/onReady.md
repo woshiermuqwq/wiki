@@ -1,5 +1,5 @@
 ## 描述
-执行 the 技能 when the 生物 is ready to 生成 from a [生成器](/生成器)
+生物准备从[刷怪器](/Spawners)生成时执行技能
 
 
 ## 别名
@@ -7,10 +7,9 @@
 EXAMPLE_MOB:
   Type: VILLAGER
   Skills:
-    # sends a message to all the players in the world
-    # when the mob is about to spawn from a spawner
-    - message{m=READY TO SPAWN FROM A SPAWNER} @World ~onReady
-    - message{m=READY TO SPAWN FROM A SPAWNER} @World ~onFirstSpawn
+    # 生物即将从刷怪器生成时向世界中所有玩家发送消息
+    - message{m=准备从刷怪器生成} @World ~onReady
+    - message{m=准备从刷怪器生成} @World ~onFirstSpawn
 ```
 
 

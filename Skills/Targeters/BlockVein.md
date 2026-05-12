@@ -1,30 +1,30 @@
 ## 描述
-目标 all adjancent 方块 that 匹配 the blocktype, starting 从 原点 of the 技能
+从技能原点开始，选取所有相邻的、类型匹配的方块
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性      | 别名         | 描述                                            | 默认值 |
 |----------------|-----------------|--------------------------------------------------------|---------|
-| blocktypes | blocktype, bt, t, material, materials, mat, m, 方块, 方块, b | 方块 to 添加 to the vein. Can be a 列表.<br>You can 添加 a `*` at the front of the 类型 to indicate that the one specified 不是 a 方块 类型, but a [方块 tag](https://Minecraft.wiki/w/Tag#Block_tags_2) (示例: `blocktype=*sculk_replaceable` )| STONE |
-| limit | max, l, m | Limit of the number of 方块 added to the vein. | 10 |
-| originMustMatch| 匹配 | Should the targeted 方块 匹配 the one at the 原点 of the 元技能 | true |
+| blocktypes     | blocktype, bt, t, material, materials, mat, m, blocks, block, b                        | 要纳入矿脉的方块类型。支持列表。<br>可在类型前加 `*` 表示指定的不是方块类型，而是[方块标签](https://minecraft.wiki/w/Tag#Block_tags_2)（例如：`blocktype=*sculk_replaceable`）| STONE   |
+| limit          | max, l, m       | 矿脉中方块数量的上限       | 10      |
+| originMustMatch| match           | 目标方块是否必须与嵌套技能原点处的方块匹配                                                                                   | true    |
 
 
 ## 示例
 ```yaml
-# Vein mine whatever you mine (Crucible)
+# 连锁挖矿——挖掘你挖到的方块对应矿脉（Crucible）
 VeinMinerPickaxe:
   Id: NETHERITE_PICKAXE
   Skills:
   - breakblock{origin=@TargetBlock} @Vein{bt=<caster.raycast>} ~onBlockBreak
 
-# Vein mine only certain ores (Crucible)
+# 仅连锁挖掘特定矿石（Crucible）
 VeinMinerPickaxeOres:
   Id: DIAMOND_PICKAXE
   Skills:
   - breakblock{origin=@TargetBlock} @Vein{bt=REDSTONE_ORE, DEEPSLATE_REDSTONE_ORE} ~onBlockBreak
 
-# Vein mine all ores (Crucible)
+# 连锁挖掘所有矿石（Crucible）
 VeinMinerPickaxeOres_V2:
   Id: DIAMOND_PICKAXE
   Skills:

@@ -1,9 +1,9 @@
 ## 描述
-以位置 of a random 实体 on the casting 生物 [仇恨表](/生物/ThreatTables)为目标。
+选取施法生物[仇恨表](/Mobs/ThreatTables)中随机实体的位置
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例

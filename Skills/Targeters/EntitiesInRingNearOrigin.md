@@ -1,10 +1,10 @@
 ## 描述
-Ta以all the 实体 in a ring near the [原点]为目标。
-继承 all 属性 from [EntitiesInRing]
+选取[原点]附近环形区域内的所有实体。  
+继承 [EntitiesInRing] 的所有属性
 
 
 ## 属性
-> This 技能 继承 every 属性 of the [EntitiesInRing] 目标选择器
+> 此技能继承 [EntitiesInRing] 目标选择器的所有属性
 
 
 ## 示例
@@ -19,5 +19,5 @@ Ta以all the 实体 in a ring near the [原点]为目标。
 
 
 <!-- LINKS -->
-[原点]: /技能/目标选择器/原点
-[EntitiesInRing]: /技能/目标选择器/EntitiesInRing
+[原点]: /Skills/Targeters/Origin
+[EntitiesInRing]: /Skills/Targeters/EntitiesInRing

@@ -1,9 +1,9 @@
 ## 描述
-执行 the 技能 when the 生物 掉落 战斗.
+生物脱离战斗时执行技能。
 
-> > **需要 [ThreatTables](/生物/ThreatTables) to be 启用**
+> **需要启用 [ThreatTables](/Mobs/ThreatTables)**  
 
-> There is no associated [@触发器](/技能/目标选择器/触发器)
+> 没有关联的 [@trigger](/Skills/Targeters/Trigger)
 
 
 ## 示例
@@ -13,9 +13,8 @@ EXAMPLE_MOB:
   Modules:
     ThreatTable: true
   Skills:
-    # sends a message to all the players in the world
-    # when the mob enters combat
-    - message{m=DROPPED COMBAT} @World ~onDropCombat
+    # 生物脱离战斗时向世界中所有玩家发送消息
+    - message{m=脱离战斗} @World ~onDropCombat
 ```
 
 

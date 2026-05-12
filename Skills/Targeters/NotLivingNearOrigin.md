@@ -1,15 +1,15 @@
 ## 描述
-以all non living 实体 in a 半径 near the 原点为目标。
+选取原点附近半径内的所有非活体实体
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 半径 of the 目标选择器 | 5 |
+| radius    | r         | 选取半径                                           | 5       |
 
 
 ## 示例
-This 技能 will say in the global chat the UUID of every non living 实体 in a 10 方块 半径 from 自身 一旦 it ends
+此技能结束时将在全局聊天中输出其周围 10 格半径内所有非活体实体的 UUID
 ```yaml
 ExampleSkill:
   Skills:

@@ -1,11 +1,11 @@
 ## 描述
-Ex执行 the 技能 when the 生物 spawns.
-> There is no associated [@触发器](/技能/目标选择器/触发器)
+生物生成时执行技能。  
+> 没有关联的 [@trigger](/Skills/Targeters/Trigger)
 
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onSpawn)
-- [MythicRPG](/../../../mythicrpg/-/wikis/技能/触发器/onSpawn)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onSpawn)
+- [MythicRPG](/../../../mythicrpg/-/wikis/Skills/Triggers/onSpawn)
 
 
 ## 示例
@@ -13,7 +13,6 @@ Ex执行 the 技能 when the 生物 spawns.
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world
-    # when the mob spawns
-    - message{m=SPAWN} @World ~onSpawn
+    # 生物生成时向世界中所有玩家发送消息
+    - message{m=生成} @World ~onSpawn
 ```

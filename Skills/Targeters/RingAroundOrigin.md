@@ -1,20 +1,20 @@
 ## 描述
-以位置 in a specified ring 在...周围 原点为目标。
+在原点周围的指定环形中选取位置。
 
-Rotations are in radians, 例如 90 degrees of axis 旋转 being `1.57`.
+旋转角度以弧度为单位，例如绕轴旋转 90 度为 `1.57`。
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 半径 of the 目标选择器 | 5 |
-| points | p | The points that make up the ring | 10 |
-| rotationx | rotx, rx | The 旋转 of the ring on the x axis | 0 |
-| rotationy | roty, ry | The 旋转 of the ring on the y axis | 0 |
-| rotationz | rotz, rz | The 旋转 of the ring on the z axis | 0 |
-| offsetx | offx, ox | The 偏移 of the ring on the x axis | 0 |
-| offsety | offy, oy | The 偏移 of the ring on the y axis | 0 |
-| offsetz | offz, oz | The 偏移 of the ring on the z axis | 0 |
-| relative | | Whether the Ring orientation 应为 relative to the 施法者 | false |
+| radius    | r         | 选取半径                                           | 5       |
+| points    | p         | 组成环形的点数量                                     | 10      |
+| rotationx | rotx, rx  | 环形在 X 轴上的旋转角度                               | 0       |
+| rotationy | roty, ry  | 环形在 Y 轴上的旋转角度                               | 0       |
+| rotationz | rotz, rz  | 环形在 Z 轴上的旋转角度                               | 0       |
+| offsetx   | offx, ox  | 环形在 X 轴上的偏移                                 | 0       |
+| offsety   | offy, oy  | 环形在 Y 轴上的偏移                                 | 0       |
+| offsetz   | offz, oz  | 环形在 Z 轴上的偏移                                 | 0       |
+| relative  |           | 环形的朝向是否相对于施法者的朝向    | false   |
 
 ## 示例
 ```yaml
@@ -25,7 +25,7 @@ ExampleSkill:
       - effect:particles @RingAroundOrigin{r=5;p=15}
     ]}
 
-# This will draw a vertical circle instead of a flat one:
+# 此示例将绘制一个竖直的圆环而非水平圆环：
 VerticalRingSkill:
   Skills:
   - particles{p=enchanted_hit;a=1;} @RAO{r=2;rz=1.57;p=9;relative=true}

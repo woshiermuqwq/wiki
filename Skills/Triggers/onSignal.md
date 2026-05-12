@@ -1,10 +1,10 @@
 ## 描述
-ThThis 触发器 has a special syntax: `~onSignal:<signal>`
+此触发器具有特殊语法：`~onSignal:<signal>`  
 
-Ex执行 the 技能 when the 生物 receives a 信号 从 [信号](/技能/技能/信号) 技能.
-A A 信号 必须为 alphanumeric.
+生物收到 [signal](/Skills/Mechanics/Signal) 技能发送的信号时执行技能。  
+信号必须是字母数字字符串。  
 
-> The associated [@触发器](/技能/目标选择器/触发器) is the 实体 that sent the 信号
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为发送信号的实体
 
 
 ## 示例
@@ -12,8 +12,7 @@ A A 信号 必须为 alphanumeric.
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a signal to all mythicmob entity in a radius of 64 blocks
-    # when a player right-clicks the mob
+    # 玩家右键点击生物时向半径 64 格内的所有 MythicMob 实体发送信号
     - signal{s=MOO_FOR_ME} @EIR{r=64} ~onInteract
 ```
 ##
@@ -21,17 +20,15 @@ EXAMPLE_MOB:
 DUMMY_MOB:
   Type: COW
   Skills:
-    # sends a message to all the players in the world
-    # when the mob receives a "MOO_FOR_ME" signal
-    - message{m=MOO} @World ~onSignal:MOO_FOR_ME
+    # 生物收到 "MOO_FOR_ME" 信号时向世界中所有玩家发送消息
+    - message{m=哞} @World ~onSignal:MOO_FOR_ME
 ```
 ##
-You may 也 choose to not specify a 信号 for this 触发器, in which case the associated 技能 将 triggered every time the 生物 receives a generic 信号.
+你也可以选择不为此触发器指定信号，此时生物每收到一个通用信号就会触发关联技能。
 ```yml
 DUMMY_MOB:
   Type: COW
   Skills:
-    # sends a message to all the players in the world
-    # when the mob receives a signal
-    - message{m=MOO...?} @World ~onSignal
+    # 生物收到信号时向世界中所有玩家发送消息
+    - message{m=哞……？} @World ~onSignal
 ```

@@ -1,15 +1,15 @@
 ## 描述
-以random 位置 near the inherited targets为目标。
+在继承目标附近随机选取位置
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 数量 | a | The 数量 of points | 5 |
-| 半径 | r, maxradius, maxr | The 半径 in which 目标 points 将 generated | 5 |
-| minradius | minr | The minimum 半径 in which 目标 points 将 generated | 0 |
-| spacing | s | The minimum 数量 of space between selected targets | 0 |
-| onsurface | surface | Whether the selected 位置 应为 on a surface that 不是 air | false |
+| amount    | a         | 生成的目标点数量                                                 | 5       |
+| radius    | r, maxradius, maxr | 生成目标点的半径范围         | 5       |
+| minradius | minr      | 生成目标点的最小半径          | 0       |
+| spacing   | s         | 选中目标之间的最小间距                 | 0       |
+| onsurface | surface   | 是否仅在非空气方块表面上选取位置 | false   |
 
 
 ## 示例

@@ -1,15 +1,15 @@
 ## 描述
-以rider of the casting 生物为目标。
+选取施法生物的骑乘者
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例
 ```yaml
   Skills:
-  - message{m="Get off!"} @Passenger
+  - message{m="下去！"} @Passenger
 ```
 
 

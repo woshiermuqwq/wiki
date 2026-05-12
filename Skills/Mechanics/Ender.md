@@ -1,5 +1,5 @@
 ## 描述
-Plays the effect of an eye of ender breaking 在location of the targeter.
+Plays the effect of an eye of ender breaking at the location of the targeter.
 
 
 ## 属性

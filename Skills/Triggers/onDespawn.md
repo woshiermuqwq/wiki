@@ -1,6 +1,6 @@
 ## 描述
-执行 the 技能 when the 生物 despawns.
-> The associated [@触发器](/技能/目标选择器/触发器) is the 施法者 自身
+生物被清除时执行技能。
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为施法者自身
 
 
 ## 示例
@@ -8,9 +8,8 @@
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world
-    # when the mob despawns
-    - message{m=DESPAWNED} @World ~onDespawn
+    # 生物被清除时向世界中所有玩家发送消息
+    - message{m=已被清除} @World ~onDespawn
 ```
 
 

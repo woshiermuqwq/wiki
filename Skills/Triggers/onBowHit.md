@@ -1,17 +1,17 @@
 ## 描述
-执行 a 技能 when the 生物 弹射物 hits an 实体.
+生物的弹射物命中实体时执行技能。
 
-> The associated [@触发器](/技能/目标选择器/触发器) is the 实体 that 已被 hit
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为被命中的实体
 
-| [Implemented 占位符](/技能/占位符#变量-占位符) |
+| [已实现的占位符](/Skills/Placeholders#variable-placeholders)     |
 |--------------------------------|
-| `<skill.var.damage-amount>` |
-| `<skill.var.damage-type>` |
-| `<skill.var.damage-cause>` |
+| `<skill.var.damage-amount>`    |
+| `<skill.var.damage-type>`      |
+| `<skill.var.damage-cause>`     |
 
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onBowHit)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onBowHit)
 
 
 ## 示例

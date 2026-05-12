@@ -1,7 +1,7 @@
 ## 描述
-Ex执行 the 技能 when the 生物, 必须为 a creeper, is primed (i.e. via the use of a flint and steel).
+生物（必须是苦力怕）被点燃时执行技能（例如通过打火石点燃）。  
   
-> The associated [@触发器](/技能/目标选择器/触发器) is the 施法者 自身
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为施法者自身
 
 
 ## 示例
@@ -9,7 +9,6 @@ Ex执行 the 技能 when the 生物, 必须为 a creeper, is primed (i.e. via th
 EXAMPLE_MOB:
   Type: CREEPER
   Skills:
-    # sends a message to all the players in the world
-    # when the mob is primed
-    - message{m=OOO I'M GONNA EXPLODE} @World ~onPrime
+    # 生物被点燃时向世界中所有玩家发送消息
+    - message{m=哦哦我要炸了} @World ~onPrime
 ```

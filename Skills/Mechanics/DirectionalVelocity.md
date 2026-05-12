@@ -1,13 +1,13 @@
 ## 描述
-Changes the velocity on the target entity on a specific vector
+Changes the 速度 on the 目标 entity on a specific vector
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| yaw       |           | The yaw of the vector 对于velocity change                        |         |
-| pitch     |           | The pitch of the vector 对于velocity change                      |         |
-| velocity  | v         | The magnitude of the velocity change                                 |         |
+| 水平朝向(yaw)       |           | The 水平朝向(yaw) of the vector for the 速度 change                        |         |
+| 俯仰角(pitch)     |           | The 俯仰角(pitch) of the vector for the 速度 change                      |         |
+| 速度  | v         | The magnitude of the 速度 change                                 |         |
 | mode      | m         | The mode to use                      | SET<!--type:SET,ADD,REMOVE,MULTIPLY,DIVIDE,MINIMUM--> |
 
 ### Mode Attribute

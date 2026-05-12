@@ -1,11 +1,11 @@
 ## 描述
-Sets the target block's open state
+Sets the 目标 block's open state
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| open      | o         | Whether the block 应当 set as open                              | true    |
+| open      | o         | Whether the block should be set as open                              | true    |
 
 
 ## 示例

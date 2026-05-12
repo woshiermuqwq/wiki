@@ -3,9 +3,9 @@ Sets the force-loaded status of a location's chunk
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| loaded    | l         | Whether the chunk 应当 force loaded                             | true    |
+| loaded    | l         | Whether the chunk should be force loaded                             | true    |
 
 
 ## 示例

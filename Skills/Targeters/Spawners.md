@@ -1,11 +1,11 @@
 ## 描述
-以位置 of the specified 生物 生成器为目标。
+选取指定生物刷怪器的位置
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 生成器 | 生成器, s| The 名称 of the 生成器. Can be 也 a simple 名称, a group (`g:groupname`) or contain wildcards (`Spawner*` to 目标 *Spawner1*,*Spawner2*,*Spawner3*...) | |
+| spawners  | spawner, s| 刷怪器名称。可以是简单名称、组名（`g:groupname`）或包含通配符（`Spawner*` 可匹配 *Spawner1*、*Spawner2*、*Spawner3*……）                |         |
 
 
 ## 示例

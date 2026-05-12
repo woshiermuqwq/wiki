@@ -1,13 +1,13 @@
 ## 描述
-以nearest 结构 of the specified 类型 在...内 a 半径 in the 施法者 世界为目标。
+选取施法者所在世界中、指定半径内最近的结构
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 类型 | t | The 类型 of the 结构 | STRONGHOLD |
-| 半径 | r | The 半径 of the 目标选择器 | 5000 |
-| unexplored | u | Whether the 结构 应为 unexplored | false |
+| type      | t         | 结构类型                                         | STRONGHOLD |
+| radius    | r         | 选取半径                                           | 5000    |
+| unexplored | u        | 是否要求结构未被探索过                           | false   |
 
 
 ## 示例

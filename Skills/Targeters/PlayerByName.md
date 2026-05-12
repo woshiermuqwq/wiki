@@ -1,14 +1,14 @@
 ## 描述
-以a specific 玩家 by their 名称. Can be a 占位符为目标。
+通过玩家名称选取特定玩家。支持占位符。
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 名称 | n | The 名称 of the 玩家 | CarsonJF|
+| name      | n         | 玩家名称                                               | CarsonJF|
 
 
 ## 示例
-玩家 that first hit it 之后 it spawned, and will continue to ignite them every 10 seconds 之后 that的following 生物 will remeber the名称。
+以下生物会记住生成后第一个攻击它的玩家的名字，之后每 10 秒点燃该玩家一次
 ```yaml
 VengefulMob:
   Type: ZOMBIE

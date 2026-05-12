@@ -1,16 +1,16 @@
 ## 描述
-Special 目标选择器 to 目标 a 区域. Only works with specific 技能
+用于选取区域的特殊目标选择器。仅适用于特定技能
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| min | | The 位置 of the first point | 0,0,0 |
-| max | | The 位置 of the second point | 0,0,0 |
-| 世界 | | The 世界 the 区域 is in | `<caster.l.w>` |
+| min       |           | 第一个点的坐标                                      | 0,0,0   |
+| max       |           | 第二个点的坐标                                     | 0,0,0   |
+| world     |           | 区域所在的世界                                    | `<caster.l.w>` |
 
-### Min and Max 属性
-The returned 区域 将 the one contained between those two points
+### Min 和 Max 属性
+返回的区域将是这两个点之间的区域
 
 
 ## 示例

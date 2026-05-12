@@ -1,11 +1,11 @@
 ## 描述
-Causes the caster to equip a copy of the target's equipment
+Causes the 施法者 to equip a copy of 目标的 equipment
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| slots     | s         | The [slots](/Mobs/Equipment#slot) to copy                            | ALL<!--type:EquipSlot-->|
+| slots     | s         | The [slots](/生物/Equipment#slot) to copy                            | ALL<!--type:EquipSlot-->|
 
 
 ## 示例

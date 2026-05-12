@@ -1,14 +1,14 @@
 ## 描述
-创建一个粒子环 around the targeted entity or location.
+Creates a ring of 粒子 around the targeted entity or location.
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | points    | pts       | The number of points to draw representing the ring                   | 8       |
-| radius    | r         | The radius of the ring around the target                             | 10      |
-> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
->> The particles are generated “per point” in this 技能, so keeping `amount` low is recommended.
+| 半径    | r         | The 半径 of the ring around the 目标                             | 10      |
+> 此技能继承[粒子](/skills/技能/粒子) 技能
+>> The 粒子 are generated “per point” in this 技能, so keeping `amount` low is recommended.
 
 
 ## 示例

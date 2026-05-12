@@ -1,5 +1,5 @@
 ## 描述
-Ex执行 the 技能 when the 施法者 changes 世界.
+施法者切换世界时执行技能。  
 
 
 ## 示例
@@ -7,8 +7,8 @@ Ex执行 the 技能 when the 施法者 changes 世界.
 WorldJumper:
   Type: WITHER_SKELETON
   Skills:
-  - command{c=say The End!} @self ~onChangeWorld ?varEquals{var=skill.world;value=world_the_end}
-  - command{c=say The Nether!} @self ~onChangeWorld ?varEquals{var=skill.world;value=world_nether}
+  - command{c=say 末地！} @self ~onChangeWorld ?varEquals{var=skill.world;value=world_the_end}
+  - command{c=say 下界！} @self ~onChangeWorld ?varEquals{var=skill.world;value=world_nether}
 ```
 
 

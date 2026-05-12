@@ -1,5 +1,5 @@
 ## 描述
-Ex执行 the 技能 when the 生物 is loaded 之后 a 服务器 restart.
+服务器重启后生物被加载时执行技能。  
 
 
 ## 示例
@@ -7,7 +7,6 @@ Ex执行 the 技能 when the 生物 is loaded 之后 a 服务器 restart.
 EXAMPLE_MOB:
   Type: VILLAGER
   Skills:
-    # sends a message to all the players in the world
-    # when the mob is loaded after a server restart
-    - message{m=LOADED} @World ~onLoad
+    # 生物在服务器重启后被加载时向世界中所有玩家发送消息
+    - message{m=已加载} @World ~onLoad
 ```

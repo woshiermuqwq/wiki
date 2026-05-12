@@ -1,12 +1,12 @@
 ## 描述
-以a 位置 在...前方 the casting 弹射物, relative to its 方向为目标。
+选取施法弹射物前方（相对于其方向）的一个位置
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| forward | f, 数量, a | How far ahead should the targeted point be | 1 |
-| rotate | rot | The 旋转, 在...周围 弹射物, of the 目标 位置 | 0 |
+| forward   | f, amount, a | 目标点在前方多远处                        | 1       |
+| rotate    | rot       | 目标位置绕弹射物的旋转角度          | 0       |
 
 
 ## 示例

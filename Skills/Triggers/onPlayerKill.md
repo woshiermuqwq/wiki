@@ -1,9 +1,9 @@
 ## 描述
-Ex执行 the 技能 when the 生物 kills a 玩家.
-> The associated [@触发器](/技能/目标选择器/触发器) is the 玩家 that 已被 killed
+生物杀死玩家时执行技能。  
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为被杀的玩家
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onKillPlayer)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onKillPlayer)
 
 
 ## 示例
@@ -11,9 +11,8 @@ Ex执行 the 技能 when the 生物 kills a 玩家.
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world
-    # when the mob kills a player
-    - message{m=PLAYER KILLED} @World ~onPlayerKill
+    # 生物杀死玩家时向世界中所有玩家发送消息
+    - message{m=玩家已击杀} @World ~onPlayerKill
 ```
 
 

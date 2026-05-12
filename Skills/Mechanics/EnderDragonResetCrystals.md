@@ -1,5 +1,5 @@
 ## 描述
-Generates the EnderDragon crystals if an enderdragon battle is going on in the target location's dimension
+Generates the EnderDragon crystals if an enderdragon battle is going on in the 目标 location's dimension
 
 
 ## 属性
@@ -11,7 +11,7 @@ Generates the EnderDragon crystals if an enderdragon battle is going on in the t
   Skills:
   - enderDragonResetCrystals @selflocation ~onDamaged =50%
 ```
-> Resets the ender dragon crystals in the dimension of the caster after the 50% health threshold is reached after receiving damage
+> Resets the ender dragon crystals in the dimension of the 施法者 after the 50% health threshold is reached after receiving damage
 
 
 ## 别名

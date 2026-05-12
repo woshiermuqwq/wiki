@@ -1,9 +1,9 @@
 ## 描述
-以any 生物 that share the same 父级 as the 施法者为目标。
+选取与施法者共享同一父实体的所有生物
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例
@@ -16,5 +16,5 @@ ExampleSkill:
 
 ## 别名
 - [x] sibling
-- [x] br其他s
+- [x] brothers
 - [x] sisters

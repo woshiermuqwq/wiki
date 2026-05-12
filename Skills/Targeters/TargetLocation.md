@@ -1,18 +1,17 @@
 ## 描述
-以位置 the casting 玩家 is looking at, or the 位置 of the 生物 目标为目标。
+选取施法玩家正在注视的位置，或生物目标的位置
 
-> If the 施法者 不是 a 玩家, then:
-> - If the 施法者 is a MythicMob with an active ThreatTable, the 位置 of the 实体 与 most 仇恨 将 returned
->- If the above 不是 met, if the 施法者 is 当前 in 战斗, the 位置 of its 目标 将 returned
->- If the above 不是 met, the 位置 of the last 实体 that damaged the 施法者 将 returned
+> 如果施法者不是玩家，则：
+> - 如果施法者是有活跃仇恨表的 MythicMob，返回仇恨值最高的实体位置
+> - 如果不满足上述条件，施法者正在战斗中，返回其目标的位置
+> - 如果以上均不满足，返回最后伤害施法者的实体位置
 >
-> *At Highdown fair for two farthings...*
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| maxdistance | max, 距离, d | The maximum 距离 to 检查 对于 位置, if the 施法者 is a 玩家 | 64 |
-| ignoreTransparent | it | If transparent 方块 应为 ignored | true |
+| maxdistance | max, distance, d | 若施法者为玩家，检测位置的最大距离                                          | 64       |
+| ignoreTransparent | it | 是否忽略透明方块                             | true    |
 
 ## 示例
 ```yaml

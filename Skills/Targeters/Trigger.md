@@ -1,9 +1,9 @@
 ## 描述
-以实体 that triggered the skilltree为目标。
+选取触发技能树的实体
 
 
 ## 属性
->*This 目标选择器 has no 属性*
+>*此目标选择器没有属性*
 
 
 ## 示例

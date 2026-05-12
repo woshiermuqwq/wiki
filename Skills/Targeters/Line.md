@@ -1,12 +1,12 @@
 ## 描述
-以位置 在...之间 生物 and the inherited 目标为目标。
+在生物与继承目标之间沿直线选取位置点
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 距离 between each point in the line | 1 |
-| fromorigin| fo | If the line 应为 drawn 从 原点 of the 元技能 | false |
+| radius    | r         | 线段上各点之间的间距                          | 1       |
+| fromorigin| fo        | 是否从嵌套技能的原点开始画线         | false   |
 
 
 ## 示例

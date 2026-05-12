@@ -1,13 +1,13 @@
 ## 描述
-Ta以all 玩家 in a ring 在...周围 施法者为目标。
-The targeted 玩家 将 the ones at a 距离 从 施法者 在...之间 minimum and the maximum 范围.
+选取施法者周围环形区域内的所有玩家。  
+被选中的玩家与施法者的距离介于最小和最大范围之间。
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| minrange | min | The minimum 范围 of the ring | 5 |
-| maxrange | max | The maximum 范围 of the ring | 10 |
+| minrange  | min       | 环形区域的最小半径                                        | 5       |
+| maxrange  | max       | 环形区域的最大半径                                        | 10      |
 
 
 ## 示例

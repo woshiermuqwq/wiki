@@ -1,12 +1,12 @@
 ## 描述
-Ex执行 the 技能 when the 生物 dies.
-If若the 服务器 is a Paper one，it将ispossible to cancel the death 事件 只要 cancelevent 技能 is synched. The 血量 that the 生物 has 之后 这是 基于指定的内容 in the `ReviveHealth` 选项。
-> The associated [@触发器](/技能/目标选择器/触发器) is the 实体 that killed the 施法者
+生物死亡时执行技能。  
+如果是 Paper 服务端，可以通过同步执行 cancelevent 技能来取消死亡事件。生物在此之后的血量由 `ReviveHealth` 选项决定。  
+> 关联的 [@trigger](/Skills/Targeters/Trigger) 为杀死施法者的实体
 
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onDeath)
-- [MythicRPG](/../../../mythicrpg/-/wikis/技能/触发器/onDeath)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onDeath)
+- [MythicRPG](/../../../mythicrpg/-/wikis/Skills/Triggers/onDeath)
 
 
 ## 示例
@@ -14,14 +14,13 @@ If若the 服务器 is a Paper one，it将ispossible to cancel the death 事件 �
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world
-    # when the mob dies
-    - message{m=DEATH} @World ~onDeath
+    # 生物死亡时向世界中所有玩家发送消息
+    - message{m=死亡} @World ~onDeath
 ```
 ```yaml
 ImmortalCow:
   Type: COW
-  Display: '&eImmortal Cow'
+  Display: '&e不死牛'
   Health: 20
   Options:
     ReviveHealth: -1
@@ -29,6 +28,6 @@ ImmortalCow:
   - skill{s=[
     - cancelevent
     - particle{p=HEART;hs=0.5;vs=0.5;y=1.5}
-    - speak{m=Call an ambulance, but not for me!}
+    - speak{m=叫救护车，但不是给我叫！}
     ];sync=true} @self ~onDeath
 ```

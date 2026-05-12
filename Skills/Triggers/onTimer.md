@@ -1,18 +1,18 @@
 ## 描述
-ThThis 触发器 has a special syntax: `~onTimer:<ticks>`
+此触发器具有特殊语法：`~onTimer:<ticks>`  
 
-Ex执行 the 技能 every *n<sup>th</sup>* ticks. Ticks 不能 be zero and 20 ticks is 等于 1 second.
+每 *n* 刻执行一次技能。刻数不能为零，20 刻等于 1 秒。  
 
-This 触发器 不 act relatively to the 生物 生成 time, but to a global clock. So, 例如, if you have `~onTimer:1000`, its first execution could be in any moment between 生物 生成 and 1000 ticks from it 取决于 the 值 of the global clock.
+此触发器的计时不基于生物的生成时间，而是基于全局时钟。因此，例如你设置了 `~onTimer:1000`，它的首次执行可能发生在生物生成后到 1000 刻之间的任意时刻，取决于全局时钟的值。
 
-> Care 必须为 taken when using this 触发器 as 它可以 lead to 服务器/client performance issues!
->i.e. large amounts of 粒子 效果 can cause client lag, or can kick the client 从 服务器
+> 使用此触发器时需谨慎，可能导致服务端/客户端性能问题！
+> 例如：大量粒子效果会造成客户端卡顿，甚至将客户端踢出服务器
 
-> There is no associated [@触发器](/技能/目标选择器/触发器).
+> 没有关联的 [@trigger](/Skills/Targeters/Trigger)。
 
 
 ## 实现
-- [MythicCrucible](/../../../mythiccrucible/-/wikis/技能/触发器/onTimer)
+- [MythicCrucible](/../../../mythiccrucible/-/wikis/Skills/Triggers/onTimer)
 
 
 ## 示例
@@ -20,8 +20,8 @@ This 触发器 不 act relatively to the 生物 生成 time, but to a global clo
 EXAMPLE_MOB:
   Type: CHICKEN
   Skills:
-    # sends a message to all the players in the world every 0.05 seconds
-    - message{m=TIMER every tick (0.05 seconds)} @World ~onTimer:1
-    # sends a message to all the players in the world every 2 seconds
-    - message{m=TIMER every 40 ticks (2 seconds)} @World ~onTimer:40
+    # 每刻（0.05 秒）向世界中所有玩家发送消息
+    - message{m=TIMER 每刻（0.05 秒）} @World ~onTimer:1
+    # 每 40 刻（2 秒）向世界中所有玩家发送消息
+    - message{m=TIMER 每 40 刻（2 秒）} @World ~onTimer:40
 ```

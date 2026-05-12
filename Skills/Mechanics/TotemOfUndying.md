@@ -1,12 +1,12 @@
 ## 描述
 Plays the effect of a totem resurrecting a player with options to specify CustomModelData to use from resource packs.  
-> You can't disable the sound that plays
+> You can't disable the sound that 播放
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| model     | m         | The CustomModelData to use 对于shown totem                       |         |
+| model     | m         | The CustomModelData to use for the shown totem                       |         |
 
 
 ## 示例

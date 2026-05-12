@@ -1,12 +1,12 @@
 ## 描述
-A switch allows a condition to be tested against a list of (cases) values.
+A switch allows a 条件 to be tested against a list of (cases) values.
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| uniqueresult | unique, first | Whether to stop execution of other skills if a condition was met | true |
-| condition |           | A condition to test for                                              |         |
+| uniqueresult | unique, first | Whether to stop execution of other skills if a 条件 was met | true |
+| 条件 |           | A 条件 to test for                                              |         |
 | cases     |           | A list of cases to evaluate                                          |         |
 
 
@@ -35,3 +35,4 @@ MyCoolMob:
 <!--TAGS-->
 <!--tag:Meta-->
 <!--tag:Meta-Mechanic-->
+

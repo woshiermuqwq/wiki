@@ -1,13 +1,13 @@
 ## 描述
-以all MythicMobs or 原版 覆盖 of the given 类型(s) in a 半径 在...周围 施法者为目标。
+选取施法者周围半径内指定类型的所有 MythicMob 或原版覆写生物
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 半径 | r | The 半径 of the 目标选择器 | 5 |
-| 类型 | 类型, t | The 类型(s) of the 目标 MythicMobs. Can be a 列表 | |
-| checkiftemplate | cit | Whether to 检查 再次st the 生物 模板 而不是 the 生物 internal 名称 | false |
+| radius    | r         | 选取半径                                           | 5       |
+| types     | type, t   | 目标 MythicMob 的类型。支持列表                  |         |
+| checkiftemplate | cit | 是否按生物的模板名称而非内部名称进行匹配 | false |
 
 
 ## 示例
@@ -20,4 +20,4 @@ ExampleSkill:
 
 ## 别名
 - [x] MIR
-- [x] 生物
+- [x] mobs

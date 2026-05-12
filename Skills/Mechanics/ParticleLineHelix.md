@@ -1,21 +1,20 @@
-## 描述
- 
-Creates a particle line helix effect 在targeted entity or location.
+## 描述 
+Creates a 粒子 line helix effect at the targeted entity or location.
 
 
 ## 属性
-| 属性 | 缩写 | 描述 | 默认值 |
+| 属性 | 缩写   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
 | distanceBetween | db  | The distance between each point                                      | 1       |
 | startYOffset    | syo, ystartoffset, ys| Offset Y location of the starting point             | 0       |
-| targetYOffset   | tyo, ytargetoffset, yt | Offset Y location of the target point             | 0       |
-| fromOrigin      | fo  | Whether to draw the line from the [@origin] instead                  | false   |
+| targetYOffset   | tyo, ytargetoffset, yt | Offset Y location of the 目标 point             | 0       |
+| fromOrigin      | fo  | Whether to draw the line from the [@原点] instead                  | false   |
 | helixlength     | hl  | The length of the helix effect                                       | 2       |
-| helixradius     | hr  | The radius of the helix effect                                       | 1       |
+| helixradius     | hr  | The 半径 of the helix effect                                       | 1       |
 | helixrotation   | rot | The rotation of the helix effect                                     | 0       |
 | maxdistance     | md  | The maximum distance the line can reach                              | 256     |
-> 此技能继承所有[Particle](/skills/mechanics/particle) 技能
->> The particles are generated “per point” in this 技能, so keeping `amount` low is recommended.
+> 此技能继承[粒子](/skills/技能/粒子) 技能
+>> The 粒子 are generated “per point” in this 技能, so keeping `amount` low is recommended.
 
 
 ## 示例

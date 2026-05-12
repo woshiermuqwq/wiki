@@ -1,13 +1,13 @@
 ## 描述
-以位置 of a [Pin]为目标。
-IfIf the Pin is a Multi-Pin made via a Pin Wand, this targets all of the associated 位置.
+选取一个 [Pin] 的位置。
+如果该 Pin 是通过 Pin 法杖创建的多点 Pin，则会选取所有关联位置。  
 
 
 ## 属性
-| 属性 | 别名 | Description | 默认 |
+| 属性 | 别名   | 描述                                                          | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| 名称 | n, pin, p, key, k | The 名称 of the [pin] to 目标 |<!--类型:Pin--> |
-| random | r |Whether to select a single and random 位置, if the specified pin is a Multi-Pin| false |
+| name      | n, pin, p, key, k | 要作为目标的 [pin] 名称                              |<!--type:Pin--> |
+| random | r |如果指定的 Pin 是多点 Pin，是否随机选取单个位置| false |
 
 
 ## 示例
