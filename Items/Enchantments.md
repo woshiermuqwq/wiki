@@ -1,8 +1,8 @@
-附魔 属性用于to应用 附魔 to 物品 made using MythicMobs。
-任何of these都可以put on any 物品 and can exceed natural 附魔-等级 limits set by Minecraft。
-Some 附魔 可能不 have any 效果 if put on 物品 that they 不是 made for.
+附魔属性用于给 MythicMobs 制作的物品添加附魔。
+任意附魔都可以放到任意物品上，甚至可以超出 Minecraft 原版设定的附魔等级上限。
+不过有些附魔放在原本不是为它设计的物品上可能不会产生任何效果。
 
-Syntax
+语法
 ------
 ```yml
 internal_itemname:
@@ -12,17 +12,17 @@ internal_itemname:
   - <enchantment> <level>
   - ...
 ```
-****\<附魔>**
-类型 of 附魔 to be applied to the specified 物品.
+**\<enchantment>**
+要应用到物品上的附魔类型。
 
-****\<等级>**
-The 等级 of the specified 附魔.
+**\<level>**
+指定附魔的等级。
 
-## Available 附魔
+## 可用附魔
 
-A 列表 of available [附魔](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/附魔/附魔.html)可以found在 Spigot Javadocs 上。
+可用[附魔](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/enchantments/Enchantment.html)列表可在 Spigot Javadocs 上找到。
 
-附魔 can 也 be added via the `namespace:enchant_name` syntax, if there are 其他 providers
+如果有其他附魔提供方，也可以通过 `namespace:enchant_name` 语法添加附魔。
 
 ## 示例
 ```yml

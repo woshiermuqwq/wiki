@@ -1,19 +1,19 @@
-All available 显示 实体 选项. All of these 选项 go 在...下 `DisplayOptions` sections, like so:
+所有可用的展示实体选项。这些选项均放在 `DisplayOptions` 区块下，示例如下：
 ```yml
 cool_display:
   Type: block_display
   DisplayOptions:
     Block: grass_block
 ```
-表 Of Contents:
+目录：
 
 [[_TOC_]]
 
-# Base 选项
-These 选项 are available for all 显示 实体 类型.
+# 基础选项
+以下选项适用于所有展示实体类型。
 
 #### ViewRange
-The maximum view 范围/距离. [When the 距离 is 多于 `viewRange x entityDistanceScaling x 64`, the 实体 不是 rendered](https://Minecraft.wiki/w/显示#Entity_data). Defaults to `1`.
+最大可视范围/距离。[当距离超过 `viewRange × entityDistanceScaling × 64` 时，实体将不再渲染](https://minecraft.wiki/w/Display#Entity_data)。默认为 `1`。
 ```yml
 cool_display:
   Type: block_display
@@ -22,8 +22,8 @@ cool_display:
     ViewRange: 1
 ```
 
-#### 宽度
-The 显示 宽度. Defaults to `0`.
+#### Width
+展示实体的宽度。默认为 `0`。
 ```yml
 cool_display:
   Type: block_display
@@ -32,8 +32,8 @@ cool_display:
     Width: 0
 ```
 
-#### 高度
-The 显示 高度. Defaults to `0`.
+#### Height
+展示实体的高度。默认为 `0`。
 ```yml
 cool_display:
   Type: block_display
@@ -43,7 +43,7 @@ cool_display:
 ```
 
 #### ShadowRadius
-The 显示 shadow 半径. Defaults to `0`.
+展示实体阴影的半径。默认为 `0`。
 ```yml
 cool_display:
   Type: block_display
@@ -53,7 +53,7 @@ cool_display:
 ```
 
 #### ShadowStrength
-The opacity of the 显示 实体 shadow. Defaults to `1`.
+展示实体阴影的不透明度。默认为 `1`。
 ```yml
 cool_display:
   Type: block_display
@@ -63,15 +63,15 @@ cool_display:
 ```
 
 #### Billboard
-Controls 该 显示 实体 pivots when rendered to the 玩家. Defaults to `FIXED`.\
-Available constraints:
+控制展示实体面向玩家渲染时的旋转基准点。默认为 `FIXED`。
+可选约束：
 
-| Billboard | Description |
-|------------|-----------------------------------|
-| FIXED | No 旋转 |
-| CENTER | Pivots 在...周围 center point |
-| HORIZONTAL | Pivots 在...周围 horizontal axis |
-| VERTICAL | Pivots 在...周围 vertical axis |
+| Billboard   | 说明                 |
+|------------|----------------------|
+| FIXED      | 不旋转                |
+| CENTER     | 围绕中心点旋转          |
+| HORIZONTAL | 围绕水平轴旋转          |
+| VERTICAL   | 围绕垂直轴旋转          |
 
 ```yml
 cool_display:
@@ -82,7 +82,7 @@ cool_display:
 ```
 
 #### TeleportDuration
-Set the teleport 持续时间 in ticks. Defaults to `0`.
+设置传送过渡时长（刻）。默认为 `0`。
 ```yml
 cool_display:
   Type: block_display
@@ -90,8 +90,9 @@ cool_display:
     Block: grass_block
     TeleportDuration: 0
 ```
+
 #### InterpolationDelay
-Set the delay 之前 starting interpolation. Defaults to `0`.
+设置插值开始前的延迟。默认为 `0`。
 ```yml
 cool_display:
   Type: block_display
@@ -101,7 +102,7 @@ cool_display:
 ```
 
 #### InterpolationDuration
-Set the interpolation 持续时间 in ticks. Defaults to `0`.
+设置插值过渡时长（刻）。默认为 `0`。
 ```yml
 cool_display:
   Type: block_display
@@ -111,9 +112,9 @@ cool_display:
 ```
 
 #### ColorOverride
-Set the glow border color. If `0`, it uses the color of the team the 显示 team is in. Defaults to `0`.\
-***Formats**: `a,r,g,b` or an 整数 equivalent.
-HHere are sites that 您可以 use: [color-hex](https://www.color-hex.com/), [arg-int-calculator](https://argb-int-calculator.netlify.app/)
+设置发光边框颜色。设为 `0` 时，使用展示实体所在队伍的颜色。默认为 `0`。
+**格式**：`a,r,g,b` 或等效整数值。
+可参考以下网站：[color-hex](https://www.color-hex.com/)、[arg-int-calculator](https://argb-int-calculator.netlify.app/)
 ```yml
 cool_display:
   Type: block_display
@@ -122,12 +123,12 @@ cool_display:
     ColorOverride: 0
 ```
 
-### Brightness
-BBoth blocklight and skylight 必须为 set to 覆盖 brightness. 值 必须为 in 范围 of `0` to `15`.
- 
-Use a 值 of `-1` to make it so the 显示 实体 uses the ambiens blocklight/skylight 没有 overriding them
+### 亮度
+方块光照和天空光照必须同时设置才能覆盖亮度。取值范围为 `0` 到 `15`。
 
-#### BlockLight & SkyLight
+使用 `-1` 表示不覆盖，使展示实体使用环境中的方块光照/天空光照。
+
+#### BlockLight 和 SkyLight
 ```yml
 cool_display:
   Type: block_display
@@ -137,10 +138,10 @@ cool_display:
     SkyLight: 0
 ```
 
-### Transformations
+### 变换
 #### Translation
-Set the 显示 实体 translation. Defaults to `0,0,0`.
-**格式**: x,y,z
+设置展示实体的偏移。默认为 `0,0,0`。
+**格式**：x,y,z
 ```yml
 cool_display:
   Type: block_display
@@ -150,8 +151,8 @@ cool_display:
 ```
 
 #### Scale
-Set the scale of the 显示 实体. Scales the model centered on the 原点. Defaults to `1,1,1`.
-**格式**: x,y,z
+设置展示实体的缩放比例。以原点为中心缩放模型。默认为 `1,1,1`。
+**格式**：x,y,z
 ```yml
 cool_display:
   Type: block_display
@@ -161,10 +162,10 @@ cool_display:
 ```
 
 #### LeftRotation
-SeSet the left 旋转 using [quaternions](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) if 4 值 are provided (x,y,z,w).
-UsUses euler if 3 are provided (x,y,z).
-DeDefaults to `0,0,0,1` (no 旋转).
-**格式**: x,y,z,w
+使用[四元数](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation)设置左乘旋转（提供 4 个值 x,y,z,w 时）。
+提供 3 个值（x,y,z）时使用欧拉角。
+默认为 `0,0,0,1`（无旋转）。
+**格式**：x,y,z,w
 ```yml
 cool_display:
   Type: block_display
@@ -174,10 +175,10 @@ cool_display:
 ```
 
 #### RightRotation
-SeSet the left 旋转 using [quaternions](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation) if 4 值 are provided (x,y,z,w).
-UsUses eular if 3 are provided (x,y,z).
-DeDefaults to `0,0,0,1` (no 旋转).
-**格式**: x,y,z,w
+使用[四元数](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation)设置右乘旋转（提供 4 个值 x,y,z,w 时）。
+提供 3 个值（x,y,z）时使用欧拉角。
+默认为 `0,0,0,1`（无旋转）。
+**格式**：x,y,z,w
 ```yml
 cool_display:
   Type: block_display
@@ -186,10 +187,11 @@ cool_display:
     RightRotation: 0,0,0,1
 ```
 
-# 方块 显示
-This 显示 类型 仅 has one special 选项.
-#### 方块
-The 方块 state to use.
+# 方块展示
+此展示类型只有一个特殊选项。
+
+#### Block
+要使用的方块状态。
 ```yml
 cool_display:
   Type: block_display
@@ -197,10 +199,10 @@ cool_display:
     Block: bell[facing=north]
 ```
 
-# 物品 显示
+# 物品展示
 
-#### 物品
-The 物品 to use.支持mythic 物品。
+#### Item
+要使用的物品。支持 Mythic 物品。
 ```yml
 cool_display:
   Type: item_display
@@ -209,19 +211,19 @@ cool_display:
 ```
 
 #### Transform
-The model transform applied to the 物品. Defaults to `NONE`.
+应用于物品的模型变换。默认为 `NONE`。
 
-| 类型 |
-|:-----------------------:|
-| FIRSTPERSON_LEFTHAND |
-| FIRSTPERSON_RIGHTHAND |
-| FIXED |
-| GROUND |
-| GUI |
-| HEAD |
-| 无 |
-| THIRDPERSON_LEFTHAND |
-| THIRDPERSON_RIGHTHAND |
+|            类型            |
+|:-------------------------:|
+|  FIRSTPERSON_LEFTHAND     |
+|  FIRSTPERSON_RIGHTHAND    |
+|          FIXED            |
+|         GROUND            |
+|           GUI             |
+|          HEAD             |
+|          NONE             |
+|  THIRDPERSON_LEFTHAND     |
+|  THIRDPERSON_RIGHTHAND    |
 
 ```yml
 cool_display:
@@ -231,9 +233,9 @@ cool_display:
     Transform: NONE
 ```
 
-# Text 显示
+# 文本展示
 #### Text
-Set the text to show. Defaults to `Give This Poor Dude A Text To Display`.
+设置要显示的文本。默认为 `Give This Poor Dude A Text To Display`。
 ```yml
 cool_display:
   Type: text_display
@@ -242,7 +244,7 @@ cool_display:
 ```
 
 #### Opacity
-Set the text opacity, ranging from `0` to `255`. Defaults to `255`.
+设置文本不透明度，取值范围 `0` 到 `255`。默认为 `255`。
 ```yml
 cool_display:
   Type: text_display
@@ -252,9 +254,8 @@ cool_display:
 ```
 
 #### DefaultBackground
-Set 是否 to render using the 默认 text background color (same as in chat),
-overriding the [BackgroundColor](#BackgroundColor) 选项.
-Defaults to `false`.
+设置是否使用默认文本背景色渲染（与聊天框中相同），此选项会覆盖 [BackgroundColor](#BackgroundColor) 选项。
+默认为 `false`。
 ```yml
 cool_display:
   Type: text_display
@@ -264,9 +265,9 @@ cool_display:
 ```
 
 #### BackgroundColor
-Set the text background color.
-Defaults to `1073741824`.\
-**Formats**: `a,r,g,b` or an 整数 equivalent.
+设置文本背景色。
+默认为 `1073741824`。
+**格式**：`a,r,g,b` 或等效整数值。
 ```yml
 cool_display:
   Type: text_display
@@ -276,13 +277,13 @@ cool_display:
 ```
 
 #### Alignment
-Set the text alignment. Defaults to `CENTER`.
+设置文本对齐方式。默认为 `CENTER`。
 
-| 类型 | Description |
-|:------:|---------------------|
-| CENTER | Center aligned text |
-| LEFT | Left aligned text |
-| RIGHT | Right aligned text |
+|  类型  | 说明       |
+|:-----:|------------|
+| CENTER | 居中对齐文本 |
+|  LEFT  | 左对齐文本   |
+| RIGHT  | 右对齐文本   |
 
 ```yml
 cool_display:
@@ -293,7 +294,7 @@ cool_display:
 ```
 
 #### LineWidth
-The maximum line 宽度 used to split lines. Can 也 use `\n` characters to split to 另一个 line. Defaults to `200`.
+用于分割行的最大行宽。也可以使用 `\n` 字符来换行。默认为 `200`。
 ```yml
 cool_display:
   Type: text_display
@@ -303,7 +304,7 @@ cool_display:
 ```
 
 #### Shadowed
-Set 是否 the text 应为 displayed with a shadow. Defaults to `false`.
+设置文本是否显示阴影。默认为 `false`。
 ```yml
 cool_display:
   Type: text_display
@@ -313,7 +314,7 @@ cool_display:
 ```
 
 #### SeeThrough
-Set 是否 the text 应为 visible 通过 方块. Defaults to `false`
+设置文本是否可以透视方块显示。默认为 `false`。
 ```yml
 cool_display:
   Type: text_display

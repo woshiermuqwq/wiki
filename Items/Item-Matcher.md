@@ -1,45 +1,45 @@
-Some features inside of MythicMobs支持matching 物品 or 方块 via a specific syntax:。
+MythicMobs 中的一些功能支持通过特定的语法来匹配物品或方块：
 
 ##
 
-Writing the internal 名称 of a Mythic 物品/[Mythic (Crucible) 自定义 方块](/../../../mythiccrucible/-/wikis/自定义-方块) will 匹配
-  - that specific Mythic 物品
-  - that specific Mythic 自定义 方块
+直接写 MythicMobs 物品或 [Mythic (Crucible) 自定义方块](/../../../mythiccrucible/-/wikis/Custom-Blocks)的内部名称，会匹配：
+  - 对应的 MythicMobs 物品
+  - 对应的 Mythic 自定义方块
 
 ##
 
-Writing the [Spigot material 类型](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html) will 匹配
-  - 物品 with that material 类型
-  - 方块 with that material 类型
+写 [Spigot 材质类型](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html)，会匹配：
+  - 对应材质类型的物品
+  - 对应材质类型的方块
 
 ##
 
-Using `#` at the start of an entry will 匹配 再次st
-  - 物品 with that [物品 Tag](https://Minecraft.wiki/w/Tag#Item_tags_2)
-    - `#arrows`, `#axes` and so on
-  - 方块 with that [方块 Tag](https://Minecraft.wiki/w/Tag#Block_tags_2)
-    - `#air`, `#animals_spawnable_on` and so on
+在条目开头使用 `#`，会匹配：
+  - 具有该[物品标签](https://minecraft.wiki/w/Tag#Item_tags_2)的物品
+    - 例如 `#arrows`、`#axes` 等
+  - 具有该[方块标签](https://minecraft.wiki/w/Tag#Block_tags_2)的方块
+    - 例如 `#air`、`#animals_spawnable_on` 等
 
 ##
 
-Using `*` at any point in the entry will make it so any * present will 匹配 再次st any number of characters. For those familiar with Regex syntax, `*` is 等于 `.*`
-  - `netherite_*` will 匹配 any 物品/方块 whose 类型 stars with "netherite_"
-  - `*_log` will 匹配 any 物品/方块 whose 类型 ends in "_log"
-  - `*a*` will 匹配 any 物品/方块 whose 类型 has the letter "a" 某处 in it
-  - `*` will 匹配 任何事物
+在条目中任意位置使用 `*`，会让每个 `*` 匹配任意数量的字符。如果你熟悉正则表达式，`*` 等同于 `.*`：
+  - `netherite_*` 会匹配材质类型以 "netherite_" 开头的任意物品/方块
+  - `*_log` 会匹配材质类型以 "_log" 结尾的任意物品/方块
+  - `*a*` 会匹配材质类型中含有字母 "a" 的任意物品/方块
+  - `*` 会匹配任何东西
 
 ##
 
-For 方块 仅, 可以 specify some specific [方块 states](https://Minecraft.wiki/w/Block_states) to be matched by specifying them inside of a pair of square brackets `[]` 之后 the entry
+仅对方块有效：可以在条目后面用一对方括号 `[]` 指定需要匹配的[方块状态](https://minecraft.wiki/w/Block_states)：
   - redstone_torch[lit=true;facing=north]
 
 
-<<!--
+<!--
 
-| 属性 ITEMMATCHER | 别名 | Description | 默认 |
+| 属性 ITEMMATCHER | 别名 | 说明 | 默认值 |
 |-----------|-----------|----------------------------------------------------------------------|---------|
-| strict | exact, e | Whether the matcher should more strictly 匹配 the 目标 物品 | false |
-| 类型 | 类型, t, material, mat, m, 物品, i | The 物品 to 匹配. Can be a 列表 | DIRT |
-| vanilla仅 | 原版 | Whether the matched 物品 can 仅 be a 原版 one | false |
+| strict    | exact, e  | 匹配器是否应更严格地匹配目标物品 | false |
+| types     | type, t, material, mat, m, item, i | 要匹配的物品。可以是列表 | DIRT |
+| vanillaonly | vanilla | 是否只匹配原版物品 | false |
 
 -->

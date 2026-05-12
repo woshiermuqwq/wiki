@@ -1,4 +1,4 @@
-All 选项 available when creating a 生物. 大部分se 选项 go 在...下 `Options` section, like so:
+创建生物时可用的全部选项。大部分选项放在 `Options` 区块下，示例如下：
 ```yml
 Dummy:
   Type: skeleton
@@ -8,77 +8,76 @@ Dummy:
 ```
 
 ##
-- [Universal 选项](/生物/选项#universal-选项)
-- [Group Specific 选项](/生物/选项#group-specific-选项)
-- [生物 Specific 选项](/生物/选项#生物-specific-选项)
+- [通用选项](/Mobs/Options#通用选项)
+- [按群体分类的选项](/Mobs/Options#按群体分类的选项)
+- [按生物类型分类的选项](/Mobs/Options#按生物类型分类的选项)
 ##
 
-# Universal 选项
+# 通用选项
 
-These 选项 are universal and will work 无论 the 生物 类型.
+以下选项为通用选项，对所有生物类型都有效。
 
 #### AlwaysShowName
-the 名称-tag是否总是 displayed。
-Equivalent to the NBT-tag `CustomNameVisible`.
-Defaults to `false`.
+名称标签是否始终显示。
+等效于 NBT 标签 `CustomNameVisible`。
+默认为 `false`。
 ```yml
   Options:
     AlwaysShowName: false
 ```
 
 #### AttackSpeed
-ThThe 攻击 速度 of the 生物
-Defaults to 原版 攻击 速度 of the respective 生物
+生物的攻击速度。
+默认为各生物的原版攻击速度。
 ```yaml
   Options:
     AttackSpeed: 1
 ```
 
 #### VisibleByDefault
-设是否 the 生物 is visible 默认情况下 when the 生物 spawns or when the 生物 gets loaded。
-Defaults to `true`.
+设置生物在生成或加载时是否默认可见。
+默认为 `true`。
 ```yml
   Options:
     VisibleByDefault: true
 ```
 
 #### Invisible
-将permanent invisibility 效果 on the 生物; no need设应用 invisibility 药水 with `~onSpawn` 触发器。
-Defaults to `false`.
+为生物施加永久隐身效果；无需通过 `~onSpawn` 触发器施加隐身药水。
+默认为 `false`。
 ```yml
   Options:
     Invisible: true
 ```
 
 #### Collidable
-Whether the 生物 has collisions. Collisions in Minecraft are bidirectional, so this would need to be set to `false` on 两者都
-the 实体 colliders to ensure that no collisions takes place but 还将 stop the 玩家 from pushing the 生物. Defaults to `true`.
+生物是否具有碰撞体积。Minecraft 中的碰撞是双向的，因此需要将碰撞双方的此项都设为 `false` 才能确保不发生碰撞，同时也能阻止玩家推动生物。默认为 `true`。
 ```yml
   Options:
     Collidable: true
 ```
 
 #### DigOutOfGround
-Teleports the 生物 two 方块 up if it takes `SUFFOCATION` 伤害. Defaults to `false`.
+当生物受到窒息伤害时，将其向上传送两格。默认为 `false`。
 ```yml
   Options:
     DigOutOfGround: false
 ```
 
-#### 消失
-决定how the 生物 will 消失。
-ThThis 选项 应为 turned on if 您是 using a lot of 生物 生成器 or 实体 will overwhelm your 服务器, or the 实体 you are making 需要 some special 行为 regarding its 消失 policy (Npcs, Boss etc.)
-DDefaults to `true`.
+#### Despawn
+决定生物的消失方式。
+如果你使用了大量刷怪点、实体会压垮服务器，或者你制作的实体需要特殊的消失策略（如 NPC、Boss 等），建议开启此选项。
+默认为 `true`。
 
-| 模式 | 别名 | Description |
-|-----------------|------------------------|-------------------------------------------------------------|
-| NORMAL | TRUE, YES | - Despawns if no 玩家 are nearby<br>- Despawns if the 服务器 is restarted<br>- Despawns if the chunk is unloaded<br>- Is killed by normal mythicmobs kill 指令 |
-| CHUNK | | - Despawns if the 服务器 is restarted<br>- Despawns if the chunk is unloaded<br>- Is killed by normal mythicmobs kill 指令 |
-| NEVER | FALSE, NO | - Is killed by normal mythicmobs kill 指令 |
-| PERSISTENT | | - Saves the 生物 in the 世界 文件 一旦 a chunk unloads.<br>- Persists across 服务器 reboots.<br>- Persistent 生物 不要 触发 技能 in unloaded chunks. |
-| NPC | | - Despawns if the 服务器 is restarted<br>- Despawns if the chunk is unloaded |
+| 模式            | 别名                    | 说明                                                                 |
+|-----------------|------------------------|----------------------------------------------------------------------|
+| NORMAL          | TRUE, YES              | - 周围没有玩家时消失<br>- 服务器重启时消失<br>- 区块卸载时消失<br>- 可被 MythicMobs 普通击杀命令杀死 |
+| CHUNK           |                        | - 服务器重启时消失<br>- 区块卸载时消失<br>- 可被 MythicMobs 普通击杀命令杀死 |
+| NEVER           | FALSE, NO              | - 可被 MythicMobs 普通击杀命令杀死 |
+| PERSISTENT      |                        | - 区块卸载时将生物保存到世界文件中<br>- 服务器重启后仍然存在<br>- 持久化生物在未加载的区块中不会触发技能 |
+| NPC             |                        | - 服务器重启时消失<br>- 区块卸载时消失 |
 
-> For the PERSISTENT 消失 模式: to 移除 a persistent 生物, 您必须 也 use the kill 指令 (`/mm m kill <type>`) or append the `-p` 标志 to the killall one (`/mm m killall -p`). More information on the subject可以found[here](/指令-and-权限#生物-指令)。
+> 对于 PERSISTENT 消失模式：要移除一个持久化生物，你必须使用 kill 命令（`/mm m kill <类型>`）或在 killall 命令后追加 `-p` 参数（`/mm m killall -p`）。更多信息详见[这里](/Commands-and-Permissions#mob-commands)。
 
 ```yml
   Options:
@@ -86,197 +85,196 @@ DDefaults to `true`.
 ```
 
 #### FollowRange
-The 范围 in 方块 在...内 which a 生物 will 目标 to 攻击 or track an 实体.
-Defaults to 原版 follow 范围 - `32`.
+生物锁定目标进行攻击或追踪的范围（格）。
+默认为原版追踪范围——`32`。
 ```yml
   Options:
     FollowRange: 32
 ```
 
 #### Glowing
-将是否 the 生物 is 永久 glowing. Defaults设`false`。
+设置生物是否永久发光。默认为 `false`。
 ```yml
   Options:
     Glowing: false
 ```
 
 #### HealOnReload
-Allows non-despawning 生物 to heal 一旦 the chunk 它们是 in gets reloaded. Defaults to `false`.
+允许不会消失的生物在其所在区块重新加载时恢复生命值。默认为 `false`。
 ```yml
   Options:
     HealOnReload: false
 ```
 
-
 #### Invincible
-使生物完全 invincible to all 类型 of 伤害. This 选项 不能 be changed by 指令 技能。
-Defaults to `false`.
+使生物对所有类型的伤害完全免疫。此选项无法通过命令技能更改。
+默认为 `false`。
 ```yml
   Options:
     Invincible: false
 ```
 
 #### Interactable
-设是否 the 生物 can be interacted with. If the 生物 is an armor stand, 它将 deny any interaction 与 equipments。
-Defaults to `false`.
+设置生物是否可以被交互。如果生物是盔甲架，则会拒绝一切与其装备的交互。
+默认为 `false`。
 ```yml
   Options:
     Interactable: false
 ```
 
 #### LockPitch
-Keeps the 生物 head from looking up/down.
-Defaults to `false`.
+阻止生物的头部上下转动。
+默认为 `false`。
 ```yml
   Options:
     LockPitch: false
 ```
 
 #### KnockbackResistance
-Aknockback resisted from 攻击. This 选项 can be 任何地方 between `0` and `1`的percentage。
-But a 生物 with 100% knockback resistance can 仍然 be knocked back by a bow 附魔: `ARROW_KNOCKBACK` (punch 附魔).
-For true knockback resistance, see the [速度向量](/技能/技能/速度向量) 技能 page. Defaults to `0`.
+攻击击退抗性的百分比。此选项的取值范围为 `0` 到 `1`。
+但拥有 100% 击退抗性的生物仍然会被弓的附魔 `ARROW_KNOCKBACK`（冲击附魔）击退。
+如需真正的击退免疫，请参考[速度](/Skills/mechanics/velocity)技能页面。默认为 `0`。
 ```yml
   Options:
     KnockbackResistance: 0.5
 ```
 
 #### MaxCombatDistance
-Prevents 玩家 即 a number of 方块 远离 damaging the 生物.
-设置 this 选项 to a number 小于 the 距离 of a certain 生物 技能 or 攻击 will ensure that the 生物 can 伤害 the 玩家 and 不会 be as easy to exploit.
-Defaults to `256`.
+阻止距离超过指定格数的玩家对该生物造成伤害。
+将此选项设置为小于生物某技能或攻击距离的值，可以确保生物能攻击到玩家，且不容易被利用。
+默认为 `256`。
 ```yml
   Options:
     MaxCombatDistance: 256 
 ```
 
 #### MovementSpeed
-The 移动 速度 of the 生物.
-Most 生物 has a 默认 move 速度 of `0.2` and any 值 higher than `1` tends to make a 生物 difficult or impossible to fight.
+生物的移动速度。
+大多数生物的默认移动速度为 `0.2`，任何高于 `1` 的值通常会让生物变得难以对抗或根本无法对抗。
 ```yml
   Options:
     MovementSpeed: 0.2
 ```
 
 #### NoAI
-Whether the 生物 should have AI. This 选项 覆盖 any AI 目标 specified in [AIGoalSelectors](/生物/生物#aigoalselectors).
-As opposed to AIGoalSelectors, this will work on 实体 that have hardcoded AI. And if 这是 set to `true`, the 生物 永远不会 cast any 技能.
-Defaults to `false`.
+生物是否禁用 AI。此选项会覆盖 [AIGoalSelectors](/Mobs/Mobs#aigoalselectors) 中指定的所有 AI 目标。
+与 AIGoalSelectors 不同，此选项对硬编码 AI 的实体也有效。且如果设为 `true`，该生物将永远不会施放任何技能。
+默认为 `false`。
 ```yml
   Options:
     NoAI: false
 ```
 
 #### NoDamageTicks
-Defines how long in ticks the 生物 is invulnerable 之后 taking 伤害.
-若[ImmunityTables](/生物/ImmunityTables) is 启用 对于 生物，then `NoDamageTicks`将willbe per 玩家 而不是 global。
-Defaults to `10`.
+定义生物受到伤害后无敌的时长（刻）。
+如果为该生物启用了[免疫表](/Mobs/ImmunityTables)，则 `NoDamageTicks` 将按每个玩家分别计算，而非全局共用。
+默认为 `10`。
 ```yml
   Options:
     NoDamageTicks: 20
 ```
 
 #### NoGravity
-Whether the 生物 不应 have gravity. If set to `true`, the 生物 **CANNOT** have the [速度向量](/技能/技能/速度向量) 技能 used on it.
-Defaults to `false`.
+生物是否不受重力影响。如果设为 `true`，该生物**无法**使用[速度](/Skills/mechanics/velocity)技能。
+默认为 `false`。
 ```yml
   Options:
     NoGravity: false
 ```
 
-#### Pass通过Damage
-使all 伤害 takenbe redirected to the 生物 父级, if one exists. A 生物 父级 is the 实体 that initially summoned the 生物。
-Defaults to `false`.
+#### PassthroughDamage
+将生物受到的所有伤害传递给其父实体（如果存在）。生物的父实体是最初召唤该生物的那个实体。
+默认为 `false`。
 ```yml
   Options:
     PassthroughDamage: false
 ```
 
 #### PreventItemPickup
-Prevent 生物 from picking up 物品;
-Defaults to `true`.
+阻止生物捡起物品。
+默认为 `true`。
 ```yml
   Options:
     PreventItemPickup: false
 ```
 
 #### PreventLeashing
-Whether to prevent a leash from being placed on the 生物.
-Defaults to `true`.
+是否阻止给生物拴上拴绳。
+默认为 `true`。
 ```yml
   Options:
     PreventLeashing: false
 ```
 
 #### PreventMobKillDrops
-Prevents a MythicMob 目标 from dropping loot.
-Defaults to `false`.
+阻止被 MythicMob 击杀的目标掉落战利品。
+默认为 `false`。
 ```yml
   Options:
     PreventMobKillDrops: false
 ```
 
 #### PreventOtherDrops
-Prevents the 生物 from dropping its 原版 loot 表.
-Defaults to `false`.
+阻止生物掉落其原版战利品表。
+默认为 `false`。
 ```yml
   Options:
     PreventOtherDrops: false
 ```
 
 #### PreventRandomEquipment
-Prevents the 生物 from spawning with random 装备.
-Defaults to `false`.
+阻止生物生成时携带随机装备。
+默认为 `false`。
 ```yml
   Options:
     PreventRandomEquipment: false
 ```
 
 #### PreventRenaming
-Prevents the 生物 from being renamed using a nametag.
-Defaults to `true`.
+阻止使用命名牌给生物重命名。
+默认为 `true`。
 ```yml
   Options:
     PreventRenaming: false
 ```
 
 #### PreventSunburn
-Prevents the 生物 from burning in the sun.
-Defaults to `false`.
+阻止生物在阳光下燃烧。
+默认为 `false`。
 ```yml
   Options:
     PreventSunburn: true
 ```
 
 #### PreventTransformation
-Se设是否 the 生物 应为 prevented from being turned into 其他 实体。
-DeDefaults to `true`.
+设置是否阻止生物转换为其他实体。
+默认为 `true`。
 ```yaml
   Options:
     PreventTransformation: false
 ```
 
 #### PreventVanillaDamage
-CaCancels every instance of the 生物 dealing "regular" 原版 伤害, canceling it.
-Sk技能 that 触发器 onAttack 仍会 be executed.
-Defaults to `false`.
+取消生物造成的所有"常规"原版伤害。
+触发 `onAttack` 的技能仍然会执行。
+默认为 `false`。
 ```yml
   Options:
     PreventVanillaDamage: true
 ```
 
 #### RepeatAllSkills
-Whether to repeat 生命值 based 技能 if a 生物 heals back 在...上方 血量 threshold.
-Defaults to `false`.
+当生物的生命值恢复到高于某个基于生命值的技能阈值时，是否重新触发该技能。
+默认为 `false`。
 ```yml
   Options:
     RepeatAllSkills: false
 ```
 
 #### ReviveHealth
-When the 生物 death 事件 gets cancelled (via a [Cancelevent](/技能/技能/cancelevent) 技能 [~onDeath](/技能/触发器/onDeath)) the one specified is the 数量 of 血量 the 生物 将 set to. If the 值 is `-1`, the 生物 will heal to its own max 血量 值.
+当生物的死亡事件被取消时（通过 [Cancelevent](/skills/mechanics/cancelevent) 技能配合 [~onDeath](/Skills/Triggers/onDeath)），该值指定生物将恢复到的生命值。如果值为 `-1`，则生物会恢复到自身的最大生命值。
 ```yaml
-#This mob will always return to 50 health every time the death event is cancelled
+# 此生物每次死亡事件被取消时都会恢复到 50 点生命值
 ExampleMob:
   Type: COW
   Health: 100
@@ -286,7 +284,7 @@ ExampleMob:
   - cancelevent{sync=true} @self ~onDeath
 ```
 ```yaml
-#This mob will always return to its maximum health (100) every time the death event is cancelled
+# 此生物每次死亡事件被取消时都会恢复到最大生命值（100）
 ExampleMob:
   Type: COW
   Health: 100  
@@ -297,229 +295,220 @@ ExampleMob:
 ```
 
 #### Scale
-ThThe scale of the 生物.
-If若set to -1，the 选项将isignored。
-DeDefaults to `-1`.
+生物的缩放比例。
+如果设为 `-1`，则忽略此选项。
+默认为 `-1`。
 ```yaml
   Options:
     Scale: 2
 ```
 
 #### ShowHealth
-Displays the 血量 of the 生物 通过 消息 broadcast 在...内 a 半径 and formatting by `Mobs.ShowHealth.Radius` and `Mobs.ShowHealth.Formatting`, 分别, in `/plugins/MythicMobs/config.yml`
-Defaults to `false`.
+通过广播消息显示生物的生命值，广播半径由 `/plugins/MythicMobs/config.yml` 中的 `Mobs.ShowHealth.Radius` 决定，格式由 `Mobs.ShowHealth.Formatting` 决定。
+默认为 `false`。
 ```yml
   Options:
     ShowHealth: false
 ```
 
 #### Silent
-Whether a 生物 should use 原版 sound 效果.
-DDefaults to `false`.
+生物是否使用原版音效。
+默认为 `false`。
 ```yml
   Options:
     Silent: false
 ```
 
 #### UseThreatTable
-Whether the 生物 should have [仇恨表](https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/生物/ThreatTables) 启用
+生物是否启用[仇恨表](https://git.mythiccraft.io/mythiccraft/MythicMobs/-/wikis/Mobs/ThreatTables)
 ```yaml
   Options:
     UseThreatTable: true
 ```
 
 #### RandomizeProperties
-RaRandomizeProperties is the 原版 feature in 充能 of giving variations to 生物 when they 生成, 例如 装备, zombie leader status, animal variations, zombie/spider jockey, 生物 size, 概率 of spawning as baby, etc
-ThThis is ideal if you are heavily overriding 实体 行为 and 不要 want the natural randomization
-Defaults to `true`
+RandomizeProperties 是原版为生物生成时提供随机变体的功能，包括随机装备、僵尸领袖状态、动物变体、僵尸/蜘蛛骑士、生物大小、生成幼体的概率等。
+当你高度自定义了实体行为且不希望出现原版随机化时，此选项非常有用。
+默认为 `true`。
 ```yaml
   Options:
     RandomizeProperties: false
 ```
 
+# 按群体分类的选项
 
-# Group specific 选项
+## 船与箱子船
 
-## Boat & BoatChest
-
-#### 类型
-ThThe [类型 of the boat 实体](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Boat.类型.html).
-Aliases: `BoatType`.
-Defaults to `OAK`
+#### Type
+船实体的[类型](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Boat.Type.html)。
+别名：`BoatType`。
+默认为 `OAK`。
 ```yaml
   Options:
     BoatType: MANGROVE
 ```
 
-## Breedable 生物
+## 可繁殖生物
 
 #### Age
-ThThe age of the 生物. Use `-1` for Baby and `1` for Adults.
-UsUsable on any 生物 that can age. For 示例: Sheep, Pigs, Cows...
-WhWhen above 0, 表示 the number of ticks 之前 this 生物 can breed 再次.
-EqEquivalent to the `Age` NBT.
-UsUse very low negative numbers to mess 与 生物 model (not 支持).
-MaMay not be working properly under some situations.
-DeDefaults to `1`.
+生物的年龄。`-1` 表示幼体，`1` 表示成年。
+适用于所有可以长大的生物，例如：羊、猪、牛……
+当大于 0 时，表示该生物可以再次繁殖前还需等待的刻数。
+等效于 NBT 中的 `Age`。
+可以使用极小的负数来扭曲生物的模型（不受支持）。
+在某些情况下可能无法正常工作。
+默认为 `1`。
 ```yml
   Options:
     Age: -1
 ```
 
 #### AgeLock
-是否应locked in placethe 生物 age。
-Useful for keeping a baby 生物 from growing up 随时间.
-This is 必需 if 您想要 Age 选项 to work 随时间.
-Defaults to `false`.
+是否锁定生物的年龄。
+用于防止幼年生物随时间长大。
+如果你希望 Age 选项随时间推移持续生效，必须启用此选项。
+默认为 `false`。
 ```yml
   Options:
     AgeLock: true
 ```
 
 #### Adult
-设adult status of 生物。
-Use if `Age` 不 work.
+设置生物的成年状态。
+在 `Age` 不生效时使用。
 ```yml
   Options:
     Adult: true
 ```
 
 #### Baby
-设baby/adult status of 生物。
-Use if `Age` 不 work.
+设置生物的幼年/成年状态。
+在 `Age` 不生效时使用。
 ```yml
   Options:
     Baby: true
 ```
 
-## Colorable 生物
+## 可染色生物
 
-Used for Horses, Llamas, TraderLlamas, Parrots, Sheeps, Shulkers, TropicalFishes and Wolves
-### 颜色
-设color of the 生物 (wool color of sheep or the collar color of wolves)。
-The 值 can be any of this [Colors](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html)
-Defaults to `WHITE`.
+适用于马、羊驼、流浪商人羊驼、鹦鹉、羊、潜影贝、热带鱼和狼。
+### Color
+设置生物的颜色（羊的羊毛颜色或狼的项圈颜色）。
+取值可以是任意一种[颜色](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/DyeColor.html)。
+默认为 `WHITE`。
 ```yml
   Options:
     Color: RED
 ```
 
+## 中立实体
 
-## Neutral 实体
-
-Used for wolves and zombie pigmen, 例如.
+例如适用于狼和僵尸猪人。
 
 #### Angry
-Whether the 生物 will 生成 angry or not.
-> 注意: Due to a Bukkit/Spigot bug wolves can not be spawned angry with this 选项.
-> Use AIGoalSelectors and AITargetSelectors if 您想要 to 生成 angry wolves.
-Defaults to `false`.
+生物生成时是否处于愤怒状态。
+> 注意：由于 Bukkit/Spigot 的 bug，狼无法以此选项生成愤怒状态。
+> 如果你需要生成愤怒的狼，请使用 AIGoalSelectors 和 AITargetSelectors。
+默认为 `false`。
 ```yaml
   Options:
     Angry: true
 ```
 
-## Slimes & Magma Cubes
+## 史莱姆与岩浆怪
 
 #### PreventSlimeSplit
-Prevents slimes and magmacubes from splitting.
-默认 to `false`.
+阻止史莱姆和岩浆怪分裂。
+默认为 `false`。
 ```yaml
   Options:
     PreventSlimeSplit: true
 ```
 
-## 实体 with 变量 size
+## 可变大小的实体
 
 #### Size
-设size of slimes, magma cubes, and phantoms。
-Can get VERY big and get exponentially larger with each increase.
-Extremely high size will cause 服务器 lag and possibly crashes.
-默认 to `1to8` (Phantoms is `1`)
+设置史莱姆、岩浆怪和幻翼的大小。
+可以设置得非常大，且每次增大都会让体型呈指数级增长。
+极高的值会导致服务器卡顿甚至崩溃。
+默认为 `1to8`（幻翼默认为 `1`）。
 ```yaml
   Options:
     Size: 10
 ```
 
-
-## Raiders
+## 袭击者
 
 #### CanJoinRaid
-Whether the 实体 can join a raid.
-Defaults to `true`.
+实体是否可以加入袭击。
+默认为 `true`。
 ```yaml
   Options:
     CanJoinRaid: false
 ```
 
 #### PatrolLeader
-the 实体是否the leader of a patrol。
-Defaults to `false`.
+实体是否为巡逻队队长。
+默认为 `false`。
 ```yaml
   Options:
     PatrolLeader: true
 ```
 
 #### PatrolSpawnPoint
-Defaults to `false`.
+默认为 `false`。
 ```yaml
   Options:
     PatrolSpawnPoint: true
 ```
 
-
-## Tameable 生物
+## 可驯服生物
 
 #### Tameable
-Whether 玩家 are able to tame the 生物. Used for wolves, cats and horses.
-Defaults to `false`.
+玩家是否可以驯服该生物。用于狼、猫和马。
+默认为 `false`。
 ```yaml
   Options:
     Tameable: true
 ```
 
-
-## Zombies (all variants)
+## 僵尸（所有变种）
 
 #### PreventJockeyMounts
-Se将是否 the zombie 将 prevented from spawning设a jockey。
-OnOnly works for Zombies.
-DeDefaults to `false`.
+设置是否阻止僵尸生成时成为骑士。
+仅对僵尸有效。
+默认为 `false`。
 ```yaml
   Options:
     PreventJockeyMounts: true
 ```
 
 #### PreventConversion
-PrPrevents the Zombie from being converted into 其他 类型 of zombies.
-Defaults to `false`.
+阻止僵尸转换为其他类型的僵尸。
+默认为 `false`。
 ```yaml
   Options:
     PreventConversion: true
 ```
 
-
 #### ReinforcementsChance
-Ch概率 for zombies to 生成 reinforcements on taking 伤害.
-ShShould be a number between 0 and 1 (0% and 100% 概率).
-OnOnly works for Zombies.
-DeDefaults to `0`.
+僵尸受到伤害时召唤增援的概率。
+取值范围为 0 到 1（对应 0% 到 100% 的概率）。
+仅对僵尸有效。
+默认为 `0`。
 ```yaml
   Options:
     ReinforcementsChance: 0.38
 ```
 
+# 按生物类型分类的选项
 
+以下选项仅针对特定生物类型，用在其他生物类型上不会产生效果。
 
-# 生物 specific 选项
-
-These are specific 生物 选项 and 将有 no 效果 when used on a
-didifferent 生物 类型.
-
-## Armor Stand
+## 盔甲架
 
 #### CanMove
-Se将是否 an armor stand can move. Defaults设`true` and 需要 PaperSpigot。
+设置盔甲架是否可以移动。默认为 `true`，需要 PaperSpigot。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -528,7 +517,7 @@ Dummy:
 ```
 
 #### CanTick
-Se将是否 an armor stand can tick. Defaults设`true` and 需要 PaperSpigot。
+设置盔甲架是否可以 tick。默认为 `true`，需要 PaperSpigot。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -537,7 +526,7 @@ Dummy:
 ```
 
 #### HasArms
-Se将是否 an armor stand has arms. Defaults设`false`。
+设置盔甲架是否有手臂。默认为 `false`。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -546,7 +535,7 @@ Dummy:
 ```
 
 #### HasBasePlate
-Se将是否 an armor stand has a baseplate. Defaults设`true`。
+设置盔甲架是否有底座。默认为 `true`。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -555,7 +544,7 @@ Dummy:
 ```
 
 #### HasGravity
-Se将是否 the armor stand is affected by gravity. Defaults设`true`。
+设置盔甲架是否受重力影响。默认为 `true`。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -564,7 +553,7 @@ Dummy:
 ```
 
 #### Invisible
-Se将是否 the armor stand is invisible. Defaults设`false`。
+设置盔甲架是否隐身。默认为 `false`。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -573,7 +562,7 @@ Dummy:
 ```
 
 #### ItemBody
-DeDesignates the [Mythic 物品](/物品/物品) that should go in the body/chest 栏位 of an armor stand.
+指定放入盔甲架身体/胸甲槽位的 [Mythic 物品](/Items/Items)。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -582,7 +571,7 @@ Dummy:
 ```
 
 #### ItemFeet
-DeDesignates the [Mythic 物品](/物品/物品) that should go in the feet 栏位 of an armor stand.
+指定放入盔甲架脚部槽位的 [Mythic 物品](/Items/Items)。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -591,7 +580,7 @@ Dummy:
 ```
 
 #### ItemHand
-DeDesignates the [Mythic 物品](/物品/物品) that should go in the main hand 栏位 of an armor stand.
+指定放入盔甲架主手槽位的 [Mythic 物品](/Items/Items)。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -600,7 +589,7 @@ Dummy:
 ```
 
 #### ItemOffhand
-DeDesignates the [Mythic 物品](/物品/物品) that should go in the off hand 栏位 of an armor stand.
+指定放入盔甲架副手槽位的 [Mythic 物品](/Items/Items)。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -609,7 +598,7 @@ Dummy:
 ```
 
 #### ItemHead
-DeDesignates the [Mythic 物品](/物品/物品) that should go in the helmet 栏位 of an armor stand.
+指定放入盔甲架头盔槽位的 [Mythic 物品](/Items/Items)。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -618,7 +607,7 @@ Dummy:
 ```
 
 #### ItemLegs
-DeDesignates the [Mythic 物品](/物品/物品) that should go in the leggings 栏位 of an armor stand.
+指定放入盔甲架护腿槽位的 [Mythic 物品](/Items/Items)。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -627,8 +616,7 @@ Dummy:
 ```
 
 #### Marker
-将armor stand设a marker. This 选项 阻止 the armor stand from being destroyed in game,。
-mamaking it 完全 non-interactable. Defaults to `false`.
+将盔甲架设为标记。此选项可阻止盔甲架在游戏中被破坏，使其完全不可交互。默认为 `false`。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -637,7 +625,7 @@ Dummy:
 ```
 
 #### Small
-Se将armor stand设small variant. Defaults to `false`。
+将盔甲架设为小型变体。默认为 `false`。
 ```yml
 Dummy:
   Type: ARMOR_STAND
@@ -646,45 +634,45 @@ Dummy:
 ```
 
 #### Pose
-Se设body part current pose。
-De默认 值 are `0,0,0` and accepts ranges like `#to#`.
-ThThese will go 在...下 `Pose` section 而不是 the `Options` section.
-###### Head
+设置身体各部位的当前姿态。
+默认值为 `0,0,0`，支持使用 `#to#` 的随机范围格式。
+这些配置放在 `Pose` 区块下，而非 `Options` 区块。
+###### 头部
 ```yml
 Mob:
   Type: armor_stand
   Pose:
     Head: 0,50,0
 ```
-###### Body
+###### 身体
 ```yml
 Mob:
   Type: armor_stand
   Pose:
     Body: 0,10,10
 ```
-###### LeftArm
+###### 左臂
 ```yml
 Mob:
   Type: armor_stand
   Pose:
     LeftArm: 0to360,0,0
 ```
-###### RightArm
+###### 右臂
 ```yml
 Mob:
   Type: armor_stand
   Pose:
     RightArm: 0to90,0,0
 ```
-###### LeftLeg
+###### 左腿
 ```yml
 Mob:
   Type: armor_stand
   Pose:
     LegLeg: 0,0to80,0
 ```
-###### RightLeg
+###### 右腿
 ```yml
 Mob:
   Type: armor_stand
@@ -692,712 +680,661 @@ Mob:
     RightLeg: 20,25,0
 ```
 
-
-## Bee
+## 蜜蜂
 
 #### Anger
-Se设time in ticks 直到 bee anger ends。
-IfIf set to 0 the bee 不会 be angry.
-Defaults to `0`.
+设置蜜蜂愤怒状态持续的刻数。
+设为 0 表示蜜蜂不会愤怒。
+默认为 `0`。
 ```yaml
   Options:
     Anger: 200
 ```
 
 #### HasNectar
-Whthe bee是否carrying pollen。
-DeDefaults to `false`.
+蜜蜂是否携带花粉。
+默认为 `false`。
 ```yaml
   Options:
     HasNectar: true
 ```
 
-
 #### HasStung
-WhWhether the bee has stung an 实体.
-DeDefaults to `false`.
+蜜蜂是否已经蜇过实体。
+默认为 `false`。
 ```yaml
   Options:
     HasStung: true
 ```
 
-
 #### PreventStingerLoss
-WhWhether to prevent the bee from losing its stinger 一旦 it hits an 实体.
-DeDefaults to `false`.
+是否阻止蜜蜂在攻击实体后失去螫针。
+默认为 `false`。
 ```yaml
   Options:
     PreventStingerLoss: true
 ```
 
-
-## Camel
+## 骆驼
 
 #### Saddled
-Whthe 实体是否saddled or not。
-DeDefaults to `false`.
+实体是否已装上鞍。
+默认为 `false`。
 ```yaml
   Options:
     Saddled: true
 ```
 
 #### Tamed
-Whthe 实体是否tamed or not。
-DeDefaults to `false`.
+实体是否已被驯服。
+默认为 `false`。
 ```yaml
   Options:
     Tamed: true
 ```
 
-
-## Cat
+## 猫
 
 #### CatType
-Se设类型 of cat。
-Ty类型 can be ALL_BLACK, BLACK, BRITISH_SHORTHAIR, CALICO, PERSIAN, JELLIE, RAGDOLL, RED, SIAMESE, TABBY or WHITE.
+设置猫的种类。
+可选种类：ALL_BLACK、BLACK、BRITISH_SHORTHAIR、CALICO、PERSIAN、JELLIE、RAGDOLL、RED、SIAMESE、TABBY、WHITE。
 ```yaml
   Options:
     CatType: BLACK
 ```
 
 #### CollarColor
-Se设color of the cat collar。
-AvAvailable colors are: BLACK, BLUE, BROWN, CYAN, GRAY, GREEN, LIGHT_BLUE, LIGHT_GRAY, LIME, MAGENTA, ORANGE, PINK, PURPLE, RED, WHITE, or YELLOW.
+设置猫项圈的颜色。
+可选颜色：BLACK、BLUE、BROWN、CYAN、GRAY、GREEN、LIGHT_BLUE、LIGHT_GRAY、LIME、MAGENTA、ORANGE、PINK、PURPLE、RED、WHITE、YELLOW。
 ```yaml
   Options:
     CollarColor: GREEN
 ```
 
 #### Tamed
-Whthe 实体是否tamed or not。
-DeDefaults to `false`.
+实体是否已被驯服。
+默认为 `false`。
 ```yaml
   Options:
     Tamed: true
 ```
 
-
-## Chicken
+## 鸡
 
 #### Jockey
-WhWhether or not the chicken has the `IsChickenJockey` NBT set to 1.
-If t若true，the chicken将cannaturally 消失, 掉落 10 experience upon death 而不是 1-3 and 不能 lay eggs。
-DeDefaults to `false`.
+鸡是否将 NBT 标签 `IsChickenJockey` 设置为 1。
+如果为 true，则鸡可以自然消失，死亡时掉落 10 点经验（而非 1-3 点），且不能下蛋。
+默认为 `false`。
 ```yaml
   Options:
     Jockey: true
 ```
 
-
-## Creepers
+## 苦力怕
 
 #### ExplosionRadius
-Se设半径/战力 of the creepers explosion。
-NeNegative 值 are ignored, and the explosion 半径 remains the creeper 默认 one.
-DeDefaults to `-1`.
+设置苦力怕爆炸的半径/威力。
+负值将被忽略，爆炸半径保持苦力怕的默认值。
+默认为 `-1`。
 ```yaml
   Options:
     ExplosionRadius: 5
 ```
 
 #### FuseTicks
-Se将number of ticks it takes for creepers设explode。
-NeNegative 值 are ignored, and the time it takes remains the creeper 默认 one.
-DeDefaults to `-1`.
+设置苦力怕引爆所需的刻数。
+负值将被忽略，引爆时间保持苦力怕的默认值。
+默认为 `-1`。
 ```yaml
   Options:
     FuseTicks: 60
 ```
 
 #### SuperCharged
-WhWhether the creeper should 生成 as a super charged creeper.
-DeDefaults to `false`.
+苦力怕是否以超级充能形态生成。
+默认为 `false`。
 ```yaml
   Options:
     SuperCharged: true
 ```
 
 #### PreventSuicide
-PrPrevents creepers from dying upon exploding. Set `mobGriefing` gamerule to true for this 选项 to work.
-DeDefaults to `false`.
+阻止苦力怕在爆炸后死亡。需要将游戏规则 `mobGriefing` 设为 true 才能使此选项生效。
+默认为 `false`。
 ```yaml
   Options:
     PreventSuicide: true
 ```
 
-
-## Enderman
+## 末影人
 
 #### PreventTeleport
-MeMeant for Endermen but //might// work on 其他 生物. May break teleport 技能!
-DeDefaults to `false`.
+主要针对末影人，但可能对其他生物也有效。可能会破坏传送技能！
+默认为 `false`。
 ```yaml
   Options:
     PreventTeleport: true
 ```
 
-
 #### HeldBlock
-Se设方块 that the Enderman is carrying。
-DeDefaults to `AIR`.
+设置末影人手持的方块。
+默认为 `AIR`。
 ```yaml
   Options:
     HeldBlock: STONE
 ```
 
-
-## Experience_orb
+## 经验球
 
 #### Experience
-Se设数量 of experience give by the experience orb 生物。
-DeDefaults to `1`.
+设置经验球生物给予的经验值。
+默认为 `1`。
 ```yaml
   Options:
     Experience: 10
 ```
 
+## 掉落方块
 
-## Falling 方块
-
-#### 方块
-De决定the [类型 of the 方块](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)。
-DeDefaults to `STONE`.
+#### Block
+决定方块的[类型](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html)。
+默认为 `STONE`。
 ```yaml
   Options:
     Block: BIRCH_WOOD
 ```
 
 #### BlockData
-AdAdditional field for inputting blockdata.
-DeDefaults to `0`.
+输入方块数据的附加字段。
+默认为 `0`。
 
 #### DropsItem
-ShShould the 实体 be able to 掉落 the falling 方块 物品.
-DeDefaults to `true`.
+实体是否应该掉落该掉落方块的物品形式。
+默认为 `true`。
 ```yaml
   Options:
     DropsItem: false
 ```
 
 #### HurtsEntities
-DaDamages 实体 on impact.
-DeDefaults to `true`.
+撞击时是否对实体造成伤害。
+默认为 `true`。
 ```yaml
   Options:
     HurtsEntities: false
 ```
 
 #### ReplaceSpawnLocationBlock
-IfIf the 实体 should replace the 方块 at its 生成 位置.
-DeDefaults to `false`.
+实体是否应替换其生成位置的方块。
+默认为 `false`。
 ```yaml
   Options:
     ReplaceSpawnLocationBlock: true
 ```
 
 #### UseSpawnLocationType
-IfIf the 类型 of the falling 方块 应为 the one at the 生成 位置.
-DeDefaults to `false`.
+掉落方块的类型是否应使用生成位置的方块类型。
+默认为 `false`。
 ```yaml
   Options:
     UseSpawnLocationType: true
 ```
 
-
-## Fox
+## 狐狸
 
 #### FoxType
-Det决定the 类型 of the fox。
-CaCan be `RED` or `SNOW`.
-DeDefaults to `RED`.
+决定狐狸的种类。
+可选值：`RED` 或 `SNOW`。
+默认为 `RED`。
 ```yaml
   Options:
     FoxType: SNOW
 ```
 
+## 青蛙
 
-## Frog
-
-#### 类型
-De决定the 类型 of the Frog。
-Al别名 is `Variant`.
-CaCan be `WARM`, `COLD` or `TEMPERATE`.
-DeDefaults to `WARM`.
+#### Type
+决定青蛙的种类。
+别名：`Variant`。
+可选值：`WARM`、`COLD` 或 `TEMPERATE`。
+默认为 `WARM`。
 ```yaml
   Options:
     Type: COLD
 ```
 
-
-## Goat
+## 山羊
 
 #### Screaming
-Se设if 这是 a screaming goat. A screaming goat makes screaming sounds and rams more 经常。
-DeDefaults to `false`.
+设置此山羊是否为尖叫山羊。尖叫山羊会发出尖叫声且冲撞更频繁。
+默认为 `false`。
 ```yaml
   Options:
     Screaming: true
 ```
 
-
-## Hoglin
+## 疣猪兽
 
 #### ImmuneToZombification
-Whthe hoglin是否immune to being zombified。
-DeDefaults to `false`.
+疣猪兽是否免疫僵尸化。
+默认为 `false`。
 ```yaml
   Options:
     ImmuneToZombification: true
 ```
 
 #### Huntable
-Whthe hoglin是否able to be hunted by piglins。
-DeDefaults to `true`.
+疣猪兽是否可以被猪灵猎杀。
+默认为 `true`。
 ```yaml
   Options:
     Huntable: true
 ```
 
-
-## Horses, Donkeys, and Mules
+## 马、驴和骡
 
 #### HorseArmor
-UsUsed for horses to set the 类型 of armor 它们有 on.
-CaCan be `iron`, `gold`, or `diamond`
-[a[armor_type] 必须为 in lower case
+用于设置马身上护甲的类型。
+可选值：`iron`、`gold`、`diamond`。
+[护甲类型]必须为小写。
 ```yaml
   Options:
     HorseArmor: gold
 ```
 
 #### CarryingChest
-UsUsed for donkeys to set 是否 它们是 carrying a chest or not.
-DeDefaults to `false`.
+用于设置驴是否携带箱子。
+默认为 `false`。
 ```yaml
   Options:
     CarryingChest: true
 ```
 
-
 #### HorseColor
-Se设color of the horse。
-CoColors 必须为 uppercase,can be any of the [Spigot Horse colors](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Horse.Color.html).
+设置马的颜色。
+颜色必须大写，可以是任意一种 [Spigot 马的颜色](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Horse.Color.html)。
 ```yaml
   Options:
     HorseColor: CREAMY
 ```
 
-
 #### Saddled
-UsUsed for horses to set 是否 它们是 saddled or not.
-Defaults to `true` if [HorseArmor](#horsearmor) is set, or `false` 否则
+用于设置马是否已装上鞍。
+如果设置了 [HorseArmor](#horsearmor) 则默认为 `true`，否则默认为 `false`。
 ```yaml
   Options:
     Saddled: true
 ```
 
 #### HorseStyle
-Se设style of the horse。
-StStyles can be any of the [Spigot Horse Style](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Horse.Style.html)
+设置马的斑纹样式。
+样式可以是任意一种 [Spigot 马样式](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Horse.Style.html)。
 ```yaml
   Options:
     HorseStyle: WHITE_DOTS
 ```
 
-
 #### Tamed
-UsUsed for horses to set 是否 它们是 tamed or not.
-Defaults to `false`.
+用于设置马是否已被驯服。
+默认为 `false`。
 ```yaml
   Options:
     Tamed: true
 ```
 
 #### HorseType
-Defines the 类型 of horse
-Can be any of the [Spigot Horse variants](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Horse.Variant.html)
-Defaults to `HORSE`
-**Removed in MC 1.11+, use[类型](/生物/生物#类型) instead.**
+定义马的种类。
+可以是任意一种 [Spigot 马变体](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Horse.Variant.html)。
+默认为 `HORSE`。
+**在 MC 1.11+ 中已移除，请改用 [Type](/Mobs/Mobs#type)。**
 
-
-## Interaction
-#### 高度
-ThThe 高度 of the Interaction 实体.
-DeDefaults to `1`.
+## 交互实体
+#### Height
+交互实体的高度。
+默认为 `1`。
 ```yaml
   Options:
     Height: 2
 ```
 
-#### 宽度
-ThThe 宽度 of the Interaction 实体.
-DeDefaults to the 值 of the `Height` 选项.
+#### Width
+交互实体的宽度。
+默认为 `Height` 选项的值。
 ```yaml
   Options:
     Width: 3
 ```
 
 #### Responsive
-IfIf the Interaction 实体 is responsive.
-DeDefaults to `true`.
+交互实体是否可响应。
+默认为 `true`。
 ```yaml
   Options:
     Responsive: false
 ```
 
-
-## IronGolem
+## 铁傀儡
 #### PlayerCreated
-AcActs as if the 玩家 built the 生物.
-DeDefaults to `false`.
+表现得像是玩家建造了该生物。
+默认为 `false`。
 ```yaml
   Options:
     PlayerCreated: true
 ```
 
+## 物品实体
 
-## 物品
-
-#### 物品
-ThThe material of the 物品 实体.
-DeDefaults to `STONE`.
+#### Item
+物品实体的材质。
+默认为 `STONE`。
 ```yaml
   Options:
     Item: BRICK
 ```
 
-#### 数量
-ThThe 数量 of 物品 in the itemstack.
-DeDefaults to `1`.
+#### Amount
+物品堆中的物品数量。
+默认为 `1`。
 ```yaml
   Options:
     Amount: 10
 ```
 
 #### CanPickup
-IfIf the itemstack can be picked up.
-DeDefaults to `true`.
+物品堆是否可以被捡起。
+默认为 `true`。
 ```yaml
   Options:
     CanPickup: false
 ```
 
-
-## Llama
+## 羊驼
 
 #### CarryingChest
-SeSet 是否 the 实体 is carrying a chest or not.
-DeDefaults to `false`.
+设置实体是否携带箱子。
+默认为 `false`。
 ```yaml
   Options:
     CarryingChest: true
 ```
 
 #### Tamed
-SeSet 是否 the 实体 is tamed or not.
-Defaults to `false`.
+设置实体是否已被驯服。
+默认为 `false`。
 ```yaml
   Options:
     Tamed: true
 ```
 
-#### 颜色
-Se设color of the llama。
-CoColors 必须为 uppercase,can be any of the [Spigot Llama colors](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Llama.Color.html).
+#### Color
+设置羊驼的颜色。
+颜色必须大写，可以是任意一种 [Spigot 羊驼颜色](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Llama.Color.html)。
 ```yaml
   Options:
     Color: CREAMY
 ```
 
-
-## MinecartChest
+## 箱子矿车
 
 #### ChestContents
-ThThe [droptable] that 将 put 在...内 chest.
+将放入箱子内的[掉落表]。
 ```yaml
   Options:
     ChestContents: example_droptable
 ```
 
-
-## Panda
+## 熊猫
 
 #### MainGene
-Se将main [gene](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Panda.Gene.html) that the panda can pass on设its offspring。
-CaCan be NORMAL, AGGRESSIVE, LAZY, WORRIED, PLAYFUL, WEAK, BROWN.
-DeDefaults to `NORMAL`.
+设置熊猫可以遗传给后代的[主基因](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Panda.Gene.html)。
+可选值：NORMAL、AGGRESSIVE、LAZY、WORRIED、PLAYFUL、WEAK、BROWN。
+默认为 `NORMAL`。
 ```yaml
   Options:
     MainGene: LAZY
 ```
 
-
 #### HiddenGene
-Se将hidden [gene](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Panda.Gene.html) that the panda can pass on设its offspring。
-CaCan be NORMAL, AGGRESSIVE, LAZY, WORRIED, PLAYFUL, WEAK, BROWN.
-DeDefaults to `NORMAL`.
+设置熊猫可以遗传给后代的[隐性基因](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Panda.Gene.html)。
+可选值：NORMAL、AGGRESSIVE、LAZY、WORRIED、PLAYFUL、WEAK、BROWN。
+默认为 `NORMAL`。
 ```yaml
   Options:
     HiddenGene: WORRIED
 ```
 
-
-## Parrot
+## 鹦鹉
 
 #### Variant
-ThThe [variant](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Parrot.Variant.html) of the parrot.
+鹦鹉的[变体](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Parrot.Variant.html)。
 ```yaml
   Options:
     Variant: GRAY
 ```
 
 #### FlyingSpeed
-ThThe flying 速度 of the parrot.
-Defaults to `-1` (The 选项 不是 applied)
+鹦鹉的飞行速度。
+默认为 `-1`（不应用此选项）。
 ```yml
   Options:
     FlyingSpeed: 0.2
 ```
 
-
-## Pig
+## 猪
 
 #### Saddled
-IfIf the pig is saddled.
-Defaults to `false`.
+猪是否已装上鞍。
+默认为 `false`。
 ```yaml
   Options:
     Saddled: true
 ```
 
-
-
-## Piglin
+## 猪灵
 
 #### AbleToHunt
-Whthe piglin是否able to hunt。
-DeDefaults to `true`.
+猪灵是否能够猎杀。
+默认为 `true`。
 ```yaml
   Options:
     AbleToHunt: false
 ```
 
-
 #### ImmuneToZombification
-Whthe piglin是否immune to being zombified。
-DeDefaults to `true`.
+猪灵是否免疫僵尸化。
+默认为 `true`。
 ```yaml
   Options:
     ImmuneToZombification: false
 ```
 
-
-## Piglin Brute
+## 猪灵蛮兵
 
 #### ImmuneToZombification
-Whthe piglin是否immune to being zombified。
-DeDefaults to `true`.
+猪灵是否免疫僵尸化。
+默认为 `true`。
 ```yaml
   Options:
     ImmuneToZombification: false
 ```
 
-
-## Rabbit
+## 兔子
 
 #### IsKillerBunny
-AlAlias: `Angry`.
-Se将rabbit设the Killer Bunny。
-Defaults to `false`.
+别名：`Angry`。
+将兔子设为杀手兔。
+默认为 `false`。
 ```yaml
   Options:
     IsKillerBunny: true
 ```
 
-
 #### RabbitType
-Se设[类型](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Rabbit.类型.html) of rabbit。
-类型 can be BLACK, BLACK_AND_WHITE, BROWN, GOLD, SALT_AND_PEPPER, THE_KILLER_BUNNY or WHITE
+设置兔子的[种类](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Rabbit.Type.html)。
+可选种类：BLACK、BLACK_AND_WHITE、BROWN、GOLD、SALT_AND_PEPPER、THE_KILLER_BUNNY、WHITE。
 ```yaml
   Options:
     RabbitType: SALT_AND_PEPPER
 ```
 
-
-## Sheep
+## 羊
 
 #### Sheared
-Whthe Sheep是否已经 sheared。
-DeDefaults to `false`.
+羊是否已被剪毛。
+默认为 `false`。
 ```yaml
   Options:
     Sheared: true
 ```
 
-
-## Silverfish
+## 蠹虫
 
 #### PreventBlockInfection
-PrPrevent silverfish from infecting 方块.
-Defaults to `false`.
+阻止蠹虫感染方块。
+默认为 `false`。
 ```yaml
   Options:
     PreventBlockInfection: true
 ```
 
-
-## Skeleton
+## 骷髅
 
 #### PreventConversion
-PrPrevents the Skeleton from being converted into 其他 类型 of skeletons.
-Defaults to `false`.
+阻止骷髅转换为其他类型的骷髅。
+默认为 `false`。
 ```yaml
   Options:
     PreventConversion: true
 ```
 
-
-## Snow Golem
+## 雪傀儡
 
 #### Derp
-WhWhether the Snow Golem has its pumpkin 已经 sheared.
-Defaults to `false`.
+雪傀儡的南瓜是否已被剪掉。
+默认为 `false`。
 ```yaml
   Options:
     Derp: true
 ```
 
-
 #### PreventSnowFormation
-PrPrevent the Snow Golem from creating snow.
-DeDefaults to `false`.
+阻止雪傀儡制造雪。
+默认为 `false`。
 ```yaml
   Options:
     PreventSnowFormation: true
 ```
 
-
 ## TNT
 
 #### FuseTicks
-HoHow long the TNT takes to explode.
-Defaults to `-1` (instantly).
+TNT 爆炸所需的刻数。
+默认为 `-1`（立即爆炸）。
 ```yaml
   Options:
     FuseTicks: 100
 ```
 
-
 #### ExplosionYield
-De决定the strength of the explosion。
-Defaults to `-1` (The normal TNT Explosion Yield is used).
+决定爆炸的强度。
+默认为 `-1`（使用普通 TNT 的爆炸威力）。
 ```yaml
   Options:
     ExplosionYield: 2
 ```
 
-
 #### Incendiary
-Whthe explosion是否能够 starting 触发。
-Defaults to `false`.
+爆炸是否能够引发火焰。
+默认为 `false`。
 ```yaml
   Options:
     Incendiary: true
 ```
 
-
-## Tropical Fish
+## 热带鱼
 
 #### Pattern
-Se设[形状/Pattern](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/TropicalFish.Pattern.html) of the fish。
+设置鱼的[形状/花纹](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/TropicalFish.Pattern.html)。
 ```yaml
   Options:
     Pattern: GLITTER
 ```
 
-
 #### BodyColor
-Se设[Primary Color](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html) of the fish。
+设置鱼的[主色](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html)。
 ```yaml
   Options:
     BodyColor: GRAY
 ```
 
-
 ## PatternColor
-设[Secondary Color](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html) of the fish。
+设置鱼的[副色](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html)。
 ```yaml
   Options:
     BodyColor: LIME
 ```
 
-
-## Villagers
+## 村民
 
 #### HasTrades
-WhWhether the villager can be traded with.
-DeDefaults to `false`.
-> 检查 out [Trades](/生物/生物#trades)
+村民是否可以交易。
+默认为 `false`。
+> 详见 [Trades](/Mobs/Mobs#trades)
 ```yaml
   Options:
     HasTrades: true
 ```
 
-
 #### Profession
-SpSpecifies the [Profession](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Villager.Profession.html) of the villager.
-ViVillagers 没有 this 选项 will roll a random profession on their initial 生成.
+指定村民的[职业](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Villager.Profession.html)。
+未设置此选项的村民在初始生成时会随机分配一个职业。
 ```yaml
   Options:
     Profession: MASON
 ```
 
-
-#### 类型
-ReRepresents [Villager 类型](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Villager.类型.html), 通常 corresponding to what 生物群系 they 生成 in.
-DeDefaults to PLAINS.
+#### Type
+表示[村民类型](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Villager.Type.html)，通常对应其生成所在的生物群系。
+默认为 PLAINS。
 ```yaml
   Options:
     Type: DESERT
 ```
 
-
-#### 等级
-ViVillager profession 等级, 等级 1 - 5.
-Le等级 1 villagers might switch professions. If 您想要 a villager to hold its profession, give them a 等级 of 2 or higher.
-Re必需 if 设置 villager professions.
+#### Level
+村民的职业等级，等级 1 到 5。
+等级 1 的村民可能会更换职业。如果你希望村民固定职业，请将其等级设为 2 或更高。
+设置村民职业时必需。
 ```yaml
   Options:
     Level: 3
 ```
 
-
-## Wolfs
+## 狼
 
 #### Variant
-设[Wolf Variant](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Wolf.Variant.html)。
+设置[狼的变体](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Wolf.Variant.html)。
 ```yaml
   Options:
     Variant: black
 ```
 
-#### 颜色
-设[Color](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html) of the Wolf Collar。
+#### Color
+设置狼项圈的[颜色](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/DyeColor.html)。
 ```yaml
   Options:
     Color: RED
 ```
 
-## Zombie Villagers
+## 僵尸村民
 
 #### Profession
-SpSpecifies the [Profession](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/实体/Villager.Profession.html) of the zombie villager.
-ThThis 选项 还将 make the zombie turn 到 respective villager 类型 when being cured using 药水.
-DeDefaults to `FARMER`.
+指定僵尸村民的[职业](https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/entity/Villager.Profession.html)。
+此选项还会使僵尸村民在被药水治愈后转换为对应类型的村民。
+默认为 `FARMER`。
 ```yaml
   Options:
     Profession: MASON
 ```
 
-
-[droptable]: /掉落/掉落#掉落-tables
+[掉落表]: /drops/Drops#drop-tables

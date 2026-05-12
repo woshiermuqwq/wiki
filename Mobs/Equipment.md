@@ -1,37 +1,37 @@
-The 装备 section in a 生物 配置 定义 what kind of 装备 the 生物 will 生成 with. The 装备 只会 be applied to the 生物 when it spawns or 期间 a reload, and can be changed 之后wards by using the [Equip 技能](/技能/技能/equip).
+生物配置中的装备区块定义了生物生成时会携带什么样的装备。装备仅在生物生成或重载时应用，之后可以通过[装备技能](/skills/mechanics/equip)进行更改。
 
-若the PreventOtherDrops 选项 不是 启用，then the 生物将willnaturally 掉落 all of its equipped 物品 on death。
+如果未启用 `PreventOtherDrops` 选项，生物死亡时会自然掉落所有已装备的物品。
 
-若您想要 your 生物 to not wear any 装备，you将canuse the 选项 "PreventRandomEquipment". See [生物 选项](/生物/选项). An alternative to using that 选项 is to equip your 生物 with *dummy 物品*, 例如 AIR。
+如果你希望生物不穿戴任何装备，可以使用选项 `PreventRandomEquipment`，参见[生物选项](/Mobs/Options)。另一种替代方案是给生物装备*占位物品*，例如 `AIR`。
 
-装备 栏位 can 也 accept [droptables](/掉落/DropTables#装备-droptables), allowing 对于 creation of "sets" where a random 物品 is selected 从 set. For 示例, a droptable可以createdthat 包含 every 原版 helmet, which can then be used on the 生物 in the 装备 tab to select one random helmet to wear。
+装备槽位也可以接受[掉落表](/drops/DropTables#equipment-droptables)，从而可以创建"套装"——从套装中随机选中一件物品。例如，可以创建一个包含所有原版头盔的掉落表，然后在生物配置的装备栏中使用它，从而随机选择一顶头盔来穿戴。
 
 [[_TOC_]]
 
 ## 语法
 ```yaml
 internal_mobname:
-  Type: <mobtype>
+  Type: <生物类型>
   Equipment:
-  - <item> <slot>
-  - <item> <slot>
+  - <物品> <槽位>
+  - <物品> <槽位>
   - ...
 ```
 
-##### 物品
-Can be 也 the 名称 of a [MythicMobs 物品](/物品/物品#internal_name) or a 原版 物品.
+### 物品
+可以是 [MythicMobs 物品](/Items/Items#internal_name) 的名称，也可以是原版物品。
 
-#### 栏位
-Defines the 栏位 on the 生物 that 物品 应为 carried on.
+### 槽位
+定义物品应装备在生物身上的哪个槽位。
 
-| 栏位 | Description |
-|---------|----------------------------------------------------------------------------------------------|
-| HEAD | The head 栏位. Accepts regular helmets, playerheads, and even blocktypes. |
-| CHEST | The chest 栏位. Will 仅 render chestplates, but will carry any 物品. |
-| LEGS | The leg 栏位. Will 仅 render leggings, but will carry any 物品. |
-| FEET | The feet 栏位. Will 仅 render boots, but will carry any 物品. |
-| HAND | The mainhand (right) hand 栏位. |
-| OFFHAND | The offhand (left) hand 栏位. |
+| 槽位    | 说明                                                                                        |
+|---------|--------------------------------------------------------------------------------------------|
+| HEAD    | 头盔槽位。接受普通头盔、玩家头颅，甚至方块类型                                                  |
+| CHEST   | 胸甲槽位。只会渲染胸甲，但可以携带任何物品                                                      |
+| LEGS    | 护腿槽位。只会渲染护腿，但可以携带任何物品                                                      |
+| FEET    | 靴子槽位。只会渲染靴子，但可以携带任何物品                                                      |
+| HAND    | 主手（右手）槽位                                                                             |
+| OFFHAND | 副手（左手）槽位                                                                             |
 
 ```yaml
 awesome_boss:
@@ -41,35 +41,34 @@ awesome_boss:
   - diamond_sword HAND
 ```
 
-## In-line 物品
-For very basic 装备, 您可以 添加 some 内联 物品 data so that you 不要 总是 必须 create a mythic 物品.
-All the 内联 物品 data that works under `Equipment` 还将 work 在...下 [掉落](/掉落/掉落) section.
+## 行内物品
+对于非常基础的装备，你可以使用行内物品数据，这样就不必每次都创建一个 Mythic 物品。
+所有在 `Equipment` 下有效的行内物品数据，在[掉落](/drops/Drops)区块下同样有效。
 
 ```yaml
  Equipment:
  - leather_chestplate{name="Dark Leather";lore="&8A vest made of darkened leather";color=BLACK} CHEST
 ```
 
-### Available 内联 属性
-| 属性 | 别名 | Description | 默认 |
-|-----------|-----------|----------------------------------------------------------------------|---------|
-| 名称 | 显示, n, d | The 显示 名称 of the 物品 | |
-| data | | The "Data" of the 物品, to not be confused with CustomModelData | 0 |
-| model | | The CustomModelData of the 物品 | 0 |
-| 数量 | a | The 数量 of the 物品 | 1 |
-| 物品描述 | l | The 物品描述 of the 物品 | |
-| 附魔 | enchants, ench, e | A 列表 of [附魔] of the 物品 | |
-| potioneffects | peffects, 药水, pe | A 列表 of [药水 效果] of the 物品, if a 药水 | |
-| color | c, potioncolor, pcolor, pc | The color of the 物品, if a 药水 | |
-| skullowner | | The 主人 of the 物品, if a skull | |
-| skulltexture | | The SkinURL of the texture of the 物品, if a skull | |
+### 可用的行内属性
+| 属性         | 别名                  | 说明                                                    | 默认值  |
+|-------------|----------------------|--------------------------------------------------------|--------|
+| name        | display, n, d        | 物品的显示名称                                             |        |
+| data        |                      | 物品的"Data"值，注意不要与 CustomModelData 混淆              | 0      |
+| model       |                      | 物品的 CustomModelData                                    | 0      |
+| amount      | a                    | 物品的数量                                                | 1      |
+| lore        | l                    | 物品的描述信息                                              |        |
+| enchantments | enchants, ench, e   | 物品的[附魔]列表                                           |        |
+| potioneffects | peffects, potion, pe | 物品的药水[效果]列表（如果是药水的话）                         |        |
+| color       | c, potioncolor, pcolor, pc | 物品的颜色（如果是药水的话）                             |        |
+| skullowner  |                      | 物品的所有者（如果是头颅的话）                                  |        |
+| skulltexture |                     | 物品材质的 SkinURL（如果是头颅的话）                           |        |
 
-[附魔]: /物品/附魔
-[药水 效果]: /物品/药水
-
+[附魔]: /Items/Enchantments
+[效果]: /Items/Potions
 
 ## MMOItems
-To equip a 生物 with an mmoitem, use the following syntax:
+要给生物装备 MMOItems 物品，请使用以下语法：
 ```yaml
   Equipment:
   - mmoitems{type=ARMOR;id=STEEL_HELMET} HEAD
@@ -78,11 +77,10 @@ To equip a 生物 with an mmoitem, use the following syntax:
   - mmoitems{type=ARMOR;id=STEEL_BOOTS} FEET
   - mmoitems{type=SWORD;id=RUBY_SWORD} HAND
 ```
-Please 注意 that mmo stats on the armor DO NOT work on MythicMobs. As such, 它们将 not have extra 血量, 防御 or 攻击 伤害 因为 of it.
-
+请注意，MMO 装备上的 MMO 属性对 MythicMobs 无效。因此，它们不会因此获得额外的生命值、防御力或攻击伤害。
 
 ## 示例
-The 示例 below will 生成 a zombie with a panda 玩家 head equipped in their head 栏位.
+下面的示例会生成一个僵尸，其头部装备了熊猫玩家头颅。
 ```yaml
 PandaZombie:
   Type: ZOMBIE
@@ -92,7 +90,7 @@ PandaZombie:
   - PLAYER_HEAD{skullTexture=eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjY0NjNlNjRjZTI5NzY0ZGIzY2I0NjgwNmNlZTYwNmFmYzI0YmRmMGNlMTRiNjY2MGMyNzBhOTZjNzg3NDI2In19fQ==} HEAD
 ```
 
-Now lets take this Panda Zombie and give it some 自定义 armor with a 名称, 物品描述, and 附魔.
+现在让我们给这只熊猫僵尸配上一些带有名称、描述和附魔的自定义护甲。
 
 ```yaml
 PandaZombie:
@@ -106,7 +104,7 @@ PandaZombie:
   - DIAMOND_BOOTS{name="Panda<&sq>s Speed";lore="A Panda must be fast";enchants=PROTECTION_ENVIRONMENTAL:4,DURABILITY:3,MENDING:1,PROTECTION_FALL:4,DEPTH_STRIDER:3} FEET
 ```
 
-Lastly, remember that we can use the 内联 物品 data in the 掉落 section. Killing the PandaZombie will make it 掉落 all of the 物品, 与ir 名称, 物品描述, and enchants all 不 need to make any mythic 物品!
+最后，请记住我们也可以在掉落区块中使用行内物品数据。击杀熊猫僵尸后，它将掉落所有物品，包括它们的名称、描述和附魔，完全不需要创建任何 Mythic 物品！
 
 ```yaml
 PandaZombie:

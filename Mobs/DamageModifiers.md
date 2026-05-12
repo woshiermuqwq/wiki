@@ -1,67 +1,66 @@
-## 伤害 Modifiers
+## 伤害修正
 
-Da伤害 Modifiers are an 属性 您可以 添加 to your MythicMobs to increase or decrease the 伤害 they receive from various sources.
+伤害修正器是一种属性，可以添加到你的 MythicMob 上，用于增减其从各种来源受到的伤害。
 
-Let say an 实体 takes 伤害 by a `ENTITY_ATTACK` 类型 of 伤害 and of 数量 `10`. Depending on the 值 of its associated DamageModifier, different things will happen:
-- `A value > 0`: The 数量 of the 伤害 would be multiplied by the 值 自身. If the 值 was `2`, the 伤害 would be doubled. If it was `0.5`, 它将 be halved.
-- `A value of 0`: The 伤害 事件 不会 cause any 伤害, but would 仍然 play the 伤害 animation
--- `A value < 0`: the associated 伤害 事件 将 cancelled and the 施法者 would be healed by the 数量 of the original 伤害 multiplied by the absolute 值 of the 伤害 modifier. If the 值 was `-2`, the 施法者 would be healed by `20` hit points. If it was `-0.1`, it would be healed by `1` hit point.
+举例来说，假设一个实体受到了类型为 `ENTITY_ATTACK`、数值为 `10` 的伤害。根据其对应伤害修正器的值，会发生不同的情况：
 
-SoSome of these 不会 work on certain 生物 under normal circumstances (e.g. SUICIDE, as no 生物 naturally suicides).
-Da伤害 Modifiers are 完全 可选, you 仅 need to 添加 the ones 您想要 to use.
+- **值 > 0**：伤害量将乘以该值。如果值为 `2`，伤害翻倍；如果值为 `0.5`，伤害减半。
+- **值 = 0**：伤害事件不会造成伤害，但仍会播放受伤动画。
+- **值 < 0**：伤害事件将被取消，并且施法者会恢复生命值，回复量等于原始伤害乘以该修正器绝对值的数值。如果值为 `-2`，施法者将回复 `20` 点生命值；如果值为 `-0.1`，则回复 `1` 点生命值。
 
-See the [spigot javadocs](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/事件/实体/EntityDamageEvent.DamageCause.html) for a 完整列表 available 伤害 类型.
+在正常情况下，部分伤害类型不会发生在某些生物身上（例如 SUICIDE，因为没有生物会自然自杀）。
+伤害修正器完全是可选的，你只需要添加你想用的那些即可。
+
+完整的可用伤害类型列表请参见 [Spigot 官方文档](https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html)。
 
 ## 选项
 
-| Modifier | Explanation |
+| 修正器               | 说明                                                               |
 | ------------------- | ------------------------------------------------------------------ |
-| BLOCK_EXPLOSION | 伤害 caused by being in the area when a 方块 explodes. |
-| CAMPFIRE | 伤害 caused when an 实体 steps on `CAMPFIRE` or `SOUL_CAMPFIRE`. |
-| CONTACT | 伤害 caused when an 实体 contacts a 方块 例如 a Cactus, Dripstone (Stalagmite) or Berry Bush. |
-| CRAMMING | 伤害 caused when an 实体 is colliding with 也 many 实体 due to the maxEntityCramming game rule. |
-| 自定义 | 自定义 伤害. |
-| DRAGON_BREATH | 伤害 caused by a dragon breathing 触发. |
-| DROWNING | 伤害 caused by running 从 air 当 in water |
-| DRYOUT | 伤害 caused when an 实体 that 应为 in water 不是. |
-| ENTITY_ATTACK | 伤害 caused when an 实体 攻击 另一个 实体. |
-| ENTITY_EXPLOSION | 伤害 caused by being in the area when an 实体, 例如 a Creeper, explodes. |
-| ENTITY_SWEEP_ATTACK | 伤害 caused when an 实体 攻击 另一个 实体 in a sweep 攻击. |
-| FALL | 伤害 caused when an 实体 falls a 距离 大于 3 方块 |
-| FALLING_BLOCK | 伤害 caused by being hit by a falling 方块 which deals 伤害 |
-| 触发 | 伤害 caused by direct exposure to 触发 |
-| FIRE_TICK | 伤害 caused 由于 burns caused by 触发 |
-| FLY_INTO_WALL | 伤害 caused when an 实体 runs into a wall. |
-| FREEZE | 伤害 caused from freezing. |
-| HOT_FLOOR | 伤害 caused when an 实体 steps on `MAGMA_BLOCK`. |
-| KILL | 伤害 caused by /kill 指令 |
-| LAVA | 伤害 caused by direct exposure to lava |
-| 闪电 | 伤害 caused by being struck by 闪电 |
-| MAGIC | 伤害 caused by being hit by a 伤害 药水 or spell |
-| MELTING | 伤害 caused 由于 a snowman melting |
-| POISON | 伤害 caused 由于 an ongoing poison 效果 |
-| 弹射物 | 伤害 caused when attacked by a 弹射物. |
-| SONIC_BOOM | 伤害 caused by the Sonic Boom 攻击 from `Warden` |
-| STARVATION | 伤害 caused by starving 由于 having an empty hunger bar |
-| SUFFOCATION | 伤害 caused by being put in a 方块 |
-| SUICIDE | 伤害 caused by committing suicide. |
-| THORNS | 伤害 caused in retaliation to 另一个 攻击 by the Thorns 附魔. |
-| VOID | 伤害 caused by falling 到 void |
-| WITHER | 伤害 caused by Wither 药水 效果 |
-| WORLD_BORDER | 伤害 caused by the 世界 Border |
+| BLOCK_EXPLOSION     | 方块爆炸时，处于爆炸范围内的实体受到的伤害                               |
+| CAMPFIRE            | 实体踩到营火或灵魂营火时受到的伤害                                     |
+| CONTACT             | 实体接触仙人掌、滴水石锥（石笋）或甜浆果丛等方块时受到的伤害                |
+| CRAMMING            | 由于游戏规则 maxEntityCramming 导致实体与过多实体碰撞时受到的伤害           |
+| CUSTOM              | 自定义伤害                                                          |
+| DRAGON_BREATH       | 末影龙吐息造成的伤害                                                   |
+| DROWNING            | 在水中氧气耗尽时受到的伤害                                              |
+| DRYOUT              | 应该在水中的实体离开水后受到的伤害                                       |
+| ENTITY_ATTACK       | 一个实体攻击另一个实体时造成的伤害                                        |
+| ENTITY_EXPLOSION    | 实体（如苦力怕）爆炸时，处于爆炸范围内的实体受到的伤害                       |
+| ENTITY_SWEEP_ATTACK | 实体使用横扫攻击另一个实体时造成的伤害                                     |
+| FALL                | 实体从超过 3 格的高度坠落时受到的伤害                                     |
+| FALLING_BLOCK       | 被会造成伤害的掉落方块击中时受到的伤害                                     |
+| FIRE                | 直接暴露在火焰中受到的伤害                                               |
+| FIRE_TICK           | 因火焰燃烧效果受到的伤害                                                 |
+| FLY_INTO_WALL       | 实体撞墙时受到的伤害                                                    |
+| FREEZE              | 冰冻造成的伤害                                                         |
+| HOT_FLOOR           | 实体踩到岩浆块时受到的伤害                                               |
+| KILL                | /kill 命令造成的伤害                                                   |
+| LAVA                | 直接暴露在熔岩中受到的伤害                                               |
+| LIGHTNING           | 被闪电击中时受到的伤害                                                   |
+| MAGIC               | 被伤害药水或法术击中时受到的伤害                                           |
+| MELTING             | 雪傀儡融化造成的伤害                                                    |
+| POISON              | 持续中毒效果造成的伤害                                                   |
+| PROJECTILE          | 被弹射物攻击时受到的伤害                                                 |
+| SONIC_BOOM          | 监守者的音爆攻擊造成的伤害                                               |
+| STARVATION          | 饥饿值耗尽导致的饥饿伤害                                                 |
+| SUFFOCATION         | 被卡在方块中受到的窒息伤害                                               |
+| SUICIDE             | 自杀造成的伤害                                                         |
+| THORNS              | 荆棘附魔在受到攻击时造成的反伤                                            |
+| VOID                | 掉入虚空时受到的伤害                                                    |
+| WITHER              | 凋零药水效果造成的伤害                                                   |
+| WORLD_BORDER        | 世界边界造成的伤害                                                      |
 
 <!--
-These 选项 are 自动 generated via a script. Do not edit them directly.
+这些选项由脚本自动生成，请勿直接编辑。
 -->
-
-
 
 ## 示例
 
-NOTE: 一个source. A number higher than 1 will multiply the 伤害 it takes by that 数量. A number lower than 1 will reduce the 伤害 it takes by that 数量. And 0 will make the 生物 immune to that 伤害 source的modifier of 1 will cause the 生物 to take normal 伤害 from。
-一个具有FALL, Blazes with 触发, FIRE_TICK, or LAVA. Etc的negative 值 will cause the 生物 to heal from that 类型 of 伤害. 注意 that this 不 work if the 生物 is naturally immune to that 伤害, E.g. Iron Golems。
+注意：修正值为 1 表示生物从该来源受到正常伤害。大于 1 的数值会按比例放大受到的伤害。小于 1 的数值会按比例减少受到的伤害。0 表示生物对该伤害来源免疫。
+负值会使生物从该伤害类型中恢复生命值。但请注意，如果生物天生对该伤害免疫，则此法无效。例如：铁傀儡免疫坠落伤害、烈焰人免疫火焰/燃烧/熔岩伤害等。
 
-In this first 示例 our Armored Zombie 生物 is 仅 a basic MythicMob with 没有 added to it.
+在第一个示例中，我们的装甲僵尸只是一个普通的基础 MythicMob，没有添加任何特殊配置。
 
 ```yaml
 ArmoredZombie:
@@ -71,7 +70,7 @@ ArmoredZombie:
   Damage: 6
 ```
 
-But, if we 添加 the DamageModifiers 属性 to him we can start messing around with his weaknesses and resistances. In this 示例 we are going to make it so melee and 弹射物 攻击 仅 do 75% of their normal 伤害 to our Armored Zombie.
+但是，如果我们给它添加伤害修正器属性，就可以开始调整它的弱点和抗性。在这个示例中，我们让近战和弹射物攻击对这只装甲僵尸只造成正常伤害的 75%。
 
 ```yaml
 ArmoredZombie:
@@ -84,7 +83,7 @@ ArmoredZombie:
   - PROJECTILE 0.75
 ```
 
-Alright, we have our 伤害 resistant zombie now. Any melee and 弹射物 伤害 it receives 将 reduced by 25% (This 包含 from 玩家 and 其他 生物.) but now he seems a little overpowered, so, lets give him a weakness to go along with it.
+好了，现在我们有了一个具有伤害抗性的僵尸。它受到的任何近战和弹射物伤害都将减少 25%（包括来自玩家和其他生物的伤害）。但它现在看起来有点太强了，所以我们也给它添加一个弱点来平衡。
 
 ```yaml
 ArmoredZombie:
@@ -98,10 +97,9 @@ ArmoredZombie:
   - MAGIC 1.25
 ```
 
-Our little Armored Zombie is 仍然 well protected 再次st 弹射物 and melee 攻击, but we have given him a weakness to magic (splash 血量 药水) to compensate.
+我们的小装甲僵尸仍然对弹射物和近战攻击有很好的防护，但我们给它加了一个对魔法（喷溅型治疗药水）的弱点来作为平衡。
 
-
-Our second 示例 is a 触发 elemental, not 仅 does this 生物 not take 伤害 from burning, it 也 heals 血量 when standing in 触发, and regains 甚至更多 血量 when in lava. 注意: This DOES NOT work on Nether 生物 as 它们会n't take 伤害 from 触发 at all, preventing them from having their 触发 and lava 伤害 modified.
+第二个示例是一个火元素生物。它不仅不会受到燃烧伤害，站在火中反而会回复生命值，而在熔岩中回复得更多。注意：这对下界生物无效，因为它们根本不会受到火焰伤害，因此无法对其火焰和熔岩伤害进行修正。
 
 ```yaml
 FireElemental:

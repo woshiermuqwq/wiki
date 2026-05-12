@@ -1,12 +1,10 @@
-生物 等级 are a useful function for adding 等级 to your 生物, which allow for several useful features.
+生物等级是一项实用功能，可以为你的生物添加等级系统，从而支持多种有用的特性。
 
-For 示例, 您可以 have the 生物 伤害 and 血量 scale up as their 等级 increases, or 您可以 have them 掉落 more 物品 取决于 what their 等级 is (see _BonusLevelItems_ in [Droptable 选项](/掉落/DropTables#droptable-选项)).
+例如，你可以让生物的伤害和生命值随等级提升而增长，或者让它们根据等级掉落更多物品（参见[掉落表选项](/drops/DropTables#droptable-options)中的 _BonusLevelItems_）。
 
-Or, for more advanced configs you could change their 掉落 完全 取决于 what 等级 它们是, give them different 技能 取决于 their 等级, or even change where/how they 生成 取决于 what 等级 它们是 (using 生成器 and randomspawns.)
+更进一步的话，你可以根据等级完全改变生物的掉落物，根据等级赋予不同的技能，甚至根据等级改变它们的生成位置/方式（利用刷怪点和随机生成）。
 
-生物 等级 can 也 be influenced by 世界 scaling (see below), [Random
-生成器](/Random%20Spawns) or the [SetLevel
-技能](/技能/技能/setlevel).
+生物等级还会受到世界缩放（见下文）、[随机生成](/Random%20Spawns)或[设置等级技能](/skills/mechanics/setlevel)的影响。
 
 ```yaml
 Zombie:
@@ -23,42 +21,39 @@ Zombie:
     Damage: 0.5
 ```
 
-# LevelModifiers
+# 等级修正
 
-These 选项, put 在...下 LevelModifiers section, will increase the
-生物 respective stats by the given numbers per 等级. These stats will
-be added 在...顶部 their base stats.
+这些选项放在 `LevelModifiers` 区块下，每提升一级，生物的对应属性就会增加给定的数值。这些加成会叠加在基础属性之上。
 
-等级 modifiers 可能不 work if you didn't specify base 值
-对于 affected 属性 in the 生物 configuration.
+如果在生物配置中未指定受影响的属性的基础值，等级修正可能不会生效。
 ```yaml
   LevelModifiers:
-    Health: [number]
-    Damage: [number]
-    KnockbackResistance: [number]
-    Power: [number]
-    Armor: [number]
-    MovementSpeed: [number]
+    Health: [数值]
+    Damage: [数值]
+    KnockbackResistance: [数值]
+    Power: [数值]
+    Armor: [数值]
+    MovementSpeed: [数值]
 ```
 
-# 世界 Scaling
+# 世界缩放
 
-生物 等级 (for random-spawned 生物) can 自动 be set by the 插件 by specifying 世界 scaling 设置 located in `/MythicMobs/config/config-mobs.yml`. 设置 it up is simple. By 默认 the section for scaling in your 配置-生物.yml should look 某事 like this:
+通过设置 `/MythicMobs/config/config-mobs.yml` 中的世界缩放选项，插件可以自动为随机生成的生物赋予等级。配置非常简单。默认情况下，`config-mobs.yml` 中的缩放部分大致如下：
 ```yaml
   MobLeveling:
-    # Used to scale a mob's attributes as they level up
+    # 用于随着生物升级缩放其属性
     ScalingEquations:
       Health: V * ((1.05)^(L-1))
       Damage: V * ((1.05)^(L-1))
       Scale: V
-    # Alternate legacy method of scaling mobs attributes
+    # 备用的传统生物属性缩放方式
     DefaultLevelModifiers:
       Health: 0.1
       Armor: 0
       Damage: 0
       KnockbackResistance: 0
       Power: 0
-    # Per-world scaling options
+    # 按世界分别缩放
     WorldScaling:
       Default:
         Enabled: true
@@ -71,17 +66,17 @@ be added 在...顶部 their base stats.
         Enabled: false
         PerBlocksFromSpawn: 100
 ```
-The above 示例 shows different 世界 with different 等级 of scaling. Using "world2" as an 示例, the 等级 for randomspawned 生物 would look 某事 like this:
+以上示例展示了不同世界使用不同缩放级别的配置。以 `world2` 为例，随机生成生物的等级如下：
 
-- 等级 0 in the white area (0-249 方块 from 生成).
-- 等级 1 in the tan area (250-499 方块 距离).
-- 等级 2 in the yellow area (500-749 方块 距离).
-- 等级 3 in the orange area (750-999 方块 距离).
-- 等级 4 in the red area (1000-1249 方块 距离).
-- Etc.
+-   白色区域（距出生点 0-249 格）：等级 0。
+-   浅棕色区域（距离 250-499 格）：等级 1。
+-   黄色区域（距离 500-749 格）：等级 2。
+-   橙色区域（距离 750-999 格）：等级 3。
+-   红色区域（距离 1000-1249 格）：等级 4。
+-   以此类推。
 
 ![](http://fs5.directupload.net/images/160317/ebnd74rs.jpg)
 
-These 选项 将自动 be applied to all 生物 即 summoned 到 game using MythicMobs' [Random Spawning](Random-Spawns). You can use the **UseWorldScaling: \[true/false\]** 选项 on your randomspawn configurations to control 是否 生物 are supposed to be affected by 世界 scaling.
+这些选项会自动应用于所有通过 MythicMobs [随机生成](Random-Spawns)召唤到游戏中的生物。你可以在随机生成配置中使用 **UseWorldScaling: \[true/false\]** 选项来控制生物是否受世界缩放的影响。
 
-> 注意 that 世界 scaling 选项 永远不会 affect [原版 覆盖](原版-覆盖) 除非 the `ScaleVanillaMobs` 选项 for that 世界 is set to `true`.
+> 注意：世界缩放选项永远不会影响[原版覆盖](Vanilla-Overrides)，除非该世界的 `ScaleVanillaMobs` 选项被设为 `true`。

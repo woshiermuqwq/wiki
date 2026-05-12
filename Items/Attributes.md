@@ -1,5 +1,5 @@
-使用MythicMobshandles the Minecraft 属性 system的The 属性 section for 物品。
-It makes it possible to 应用 different 属性 给予 the 实体 wearing/using the 物品 取决于 the 栏位.
+MythicMobs 物品的属性部分负责处理 Minecraft 的属性系统。
+它可以根据物品所在的槽位，为穿戴/持有该物品的实体赋予不同的属性。
 
 [[_TOC_]]
 
@@ -13,47 +13,47 @@ Item:
 ```
 
 
-## 栏位
-| 栏位 | Description |
+## 槽位
+| 槽位 | 说明 |
 |----------|---------------------------------------------------------------------------|
-| All |将应用the given 属性 to all 栏位. |。
-| MainHand | 属性 只会 应用 if 物品 is being held in the main hand. |
-| OffHand | 属性 只会 应用 if 物品 is being held in the off hand. |
-| Head | 属性 只会 应用 if 物品 is being worn on the head 栏位. |
-| Chest | 属性 只会 应用 if 物品 is being worn on the chest/torso 栏位. |
-| Legs | 属性 只会 应用 if 物品 is being worn on the legs 栏位. |
-| Feet | 属性 只会 应用 if 物品 is being worn on the feet 栏位. |
+| All      | 将给定的属性应用到所有槽位。 |
+| MainHand | 属性仅在物品位于主手时生效。 |
+| OffHand  | 属性仅在物品位于副手时生效。 |
+| Head     | 属性仅在物品穿戴在头部槽位时生效。 |
+| Chest    | 属性仅在物品穿戴在胸甲槽位时生效。 |
+| Legs     | 属性仅在物品穿戴在护腿槽位时生效。 |
+| Feet     | 属性仅在物品穿戴在靴子槽位时生效。 |
 
 
-## 值
-You can input 两者都 absolute or relative 值:
-- To input an absolute 值, 仅仅 write it out
+## 属性值
+你可以使用绝对值或相对值：
+- 输入绝对值，直接写数字即可：
 ```yaml
       Damage: 10 ADD
 ```
-- To input a relative 值, use a % symbol 之后 it
+- 输入相对百分比，在数字后面加 `%`：
 ```yaml
       Damage: 10% ADD
 ```
 
 
-## Operations
-| Operation | 别名 | Description |
+## 运算方式
+| 运算 | 别名 | 说明 |
 |---------------|--------------------|---------------------------------------------------------------------------------------------------|
-| 添加 | 0, ADD_NUMBER | 添加 or subtracts the specified 值 to the base 值. |
-| MULTIPLY_BASE | 1, ADD_SCALAR | Multiplies the base 值 与 sum of all the modifier 数量. |
-| MULTIPLY | 2, MULTIPLY_SCALAR | Similar to `MULTIPLY_BASE` but multiplies all the modifier 数量 而不是 adding all of them |
+| ADD           | 0, ADD_NUMBER      | 在基础值上加上或减去指定数值。 |
+| MULTIPLY_BASE | 1, ADD_SCALAR      | 将基础值乘以所有修饰符数值的总和。 |
+| MULTIPLY      | 2, MULTIPLY_SCALAR | 类似于 `MULTIPLY_BASE`，但会将所有修饰符的数值相乘而不是相加。 |
 
-[*See MC wiki on how the game calculates the 值 for all modifiers*](https://Minecraft.wiki/w/属性#Modifiers)
+[*参见 MC Wiki 了解游戏如何计算所有修饰符的最终值*](https://minecraft.wiki/w/Attribute#Modifiers)
 
 
-## 属性
-These are all the available 属性 that can be put on the 物品.
-YoYou can use general 占位符 like `<random.#to#>` or `<random.float.#to#>`.
-You can find out more ab移除se 属性 by looking at [The Minecraft Wiki page regarding them](https://Minecraft.wiki/w/属性#属性)
+## 属性列表
+以下是所有可附加到物品上的属性。
+你可以使用通用占位符，如 `<random.#to#>` 或 `<random.float.#to#>`。
+你可以查阅 [Minecraft Wiki 属性页面](https://minecraft.wiki/w/Attribute#Attributes)获取更多信息。
 
-### AttackSpeed
-决定the recharge rate of a fully charged 攻击。
+### AttackSpeed（攻击速度）
+决定完全蓄力攻击的冷却速率。
 ```yml
 custom_item:
   Id: stick
@@ -62,10 +62,10 @@ custom_item:
       AttackSpeed: 0.1 MULTIPLY
 ```
 
-### Armor
-设数量 of armor。
-1 armor is 等于 0.5 armor plates.
-原版 caps the 数量 to 30.
+### Armor（护甲值）
+设置护甲点数。
+1 点护甲等于 0.5 个护甲图标。
+原版上限为 30。
 ```yml
 custom_item:
   Id: diamond_chestplate
@@ -74,8 +74,8 @@ custom_item:
       Armor: 2
 ```
 
-### ArmorToughness
-Alters the 伤害 reduction percentage of the armor 属性. [MC wiki](https://Minecraft.wiki/Armor#Armor_toughness).
+### ArmorToughness（护甲韧性）
+修改护甲属性的伤害减免百分比。[MC Wiki](https://minecraft.wiki/Armor#Armor_toughness)。
 ```yml
 custom_item:
   Id: diamond_chestplate
@@ -84,9 +84,9 @@ custom_item:
       ArmorToughness: 0.5
 ```
 
-### 伤害
-设伤害 dealt by melee 攻击。
-1 伤害 equals to 0.5 hearts of 伤害 dealt (没有 armor).
+### Damage（伤害）
+设置近战攻击造成的伤害。
+1 点伤害等于 0.5 颗心的伤害量（无护甲时）。
 ```yml
 custom_item:
   Id: stick
@@ -95,9 +95,9 @@ custom_item:
       Damage: 0.2 ADD_SCALAR
 ```
 
-### 血量
-The maximum 血量 modifier the user can have when 也 holding or wearing the 物品.
-1 血量 equals to 0.5 hearts.
+### Health（生命值）
+持有或穿戴物品时，使用者的最大生命值修正。
+1 点生命值等于 0.5 颗心。
 ```yml
 custom_item:
   Id: diamond_chestplate
@@ -106,9 +106,9 @@ custom_item:
       Health: 2 ADD
 ```
 
-### Luck
-S设数量 of luck modifier of the 物品。
-This modifier affects the 结果 of loot tables and 也 the [生物 掉落](/掉落/掉落).
+### Luck（幸运）
+设置物品的幸运修正值。
+此修正会影响战利品表的结果，也会影响[生物掉落](/drops/Drops)。
 ```yml
 custom_item:
   Id: stick
@@ -117,8 +117,8 @@ custom_item:
       Luck: -10 ADD
 ```
 
-### KnockbackResistance
-设horizontal scale knockback resisted from 攻击。
+### KnockbackResistance（击退抗性）
+设置承受攻击时水平方向击退的抗性倍率。
 ```yml
 custom_item:
   Id: diamond_chestplate
@@ -127,8 +127,8 @@ custom_item:
       KnockbackResistance: 2 MULTIPLY_BASE
 ```
 
-### MovementSpeed
-设移动 速度 modifier of the 物品。
+### MovementSpeed（移动速度）
+设置物品的移动速度修正值。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -137,9 +137,9 @@ custom_item:
       MovementSpeed: -0.2 MULTIPLY_BASE
 ```
 
-### MaxAbsorption
-ThThe maximum absorption of this 生物.
-决定the highest 血量 they may gain by the Absorption 效果。
+### MaxAbsorption（最大吸收值）
+此生物的最大吸收生命值。
+决定了通过吸收效果能获得的最高生命值。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -148,8 +148,8 @@ custom_item:
       MaxAbsorption: 1 ADD
 ```
 
-### Scale
-The multiplier of the size of an 实体
+### Scale（体型倍率）
+实体大小的倍率。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -158,8 +158,8 @@ custom_item:
       Scale: 2 ADD
 ```
 
-### StepHeight‌
-Th方块 that an 实体 can step up 无需跳跃即可. 潜行仅会阻止 掉落 from heights 高于 than this 属性.[5] This 仅 happens if the 高度 that the 玩家 is above a 方块 is equal or 小于 the 属性的maximumnumber。
+### StepHeight（跨越高度）
+实体无需跳跃即可跨上的最大方块高度。潜行只会阻止从高于此属性的高度跌落。仅当玩家高于方块的垂直高度小于或等于此属性时才会触发跨越。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -168,8 +168,8 @@ custom_item:
       StepHeight‌: 2 ADD
 ```
 
-### JumpHeight
-The 高度 an 实体 can jump, 类似 the Jump Boost 效果
+### JumpHeight（跳跃高度）
+实体能跳的高度，类似于跳跃提升效果。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -178,8 +178,8 @@ custom_item:
       JumpHeight: 2 ADD
 ```
 
-### BlockInteractionRange
-玩家 in 方块的方块 interaction范围。
+### BlockInteractionRange（方块交互距离）
+玩家的方块交互范围，以方块为单位。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -188,8 +188,8 @@ custom_item:
       BlockInteractionRange: 2 ADD
 ```
 
-### EntityInteractionRange
-玩家 in 方块的实体 interaction范围。
+### EntityInteractionRange（实体交互距离）
+玩家的实体交互范围，以方块为单位。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -198,8 +198,8 @@ custom_item:
       EntityInteractionRange: 2 ADD
 ```
 
-### BlockBreakSpeed
-The 速度 the 玩家 can break 方块 as a multiplier
+### BlockBreakSpeed（方块破坏速度）
+玩家破坏方块的速度倍率。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -208,8 +208,8 @@ custom_item:
       BlockBreakSpeed: 2 ADD
 ```
 
-### Gravity
-The gravity affecting an 实体 in 方块 per tick squared
+### Gravity（重力）
+作用于实体的重力，单位为方块/刻²。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -218,8 +218,8 @@ custom_item:
       Gravity: 2 ADD
 ```
 
-### SafeFallDistance
-方块 the 实体 必须 fall to make fallling 粒子 and sounds的number of 方块 an 实体 can fall 之前 fall 伤害 starts to be accumulated. Also the minimum数量。
+### SafeFallDistance（安全坠落距离）
+实体在开始累积摔落伤害之前可以坠落的最大方块数，同时也是产生摔落粒子和音效所需的最小坠落高度。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -228,8 +228,8 @@ custom_item:
       SafeFallDistance: 2 ADD
 ```
 
-### FallDamageMultiplier‌
-The 数量 of fall 伤害 an 实体 takes as a multiplier
+### FallDamageMultiplier（摔落伤害倍率）
+实体承受摔落伤害的倍率。
 ```yml
 custom_item:
   Id: wooden_sword
@@ -239,9 +239,7 @@ custom_item:
 ```
 
 ## 示例
-This 示例 物品 will grant +10 luck when the 物品 is held in the main
-hand, but will grant +7 luck and +2 extra 伤害 if the 物品 is held in
-the offhand 栏位:
+以下示例物品在主手时会提供 +10 幸运，在副手时则提供 +7 幸运和 +2 额外伤害：
 ```yml
 lucky_charms:
   Id: potato_item
@@ -253,7 +251,7 @@ lucky_charms:
       Luck: 7
       Damage: 2
 ```
-This 示例 物品 grants +2 extra 血量 no matter which 栏位 the 物品 is being held, but 还将 grant +4% 移动 速度 if the 物品 is worn in the feet 栏位:
+以下示例物品不管放在哪个槽位都提供 +2 额外生命值，但如果穿在脚上还会提供 +4% 移动速度：
 ```yml
 happy_feet:
   Id: leather_boots
@@ -264,7 +262,7 @@ happy_feet:
     Feet:
       MovementSpeed: 0.04
 ```
-Each time this 物品 is generated 它将 have a random 伤害 值 between 3 and 5 and a random 速度 bonus between 1% and 5% when worn in the main hand:
+以下物品每次生成时都会在主手槽位获得 3 到 5 之间的随机伤害值，以及 1% 到 5% 之间的随机速度加成：
 ```yml
 lucky_sword:
   Id: wood_sword

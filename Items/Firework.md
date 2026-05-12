@@ -1,5 +1,5 @@
-This 属性 用于 修改 the firework 效果 of a firework or firework_charge 物品.
-This 属性 is 必需 for every firework or firework_charge 物品.
+此属性用于修改烟花火箭或烟花之星物品的烟花效果。
+每个烟花火箭或烟花之星物品都必须包含此属性。
 
 ### 格式
 ```yml
@@ -12,14 +12,13 @@ ItemName:
     Trail:
 ```
 
-Breaking Down The Firework Configuration
+拆解烟花配置
 ---------------------------------------
 
-### 颜色
-primary colors to be added to the firework 效果. The colors 必须为 using RGB(red,green,blue) 格式的列表。
+### Colors（主颜色）
+要添加到烟花效果中的主颜色列表。颜色必须使用 RGB（红,绿,蓝）格式。
 ```yml
-# adds red(255,0,0), green(0,255,0), and blue(0,0,255) colors
-# to the firework effect
+# 为烟花效果添加红色(255,0,0)、绿色(0,255,0)和蓝色(0,0,255)
 example_item:
   Id: firework_charge
   Firework:
@@ -28,8 +27,8 @@ example_item:
       - 0,255,0
       - 0,0,255
 ```
-### FadeColors
-Similar to the [colors](/物品/Firework#Colors) 选项 but 添加 the colors to the fade 效果 instead.
+### FadeColors（渐隐颜色）
+与[主颜色](/Items/Firework#Colors)选项类似，但作用于渐隐效果。
 ```yml
 example_item:
   Id: firework_charge
@@ -42,16 +41,16 @@ example_item:
       - 255,0,255
       - 0,255,0
 ```
-### Flicker
-Whether the firework 效果 flickers
+### Flicker（闪烁）
+烟花效果是否闪烁。
 ```yml
 example_item:
   Id: firework_charge
   Firework:
     Flicker: true
 ```
-### Trail
-Whether the firework 效果 has a trail
+### Trail（拖尾）
+烟花效果是否带有拖尾轨迹。
 ```yml
 example_item:
   Id: firework_charge
