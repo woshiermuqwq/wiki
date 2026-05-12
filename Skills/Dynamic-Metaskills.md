@@ -16,7 +16,7 @@ ThThis 不是 an intended 技能. It 仅 a side-效果 that consistently works �
 
 Since 这是 pretty much uncharted territory, if you have any information useful to further expand this page and, by proxy, the knowledge available to every 其他 MythicMobs user, let me know: [Lxlp Discord Profile](https://discord.com/users/353257382811533322)
 
-Also, 当 这是 也 repeated later on in the page, 它是 EXTREMELY important for you to understand that, if this feature is used in conjunction with *any* 字符串 sourced from a 玩家, that *will* allow the 玩家 to use *any* mythic 技能 (**指令 技能 included**) in a trivially easy way. So, to reiterate: make sure 一切 that ends up in a dynamic 元技能 已被 made by a developer and 不是 dependent on user input or user-controlled 值, or make sure the user controller 值 is validated and sanitized
+Also, 当 这也是repeated later on in the page, 它是 EXTREMELY important for you to understand that, if this feature is used in conjunction with *any* 字符串 sourced from a 玩家, that *will* allow the 玩家 to use *any* mythic 技能 (**指令 技能 included**) in a trivially easy way. So, to reiterate: make sure 一切 that ends up in a dynamic 元技能 已被 made by a developer and 不是 dependent on user input or user-controlled 值, or make sure the user controller 值 is validated and sanitized
 
 # How does this work?
 Basically, it all boils down to two things:

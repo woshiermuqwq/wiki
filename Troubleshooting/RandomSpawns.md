@@ -1,6 +1,6 @@
 # RandomSpawns not working
 
-- 检查 移除 `Chance` of the randomspawn: if 它是 也 low, that might be the issue, so bring it to `1` 为了 检查 if that was the issue. If it was not, continue 与 steps below 没有 changing it back 直到 the issue is solved.
+- 检查 移除 `Chance` of the randomspawn: if 它太低, that might be the issue, so bring it to `1` 为了 检查 if that was the issue. If it was not, continue 与 steps below 没有 changing it back 直到 the issue is solved.
 - 检查 the 世界 difficulty: if you are trying to 生成 an hostile 生物 类型, it 不应 be peaceful!
 - 移除 **any limitations**, 例如 `biome` and `conditions`, then see if it works
 -- 检查 if 有ny mispelled word 任何地方, 例如:

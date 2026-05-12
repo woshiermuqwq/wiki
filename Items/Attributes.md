@@ -159,7 +159,7 @@ custom_item:
 ```
 
 ### StepHeight‌
-Th方块 that an 实体 can step up 没有 jumping. Sneaking 仅 阻止 掉落 from heights 即 higher than this 属性.[5] This 仅 happens if the 高度 that the 玩家 is above a 方块 is equal or 小于 the 属性的maximumnumber。
+Th方块 that an 实体 can step up 无需跳跃即可. 潜行仅会阻止 掉落 from heights 高于 than this 属性.[5] This 仅 happens if the 高度 that the 玩家 is above a 方块 is equal or 小于 the 属性的maximumnumber。
 ```yml
 custom_item:
   Id: wooden_sword

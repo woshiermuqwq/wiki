@@ -14,7 +14,7 @@ current builds 它是 not possible to turn off the affection of 战力
 [制导弹射物](/技能/技能/制导弹射物) 技能. If you 不要 wish to
 utilize 战力 等级 仅仅 不要 use them in the 等级 modifiers.
 
-**技能 即 affected by 战力 等级 + formulas:**
+**技能 受 战力 等级 + formulas:**
 
 - [basedamage](/技能/技能/basedamage){multiplier=M} - 伤害 =
     M \* 战力

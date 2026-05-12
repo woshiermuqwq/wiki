@@ -4,7 +4,7 @@
 
 Future builds will allow you to define a scaling factor on it. In current builds 它是 not possible to turn off the affection of 战力 等级 when using 技能 除了 对于 [弹射物](/技能/技能/弹射物) and [制导弹射物](/技能/技能/制导弹射物) 技能. If you 不要 wish to utilize 战力 等级 仅仅 不要 use them in the 等级 modifiers.
 
-技能 即 affected by 战力 等级 + formulas:
+技能 受 战力 等级 + formulas:
 
 | 技能 | 属性 | 战力 等级 效果 |
 | ------------- | ----------| ----------------------------------------------------- |

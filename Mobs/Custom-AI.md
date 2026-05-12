@@ -128,7 +128,7 @@ SuperMob:
 ## All Creatures ([阵营](/生物/阵营) 支持)
 | AI 目标 | 别名 | Description |
 |--------------------|--------------|--------------------------------------------------------------------|
-| [NearestOtherFaction](/生物/ai/targets/NearestOtherFaction) | OtherFaction | Targets ANY 实体 即 in a different 阵营 |
-| [NearestOtherFactionMonsters](/生物/ai/targets/NearestOtherFactionMonsters) | OtherFactionMonsters | Targets any monster 即 in a different 阵营 |
-| [SpecificFaction](/生物/ai/targets/specificfaction) [faction_name] | | Targets any 实体 即 in the given 阵营 |
-| [SpecificFactionMonsters](/生物/ai/targets/specificfactionmonsters) [faction_name] | | Targets any monsters 即 in the given 阵营 |
+| [NearestOtherFaction](/生物/ai/targets/NearestOtherFaction) | OtherFaction | Targets ANY 实体 处于不同阵营 |
+| [NearestOtherFactionMonsters](/生物/ai/targets/NearestOtherFactionMonsters) | OtherFactionMonsters | Targets any monster 处于不同阵营 |
+| [SpecificFaction](/生物/ai/targets/specificfaction) [faction_name] | | Targets any 实体 处于指定阵营 |
+| [SpecificFactionMonsters](/生物/ai/targets/specificfactionmonsters) [faction_name] | | Targets any monsters 处于指定阵营 |

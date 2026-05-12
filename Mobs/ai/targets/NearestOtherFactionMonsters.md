@@ -1,5 +1,5 @@
 ## 描述
-以any monster 即 in a different 阵营为目标。
+以any monster 处于不同阵营为目标。
 
 
 ## 属性
